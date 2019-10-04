@@ -59,8 +59,13 @@ There are only twenty-six letters of the alphabet, but there is no logical limit
 \end{ekey}
 Keep in mind that each of these is a different sentence letter. When there are subscripts in the symbolization key, it is important to keep track of them.
 
-\section{Connectives}
+%Vass Vilmos fordítás eleje
+
+\section{Logikai műveletek}
 Logical connectives are used to build complex sentences from atomic components. There are five logical connectives in SL. This table summarizes them, and they are explained below.
+
+
+A logikai műveleteket arra használjuk, hogy egyszerű alkotóelemekből összetett mondatokat építsünk fel a segítségükkel. Öt különböző logikai műveletet különböztetünk meg SL-ben!! amelyek a mondatokhoz tartoznak. Ezeket az alábbi táblázat foglalja össze:
 
 \begin{table}[h]
 \center
@@ -77,46 +82,115 @@ symbol&what it is called&what it means\\
 \end{tabular}
 \end{table}
 
-\subsection{Negation}
+\begin{table}[h]
+\center
+\begin{tabular}{|c|c|c|}
+\hline
+Jelölés&Megnevezés&Jelentés\\
+\hline
+\enot&negáció&„Nem igaz, hogy$\ldots$”\\
+\eand&konjunkció&„És $\ldots$\ továbbá $\ldots$\ valamint $\ldots$”\\
+\eor&diszjunkció&„Vagy $\ldots$\ illetve $\ldots$”\\
+\eif&implikáció&„Ha $\ldots$\, akkor $\ldots$”\\
+\eiff&ekvivalencia&„$\ldots$\ akkor és csakis akkor $\ldots$”\\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Negáció}
 Consider how we might symbolize these sentences:
+
+Gondolkozzunk el azon, milyen szimbólumokkal is jelölhetnénk ezeket a kijelentő mondatokat:
 \begin{earg}
 \item[\ex{not1}] Mary is in Barcelona.
 \item[\ex{not2}] Mary is not in Barcelona.
 \item[\ex{not3}] Mary is somewhere besides Barcelona.
 \end{earg}
 
+\begin{earg}
+\item[\ex{not1}] Petra Párizsban van.
+\item[\ex{not2}] Nem igaz, hogy Petra Párizsban van.
+\item[\ex{not3}] Petra Párizson kívül, valahol máshol van.
+\end{earg}
+
 In order to symbolize sentence \ref{not1}, we will need one sentence letter. We can provide a symbolization key:
 
+Annak érdekében, hogy kifejezzük \aref{not1}. mondatot, szükségünk lesz egy nagybetűre, mint szimbólum.
+Tegyük fel, hogy \aref{not1}. mondat számára ezt a kulcsot alkalmazzuk:
 \begin{ekey}
 \item[B:]Mary is in Barcelona.
+\end{ekey}
+
+\begin{ekey}
+\item[P:]Petra Párizsban van.
 \end{ekey}
 
 Note that here we are giving $B$ a different interpretation than we did in the previous section. The symbolization key only specifies what $B$ means \emph{in a specific context}. It is vital that we continue to use this meaning of $B$ so long as we are talking about Mary and Barcelona. Later, when we are symbolizing different sentences, we can write a new symbolization key and use $B$ to mean something else.
 
 Now, sentence \ref{not1} is simply $B$. 
 
+Vegyük észre, hogy B-hez egy, a korábbiaktól különböző jelentést társítunk. A szimbolizációs kulcs csupán azt fejezi ki, hogy B egy adott környezetben mit is jelent éppen.
+Kulcsfontosságú, hogy mostantól ezt a jelentést társítsuk B-hez, amíg Petráról és Párizsról beszélünk. Később, mikor már nem róluk lesz szó, akkor ismét használhatjuk B-t arra, hogy valami mást jelentsen. Mostantól azonban az 1. mondat egyszerűen csak B.
+
 Since sentence \ref{not2} is obviously related to the sentence \ref{not1}, we do not want to introduce a different sentence letter. To put it partly in English, the sentence means `Not $B$.' In order to symbolize this, we need a symbol for logical negation. We will use `\enot.' Now we can translate `Not $B$' to $\enot B$.
 
+Mivel \aref{not2}. mondat egyértelműen kapcsolódik \aref{not1}. mondathoz, ezért nem szeretnénk egy teljesen új nagybetűvel jelölni őt.
+\Aref{not2}. mondat ugyanis nagyjából azt jelenti, hogy „Nem igaz, hogy B”.
+Ennek a kifejezésére szükségünk van egy szimbólumra, ami a negációt jelenti.
+
+Ezt a jelölést fogjuk használni a továbbiakban: „\enot”.
+
 Sentence \ref{not3} is about whether or not Mary is in Barcelona, but it does not contain the word `not.' Nevertheless, it is obviously logically equivalent to sentence \ref{not2}. They both mean: It is not the case that Mary is in Barcelona. As such, we can translate both sentence \ref{not2} and sentence \ref{not3} as $\enot B$.
+
+\Aref{not3}. mondat azzal foglalkozik, hogy Petra Párizsban van-e, vagy sem, viszont nem tartalmazza a „nem” szócskát. Ennek ellenére jelentése egyértelműen azonos logikai szemszögből a 2. mondattal. Mind a ketten ezt fejezik ki: „Petra nincs Párizsban.”
+
+Így tehát \aref{not2}. mondat mellett, \aref{not3}. mondatot is jelölhetjük „$\enot B$”-vel.
 
 \factoidbox{
 A sentence can be symbolized as $\enot\script{A}$ if it can be paraphrased in English as `It is not the case that \script{A}.'
 }
 
+\factoidbox{
+Egy mondatot jelölhetünk „$\enot\script{A}$”-ként, ha meg tudjuk úgy fogalmazni, hogy „Nem igaz, hogy…”.
+}
 
 Consider these further examples:
+
+Segítségképpen nézzünk meg egy másik példát is:
+
 \begin{earg}
 \item[\ex{not4}] The widget can be replaced if it breaks.
 \item[\ex{not5}] The widget is irreplaceable.
 \item[\ex{not5b}] The widget is not irreplaceable.
 \end{earg}
 
+\begin{earg}
+\item[\ex{not4}] Ez az eszköz lecserélhető.
+\item[\ex{not5}] Ez az eszköz lecserélhetetlen.
+\item[\ex{not5b}] Ez az eszköz nem lecserélhetetlen.
+\end{earg}
+
 
 If we let $R$ mean `The widget is replaceable', then sentence \ref{not4} can be translated as $R$.
 
+Használjuk a következő kulcsot a 4. mondathoz:
+
+\begin{ekey}
+\item[R:]Ez az eszköz lecserélhető.
+\end{ekey}
+
+\Aref{not4}. mondatot tehát az „ R ” betű reprezentálja mostantól. 
+
 What about sentence \ref{not5}? Saying the widget is irreplaceable means that it is not the case that the widget is replaceable. So even though sentence \ref{not5} is not negative in English, we symoblize it using negation as $\enot{R}$.
 
+\Aref{not5}. mondat állítása („Ez az eszköz lecserélhetetlen.”) alapvetően azt jelenti, hogy „Nem igaz, hogy ez az eszköz lecserélhető.” Tehát annak ellenére, hogy \aref{not5}. mondat eredetileg nem tartalmazza a „nem” szócskát, a jelölése mégis „$\enot{R}$” lesz.
+
 Sentence \ref{not5b} can be paraphrased as `It is not the case that the widget is irreplaceable.' Using negation twice, we translate this as $\enot\enot R$. The two negations in a row each work as negations, so the sentence means `It is not the case that$\ldots$ it is not the case that$\ldots$ $R$.' If you think about the sentence in English, it is logically equivalent to sentence \ref{not4}. So when we define logical equivalence in SL, we will make sure that $R$ and $\enot\enot R$ are logically equivalent.
+
+\Aref{not5b}. mondatot pedig szintén ki tudjuk fejezni más szóösszetétellel, hogy vele ekvivalens állítást kapjunk: „Ez az eszköz nem lecserélhetetlen” = „Nem igaz, hogy ez az eszköz lecserélhetetlen”.
+Tovább is tudunk menni:
+
+„Nem igaz, hogy ez az eszköz lecserélhetetlen” = „Nem igaz, hogy nem igaz, hogy ez az eszköz lecserélhető”.  Így tehát ezt a mondatot logikailag helyesen le tudjuk írni ily módon: „$\enot\enot R$”.
 
 More examples:
 \begin{earg}
@@ -124,10 +198,24 @@ More examples:
 \item[\ex{not7}] Elliott is unhappy.
 \end{earg}
 
+Azonban szükségeltetik némi óvatosság, mikor negációval van dolgunk. Nézzünk rá példát:
+\begin{earg}
+\item[\ex{not6}] Béla boldog.
+\item[\ex{not7}] Béla boldogtalan.
+\end{earg}
+
 
 If we let $H$ mean `Elliot is happy', then we can symbolize sentence \ref{not6} as $H$.
 
+Ha logikai szemszögből helyesnek valljuk azt a mondatot, hogy „Béla boldog”, akkor „$H$”-val akár reprezentálhatjuk is.
+\Aref{not6}. mondatot ezután „$H$”-val jelölnénk.
+
 However, it would be a mistake to symbolize sentence \ref{not7} as $\enot{H}$. If Elliott is unhappy, then he is not happy--- but sentence \ref{not7} does not mean the same thing as `It is not the case that Elliott is happy.' It could be that he is not happy but that he is not unhappy either. Perhaps he is somewhere between the two. In order to allow for the possibility that he is indifferent, we would need a new sentence letter to symbolize sentence \ref{not7}.
+
+Azonban hibát követnénk el akkor, ha \aref{not7}. mondatot „\enot{H}”-val jelölnénk.
+Ha Béla boldogtalan, akkor ő nem boldog; viszont \aref{not7}. mondat jelentése nem egyenlő azzal, hogy „Nem igaz, hogy Béla boldog”.
+
+Lehetséges ugyanis, hogy Béla se nem boldog, se nem boldogtalan; előfordulhat, hogy ő közömbös hangulatban van éppenséggel. Így tehát elengedhetetlen, hogy bevezessünk egy új betűt annak érdekében, hogy \aref{not7}. mondatot logikailag helyesen tudjuk jelölni. 
 
 For any sentence \script{A}: If \script{A} is true, then \enot\script{A} is false. If \enot\script{A} is true, then \script{A} is false. Using `T' for true and `F' for false, we can summarize this in a \emph{characteristic truth table} for negation:
 \begin{center}
@@ -140,7 +228,19 @@ F & T
 \end{center}
 We will discuss truth tables at greater length in the next chapter.
 
+Legyen szó bármilyen A mondatról: Ha A igaz, akkor \enot\script{A}  hamis. Ha pedig \enot\script{A} igaz, akkor A  hamis.
+I nagybetűt használva Igaz állításhoz és H nagybetűt használva Hamis állításhoz, össze tudjuk foglalni a következő igazságtáblában a negációt:
+\begin{center}
+\begin{tabular}{c|c}
+\script{A} & \enot\script{A}\\
+\hline
+I & H\\
+H & I 
+\end{tabular}
+\end{center}
+A 3. fejezetben részletesebben kifejtjük az igazságtáblákat.
 
+%Vass Vilmos fordítás vége
 
 \subsection{Conjunction}
 Consider these sentences:
