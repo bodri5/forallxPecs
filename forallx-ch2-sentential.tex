@@ -243,30 +243,70 @@ A 3. fejezetben részletesebben kifejtjük az igazságtáblákat.
 %Vass Vilmos fordítás vége
 
 %AL fordítása kezdet
+\subsection{Conjuction}
+\subsection{Konjukció}
 
-\subsection{Conjunction}
 Consider these sentences:
+Vegyük a követkető mondatokat:
+
+
 \begin{earg}
 \item[\ex{and1}]Adam is athletic.
 \item[\ex{and2}]Barbara is athletic.
 \item[\ex{and3}]Adam is athletic, and Barbara is also athletic.
 \end{earg}
 
+\begin{earg}
+\item[\ex{and1}]Ádám sportos.
+\item[\ex{and2}]Barbara sportos..
+\item[\ex{and3}]Ádám sportos, és Barbara szintén sportos.
+\end{earg}
+
 We will need separate sentence letters for \ref{and1} and \ref{and2}, so we define this symbolization key:
+Definiáljunk egy olyan szimbolizációs kulcsot, ahol \ref{and1} -t és \ref{and2} -t számok helyett betűkkel fogunk azonosítani:
+
 \begin{ekey}
 \item[A:] Adam is athletic.
 \item[B:] Barbara is athletic.
 \end{ekey}
 
+\begin{ekey}
+\item[A:] Ádám sportos.
+\item[B:] Barbara sportos.
+\end{ekey}
+
 Sentence \ref{and1} can be symbolized as $A$.
+
+A \ref{and1} mondat úgy is szimbolizálható mint $A$.
 
 Sentence \ref{and2} can be symbolized as $B$.
 
-Sentence \ref{and3} can be paraphrased as `$A$ and $B$.' In order to fully symbolize this sentence, we need another symbol. We will use `\eand.' We translate `$A$ and $B$' as $A\eand B$. The logical connective `\eand' is called \define{conjunction}, and $A$ and $B$ are each called \define{conjuncts}.
+A \ref{and2} mondat úgy is szimbolizálható mint $B$.
 
-Notice that we make no attempt to symbolize `also' in sentence \ref{and3}. Words like `both' and `also' function to draw our attention to the fact that two things are being conjoined. They are not doing any further logical work, so we do not need to represent them in SL.
+Sentence \ref{and3} can be paraphrased as `$A$ and $B$.'
+In order to fully symbolize this sentence, we need another symbol. We will use `\eand.' 
+We translate `$A$ and $B$' as $A\eand B$.
+The logical connective `\eand' is called \define{conjunction}, and $A$ and $B$ are each called \define{conjuncts}.
+
+
+A \ref{and3} mondatot úgy értelmezhetjük mint `$A$ és $B$`. 
+Ahhoz hogy helyesen tudjuk szimbolizálni ezt a mondatot, szükségünk van egy másik szimbólumra. Az `\end.`  jelet fogjuk használni a következőkben. 
+Ebből következőleg az `$A$ és $B$' -t  $A\eand B$ -ként fogjuk fordítani. 
+A logikai kapcsolatot `\eand'-t \define{conjuction}-nak (konjukciónak), és az $A$ és $B$  változókat \define{conjuncts} -nak (konjuktoknak) nevezzük.
+
+
+
+Notice that we make no attempt to symbolize `also' in sentence \ref{and3}.
+Words like `both' and `also' function to draw our attention to the fact that two things are being conjoined. They are not doing any further logical work, so we do not need to represent them in SL.
+
+Vegyük figyelembe, hogy mi nem kíséreltük meg szimbolizálni a ’ szintén.’ kifejezést a \ref{and3} mondatban.
+Az olyan kifejezéseknek, mint az ’ egyaránt ’ és ’ szintén ’ , az a funkciója hogy felhívja a figyelmünket arra tényre, hogy két dolog össze van kapcsolódva.
+Ezeknek a kifejezéseknek nincs további logikai szerepük, vagyis nincs szükség külön jelölésmódra.
 
 Some more examples:
+
+További példák:
+
 \begin{earg}
 \item[\ex{and4}]Barbara is athletic and energetic.
 \item[\ex{and5}]Barbara and Adam are both athletic.
@@ -274,7 +314,35 @@ Some more examples:
 \item[\ex{and7}]Barbara is athletic, but Adam is more athletic than she is.
 \end{earg}
 
-Sentence \ref{and4} is obviously a conjunction. The sentence says two things about Barbara, so in English it is permissible to refer to Barbara only once. It might be tempting to try this when translating the argument: Since $B$ means `Barbara is athletic', one might paraphrase the sentences as `$B$ and energetic.' This would be a mistake. Once we translate part of a sentence as $B$, any further structure is lost. $B$ is an atomic sentence; it is nothing more than true or false. Conversely, `energetic' is not a sentence; on its own it is neither true nor false. We should instead paraphrase the sentence as `$B$ and Barbara is energetic.' Now we need to add a sentence letter to the symbolization key. Let $E$ mean `Barbara is energetic.' Now the sentence can be translated as $B\eand E$.
+\begin{earg}
+\item[\ex{and4}]Barbara sportos és energikus..
+\item[\ex{and5}]Barbara és Ádám egyaránt sportos.
+\item[\ex{and6}]Bár Barbara energikus, nem sportos.
+\item[\ex{and7}]Barbara sportos, de Ádám még sportosabb mint ő.
+\end{earg}
+
+Sentence \ref{and4} is obviously a conjunction. 
+The sentence says two things about Barbara, so in English it is permissible to refer to Barbara only once. 
+It might be tempting to try this when translating the argument: Since $B$ means `Barbara is athletic', one might paraphrase the sentences as `$B$ and energetic.' 
+This would be a mistake. 
+Once we translate part of a sentence as $B$, any further structure is lost.
+$B$ is an atomic sentence; it is nothing more than true or false. 
+Conversely, `energetic' is not a sentence; on its own it is neither true nor false.
+We should instead paraphrase the sentence as `$B$ and Barbara is energetic.' 
+Now we need to add a sentence letter to the symbolization key. 
+Let $E$ mean `Barbara is energetic.' Now the sentence can be translated as $B\eand E$.
+
+A \ref{and4} mondat egyértelműen konjukció. 
+A mondat két dolgot állít Barbaráról, tehát az angol nyelvben megengedhető hogy csak egyszer utaljunk Barbarára egy mondatban.
+Figyeljük meg ezt, az állítások fordításakor: Amíg $B$ azt jelenti, hogy ’ Barbara sportos ’ ,  akkor a mondatot úgyis definiálhatnánk hogy '$B$ és energikus.' 
+Viszont ez hiba lenne. 
+Egyszer már lefordítottuk a mondat egy részét mint $B$ ,  ezért a mondat további szerkezetét elveszítettnek tekintjük.
+A $B$ egy atomi mondat, nem több mint egy igaz-hamis. 
+Fordítva, az ’ energikus ’ nem egy mondat, önmagában nem igaz vagy hamis. 
+Ehelyett a mondatot úgy kell átfogalmazni, hogy '$B$ és Barbara energikus'.
+Adjunk egy újabb betűt a szimbolizációs kulcshoz. 
+Legyen az $E$ jelentése : ’ Barbara energikus ’ .
+Most a mondat már fordítható úgy is fordítható mint $B\eand E$
 
 %AL fordítása vége
 
