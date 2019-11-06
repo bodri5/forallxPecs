@@ -1,37 +1,59 @@
 %!TEX root = forallx.tex
-\chapter{Sentential logic}
+
+%VM fordítása kezdet
+\chapter{Kijelentéslogika}
 \label{ch.SL}
-
-
 
 
 This chapter introduces a logical language called SL. It is a version of \emph{sentential logic}, because the basic units of the language will represent entire sentences.
 
-\nix{Could have a historical box about Boole?}
+Ez a fejezet egy logikai nyelvet mutat be, a KB -t. Ez a kijelentés logika egy verziója, mert a nyelv alapegységei teljes mondatokat reprezentálnak.
 
 
 \section{Sentence letters}
+
+\section{Kijelentés betűk}
 In SL, capital letters are used to represent basic sentences. Considered only as a symbol of SL, the letter $A$ could mean any sentence. So when translating from English into SL, it is important to provide a \emph{symbolization key}. The key provides an English language sentence for each sentence letter used in the symbolization.
 
+A KB-ban a nagybetűk alapállításokat képviselnek. Csak, mint a KB egy szimbólumát figyelembe véve, az A betű bármilyen mondatot jelenthet. Tehát mikor magyarról KB-be fordítunk, fontos, hogy megadjuk a szimbolizáziós kulcsot. A kulcs egy magyar mondatot nyújt minden a szimbolizációban használt kijelentés betűre.
+
 For example, consider this argument:
+
+Például vegyük ezt az érvelést:
 \begin{earg}
 \item[] There is an apple on the desk.
 \item[] If there is an apple on the desk, then Jenny made it to class.
 \item[\therefore] Jenny made it to class.
 \end{earg}
+
+\begin{earg}
+\item[] Van egy alma az asztalon.
+\item[] Ha van egy alma az asztalon, akkor Janka eljutott az osztályba.
+\item[\therefore] Janka eljutott az osztályba.
+\end{earg}
 This is obviously a valid argument in English. In symbolizing it, we want to preserve the structure of the argument that makes it valid.
 What happens if we replace each sentence with a letter? Our symbolization key would look like this:
+
+Ez nyilvánvalóan helyes érvelés magyarul. Szimbolizáláskor mi meg akarjuk őrizni az érvelés szerkezetét, mely azt igazzá teszi. Mi történik, ha minden mondatot lecserélünk egy betűre? Akkor a szimbolizációs kulcsunk így nézne ki:
 \begin{ekey}
 \item[A:]There is an apple on the desk.
 \item[B:]If there is an apple on the desk, then Jenny made it to class.
 \item[C:]Jenny made it to class.
 \end{ekey}
+\begin{ekey}
+\item[A:]Van egy alma az asztalon.
+\item[B:]Ha van egy alma az asztalon, akkor Janka eljutott az osztályba.
+\item[C:]Janka eljutott az osztályba.
+\end{ekey}
 We would then symbolize the argument in this way:
+
+És így szimbolizálnánk az érvelést:
 \begin{earg}
 \item[] $A$
 \item[] $B$
 \item[\therefore] $C$
 \end{earg}
+%VM fordítása vége
 There is no necessary connection between some sentence $A$, which could be any sentence, and some other sentences $B$ and $C$, which could be any sentences.
 The structure of the argument has been completely lost in this translation.
 
