@@ -375,19 +375,40 @@ Most a mondat már úgy is fordítható mint $B\eand E$
 A sentence can be symbolized as $\script{A}\eand\script{B}$ if it can be paraphrased in English as `Both \script{A}, and \script{B}.' Each of the conjuncts must be a sentence.
 }
 
+\factoidbox{
+Egy mondatot jelölhetünk $\script{A}\eand\script{B}$-nek, ha elmondható róluk magyarul, hogy „Mind \script{A} és \script{B}”. A konjunktoknak külön-külön is mondatoknak kell lenniük.
+}
+
 Sentence \ref{and5} says one thing about two different subjects. It says of both Barbara and Adam that they are athletic, and in English we use the word `athletic' only once. In translating to SL, it is important to realize that the sentence can be paraphrased as, `Barbara is athletic, and Adam is athletic.' This translates as $B\eand A$.
+
+A \ref{and5}. mondat két különböző alanyról szól, miszerint Barbara és Ádám sportosak, és a „sportos” szót csak egyszer használjuk, bár mindkettőjükre vonatkozik. Fontos észrevennünk, a KB-ban ezt a mondatot úgy értelmezhetjük, hogy „Barbara sportos és Ádám (is) sportos”, amit a következőképpen fordíthatunk le: $B\eand A$.
 
 Sentence \ref{and6} is a bit more complicated. The word `although' sets up a contrast between the first part of the sentence and the second part. Nevertheless, the sentence says both that Barbara is energetic and that she is not athletic. In order to make each of the conjuncts an atomic sentence, we need to replace `she' with `Barbara.'
 
+A \ref{and6}. mondat kicsit már bonyolultabb. A „bár” szó ellentétet állít a mondatunk első és második fele között. Mindazonáltal a mondat arról szól, hogy Barbara energikus és ő nem sportos. Ahhoz, hogy a két konjunktot atomi mondattá alakítsuk, az „őt” ki kell cserélnünk „Barbarára”.
+
 So we can paraphrase sentence \ref{and6} as, `\emph{Both} Barbara is energetic, \emph{and} Barbara is not athletic.' The second conjunct contains a negation, so we paraphrase further: `\emph{Both} Barbara is energetic \emph{and} \emph{it is not the case that} Barbara is athletic.' This translates as $E\eand\enot B$.
+
+Tehát a \ref{and6}. mondatot úgy is kifejezhetjük, hogy „Barbara energikus, \emph{és} Barbara nem sportos.” A második konjunkt negálást tartalmaz, ezért tovább bonthatjuk a mondatot: „Barbara energikus, \emph{és} \emph{nem mondhatjuk el, hogy} Barbara sportos.” Ezt a következőképp fordíthatjuk: $E\eand\enot B$.
 
 Sentence \ref{and7} contains a similar contrastive structure. It is irrelevant for the purpose of translating to SL, so we can paraphrase the sentence as `\emph{Both} Barbara is athletic, \emph{and} Adam is more athletic than Barbara.' (Notice that we once again replace the pronoun `she' with her name.) How should we translate the second conjunct? We already have the sentence letter $A$ which is about Adam's being athletic and $B$ which is about Barbara's being athletic, but neither is about one of them being more athletic than the other. We need a new sentence letter. Let $R$ mean `Adam is more athletic than Barbara.' Now the sentence translates as $B\eand R$.
 
+A \ref{and7}. mondat is hasonló ellentétes szerkezetet tartalmaz. KB-ra fordításnál ettől eltekinthetünk, hogy a következő mondatot fejezhessük ki: „Barbara atlétikus, \emph{és} Ádám atlétikusabb, mint Barbara.” (Vegyük észre, hogy ismét kicseréltük az „őt” a lány nevére.) Vajon hogyan fordíthatnánk le a második konjunktot? Már van egy $A$ szimbolizációs kulcsunk, ami arról szól, hogy Ádám sportos, és van egy $B$ szimbolizációs kulcsunk, ami arról szól, hogy Barbara sportos, de egyikben sem kapunk utalást arra, hogy egyikük sportosabb a másiknál. Szükségünk van egy új mondatot jelölő betűre. Legyen $R$ jelentése: „Ádám sportosabb, mint Barbara.” Így pedig a mondatot a következőképpen fordíthatjuk: $B\eand R$.
+
 \factoidbox{Sentences that can be paraphrased `\script{A}, but \script{B}' or `Although \script{A}, \script{B}' are best symbolized using conjunction: \script{A}\eand\script{B}}
+
+\factoidbox{
+Azok a mondatok, amelyek kifejezhetők úgy, mint „\script{A}, de \script{B}” vagy „Bár \script{A}, \script{B}” a legegyszerűbben a következő konjunkcióval jelölhetők: \script{A}\eand\script{B}
+}
 
 It is important to keep in mind that the sentence letters $A$, $B$, and $R$ are atomic sentences. Considered as symbols of SL, they have no meaning beyond being true or false. We have used them to symbolize different English language sentences that are all about people being athletic, but this similarity is completely lost when we translate to SL. No formal language can capture all the structure of the English language, but as long as this structure is not important to the argument there is nothing lost by leaving it out.
 
+Fontos észben tartanunk, hogy $A$, $B$ és $R$ atomi mondatokatat jelölő betűk. A KB szimbólumainak tekinthetők, így nincs más jelentésük, mint igaz vagy hamis. Olyan mondatok jelölésére használtuk ezeket, amik arról szólnak, hogy az emberek energikusak, de ez a hasonlóság teljesen elveszik, amikor KB-re fordítunk. Semmilyen formális nyelv nem tudja megragadni a magyar nyelv szerkezetét, de addig, amíg ez a szerkezet nem fontos az érvelés szempontjából, semmit nem veszítünk, ha kihagyjuk.
+
 For any sentences \script{A} and \script{B}, \script{A}\eand\script{B} is true if and only if both \script{A} and \script{B} are true. We can summarize this in the {characteristic truth table} for conjunction:
+
+Bármely \script{A} és \script{B}, \script{A}\eand\script{B} mondat akkor és csak akkor igaz, ha mind \script{A}\ és mind script{B} is igaz. Ezt összefoglalhatjuk a konjunkcióra vonatkozó igazságtáblázatban:
+
 %GF fordítása vége
 %ZB fordítása kezdet
 \begin{center}
