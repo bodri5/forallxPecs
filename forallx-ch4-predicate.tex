@@ -2,24 +2,35 @@
 
 %ZL fordítása kezdet
 \chapter{Quantified logic}
+Kvantor logika 
 \label{ch.QL}
 
 This chapter introduces a logical language called QL. It is a version of \emph{quantified logic}, because it allows for quantifiers like \emph{all} and \emph{some}. Quantified logic is also sometimes called \emph{predicate logic}, because the basic units of the language are predicates and terms.
+A fejezet bemutatja az úgynevezett QL logika nyelvet. Ez egy fajtája a kvantor logikának, mert engedélyezi az kvantorokat, mint a mind, és a néhány. A kvantor logikát néha predikátum logikának is nevezik, mert a nyelv alapegységei predikátumok, és feltételek.
 
 \section{From sentences to predicates}
+Mondatoktól prediátumokig
 Consider the following argument, which is obviously valid in English:
+Figyelembe véve a következő érvet, ami az angolban nyilvánvalóan érvényes:
 \begin{quote}
 If everyone knows logic, then either no one will be confused or everyone will. Everyone will be confused only if we try to believe a contradiction. This is a logic class, so everyone knows logic.\\
 \therefore\ If we don't try to believe a contradiction, then no one will be confused.
 \end{quote}
-In order to symbolize this in SL, we will need a symbolization key. 
+Ha mindenki ismeri a logikát, akkor vagy senki nem lesz zavarban vagy mindenki. Mindenki csak akkor lesz zavarban, ha megpróbáljuk elhinni az ellentmondást. Ez egy logikai osztály, tehát mindenki ismeri a logikát. Ha nem próbáljuk meg elhinni az ellentmondást, akkor senki sem lesz zavarban.
+In order to symbolize this in SL, we will need a symbolization key.
+Annak érdekében, hogy tudjuk ezt szimbolizálni SL-ben, szükségünk lesz egy szimbolizációs kulcsra.
 \begin{ekey}
 \item[L:] Everyone knows logic.
+L: Mindenki ismeri a logikát.
 \item[N:] No one will be confused.
+N: Senki sem lesz zavarban.
 \item[E:] Everyone will be confused.
+E: Mindenki zavarban lesz.
 \item[B:] We try to believe a contradiction.
+B: Megpróbáljuk elhinni az ellentmondást.
 \end{ekey}
 Notice that $N$ and $E$ are both about people being confused, but they are two separate sentence letters. We could not replace $E$ with $\enot N$. Why not? $\enot N$ means `It is not the case that no one will be confused.' This would be the case if even one person were confused, so it is a long way from saying that \emph{everyone} will be confused.
+Vegyük észre, hogy N, és E egyaránt azt jelenti, hogy az emberek zavarban vannak, de mindkettő különálló mondat betű. Nem helyetesíthetjük az E-t ¬N-el.  Miért nem?  ¬N az jelenti  ‘Ez nem az az eset, hogy senki sem lesz zavarban.’ Ez az az eset lenne, hogy ha egyáltalan egy ember zavarban lenne, tehát ez messze van attól, hogy azt mondjuk, hogy mindenki zavarban lesz.
 
 %ZL fordítása vége
 
