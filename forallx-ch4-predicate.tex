@@ -163,7 +163,7 @@ Sentence \ref{terms5} requires that we pay careful attention to the order of ter
 
 
 
-
+%MR fordítása kezdet
 
 \section{Quantifiers}
 We are now ready to introduce quantifiers. Consider these sentences:
@@ -193,6 +193,8 @@ Consider these further sentences:
 \end{earg}
 
 Sentence \ref{q.ne} can be paraphrased as, `It is not the case that someone is angry.' This can be translated using negation and an existential quantifier: $\enot \exists x Ax$. Yet sentence \ref{q.ne} could also be paraphrased as, `Everyone is not angry.' With this in mind, it can be translated using negation and a universal quantifier: $\forall x \enot Ax$. Both of these are acceptable translations, because they are logically equivalent. The critical thing is whether the negation comes before or after the quantifier.
+
+%MR fordítása vége
 
 In general, $\forall x\script{A}$ is logically equivalent to $\enot\exists x\enot\script{A}$. This means that any sentence which can be symbolized with a universal quantifier can be symbolized with an existential quantifier, and vice versa. One translation might seem more natural than the other, but there is no logical difference in translating with one quantifier rather than the other. For some sentences, it will simply be a matter of taste.
 
@@ -445,6 +447,8 @@ In the sentence $\exists x Gx \eif Gl$, the scope of the existential quantifier 
 
 With the key given above, $\exists x Gx \eif Gl$ means that if there is some guitarist, then Lemmy is a guitarist. $\exists x (Gx \eif Gl)$ would mean that there is some person such that if that person were a guitarist, then Lemmy would be a guitarist. Recall that the conditional here is a material conditional; the conditional is true if the antecedent is false. Let the constant $p$ denote the author of this book, someone who is certainly not a guitarist. The sentence $Gp \eif Gl$ is true because $Gp$ is false. Since someone (namely $p$) satisfies the sentence, then $\exists x (Gx \eif Gl)$ is true. The sentence is true because there is a non-guitarist, regardless of Lemmy's skill with the guitar.
 
+%HD fordítása kezdet
+
 Something strange happened when we changed the scope of the quantifier, because the conditional in QL is a material conditional. In order to keep the meaning the same, we would have to change the quantifier: $\exists x Gx \eif Gl$ means the same thing as $\forall x (Gx \eif Gl)$, and $\exists x (Gx \eif Gl)$ means the same thing as $\forall x Gx \eif Gl$.
 
 This oddity does not arise with other connectives or if the variable is in the consequent of the conditional. For example, $\exists x Gx \eand Gl$ means the same thing as $\exists x (Gx \eand Gl)$, and $Gl \eif \exists x Gx$ means the same things as $\exists x(Gl \eif Gx)$.
@@ -481,6 +485,8 @@ Now the argument can be translated in this way:
 \item[] $Rb \eand \enot Kb$
 \item[\therefore] $Gb \eand \enot Hb$
 \end{earg}
+
+%HD fordítása vége
 
 Next suppose that we want to translate this argument:
 \begin{quote}
@@ -662,6 +668,8 @@ We define a \define{sentence} of QL as a wff of QL that contains no free variabl
 
 We will adopt the same notational conventions that we did for SL (p.~\pageref{SLconventions}.) First, we may leave off the outermost parentheses of a formula. Second, we will use square brackets `[' and `]' in place of parentheses to increase the readability of formulae. Third, we will leave out parentheses between each pair of conjuncts when writing long series of conjunctions. Fourth, we will leave out parentheses between each pair of disjuncts when writing long series of disjunctions.
 
+%NM fordítása kezdet 
+
 \section{Identity}
 \label{sec.identity}
 
@@ -691,6 +699,8 @@ In addition to sentences that use the word `else', identity will be helpful when
 \item[\ex{else3}] No one besides Pavel owes money to Hikaru.
 \item[\ex{else4}] Only Pavel owes Hikaru money.
 \end{earg}
+
+%NM fordítása vége
 
 We add the constant $h$, which means Hikaru.
 
@@ -794,6 +804,8 @@ For a more detailed discussion of Russell's theory of definite descriptions, inc
 %bound variable
 %scope
 
+%DR firdítása kezdet
+
 \practiceproblems
 
 %\solutions
@@ -885,7 +897,7 @@ These are syllogistic figures identified by Aristotle and his successors, along 
 	\therefore\  Some $C$ is not $A$.
 \end{description}
 
-
+%DR fordításas vége
 
 \problempart Using the symbolization key given, translate each English-language sentence into QL.
 \begin{ekey}
