@@ -184,33 +184,57 @@ Sentence \ref{terms5} requires that we pay careful attention to the order of ter
 %MR fordítása kezdet
 
 \section{Quantifiers}
+\section{Kvantorok}
 We are now ready to introduce quantifiers. Consider these sentences:
+
+Most már bevezethetjük a kvantorokat. Tekintsük a következő mondatokat:
+
 \begin{earg}
 \item[\ex{q.a}] Everyone is happy.
+\item[\ex{q.a}] Mindenki boldog.
 \item[\ex{q.ac}] Everyone is at least as tough as Donald.
+\item[\ex{q.ac}] Mindenki legalább olyan erős, mint Donald.
 \item[\ex{q.e}] Someone is angry.
+\item[\ex{q.e}] Valaki mérges.
 \end{earg}
 
 It might be tempting to translate sentence \ref{q.a} as $Hd \eand Hg \eand Hm$. Yet this would only say that Donald, Gregor, and Marybeth are happy. We want to say that \emph{everyone} is happy, even if we have not defined a constant to name them. In order to do this, we introduce the `$\forall$' symbol. This is called the \define{universal quantifier}.
+
+Hívogatónak tűnhet a \ref{q.a}. mondatot úgy lefordítani, mint $Hd \eand Hg \eand Hm$. Azonban ez csak azt jelentené, hogy Donald, Gregor és Marybeth boldogok. Azt szeretnénk kifejezni, hogy mindenki boldog, még akkor is ha nem határoztunk meg nekik állandó nevet. Ahhoz, hogy ezt megtegyük, bevezetjük a `$\forall$' jelet. Ez az \define{univerz\'alis kvantor}.
 
 A quantifier must always be followed by a variable and a formula that includes that variable. We can translate sentence \ref{q.a} as $\forall x Hx$. Paraphrased in English, this means `For all $x$, $x$ is happy.'
 %\nix{This may be too soon:}
 We call $\forall x$ an \emph{x-quantifier}. The formula that follows the quantifier is called the \emph{scope} of the quantifier. We will give a formal definition of scope later, but intuitively it is the part of the sentence that the quantifier quantifies over. In $\forall x Hx$, the scope of the universal quantifier is $Hx$.
 
+A kvantort minden esetben egy változó és egy, a változót magába foglaló képlet kell, hogy kövesse. A \ref{q.a}. mondatot fordíthatjuk úgy, mint $\forall x Hx$. Magyarul körülírva, ez azt jelenti, hogy “Minden x-re vonatkozólag, x boldog”. $\forall x$-et \emph{x-kvantornak} nevezzük. A képletet, ami a kvantort követi, a kvantor \emph{hatókörének} nevezzük. A hatókör definíciójával később foglalkozunk, de a mondatnak az a része, aminek a kvantor meghatározza a mennyiségét. Az $\forall x Hx$ képletben az univerzális kvantor hatóköre $Hx$.
+
 Sentence \ref{q.ac} can be paraphrased as, `For all $x$, $x$ is at least as tough as Donald.' This translates as $\forall x T_2xd$.
+
+A \ref{q.ac} .mondatot a következőképpen lehet körülírni: „Minden $x$-re vonatkozólag, $x$ legalább olyan erős, mint Donald.” Ez azt jelenti, hogy $\forall x T_2xd$.
 
 In these quantified sentences, the variable $x$ is serving as a kind of placeholder. The expression $\forall x$ means that you can pick anyone and put them in as $x$. There is no special reason to use $x$ rather than some other variable. The sentence $\forall x Hx$ means exactly the same thing as $\forall y Hy$, $\forall z Hz$, and $\forall x_5 Hx_5$.
 
+Ezekben a kvantifikált mondatokban az $x$ változó helyettesítőként szolgál. A $\forall x$ kifejezés azt jelenti, hogy bárkit választhatunk és behelyettesíthetünk az $x$ helyére. Semmi különösebb oka nincs pont az $x$ használatának, akármelyik más változót is használhatnánk. A $\forall x Hx$ mondat ugyanazt jelenti mint $\forall y Hy$, $\forall z Hz$ és $\forall x_5 Hx_5$.
+
 To translate sentence \ref{q.e}, we introduce another new symbol: the \define{existential quantifier}, $\exists$. Like the universal quantifier, the existential quantifier requires a variable. Sentence \ref{q.e} can be translated as $\exists x Ax$. This means that there is some $x$ which is angry. More precisely, it means that there is \emph{at least one} angry person. Once again, the variable is a kind of placeholder; we could just as easily have translated sentence \ref{q.e} as $\exists z Az$.
 
+A \ref{q.e}. mondat lefordításához egy új jelet vezetünk be: az \define{egzisztenci\'alis kvantort}, $\exists$-t. Ugyanúgy, mint az univerzális kvantornak az egzisztenciálisnak is szüksége van egy változóra. A \ref{q.e}. mondatot fordíthatjuk úgy, mint $\exists x Ax$. Ez azt jelenti, hogy létezik $x$, aki mérges. Pontosabban ez azt jelenti, hogy \emph{legalább egy} mérges személy van. A változó ismét csak helyettesítőként szolgál; a \ref{q.e}. mondatot akár úgy is fordíthattuk volna, mint $\exists z Az$.
+
 Consider these further sentences:
+
+Tekintsük a következő mondatokat:
 \begin{earg}
 \item[\ex{q.ne}] No one is angry.
+\item[\ex{q.ne}] Senki sem mérges.
 \item[\ex{q.en}] There is someone who is not happy.
+\item[\ex{q.en}] Van valaki, aki nem boldog.
 \item[\ex{q.na}] Not everyone is happy.
+\item[\ex{q.na}] Nem mindenki boldog.
 \end{earg}
 
 Sentence \ref{q.ne} can be paraphrased as, `It is not the case that someone is angry.' This can be translated using negation and an existential quantifier: $\enot \exists x Ax$. Yet sentence \ref{q.ne} could also be paraphrased as, `Everyone is not angry.' With this in mind, it can be translated using negation and a universal quantifier: $\forall x \enot Ax$. Both of these are acceptable translations, because they are logically equivalent. The critical thing is whether the negation comes before or after the quantifier.
+
+A \ref{q.ne}. mondatot körülírhatjuk a következőképpen: ’Nem igaz, hogy valaki mérges.’ Ezt lefordíthatjuk tagadással és egy egzisztenciális kvantor használatával: $\enot \exists x Ax$. A \ref{q.ne}. mondatot úgy is körülírhatnánk, hogy ‘Nincs olyan, aki mérges.’ Ebben az esetben lefordíthatjuk a mondatot tagadás és az univerzális kvantor használatával: $\forall x \enot Ax$. Mindkettő fordítás elfogadható, mert logikailag egyenlőek. A kritikus kérdés az, hogy a tagadás a predikátum elé vagy pedig utána kerüljön.
 
 %MR fordítása vége
 
