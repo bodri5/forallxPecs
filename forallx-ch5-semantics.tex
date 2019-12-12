@@ -291,6 +291,7 @@ Notice that although identity always has the same interpretation, it does not al
 
 If the referent of two constants is the same, then anything which is true of one is true of the other. For example, if $\referent{a}=\referent{b}$, then $Aa\eiff Ab$, $Ba\eiff Bb$, $Ca\eiff Cb$, $Rca\eiff Rcb$, $\forall x Rxa\eiff \forall x Rxb$, and so on for any two sentences containing $a$ and $b$. However, the reverse is not true.
 
+
 \label{model.nonidentity}
 It is possible that anything which is true of $a$ is also true of $b$, yet for $a$ and $b$ still to have different referents. This may seem puzzling, but it is easy to construct a model that shows this. Consider this model:
 \begin{partialmodel}
@@ -327,6 +328,9 @@ An argument `` $\script{P}_1, \script{P}_2, \cdots$, \therefore\ \script{C} '' i
 
 Two sentences \script{A} and \script{B} are \define{logically equivalent in QL} if and only if both $\script{A}\models\script{B}$ and $\script{B}\models\script{A}$.
 
+
+%SPH fordítása kezdet
+
 The set $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ is \define{consistent in QL} if and only if there is at least one model in which all of the sentences are true. The set is \define{inconsistent in QL} if and if only there is no such model.
 
 \end{quote}
@@ -351,6 +355,8 @@ Since Paris is the only member of the UD, it must be the referent of $d$. The mo
 	\extension{B}	& $\emptyset$\\
 	\referent{d}	& Paris
 \end{partialmodel}
+
+%SPH fordítása vége
 
 Strictly speaking, a model specifies an extension for \emph{every} predicate of QL and a referent for \emph{every} constant. As such, it is generally impossible to write down a complete model. That would require writing down infinitely many extensions and infinitely many referents. However, we do not need to consider every predicate in order to show that there are models in which $\forall xAxx \eif Bd$ is false. Predicates like $H$ and constants like $f_{13}$ make no difference to the truth or falsity of this sentence. It is enough to specify extensions for $A$ and $B$ and a referent for $d$, as we have done. This provides a \emph{partial model} in which the sentence is false.
 
