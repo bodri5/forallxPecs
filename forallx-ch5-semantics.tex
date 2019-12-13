@@ -4,42 +4,80 @@
 \chapter{Formal semantics}
 \label{ch.semantics}
 
+%!TEX root = forallx.tex
+\chapter{Formal semantics}
+\label{ch.semantics}
+
 In this chapter, we describe a \emph{formal semantics} for SL and for QL. The word `semantics' comes from the greek word for `mark' and means `related to meaning.' So a formal semantics will be a mathematical account of meaning in the formal language.
+
+Ebben a fejezetben leírjuk a kijelentéslogika és a predikátumlogika \emph{szimbolikus vagy formális jelentéstanát}. Az angolban használatos 'semantics' vagy ’szemantika’ szó a görög ’jel’ szóból származik, mai értelmezése ’jelentéshez kapcsolódó’. A hivatalos nyelvben a formális szemantika a jelentés matematikai számadása.
+
 
 A formal, logical language is built from two kinds of elements: logical symbols and non-logical symbols. Connectives (like `\eand') and quantifiers (like `$\forall$') are logical symbols, because their meaning is specified within the formal language. When writing a symbolization key, you are not allowed to change the meaning of the logical symbols. You cannot say, for instance, that the `\enot' symbol will mean `not' in one argument and `perhaps' in another. The `\enot' symbol always means logical negation. It is used to translate the English language word `not', but it is a symbol of a formal language and is defined by its truth conditions.
 
+Egy formális, logikus nyelv kétfajta elemből épül: logikai szimbólumokból és nemlogikai szimbólumokból. Például, az `\eand' és `$\forall$' logikai szimbólumok, mivel a jelentésük meghatározott a szimbolikus logikában. Az `\eand' egy logikai művelet, míg a `$\forall$' egy kvantor. Szimbolizációs kulcsok írása közben nem szabad megváltoztatni a logikai szimbólumok jelentését; például, a `\enot' szimbólum nem jelenthet 'nem'-et egy kijelentésben, és 'talán'-t a következőben. A `\enot' szimbólum mindig logikai tagadást jelöl. Az angol 'not' szó fordítására használjuk, de a formális nyelv szimbóluma és így annak az igazságállapotai határozzák meg.
+
+
 The sentence letters in SL are non-logical symbols, because their meaning is not defined by the logical structure of SL. When we translate an argument from English to SL, for example, the sentence letter $M$ does not have its meaning fixed in advance; instead, we provide a symbolization key that says how $M$ should be interpreted in that argument. In QL, the predicates and constants are non-logical symbols.
+
+A kijelentéslogika változói nemlogikai szimbólumok, mivel a jelentésüket nem határozza meg a kijelentéslogika szerkezete. Amikor magyarról kijelentéslogikára 'fordítunk' egy kijelentést, például az $A$ változó jelentése nincs előre rögzítve; helyette egy szimbolizációs kulccsal határozzuk meg, hogyan kell a $A$ jelet értelmezni az adott kijelentésben. A predikátumlogikában a predikátumok és konstansok nemlogikai szimbólumok.
+
 
 In translating from English to a formal language, we provided symbolization keys which were interpretations of all the non-logical symbols we used in the translation. An \define{interpretation} gives a meaning to all the non-logical elements of the language.
 
+Amikor magyarról szimbolikus nyelvre 'fordítunk', azzal meghatározzuk a szimbolizációs kulcsokat is. Ezek az összes, a 'fordításban' használt nemlogikai szimbólum értelmezésére használhatóak. Az \define{értelmezés} a nyelv összes nemlogikai elemének jelentést ad.
+ 
+
 It is possible to provide different interpretations that make no formal difference. In SL, for example, we might say that $D$ means `Today is Tuesday'; we might say instead that $D$ means `Today is the day after Monday.' These are two different interpretations, because they use different English sentences for the meaning of $D$. Yet, formally, there is no difference between them. All that matters once we have symbolized these sentences is whether they are true or false. In order to characterize what makes a difference in the formal language, we need to know what makes sentences true or false. For this, we need a formal characterization of \emph{truth}.
 
+Lehetséges különböző értelmezéseket meghatározni, amik között valós különbség nincs. Például, a kijelentéslogikában mondhatjuk, hogy a $N$ azt jelenti, hogy ma kedd van, vagy azt, hogy a ma a hétfő utáni nap. Ezek különböző értelmezéseknek számítanak, mivel két különböző magyar mondattal adják meg a $N$ jelentését. Azonban a szimbolikus logikában nincs közöttük különbség. Miután a kijelentések szimbólumokká váltak, csak az számít, hogy igazak vagy hamisak. Hogy jellemezzük azt, hogy mi számít különbségnek a szimbolikus nyelvben, tudnunk kell, hogy mi teszi a kijelentéseket igazzá vagy hamissá. Ehhez szükségünk van az /emph{igazság} hivatalos jellemzésére.
 
 
 When we gave definitions for a sentence of SL and for a sentence of QL, we distinguished between the \define{object language} and the \define{metalanguage}. The object language is the language that we are \emph{talking about}: either SL or QL. The metalanguage is the language that we use to talk about the object language: English, supplemented with some mathematical jargon. It will be important to keep this distinction in mind.
 
+Amikor definíciókat adtunk a kijelentéslogika és a predikátumlogika kijelentéseire, különbséget tettünk a \define{tárgynyelv} és \define{metanyelv} között. A tárgynyelv az a nyelv, \emph{amiről beszélünk} mind a kijelentéslogikában, mint a predikátumlogikában, míg a metanyelv az a nyelv, amit arra használunk, hogy a \emph{tárgynyelvről beszéljünk}, némi matematikai szaknyelvvel kiegészítve. Fontos lesz, hogy ezt a különbséget észben tartsuk.
+
 
 %\nix{box about Tarski? The logician Alfred Tarksi introduced this distinction ca.~1940. Tarski argued that the truth conditions for a language could never be expressed in the language itself--- the metalanguage needed to be more powerful than the object language. So it's simply not possible to give a definition of truth for SL that is itself a sentence of SL--- describing the semantics of SL requires a more powerful language.}
 
+%\nix{Alfred Tarski logikával foglalkozó tudós vezette be ezt a különbséget 1940 körül. Tarski szerint egy nyelv igazságállapotait nem lehet kifejezni magán a nyelven belül, és egy, a tárgynyelvnél 'erősebb' metanyelvre van szükség. Ezért a kijelentéslogikában használatos igazság  definícióját lehetetlen magában a kijelentéslogikában meghatározni; a kijelentéslogika jelentéstanának leírásához egy erősebb nyelv szükséges.}
 
 \section{Semantics for SL}
 
 This section provides a rigorous, formal characterization of \emph{truth in SL} which builds on what we already know from doing truth tables. We were able to use truth tables to reliably test whether a sentence was a tautology in SL, whether two sentences were equivalent, whether an argument was valid, and so on. For instance: \script{A} is a tautology in SL if it is T on every line of a complete truth table.
 
+Ez a rész szigorú, formális jellemzést ad a \emph{kijelentéslogikai igazságnak}, ami arra épül, amit már tudunk az igazságtáblázatokból. Az igazságtáblázatok használatával megbízhatóan ellenőrizhettük, hogy egy kijelentés tautológia volt-e a kijelentéslogikában, két kijelentés egyenértékű (ekvivalens) volt, egy kijelentés érvényes volt, és így tovább. Például, a \script{A} egy tautológia a kijelentéslogikában, ha minden esetben igaz; ha egy teljes igazságtáblázat minden sorában T értékű.
+
+
 This worked because each line of a truth table corresponds to a way the world might be. We considered all the possible combinations of 1 and 0 for the sentence letters that made a difference to the sentences we cared about. The truth table allowed us to determine what would happen given these different combinations. 
 
-Once we construct a truth table, the symbols `1' and `0' are divorced from their metalinguistic meaning of `true' and `false'. We interpret `1' as meaning `true', but the formal properties of 1 are defined by the characteristic truth tables for the various connectives.  The symbols in a truth table have a formal meaning that we can specific entirely in terms of how the connectives operate. For example, if $A$ is value 1, then $\enot A$ is value 0.
+Ez azért működött, mivel egy igazságtáblázat minden sora megfelel egy állapotnak, amely a világot tükrözheti. Minden olyan 0 és 1 kombinációt figyelembe vettünk, ami a kérdéses kijelentésekben bármiféle változást jelentene. Az igazságtáblázat segítségével megállapíthattuk, hogy mi történne ezekben az esetekben.
+
+
+Once we construct a truth table, the symbols `1' and `0' are divorced from their metalinguistic meaning of `true' and `false'. We interpret `1' as meaning `true', but the formal properties of 1 are defined by the characteristic truth tables for the various connectives. The symbols in a truth table have a formal meaning that we can specific entirely in terms of how the connectives operate. For example, if $A$ is value 1, then $\enot A$ is value 0.
+
+Miután az igazságtáblázat elkészült, a '0' és '1' szimbólumok jelentése már nem "igaz" és "hamis", mint a metanyelvben. Az '1' jelet "igaz"-nak vesszük, de az '1' hivatalos tulajdonságait már az igazságtáblázatokban létező logikai műveletek jellemzői definiálják. Az igazságtáblázatban a szimbólumoknak formális jelentése van, amit megszabhatunk kizárólag az logikai műveletek működése szerint. Például, ha $A$ értéke 1, akkor $\enot A$ értéke 0.
+
 
 In short: Truth in SL just is the assignment of a 1 or a 0.
 
+Röviden: A kijelentéslogikában, az "igazság" csak a 0 vagy 1 hozzárendelése.
+
+
 To formally define truth in SL, then, we want a function that assigns a 1 or 0 to each of the sentences of SL. We can interpret this function as a definition of truth for SL if it assigns 1 to all of the true sentences of SL and 0 to all of the false sentences of SL. Call this function `$v$' (for `valuation'). We want $v$ to be a function such that for any sentence \script{A}, $v(\script{A})=1$ if \script{A} is true and $v(\script{A})=0$ if \script{A} is false.
+
+Ezért, hogy formálisan definiáljuk az "igazságot" a kijelentéslogikában, egy függvényt kell készítenünk, ami a kijelentéslogika minden kijelentéséhez 1-et vagy 0-t rendel. Ezt a függvényt akkor értelmezhetjük az "igazság" kijelentéslogikai definíciójának, ha a kijelentéslogika összes igaz kijelentéséhez 1-et rendel, és minden hamis kijelentéséhez 0-t. Ezt a függvényt hívjuk '$é$'-nek, az 'értékelés' után. Az $é$-nek olyan függvénynek kell lennie, ami minden \script{A} kijelentéshez $v(\script{A})=1$-t ír, ha \script{A} igaz, és $v(\script{A})=0$-t, ha \script{A} hamis.
+
 
 Recall that the recursive definition of a wff for SL had two stages: The first step said that atomic sentences (solitary sentence letters) are wffs. The second stage allowed for wffs to be constructed out of more basic wffs. There were clauses of the definition for all of the sentential connectives. For example, if \script{A} is a wff, then \enot\script{A} is a wff.
 
-%FV fordítása vége
+Emélkezzünk vissza, hogy a kijelentéslogikában a logikai formulák rekurzív definíciójának két szakasza volt. Az első szerint az atomi kijelentések (kijelentésváltozók) logikai formulák. A második megengedte azokat a logikai formulákat, amik egyszerűbb logikai formulákból tevődnek össze. Minden logikai művelet definíciójához voltak kikötések; például, ha \script{A} egy logikai formula, akkor \enot\script{A} is az.
 
 Our strategy for defining the truth function, $v$, will also be in two steps. The first step will handle truth for atomic sentences; the second step will handle truth for compound sentences.
 
+Az igazságfunkció, $v$ meghatározását szintén két lépésben fogjuk megoldani. Az első lépés a kijelentésváltozók, a második lépés pedig az összetett kijelentések igazságát fogja kezelni.
+
+%FV fordítása vége
 
 \subsection{Truth in SL}
 How can we define truth for an atomic sentence of SL? Consider, for example, the sentence $M$. Without an interpretation, we cannot say whether $M$ is true or false. It might mean anything. If we use $M$ to symbolize `The moon orbits the Earth', then $M$ is true. If we use $M$ to symbolize `The moon is a giant turnip', then $M$ is false.
