@@ -124,16 +124,29 @@ Singular terms are called \define{constants} because they pick out specific indi
 
 %EG fordítása kezdete
 
-\subsection{Predicates}
+\subsection*{Predicates}
+\subsection{Predikátumok}
+
 The simplest predicates are properties of individuals. They are things you can say about an object. `\blank\ is a dog' and `\blank\ is a member of Monty Python' are both predicates. In translating English sentences, the term will not always come at the beginning of the sentence: `A piano fell on \blank' is also a predicate. Predicates like these are called \define{one-place} or \define{monadic}, because there is only one blank to fill in. A one-place predicate and a singular term combine to make a sentence.
 
+A legegyszerűbb predikátumok az indivíduumok tulajdonságai. Ezek olyan dolgok amiket el lehet mondani egy objektumról. „\blank\ egy kutya” és „\blank\ a Monty Python egy tagja” egyaránt predikátumok. Angolról való fordításban a kifejezés nem mindig a mondat elejére kerül: „Ráesett egy zongora \blank\-ra” is egy predikátum. Az ilyen predikátumokat úgy hívják, hogy \define{unáris} vagy \define{monadikus}, mert csak egy hiányt kell betölteni. Egy unáris predikátum és egy szinguláris kifejezés összekapcsolása alakít egy mondatot.
+
 Other predicates are about the \emph{relation} between two things. For instance, `\blank\ is bigger than \blank', `\blank\ is to the left of \blank', and `\blank\ owes money to \blank.' These are \define{two-place} or \define{dyadic} predicates, because they need to be filled in with two terms in order to make a sentence.
+
+Más predikátumok két dolog közötti \emph{relációról} szólnak. Példának „\blank\ nagyobb mint \blank”, „\blank\ balra van \blank\-tól”, és „\blank\ tartozik \blank\-nak.” Ezek \define{bináris} vagy \define{diadikus} predikátumok, mert két kijelentéssel kell feltölteni őket hogy mondattá váljanak.
 
 In general, you can think about predicates as schematic sentences that need to be filled out with some number of terms. Conversely, you can start with sentences and make predicates out of them by removing terms. Consider the sentence, `Vinnie borrowed the family car from Nunzio.' By removing a singular term, we can recognize this sentence as using any of three different monadic predicates:
 \begin{center}
 \blank borrowed the family car from Nunzio.\\
 Vinnie borrowed \blank from Nunzio.\\
 Vinnie borrowed the family car from \blank.
+\end{center}
+
+Általánosan lehet úgy gondolni a predikátumokra, mint vázlatos mondatokra, amiket fel kell tölteni valamennyi kifejezéssel. Ugyanígy ki lehet indulni mondatokból, és azokból predikátumokat lehet létrehozni kifejezések eltüntetésével. Vegyük ezt a mondatot: „Vinnie kölcsönvette a családi autót Nunzio-tól.”. Egyetlen kifejezés eltüntetésével létrejön ebből a mondatból az egyik monadikus predikátum az alábbi három közül:
+\begin{center}
+\blank kölcsönvette a családi autót Nunzio-tól.\\
+Vinnie kölcsönvette \blank\-t Nunzio-tól.\\
+Vinnie kölcsönvette a családi autót \blank\-tól.
 \end{center}
 
 By removing two singular terms, we can recognize three different dyadic predicates:
@@ -143,12 +156,26 @@ Vinnie borrowed \blank\ from \blank.\\
 \blank\ borrowed \blank\ from Nunzio.
 \end{center}
 
+Két szinguláris kifejezés eltüntetésével létrejön az alábbi három diadikus predikátum egyike:
+\begin{center}
+Vinnie kölcsönvette \blank\-t \blank\-tól.\\
+\blank\ kölcsönvette a családi autót \blank\-tól.\\
+\blank\ kölcsönvette \blank\-t Nunzio-tól.
+\end{center}
+
 By removing all three singular terms, we can recognize one \define{three-place} or \define{triadic} predicate:
 \begin{center}
 \blank\ borrowed \blank\ from \blank.
 \end{center}
 
+Ha mindhárom szinguláris kifejezést eltüntetjük, létrejön egy \define{ternáris} vagy \define{triadikus} predikátum:
+\begin{center}
+\blank\ kölcsönvette \blank\-t \blank\-tól.
+\end{center}
+
 If we are translating this sentence into QL, should we translate it with a one-, two-, or three-place predicate? It depends on what we want to be able to say. If the only thing that we will discuss being borrowed is the family car, then the generality of the three-place predicate is unnecessary. If the only borrowing we need to symbolize is different people borrowing the family car from Nunzio, then a one-place predicate will be enough.
+
+Ha ezt a mondatot lefordítjuk PL-be, akkor unáris, bináris vagy ternárissá alakítsuk? Ez attól függ, hogy milyen kijelentések megadására akarunk képesek lenni. Ha az egyetlen dolog aminek kölcsönzéséről beszélni fogunk az a családi autó, akkor a ternáris predikátum általánossága szükségtelen. Ha az egyetlen dolog, amit szimbolizálnunk kell, az az, hogy különböző emberek kölcsön veszik Nunzio-tól a családi autót, akkor egy unáris predikátum elegendő.
 
 %EG fordítása vége
 
