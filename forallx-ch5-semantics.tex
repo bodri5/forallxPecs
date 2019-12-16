@@ -333,20 +333,33 @@ Two sentences \script{A} and \script{B} are \define{logically equivalent in QL} 
 
 The set $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ is \define{consistent in QL} if and only if there is at least one model in which all of the sentences are true. The set is \define{inconsistent in QL} if and if only there is no such model.
 
+Az $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ halamaz akkor és csak akkor \define{konzisztens} a PL-ban ha létezik egy modell ahol minden mondat igaz. A halmaz akkor és csak akkor \define{inkonzisztens} a PL-ban ha nincs ilyen modell.
+
 \end{quote}
 
 
-\subsection{Constructing models}
+\subsection*{Constructing models}
+\subsection{Modell építés}
 
 Suppose we want to show that $\forall xAxx \eif Bd$ is \emph{not} a tautology. This requires showing that the sentence is not true in every model; i.e., that it is false in some model. If we can provide just one model in which the sentence is false, then we will have shown that the sentence is not a tautology.
 
+Tegyük fel, hogy be akarjuk bizonyítani hogy $\forall xAxx \eif Bd$ \emph{nem} tautológia. Ehhez be kell bizonyítani hogy a mondat \emph{nem} igaz az összes modellben; tehát hamis valamely modellben. Ha legalább egy modellt találunk ahol a mondat hamis, akkor már nem lehet tautológia.
+
 What would such a model look like? In order for $\forall xAxx \eif Bd$ to be false, the antecedent ($\forall x Axx$) must be true, and the consequent ($Bd$) must be false.
+
+Hogy néz ki egy ilyen modell? Ahhoz hogy $\forall xAxx \eif Bd$ hamis legyen, a hipotézisnek ($\forall x Axx$) igaznak kell lennie, a konklúziónak ($Bd$) pedig hamisnak.
 
 To construct such a model, we start with a UD. It will be easier to specify extensions for predicates if we have a small UD, so start with a UD that has just one member. Formally, this single member might be anything. Let's say it is the city of Paris.
 
+Hogy egy ilyen modellt építsünk, szükség lesz egy univerzumra. Könnyebb lesz a predikátum paramétereit meghatározni, ha kis méretű univerzummal dolgozunk, szóval kezdjünk egy egy-tagú univerzummal. Ez az egyedül álló tag alakilag bármi lehet, szóval most legyen Franciaország fővárosa, Párizs.
+
 We want $\forall x Axx$ to be true, so we want all members of the UD to be paired with themself in the extension of $A$; this means that the extension of $A$ must be \{\ntuple{Paris,Paris}\}.
 
+Azt akarjuk, hogy $\forall x Axx$ igaz legyen, tehát hogy az univerzum összes tagja saját magával legyen párosítva az $A$ kiterjedésében; eszerint a mi esetünkben az $A$ kiterjedése \{\ntuple{Párizs,Párizs}\} lesz.
+
 We want $Bd$ to be false, so the referent of $d$ must not be in the extension of $B$. We give $B$ an empty extension.
+
+A $Bd$ hamis kell hogy legyen, szóval a $d$ változó nem lehet a $B$ kiterjedésében. Ennek megfelelően $B$ üres kiterjedést kap.
 
 Since Paris is the only member of the UD, it must be the referent of $d$. The model we have constructed looks like this:
 \begin{partialmodel}
@@ -356,9 +369,17 @@ Since Paris is the only member of the UD, it must be the referent of $d$. The mo
 	\referent{d}	& Paris
 \end{partialmodel}
 
-%SPH fordítása vége
+Mivel Párizs az univerzum egyetlen eleme, ezért ez kell hogy legyen a $d$ változó értéke. Az ezáltal felépített modell pedig így néz ki:
+\begin{partialmodel}
+	Univerzum			& \{Párizs\}\\
+	\extension{A} 	& \{\ntuple{Párizs,Párizs}\}\\
+	\extension{B}	& $\emptyset$\\
+	\referent{d}	& Párizs
+\end{partialmodel}
 
 Strictly speaking, a model specifies an extension for \emph{every} predicate of QL and a referent for \emph{every} constant. As such, it is generally impossible to write down a complete model. That would require writing down infinitely many extensions and infinitely many referents. However, we do not need to consider every predicate in order to show that there are models in which $\forall xAxx \eif Bd$ is false. Predicates like $H$ and constants like $f_{13}$ make no difference to the truth or falsity of this sentence. It is enough to specify extensions for $A$ and $B$ and a referent for $d$, as we have done. This provides a \emph{partial model} in which the sentence is false.
+
+Az igazat megvallva, egy modell meghatároz egy-egy kiterjedést a univerzum \emph{minden} predikátumához, és egy-egy értéket \emph{minden} konstanshoz. Ennek megfelelően általában lehetetlen teljes modelleket ábrázolni. Ehhez végtelen sok paramétert és változót kéne leírni. Ahhoz viszont hogy bebízonyítsuk hogy létezik modell, ahol $\forall xAxx \eif Bd$ hamis, nem kell az összes létező paramétert vizsgálnunk. Az olyan paraméterek mint a $H$, vagy az olyan konstansok mint az $f_{13}$ nem befolyásolják a mondatunk igazság értékét. Elég az $A$ és a $B$ kiterjedését, és a $d$-hez egy értéket felírni, ahogy azt eredetileg is tettük. Ez egy \emph{részleges modellt} biztosít, amiben a mondat hamis.
 
 Perhaps you are wondering: What does the predicate $A$ mean in English? The partial model could correspond to an interpretation like this one:
 \begin{ekey}
@@ -367,6 +388,15 @@ Perhaps you are wondering: What does the predicate $A$ mean in English? The part
 \item[$Bx$:] $x$ was founded in the 20th century.
 \item[$d$:] the City of Lights
 \end{ekey}
+
+Felmerülhet a kérdés: Mit jelent az $A$ predikátum magyarul? A részleges modellünk egy ehhez hasonló értemezést ábrázolhat:
+\begin{ekey}
+\item[U:] Párizs
+\item[$Axy$:] $x$ ugyan abban az országban van mint $y$.
+\item[$Bx$:] $x$-et a 20. században alapították.
+\item[$d$:] a Fények Városa.
+\end{ekey}
+%SPH fordítása vége
 However, all that the partial model tells us is that $A$ is a predicate which is true of Paris and Paris. There are indefinitely many predicates in English that have this extension. $Axy$ might instead translate `$x$ is the same size as $y$' or `$x$ and $y$ are both cities.' Similarly, $Bx$ is some predicate that does not apply to Paris; it might instead translate `$x$ is on an island' or `$x$ is a subcompact car.' When we specify the extensions of $A$ and $B$, we do not specify what English predicates $A$ and $B$ should be used to translate. We are concerned with whether the $\forall xAxx \eif Bd$ comes out true or false, and all that matters for truth and falsity in QL is the information in the model: the UD, the extensions of predicates, and the referents of constants.
 
 
