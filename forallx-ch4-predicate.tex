@@ -86,27 +86,43 @@ Some arguments with quantifier structure can be captured in SL, like the first e
 
 Generally, if an argument containing quantifiers comes out \emph{valid in SL}, then the English language argument is valid. If it comes out \emph{invalid in SL}, then we cannot say the English language argument is invalid. The argument might be valid because of quantifier structure which the natural language argument has and which the argument in SL lacks.
 
+Általában, ha egy kvantorokat tartalmazó érvelés helyes KL-ben, akkor nyelvtanilag is helyes. Ha viszont az érvelés helytelen KL-ben, attól még nem biztos, hogy nyelvtanilag is helytelen. Érvelésünk a logikai helytelenség ellenére akár nyelvtanilag helyes is lehet a természetes nyelv kvantorstruktúrája miatt, mely struktúra a KL-ből hiányzik.
+
 \nix{Is this true? Is it possible to exploit the independence of N and E?}
 
 Similarly, if a sentence with quantifiers comes out as a \emph{tautology in SL}, then the English sentence is logically true. If it comes out as \emph{contingent in SL}, then this might be because of the structure of the quantifiers that gets removed when we translate into the formal language.
 
+Hasonlóképpen, ha egy kvantorokat tartalmazó állítás tautológia KL-ben, akkor a kijelentés nyelvtanilag is helytálló. Ha állításunk kontingens KL-ben, annak oka a formális nyelvé alakítás során kieső kvantorok struktúrája lehet.
 
 In order to symbolize arguments that rely on quantifier structure, we need to develop a different logical language. We will call this language quantified logic, QL.
 
+A kvantorstruktúrán alapuló érvelések helyes szimbolizálása érdekében egy új logikai nyelvet kell kifejlesztenünk. Ezt a nyelvet predikátumlogikának, PL-nek nevezzük.
 
-\section{Building blocks of QL}
+\section*{Building blocks of QL}
+\section{A PL építőelemei}
 
 Just as sentences were the basic unit of sentential logic, predicates will be the basic unit of quantified logic. A predicate is an expression like `is a dog.' This is not a sentence on its own. It is neither true nor false. In order to be true or false, we need to specify something: Who or what is it that is a dog?
 
+Ahogy a kijelentéslogika alapegységei a kijelentések voltak, a predikátumlogika alapjai a predikátumok lesznek. A predikátum egy kifejezés, mint például `egy kutya'. Ez önmagában nem egy kijelentés, nincs logikai értéke. Ahhoz, hogy eldönthessük igaz vagy hamis, valamit meg kell határoznunk: Ki, vagy mi az, ami kutya?
+
 The details of this will be explained in the rest of the chapter, but here is the basic idea: In QL, we will represent predicates with capital letters. For instance, we might let $D$ stand for `\blank\ is a dog.' We will use lower-case letters as the names of specific things. For instance, we might let $b$ stand for Bertie. The expression $Db$ will be a sentence in QL. It is a translation of the sentence `Bertie is a dog.'
+
+Ennek részletei a fejezet későbbi részében lesznek olvashatók, de most nézzük az alap ötletet: PL-ben a predikátumokat nagybetűkkel reprezentáljuk. Például az `\blank\ egy kutya' predikátumot jelöljük $D$-vel. A különböző dolgok neveit pedig kisbetűvel jelöljük. Így például a Bertie név helyett $b$ állhat. A $Db$ kifejezés egy kijelentés lesz PL-ben, ez a `Bertie egy kutya' fordítása.
 
 In order to represent quantifier structure, we will also have symbols that represent quantifiers. For instance, `$\exists$' will mean `There is some\blank.' So to say that there is a dog, we can write $\exists x Dx$; that is: There is some $x$ such that $x$ is a dog.
 
+Hogy helyesen reprezentálhassuk a kvantorstruktúrát, a kvantorok jelölésére is kell alkalmaznunk különböző szimbólumokat. Például `$\exists$' azt jelenti `Van olyan\blank.' vagy `Létezik\blank.' Tehát ha azt szeretnénk mondani, hogy létezik kutya, írhatjuk, hogy $\exists x Dx$; ami azt jelenti: Van olyan $x$, amely $x$ egy kutya.
+
 That will come later. We start by defining singular terms and predicates.
 
+Ezzel a későbbiekben foglalkozunk. A szinguláris kifejezések és predikátumok definiálásával kezdjük.
 
-\subsection{Singular Terms}
+\subsection*{Singular Terms}
+\subsection{Szinguláris kifejezések}
+
 In English, a \define{singular term} is a word or phrase that refers to a \emph{specific} person, place, or thing. The word `dog' is not a singular term, because there are a great many dogs. The phrase `Philip's dog Bertie' is a singular term, because it refers to a specific little terrier.
+
+A magyar nyelvben a szinguláris kifejezés egy szó vagy szókapcsolat, amely egy konkrét személyt, helyet vagy tárgyat jelöl. A `kutya' szó nem egy szinguláris kifejezés, hiszen nagyon sok kutya van a világon. A `Philip kutyája Bertie' viszont egy szinguláris kifejezés, mivel egy bizonyos terrierre utal.
 
 %TKK fordítása vége
 
