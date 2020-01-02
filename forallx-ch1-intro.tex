@@ -2,12 +2,17 @@
 
 %SR fordítása kezdet
 
-\chapter{What is logic?}
+\chapter*{What is logic?}
+\chapter{Mi a logika?}
 \label{ch.intro}
 
 Logic is the business of evaluating arguments, sorting good ones from bad ones. In everyday language, we sometimes use the word `argument' to refer to belligerent shouting matches. If you and a friend have an argument in this sense, things are not going well between the two of you.
 
+A logika az érvelés kiértékelése, a jó elválasztása a rossztól. A hétköznapi nyelvben néha a „vita” szót használjuk az agresszív párbeszéd jellemzésére. Ha te és egy barátod így vitatkoztok, a dolgok nem alakulnak valami fényesen kettőtök közt.
+
 In logic, we are not interested in the teeth-gnashing, hair-pulling kind of argument. A logical argument is structured to give someone a reason to believe some conclusion. Here is one such argument:
+
+A logikában hidegen hagy minket a fogcsikorgatós hajhúzós vita. Egy logikus érvelés felépítésének célja az, hogy valaki számára hihetővé tegyen egy következtetést. Itt van egy ilyen érvelés:
 
 \label{argRaining}
 \begin{earg}
@@ -16,12 +21,25 @@ In logic, we are not interested in the teeth-gnashing, hair-pulling kind of argu
 \item[\therefore] You should take an umbrella.
 \end{earg}
 
+\label{argRaining}
+\begin{earg}
+\item[(1)] Zuhog az eső.
+\item[(2)] Ha nem viszel esernyőt, el fogsz ázni.
+\item[\therefore] Vigyél egy esernyőt.
+\end{earg}
+
 The three dots on the third line of the argument mean `Therefore' and they indicate that the final sentence is the \emph{conclusion} of the argument. The other sentences are \emph{premises} of the argument. If you believe the premises, then the argument provides you with a reason to believe the conclusion.
+
+Az érvelés harmadik sorában lévõ három pont ezt jelenti: „Ezért”, és azt jelzi, hogy az utolsó mondat a \emph{következtetés}. A többi mondat az \emph{előfeltétel}. Ha elhiszed az előfeltételeket, az érvelés okot ad arra, hogy a következtetést is elhidd.
 
 This chapter discusses some basic logical notions that apply to arguments in a natural language like English. It is important to begin with a clear understanding of what arguments are and of what it means for an argument to be valid. Later we will translate arguments from English into a formal language. We want formal validity, as defined in the formal language, to have at least some of the important features of natural-language validity.
 
+Ez a fejezet néhány alapvető logikai fogalmat tárgyal, amik alkalmazhatóak érvelésekben, egy természetes nyelv használata során, ilyen például a magyar nyelv. Fontos, hogy egyértelműen megértsük, mi az érvelés és mit jelent az érvelés érvényessége. Később lefordítjuk az érveket magyarról  egy formális nyelvre. Azt szeretnénk ettől az fordítástól, hogy megmaradjanak a természetes nyelv fontos jellemzői is.
+
 \section{Arguments}
 When people mean to give arguments, they typically often use words like `therefore' and `because.' When analyzing an argument, the first thing to do is to separate the premises from the conclusion. Words like these are a clue to what the argument is supposed to be, especially if--- in the argument as given--- the conclusion comes at the beginning or in the middle of the argument.
+
+Amikor az emberek érvelni akarnak, általában olyan szavakat használnak, mint „ezért” és „mert”. Egy érv elemzésekor az első lépés, hogy elkülönítsük az előfeltételeket a konkluziótol. Az ilyen szavak információt nyujtanak arról, hogy milyennek kell lennie egy érvelésnek, különösen, ha --az adott érvben-- a következtetés az érvelés elején vagy közepén található.
 
 %SR fordítása vége
 
@@ -52,7 +70,7 @@ You should not confuse the idea of a sentence that can be true or false with the
 
 Also, there are things that would count as `sentences' in a linguistics or grammar course that we will not count as sentences in logic.
 
-\paragraph{Questions} In a grammar class, `Are you sleepy yet?' would count as an interrogative sentence. Although you might be sleepy or you might be alert, the question itself is neither true nor false. For this reason, questions will not count as sentences in logic. Suppose you answer the question: `I am not sleepy.' This is either true or false, and so it is a sentence in the logical sense. Generally, \emph{questions} will not count as sentences, but \emph{answers} will. 
+\paragraph{Questions} In a grammar class, `Are you sleepy yet?' would count as an interrogative sentence. Although you might be sleepy or you might be alert, the question itself is neither true nor false. For this reason, questions will not count as sentences in logic. Suppose you answer the question: `I am not sleepy.' This is either true or false, and so it is a sentence in the logical sense. Generally, \emph{questions} will not count as sentences, but \emph{answers} will.
 
 `What is this course about?' is not a sentence. `No one knows what this course is about' is a sentence.
 
