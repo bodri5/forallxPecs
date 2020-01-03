@@ -176,16 +176,25 @@ Inductive arguments, even good inductive arguments, are not deductively valid. W
 
 %CsA fordítása kezdet
 
-\section{Other logical notions}
+\section*{Other logical notions}
+\section{Más logikai fogalmak}
 
 In addition to deductive validity, we will be interested in some other logical concepts.
 
-\subsection{Truth-values}
+Kiegészítésként a levezetéses érvényesítéshez, más logikai koncepciókkal is foglalkozni fogunk.
+
+\subsection*{Truth-values}
+\subsection{Igazságértékek}
 True or false is said to be the \define{truth-value} of a sentence. We defined sentences as things that could be true or false; we could have said instead that sentences are things that can have truth-values.
 
-\subsection{Logical truth}
+Az \define{Igazságértéke} egy állításnak igaz vagy hamis. Úgy határozunk meg állításokat, mint valami ami lehet igaz vagy hamis; ehelyett mondhatjuk azt, hogy az állítások olyan dolgok amiknek van igazságértékük.
+
+\subsection*{Logical truth}
+\subsection{Logiaki igazság}
 
 In considering arguments formally, we care about what would be true \emph{if} the premises were true. Generally, we are not concerned with the actual truth value of any particular sentences--- whether they are \emph{actually} true or false. Yet there are some sentences that must be true, just as a matter of logic.
+
+Amikor formálisan vizsgálunk egy érvelést, akkor azzal foglalkozunk, hogy mik lennének igazak \emph{ha} a tények igazak lennének, bármely állítás tényleges igazságértékével nem foglalkozunk--- akár igazak vagy hamisak. Viszont vannak olyan állítások amiknek igaznak kelle lenniük, logikailag.
 
 Consider these sentences:
 \begin{earg}
@@ -193,15 +202,33 @@ Consider these sentences:
 \item[\ex{Atautology}] Either it is raining, or it is not.
 \item[\ex{Acontradiction}] It is both raining and not raining.
 \end{earg}
+
+Vizsgáljuk ezeket az állításokat:
+\begin{earg}
+\item[\ex{Acontingent}] Esik az eső.
+\item[\ex{Atautology}] Vagy esik az eső vagy nem.
+\item[\ex{Acontradiction}] Egyszerre esik az eső és nem is.
+\end{earg}
+
 In order to know if sentence \ref{Acontingent} is true, you would need to look outside or check the weather channel. Logically speaking, it might be either true or false. Sentences like this are called \emph{contingent} sentences.
 
+Hogy megállapítsuk hogy az \ref{Acontingent}-es állítás igaz, ki kéne nézni az ablakon vagy ellenőrizni az időjárásjelentést. Logikailag mondva lehet, hogy igaz vagy hamis. Az ilyen állításokat \emph{bizonytalan} állításoknak nevezzük.
+ 
 Sentence \ref{Atautology} is different. You do not need to look outside to know that it is true. Regardless of what the weather is like, it is either raining or not. This sentence is \emph{logically true}; it is true merely as a matter of logic, regardless of what the world is actually like. A logically true sentence is called a \define{tautology}.
+
+A \ref{Atautology}-ik állítás különböző. Nem kell kinézni az ablakon ahhoz, hogy megbizonyosodjunk róla, hogy igaz-e. Eltekintve attól, hogy milyen idő van, vagy esik az eső vagy nem. Ez az állítás \emph{Logikailag igaz}; pusztán logikaliag igaz, függetlenül attól hogy ténylegesen milyen idő van kint. Egy logikailag igaz állítást \define{Tautológia}-nak nevezzük.
 
 You do not need to check the weather to know about sentence \ref{Acontradiction}, either. It must be false, simply as a matter of logic. It might be raining here and not raining across town, it might be raining now but stop raining even as you read this, but it is impossible for it to be both raining and not raining here at this moment. The third sentence is \emph{logically false}; it is false regardless of what the world is like. A logically false sentence is called a \define{contradiction}.
 
+Nem kell ellenőrizni akkor sem az időjárást ha a \ref{Acontradiction}-ik állítást vizsgálod. Hamisnak kell lennie, szimplán a logika miatt. Lehet, hogy itt esik viszont a város másik felén nem, lehet, hogy most esik viszont eláll az eső miközben ezt olvasod, viszont lehetetlen, hogy egy adott pillanatban, adott helyen egyszerre essen is az eső és nem. A harmadik állítás \emph{logikailag hamis};hamis, függetlenül attól, hogy milyen a világ. Egy logikailag hamis állítást \define{ellentmondás}-nak nevezzük.
+
 To be precise, we can define a \define{contingent sentence} as a sentence that is neither a tautology nor a contradiction.
 
+Hogy pontosak legyünk, meghatározhatunk egy \define{bizonytalan állítást} egy olyan állításként ami nem tautológikus és nem is ellentmondásos.
+
 A sentence might \emph{always} be true and still be contingent. For instance, if there never were a time when the universe contained fewer than seven things, then the sentence `At least seven things exist' would always be true. Yet the sentence is contingent; its truth is not a matter of logic. There is no contradiction in considering a possible world in which there are fewer than seven things. The important question is whether the sentence \emph{must} be true, just on account of logic.
+
+Egy állítás lehet \emph{mindig} igaz és mégis bizonytalan. Példának okáért, ha nem volt olyan időszak, amikor az univerzumban kevesebb mint hét dolog volt, akkor a `Legalább hét dolog létezik' állítás mindig igaz. Viszont az állítás bizonytalan; az igazsága nem a logikán alapszik. Nincs ellentmondás egy olyan világ vizsgálatában, ahol kevesebb mint hét dolog létezik. A fontos kérdés, hogy az állításnak igaznak \emph{kell-e} lennie, a logika miatt.
 
 %CsA fordítása vége
 
