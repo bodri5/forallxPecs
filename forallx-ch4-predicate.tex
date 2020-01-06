@@ -787,17 +787,32 @@ We will adopt the same notational conventions that we did for SL (p.~\pageref{SL
 \section{Identity}
 \label{sec.identity}
 
+\section{Azonosság}
+\label{sec.azonosság}
+
 Consider this sentence:
 \begin{earg}
 \item[\ex{else1}] Pavel owes money to everyone else.
 \end{earg}
 Let the UD be people; this will allow us to translate `everyone' as a universal quantifier. Let $Oxy$ mean `$x$ owes money to $y$', and let $p$ mean Pavel. Now we can symbolize sentence \ref{else1} as $\forall x Opx$. Unfortunately, this translation has some odd consequences. It says that Pavel owes money to every member of the UD, including Pavel; it entails that Pavel owes money to himself. However, sentence \ref{else1} does not say that Pavel owes money to himself; he owes money to everyone \emph{else}. This is a problem, because $\forall x Opx$ is the best translation we can give of this sentence into QL.
 
+Nézzük meg ezt a kijelentést:
+\begin{earg}
+\item[\ex{else1}] Pavel mindenki másnak tartozik pénzzel.
+\end{earg}
+Legyen a Meghatározott Univerzum itt az emberek; így értelmezhetjük a „mindenki” kifejezést univerzális kvantorként. $Oxy$ jelentse azt, hogy „$x$ tartozik $y$-nak pénzzel”, és $p$ jelölje Pavelt. Így ábrázolhatjuk a \ref{else1} kijelentést úgy, hogy $\forall x Opx$. Sajnos ez a megoldás így problémás következményekkel jár. Ez a formula ugyanis azt mondja ki, hogy Pavel a Meghatározott Univerzum összes tagjának tartozik, amibe így maga Pavel is beletartozik, ezek szerint pedig Pavelnek saját magának is tartoznia kellene pénzzel. Azonban a kijelentés nem mondja, hogy Pavel tartozna saját magának pénzzel, hanem azt, hogy \emph{mindenki másnak} tartozik. Ez nagy gond, ugyanis a $\forall x Opx$ a lehető legjobb formula jelenleg amit megadhatunk mint a mondat Predikátum Logikai (vagy Számszerűsített Logikai) reprezentálása.
+
 The solution is to add another symbol to QL. The symbol `$=$' is a two-place predicate. Since it has a special logical meaning, we write it a bit differently: For two terms $t_1$ and $t_2$, $t_1=t_2$ is an atomic formula.
+
+A megoldás az, hogy még egy szimbólumot hozzáadunk a Predikátum Logikához. A szimbólum „$=$” egy kétértékű predikátum. Mivel ennek különleges logikai jelentése van, ezért kicsit másképpen használjuk: Két kifejezésre, $t_1$-re és $t_2$-re $t_1=t_2$ egy atomos formula.
 
 The predicate $x=y$ means `$x$ is identical to $y$.' This does not mean merely that $x$ and $y$ are indistinguishable or that all of the same predicates are true of them. Rather, it means that $x$ and $y$ are the very same thing.
 
+Az $x=y$ predikátum azt jelenti, hogy „$x$ azonos $y$-nal.” Ez azonban egyáltalán nem azt jelenti, hogy $x$ és $y$ megkülönböztethetetlenek lennének, vagy hogy ugyanazok a predikátumok igazak rájuk. Inkább úgy fogalmazható meg, hogy $x$ és $y$ ugyanaz a dolog.
+
 When we write $x \neq y$, we mean that $x$ and $y$ are not identical. There is no reason to introduce this as an additional predicate. Instead, $x \neq y$ is an abbreviation of $\enot(x = y)$.
+
+Mikor azt írjuk, hogy $x \neq y$, azt értjük alatta, hogy $x$ és $y$ nem azonosak. Nincs szükség rá, hogy ezt külön predikátumként értelmezzük. Ehelyett vegyük úgy, hogy $x \neq y$ az $\enot(x = y)$ rövidítése.
 
 Now suppose we want to symbolize this sentence:
 \begin{earg}
@@ -805,13 +820,28 @@ Now suppose we want to symbolize this sentence:
 \end{earg}
 Let the constant $c$ mean Mister Checkov. Sentence \ref{else2} can be symbolized as $p=c$. This means that the constants $p$ and $c$ both refer to the same guy.
 
+Így a következőképpen ábrázolhatjuk ezt a kifejezést:
+\begin{earg}
+\item[\ex{else2}] Pavel másnéven Checkov úr.
+\end{earg}
+A $c$ konstans jelentse Checkov urat. Így a \ref{else2} kifejezés leírható úgy, hogy $p=c$. Ez azt jelenti, hogy $p$ és $c$ konstansok ugyanarra az emberre utalnak.
+
 This is all well and good, but how does it help with sentence \ref{else1}? That sentence can be paraphrased as, `Everyone who is not Pavel is owed money by Pavel.' This is a sentence structure we already know how to symbolize: `For all $x$, if $x$ is not Pavel, then $x$ is owed money by Pavel.' In QL with identity, this becomes $\forall x (x\neq p \eif Opx)$.
 
+Ez mind nagyszerű, de hogyan segít ez nekünk a \ref{else1} kijelentésben? A kijelentés más szavakkal úgy is leírható, hogy „Pavel tartozik pénzzel mindenkinek aki nem Pavel maga.” Ezt a kijelentés-struktúrát pedig most már tudjuk, hogyan kell ábrázolnunk: „Minden $x$-re, ha $x$ nem Pavel, akkor $x$-nek tartozik Pavel.” A Predikátum Logikában azonossággal ez a következőképp néz ki: $\forall x (x\neq p \eif Opx)$.
+
 In addition to sentences that use the word `else', identity will be helpful when symbolizing some sentences that contain the words `besides' and `only.' Consider these examples:
+
+Továbbá olyan kijelentésekben, amik használják a „különben” szót, az azonosság nagy segítség lesz, mikor a kijelentések tartalmaznak olyan kifejezéseket mint „kivéve” és „csak”. Vegyük ezeket a példákat:
 
 \begin{earg}
 \item[\ex{else3}] No one besides Pavel owes money to Hikaru.
 \item[\ex{else4}] Only Pavel owes Hikaru money.
+\end{earg}
+
+\begin{earg}
+\item[\ex{else3}] Senki más nem tartozik Hikarunak pénzzel, kivéve Pavelt.
+\item[\ex{else4}] Csak Pavel tartozik pénzzel Hikarunak.
 \end{earg}
 
 %NM fordítása vége
