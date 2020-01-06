@@ -605,7 +605,10 @@ If I say this, it means that I will be on the porch, regardless of whether anyon
 
 %JK fordítása kezdet
 
-\subsection{Biconditional}
+\subsection*{Biconditional}
+
+\subsection{Ekvivalencia}
+
 Consider these sentences:
 \begin{earg}
 \item[\ex{iff1}] The figure on the board is a triangle only if it has exactly three sides.
@@ -613,19 +616,40 @@ Consider these sentences:
 \item[\ex{iff3}] The figure on the board is a triangle if and only if it has exactly three sides.
 \end{earg}
 
+Tekintsük a következő mondatokat:
+\begin{earg}
+\item[\ex{iff1}] Az alakzat a táblán csak akkor egy háromszög, ha pontosan három oldala van.
+\item[\ex{iff2}] Az alakzat a táblán akkor egy háromszög, ha pontosan három oldala van.
+\item[\ex{iff3}] Az alakzat a táblán akkor és csak akkor egy háromszög, ha pontosan 3 oldala van.
+\end{earg}
+
 Let $T$ mean `The figure is a triangle' and $S$ mean `The figure has three sides.'
+
+$T$ jelentse, hogy „Az alakzat egy háromszög” és $S$ jelentse, hogy „Az alakzatnak 3 oldala van”.
 
 Sentence \ref{iff1}, for reasons discussed above, can be translated as $T\eif S$.
 
+A \ref{iff1} -es mondat, a feljebb magyarázottak miatt, lefordítható $T\eif S$ -ként.
+
 Sentence \ref{iff2} is importantly different. It can be paraphrased as, `If the figure has three sides, then it is a triangle.' So it can be translated as $S\eif T$.
+
+A \ref{iff2} -ös mondat jelentősen különböző. Mondhatjuk úgy is, hogy „Ha az alakzatnak 3 oldala van, akkor egy háromszög.” Tehát értelmezhető $S\eif T$ -ként.
 
 Sentence \ref{iff3} says that $T$ is true \emph{if and only if} $S$ is true; we can infer $S$ from $T$, and we can infer $T$ from $S$. This is called a \define{biconditional}, because it entails the two conditionals $S\eif T$ and $T \eif S$. We will use `\eiff' to represent the biconditional; sentence \ref{iff3} can be translated as $S \eiff T$.
 
+A \ref{iff3} -os mondat azt mondja, ha $T$ igaz \emph{akkor és csak akkor} $S$ is igaz; $S$ magával vonja $T$ -t, és $T$ is $S$ -t. Ezt \define{ekvivalenciának} hívjuk, mert két felételt von maga után $S\eif T$ és $T \eif S$ -t. „\eiff” -t fogjuk használni, hogy kifejezzük az ekvivalenciát; a \ref{iff3} -os mondat lefordítható $S \eiff T$ -ként.
+
 We could abide without a new symbol for the biconditional. Since sentence \ref{iff3} means `$T \eif S$ and $S\eif T$,' we could translate it as $(T \eif S)\eand(S\eif T)$. We would need parentheses to indicate that $(T \eif S)$ and $(S\eif T)$ are separate conjuncts; the expression $T \eif S\eand S\eif T$ would be ambiguous.
+
+Maradhatunk anélkül, hogy új szimbólumot írnánk az ekvivalenciára. A \ref{iff3} -os mondat óta jelenti „$T \eif S$ és $S\eif T$,” lefordíthatjuk $(T \eif S)\eand(S\eif T)$ -ként. Szükségünk lesz zárójelre, hogy jelezzük $(T \eif S)$ és $(S\eif T)$ külön kapcsolat; a $T \eif S\eand S\eif T$ kifejezés félreérthető lenne.
 
 Because we could always write $(\script{A}\eif\script{B})\eand(\script{B}\eif\script{A})$ instead of $\script{A}\eiff\script{B}$, we do not strictly speaking \emph{need} to introduce a new symbol for the biconditional. Nevertheless, logical languages usually have such a symbol. SL will have one, which makes it easier to translate phrases like `if and only if.'
 
+Mivel mindig írhatunk $(\script{A}\eif\script{B})\eand(\script{B}\eif\script{A})$ -t $\script{A}\eiff\script{B}$ helyett, nem szigorúan arról beszélünk, hogy \emph{szükség van} egy új jel bevezetésére az ekvivalenciára. Mindazonáltal a logikai nyelv rendszerint sok jelet tartalmaz. Az ítéletlogikának van egy, amely könnyebbé teszi az olyan kifejezéseket, mint „akkor és csak akkor”.
+
 \script{A}\eiff\script{B} is true if and only if \script{A} and \script{B} have the same truth value. This is the characteristic truth table for the biconditional:
+
+\script{A}\eiff\script{B} igaz akkor és csak akkor, ha \script{A} és \script{B} igazságértéke megegyezik. Itt van a jellegzetes igazság tábla az ekvivalenciára.
 
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -640,12 +664,20 @@ F & F & T
 
 
 
-\section{Other symbolization}
+\section*{Other symbolization}
 We have now introduced all of the connectives of SL. We can use them together to translate many kinds of sentences. Consider these examples of sentences that use the English-language connective `unless':
 
+\section{Más szimbolizálás}
+Bemutattuk az ítéletlogika összes műveletét. Használhatjuk őket együtt, hogy átalakíthassunk többféle mondatot. Tekintve ezeket a példákat, amire azt mondjuk „hacsak”:
+
 \begin{earg}
-\item[\ex{unless1}] Unless you wear a jacket, you will catch cold. 
-\item[\ex{unless2}] You will catch cold unless you wear a jacket. 
+\item[\ex{unless1}] Unless you wear a jacket, you will catch cold.
+\item[\ex{unless2}] You will catch cold unless you wear a jacket.
+\end{earg}
+
+\begin{earg}
+\item[\ex{unless1}] Hacsak nem hordasz kabátot, megfázol.
+\item[\ex{unless2}] Megfázol, hacsak nem hordasz kabátot.
 \end{earg}
 
 %JK fordítása vége
