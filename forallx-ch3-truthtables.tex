@@ -237,13 +237,23 @@ Note that there are many combinations of truth values that would have made the s
 
 Showing that a sentence is \emph{not} contingent requires providing a complete truth table, because it requires showing that the sentence is a tautology or that it is a contradiction.  If you do not know whether a particular sentence is contingent, then you do not know whether you will need a complete or partial truth table. You can always start working on a complete truth table. If you complete rows that show the sentence is contingent, then you can stop. If not, then complete the truth table. Even though two carefully selected rows will show that a contingent sentence is contingent, there is nothing wrong with filling in more rows.
 
+%UD fordítása kezdet
+
 Showing that two sentences are logically equivalent requires providing a complete truth table. Showing that two sentences are \emph{not} logically equivalent requires only a one-line partial truth table: Make the table so that one sentence is true and the other false.
+
+Ahhoz, hogy bebizonyítsuk, hogy két kijelentés logikailag ekvivalens, teljes igazságtáblázatot kell készítenünk. Ha azonban azt akarjuk megmutatni, hogy két állítás \emph{nem} ekvivalens, elég csak egy egysoros parciális igazságtábla: készítse el a táblát úgy, hogy az egyik kijelentés igaz, a másik hamis legyen.
 
 Showing that a set of sentences is consistent requires providing one row of a truth table on which all of the sentences are true. The rest of the table is irrelevant, so a one-line partial truth table will do. Showing that a set of sentences is inconsistent, on the other hand, requires a complete truth table: You must show that on every row of the table at least one of the sentences is false.
 
+Kijelentéskészlet konzisztenciájának igazolásához egy sort kell csak megadni az igazságtáblából, amelyben az összes kijelentés igaz. A tábla többi része irreleváns, így egy egysoros parciális igazságtábla eleget tesz. Másrészről azonban, ha a kijelentéskészlet inkonzisztenciáját szeretnénk megmutatni, teljes igazságtáblázatra lesz szükségünk. Ekkor azt kell megmutatni, hogy a tábla valamennyi sorában legalább egy kijelentés hamis.
+
 Showing that an argument is valid requires a complete truth table. Showing that an argument is \emph{invalid} only requires providing a one-line truth table: If you can produce a line on which the premises are all true and the conclusion is false, then the argument is invalid.
 
+Egy érvelés érvényességének bizonyításához teljes igazságtáblára van szükségünk. \emph{Érvénytelen}ségének kimutatásához azonban csak egysoros igazságtábla kell. Ha elő tudunk állítani egy olyan sort, amelyben az összes feltétel igaz, míg a zárótétel hamis, akkor az argumentum érvénytelen.
+
 Here is a table that summarizes when a complete truth table is required and when a partial truth table will do.
+
+Az alábbi tábla összegzi, mikor van szükségünk teljes igazságtáblára, és mikor elég csak egy sor belőle.
 
 \begin{table}[h!]
 \begin{center}
@@ -261,6 +271,26 @@ valid? & complete truth table & one-line partial truth table\\
 \end{tabular}
 \end{center}
 \caption{Do you need a complete truth table or a partial truth table? It depends on what you are trying to show.}
+\label{table.CompleteVsPartial}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c|c|c|}
+\cline{2-3}
+ & IGEN & NEM\\
+\cline{2-3}
+tautológia? & teljes igazságtábla & egysoros parciális igazságtábla\\
+kontradikció? &  teljes igazságtábla  & egysoros paricális igazságtábla\\
+kontingens? & kétsoros parciális igazságtábla & teljes igazságtábla\\
+ekvivalens? & teljes igazságtábla & egysoros parciális igazságtábla\\
+konzisztens? & egysoros parciális igazságtábla & teljes igazságtábla\\
+érvényes? & teljes igazságtábla & egysoros parciális igazságtábla\\
+\cline{2-3}
+\end{tabular}
+\end{center}
+\caption{Teljes vagy parciális igazságtáblázatra van szükségünk? Attól függ, mit akarunk
+megmutatni.}
 \label{table.CompleteVsPartial}
 \end{table}
 
@@ -282,10 +312,20 @@ valid? & complete truth table & one-line partial truth table\\
 \practiceproblems
 If you want additional practice, you can construct truth tables for any of the sentences and arguments in the exercises for the previous chapter.
 
+\practiceproblems
+Ha további gyakorlást szeretne, készíthet teljes igazságtáblázatot bármelyik kijelentéshez és argumentumhoz a korábbi fejezetek feladataiban.
+
 \solutions
 \problempart
 \label{pr.TT.TTorC}
 Determine whether each sentence is a tautology, a contradiction, or a contingent sentence. Justify your answer with a complete or partial truth table where appropriate.
+
+\solutions
+\problempart
+\label{pr.TT.TTorC}
+Határozza meg, mely kijelentés tautológia, kontradikció, vagy kontingens. Ahol indokolt, igazolja válaszát teljes vagy parciális igazságtáblázattal!
+
+%UD fordítása vége
 \begin{earg}
 \item $A \eif A$ %taut
 \item $\enot B \eand B$ %contra
