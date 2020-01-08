@@ -10,6 +10,7 @@ Any non-atomic sentence of SL is composed of atomic sentences with sentential co
 
 In this chapter, we will make use of the fact that all of the logical operators in SL are truth-functional--- it makes it possible to construct truth tables to determine the logical features of sentences. You should realize, however, that this is not possible for all languages. In English, it is possible to form a new sentence from any simpler sentence \script{X} by saying `It is possible that \script{X}.' The truth-value of this new sentence does not depend directly on the truth-value of \script{X}. Even if \script{X} is false, perhaps in some sense \script{X} \emph{could} have been true--- then the new sentence would be true. Some formal languages, called \emph{modal logics}, have an operator for {possibility}. In a modal logic, we could translate `It is possible that \script{X}' as {\large $\diamond$}\script{X}. However, the ability to translate sentences like these come at a cost: The {\large $\diamond$} operator is not truth-functional, and so modal logics are not amenable to truth tables.
 
+%ZL fordítása ezdet
 
 \section{Complete truth tables}
 The truth-value of sentences which contain only one connective are given by the characteristic truth table for that connective. In the previous chapter, we wrote the characteristic truth tables with `T' for true and `F' for false. It is important to note, however, that this is not about truth in any deep or cosmic sense. Poets and philosophers can argue at length about the nature and significance \emph{truth}, but the truth functions in SL are just rules which transform input values into output values. To underscore this, in this chapter we will write `1' and `0' instead of `T' and `F'. Even though we interpret `1' as meaning `true' and `0' as meaning `false', computers can be programmed to fill out truth tables in a purely mechanical way. In a machine, `1' might mean that a register is switched on and `0' that the register is switched off. Mathematically, they are just the two possible values that a sentence of SL can have.
@@ -52,6 +53,7 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
 \end{tabular}
 \end{center}
 Now consider the subsentence $H\eand I$. This is a conjunction \script{A}\eand\script{B} with $H$ as \script{A} and with $I$ as \script{B}. $H$ and $I$ are both true on the first row. Since a conjunction is true when both conjuncts are true, we write a 1 underneath the conjunction symbol. We continue for the other three rows and get this:
+%ZL fordítása vége
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
