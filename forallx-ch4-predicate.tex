@@ -305,25 +305,44 @@ A \ref{q.ne}. mondatot körülírhatjuk a következőképpen: ’Nem igaz, hogy 
 
 %MR fordítása vége
 
+
 %ÖD fordítása kezdete
 
 In general, $\forall x\script{A}$ is logically equivalent to $\enot\exists x\enot\script{A}$. This means that any sentence which can be symbolized with a universal quantifier can be symbolized with an existential quantifier, and vice versa. One translation might seem more natural than the other, but there is no logical difference in translating with one quantifier rather than the other. For some sentences, it will simply be a matter of taste.
 
+Általában, $\forall x\script{A}$ logikailag ekvivalens $\enot\exists x\enot\script{A}$ -val. Ez azt jelenti, hogy bármely olyan mondat, amely egy univerzális kvantorral szimbolizálható, az szimbolizálható egy egzisztenciális kvantorral és fordítva. Egy fordítás természetesebbnek tűnhet a másiknál, de nincs logikai különbség két kvantorban történő fordításban.
+
 Sentence \ref{q.en} is most naturally paraphrased as, `There is some $x$ such that $x$ is not happy.' This becomes $\exists x \enot Hx$. Equivalently, we could write $\enot\forall x Hx$.
+
+A \ref{q.en} mondatot legtermészetesebben az alábbi módon definiálják: van olyan $x$, hogy $x$ nem boldog. Ez lesz $\exists x \enot Hx$. Egyenértékűen a következőképp néz ki: $\enot\forall x Hx$.
 
 Sentence \ref{q.na} is most naturally translated as $\enot\forall xHx$. This is logically equivalent to sentence \ref{q.en} and so could also be translated as $\exists x \enot Hx$.
 
+A \ref{q.na} mondat lefordítva lényegében a következőt jelenti: $\enot\forall xHx$. Ez logikailag ekvivalens a \ref{q.en} mondattal és szintén le lehet fordítani: $\exists x \enot Hx$.
+
 Although we have two quantifiers in QL, we could have an equivalent formal language with only one quantifier. We could proceed with only the universal quantifier, for instance, and treat the existential quantifier as a notational convention. We use square brackets [ ] to make some sentences more readable, but we know that these are really just parentheses ( ). In the same way, we could write `$\exists x$' knowing that this is just shorthand for `$\enot \forall x \enot$.' There is a choice between making logic formally simple and making it expressively simple. With QL, we opt for expressive simplicity. Both $\forall$ and $\exists$ will be symbols of QL.
 
+Habár két kvantorunk van a Predikátum Logikában, lehet még egy egyenértékű formális nyelvünk is egyetlen kvantorral. Tudnánk csak az univerzális kvantorral folytatni és jelölési konvencióként kezelni az egzisztenciális kvantort. Szögletes zárójeleket használunk [], hogy néhány mondatot jobban olvashatóbbá tegyünk, de tudjuk, hogy ezek igazából csak zárójelek (). Ugyanúgy írhatjuk `$\exists x$'-t tudva, hogy ez csak gyorsírása a `$\enot \forall x \enot$.'-nak. Választhatunk a logika formálisan egyszerűvé tétele és a kifejezetten egyszerűvé tétele között. Predikátum Logikával a kifejezés egyszerűsítésére törekszünk. Mindkét $\forall$ és $\exists$ is szimbólumai lesznek a Predikátum Logikának.
 
 \subsection{Universe of Discourse}
+\subsection{Individuumtartomány}
+
 Given the symbolization key we have been using, $\forall xHx$ means `Everyone is happy.' Who is included in this \emph{everyone}? When we use sentences like this in English, we usually do not mean everyone now alive on the Earth. We certainly do not mean everyone who was ever alive or who will ever live. We mean something more modest: everyone in the building, everyone in the class, or everyone in the room.
 
+Figyelembe véve a szimbolizációs kulcsot, amelyet használunk, $\forall xHx$ azt jelenti ’Mindenki boldog’. Kit foglal magába ez a \emph{mindenki}? Amikor a mondatot így használjuk a magyarban, általában nem a Földön élő összes emberre gondolunk. Természetesen nem is azokra, akik éltek vagy élni fognak azon. Valami konkrétabbra gondolunk: mindenki az épületben, mindenki az osztályban, vagy mindenki a szobában.
+
 In order to eliminate this ambiguity, we will need to specify a \define{universe of discourse}--- abbreviated UD. The UD is the set of things that we are talking about. So if we want to talk about people in Chicago, we define the UD to be people in Chicago. We write this at the beginning of the symbolization key, like this:
+
+Annak érdekében, hogy kiiktassuk ezt a kétértelműséget, szükségünk lesz kikötni egy \define{Individuumtartományt} röviden: UD. Individuumtartomány a dolgok halmaza.  Szóval, ha beszélni akarunk Chicago-i emberekről, definiálnunk kell az Individuumtartományt, tehát az embereket Chicago-ban. Ezt a szimbolizációs kulcs elejére írjuk. Például:
+
 \begin{ekey}
 \item[UD:] people in Chicago
+\item[UD:] emberek Chicagoban
 \end{ekey}
+
 The quantifiers \emph{range over} the universe of discourse. Given this UD, $\forall x$ means `Everyone in Chicago' and $\exists x$ means `Someone in Chicago.' Each constant names some member of the UD, so we can only use this UD with the symbolization key above if Donald, Gregor, and Marybeth are all in Chicago. If we want to talk about people in places besides Chicago, then we need to include those people in the UD.
+
+A kvantorok az Individuumtartomány \emph{alatt mozognak}. A megadott Individuumtartomány értelmében, $\forall x$ azt jelenti: mindenki Chicago-ban, és $\exists x$ azt jelenti: valaki Chicago-ban. Mindegyik konstans megnevezi az Individuumtartomány valamely tagját, szóval csak akkor használhatjuk ezt az Individuumtartományt a fenti szimbólumkulccsal, ha Donald, Gregor és Marybeth mind Chicago-ban vannak.
 
 %ÖD fordítása vége
 
