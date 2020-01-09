@@ -570,10 +570,15 @@ The paraphrased sentence `\script{A} only if \script{B}' is logically equivalent
 
 In English, the truth of conditionals often depends on what \emph{would} be the case if the antecedent \emph{were true}--- even if, as a matter of fact, the antecedent is false. This poses a problem for translating conditionals into SL.  Considered as sentences of SL, $R$ and $B$ in the above examples have nothing intrinsic to do with each other. In order to consider what the world would be like if $R$ were true, we would need to analyze what $R$ says about the world. Since $R$ is an atomic symbol of SL, however, there is no further structure to be analyzed. When we replace a sentence with a sentence letter, we consider it merely as some atomic sentence that might be true or false.
 
+Az angol nyelvben az állítások igazságtartalma gyakran attól függ, hogy mi \emph{lenne} akkor, ha az előzmény \emph{igaz lenne}--- még akkor is, ha valójában az előzmény hamis. Ez problémát jelent az állítások KL-re történő fordításában. A fenti KL mondatoknak, $R$-nek és $B$-nek semmi köze nincs egymáshoz. Annak megfontolására, hogy milyen lenne a világ, ha $R$ igaz lenne, elemeznünk kell, mit mond $R$ a világról. Mivel $R$ egy atomi szimbóluma KL-nek, ezért a továbbiakban nem kell elemeznünk a szerkezetet. Amikor egy mondatot egy betűre cserélünk, akkor pusztán atomi mondatnak tekintjük, amely lehet igaz vagy hamis.
+
 In order to translate conditionals into SL, we will not try to capture all the subtleties of the English language `If$\ldots$ then$\ldots$.' Instead, the symbol `\eif' will be a \emph{material conditional}. This means that when \script{A} is false, the conditional \script{A}\eif\script{B} is automatically true, regardless of the truth value of \script{B}. If both \script{A} and \script{B} are true, then the conditional \script{A}\eif\script{B} is true.
 
+Annak érdekében, hogy az állítást KL-re fordítsuk, ne próbáljuk meg megragadni a `Ha$\ldots$ akkor$\ldots$` szerkezet finomságait. Ehelyett a `\eif' szimbólum \emph{anyagi feltétel} lesz. Ez azt jelenti, hogy ha \script{A} hamis, akkor az \script{A}\eif\script{B} állítás automatikusan igaz, függetlenül a \script{B} igazságtartalmától. Ha \script{A} és \script{B} igaz, akkor az \script{A}\eif\script{B} állítás is igaz lesz.
 
 In short, \script{A}\eif\script{B} is false if and only if \script{A} is true and \script{B} is false. We can summarize this with a characteristic truth table for the conditional.
+
+Röviden: az \script{A}\eif\script{B} állítás csak akkor lesz hamis, ha \script{A} igaz, de \script{B} hamis. Összefoglalhatjuk ezt egy igazságtáblával.
 
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -586,7 +591,20 @@ F & F & T
 \end{tabular}
 \end{center}
 
+\begin{center}
+\begin{tabular}{c|c|c}
+\script{A} & \script{B} & \script{A}\eif\script{B}\\
+\hline
+I & I & I\\
+I & H & H\\
+H & I & I\\
+H & H & I
+\end{tabular}
+\end{center}
+
 The conditional is \emph{asymmetrical}. You cannot swap the antecedent and consequent without changing the meaning of the sentence, because \script{A}\eif\script{B} and \script{B}\eif\script{A} are not logically equivalent.
+
+Az állítás \emph{asszimetrikus}. A két állítás nem cserélhető fel a jelentésük megváltoztatása nélkül, mert \script{A}\eif\script{B} és \script{B}\eif\script{A} logikailag nem ekvivalensek.
 
 %\begin{earg}
 %\item[\ex{if3}] Everytime a bell rings, an angel earns its wings.
@@ -595,11 +613,19 @@ The conditional is \emph{asymmetrical}. You cannot swap the antecedent and conse
 
 Not all sentences of the form `If$\ldots$ then$\ldots$' are conditionals. Consider this sentence:
 
+Nem minden mondat `Ha$\ldots$ akkor$\ldots$' szerkezetű. Vegyük ezt a mondatot:
+
 \begin{earg}
 \item[\ex{if5}] If anyone wants to see me, then I will be on the porch.
 \end{earg}
 
+\begin{earg}
+\item[\ex{if5}] Ha valaki látni akar, akkor a tornácon leszek.
+\end{earg}
+
 If I say this, it means that I will be on the porch, regardless of whether anyone wants to see me or not--- but if someone did want to see me, then they should look for me there. If we let $P$ mean `I will be on the porch,' then sentence \ref{if5} can be translated simply as $P$.
+
+Ez azt jelenti, hogy a tornácon leszek, függetlenül, hogy valaki látni akar vagy sem - de ha valaki látni szeretne, akkor ott kell keresnie. Ha $P$ alatt azt értjük, hogy „A tornácon leszek”, akkor a \ref{if5}. mondat egyszerűen $P$-ként fordítható le.
 
 %DD fordítása vége
 
