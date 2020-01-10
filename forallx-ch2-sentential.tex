@@ -538,33 +538,76 @@ Although `\eor' is an \emph{inclusive or}, we can symbolize an \emph{exclusive o
 
 %SG fordítása vége
 %HÁ fordítása kezdet
+\subsection*{Conditional}
+\subsection{Implikáció}
 
-\subsection{Conditional}
 For the following sentences, let $R$ mean `You will cut the red wire' and $B$ mean `The bomb will explode.'
+
+A következő mondatoknál jelölje $R$ azt, hogy „Elvágod a piros vezetéket”, és B azt hogy „A bomba felrobban.”
 
 \begin{earg}
 \item[\ex{if1}] If you cut the red wire, then the bomb will explode.
 \item[\ex{if2}] The bomb will explode only if you cut the red wire.
 \end{earg}
 
+\begin{earg}
+\item[\ex{if1}] Ha elvágod a piros vezetéket, akkor a bomba felrobban
+\item[\ex{if2}] A bomba csak akkor robban fel, ha elvágod a piros vezetéket.
+\end{earg}
+
 Sentence \ref{if1} can be translated partially as `If $R$, then $B$.' We will use the symbol `\eif' to represent logical {entailment}. The sentence becomes $R\eif B$. The connective is called a \define{conditional}. The sentence on the left-hand side of the conditional ($R$ in this example) is called the \define{antecedent}. The sentence on the right-hand side ($B$) is called the \define{consequent}.
 
+A \ref{if1} mondat részben lefordítható mint „Ha $R$, akkor $B$.” A logikai kovetkezmény ábrázolásához a „\eif” szimbólumot fogjuk haszálni.
+A mondat $R\eif B$ lesz. A  logikai függvényt \define{implikáció}-nak nevezzük. A kijelentést az implikáció bal oldalán (ebben a példában $R$) \define{előfeltétel}-nek
+nevezzük.  A kijelentést a jobb oldalon ($B$) \define{következmény}-nek nevezzük.
+
+
 Sentence \ref{if2} is also a conditional. Since the word `if' appears in the second half of the sentence, it might be tempting to symbolize this in the same way as sentence \ref{if1}. That would be a mistake.
+
+A \ref{if2}-es mondat szintén implikáció. Mivel a „ha” szó megjelenik a második mondat felénél, csábító lehet úgy szimbolizálni, mint a \ref{if1}-es mondatot. Ez azonban hiba lenne.
+
 
 The conditional $R\eif B$ says that \emph{if} $R$ were true, \emph{then} $B$ would also be true. It does not say that your cutting the red wire is the \emph{only} way that the bomb could explode. Someone else might cut the wire, or the bomb might be on a timer. The sentence $R\eif B$ does not say anything about 
 what to expect if $R$ is false. Sentence \ref{if2} is different. It says that the only conditions under which the bomb will explode involve your having cut the red wire; i.e., if the bomb explodes, then you must have cut the wire. As such, sentence \ref{if2} should be symbolized as $B \eif R$.
 
+Az $R\eif B$ implikáció azt mondja, hogy \emph{ha} $R$ igaz , \emph{akkor} $B$ is igaz . Nem mondja, hogy
+csak a piros vezeték általad történő elvágása az \emph{egyetlen} módja a bomba felrobbanásának. Valaki 
+más is elvághatja a vezetéket, vagy esetleg a bomba időzítőn lehet. Az $R\eif B$ nem mond
+semmit arról, hogy mi történik, ha $R$ hamis. A \ref{if2}-es mondat más. Azt mondja, hogy az egyetlen kimenetel, ami alatt a bomba felrobban, ha elvágod a piros vezetéket; vagyis, ha a bomba felrobban, akkor el kellett vágnod a vezetéket. A \ref{if2}. mondatot 
+$B \eif R$-ként kell szimbolizálni.
+
+
+
 It is important to remember that the connective `\eif' says only that, if the antecedent is true, then the consequent is true. It says nothing about the \emph{causal} connection between the two events. Translating sentence \ref{if2} as $B \eif R$ does not mean that the bomb exploding would somehow have caused your cutting the wire. Both sentence \ref{if1} and \ref{if2} suggest that, if you cut the red wire, your cutting the red wire would be the cause of the bomb exploding. They differ on the \emph{logical} connection. If sentence \ref{if2} were true, then an explosion would tell us--- those of us safely away from the bomb--- that you had cut the red wire. Without an explosion, sentence \ref{if2} tells us nothing.
+
+Fontos emlékezni arra, hogy a `\eif'  logikai függvény csak azt mondja, ha a
+az első kijelentés igaz, akkor a következő is igaz.
+Nem mondd semmit a két esemény közt lévő \emph{kauzális} (ok- okozati) kapcsolatról.
+A \ref{if2}. mondat $B \eif R$ nem azt jelenti, hogy a felrobbanó bomba valamilyen módon okozta volna a vágást. \ref{if1}. és a \ref{if2}. mondat egyaránt azt sugallja, hogy ha elvágod a piros vezetéket, akkor ez a cselekedeted okozhatja a bomba robbanását.
+A \emph{logikai} kapcsolatban különböznek.  Ha a \ref{if2} igaz lenne, akkor egy robbanás azt mondaná
+nekünk- azok közül akik biztonságos távolságra vannak a bombától- hogy elvágtad a piros
+vezetéket. Robbanás nélkül a \ref{if2}. mondat nem mondd semmit.
+
 
 \factoidbox{
 The paraphrased sentence `\script{A} only if \script{B}' is logically equivalent to `If \script{A}, then \script{B}.'
 }
 
-% Could discuss necessary and sufficient conditions here.
+\factoidbox{
+Az átalakított „\script{A} csak akkor, ha \script{B}” mondat logikailag megegyezik a „ha \script{A}, akkor \script{B}” kifejezéssel.
+}
 
+% Could discuss necessary and sufficient conditions here.
 `If \script{A} then \script{B}' means that if \script{A} is true then so is \script{B}. So we know that if the antecedent \script{A} is true but the consequent \script{B} is false, then the conditional `If \script{A} then \script{B}' is false. What is the truth value of `If \script{A} then \script{B}' under other circumstances? Suppose, for instance, that the antecedent \script{A} happened to be false. `If \script{A} then \script{B}' would then not tell us anything about the actual truth value of the consequent \script{B}, and it is unclear what the truth value of `If \script{A} then \script{B}' would be.
 
+„Ha \script{A}, akkor \script{B}” azt jelenti, hogy ha \script{A} igaz, akkor \script{B} is. Tehát tudjuk, hogy ha
+az \script{A} mondatrész igaz, de a következõ \script{B} hamis, akkor az implikáció „ha
+ \script{A}, akkor  \script{B}” hamis. Mi az igazságértéke „Ha \script{A} akkor \script{B}”-nek más körülmények között?
+Tegyük fel például, hogy az \script{A} mondatrész hamis. A „Ha \script{A}, akkor \script{B}” semmit nem mondana
+ nekünk  \script{B} igazságértékről, és az sem tiszta, hogy mi az igazságérteke a „Ha \script{A} akkor \script{B}” mondatnak.
+
 %HÁ fordítása vége
+
 
 %DD fordítása kezdet
 
