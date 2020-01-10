@@ -10,12 +10,18 @@ Any non-atomic sentence of SL is composed of atomic sentences with sentential co
 
 In this chapter, we will make use of the fact that all of the logical operators in SL are truth-functional--- it makes it possible to construct truth tables to determine the logical features of sentences. You should realize, however, that this is not possible for all languages. In English, it is possible to form a new sentence from any simpler sentence \script{X} by saying `It is possible that \script{X}.' The truth-value of this new sentence does not depend directly on the truth-value of \script{X}. Even if \script{X} is false, perhaps in some sense \script{X} \emph{could} have been true--- then the new sentence would be true. Some formal languages, called \emph{modal logics}, have an operator for {possibility}. In a modal logic, we could translate `It is possible that \script{X}' as {\large $\diamond$}\script{X}. However, the ability to translate sentences like these come at a cost: The {\large $\diamond$} operator is not truth-functional, and so modal logics are not amenable to truth tables.
 
-%ZL fordítása ezdet
+%LZ fordítása kezdet
 
-\section{Complete truth tables}
+\section*{Complete truth tables}
 The truth-value of sentences which contain only one connective are given by the characteristic truth table for that connective. In the previous chapter, we wrote the characteristic truth tables with `T' for true and `F' for false. It is important to note, however, that this is not about truth in any deep or cosmic sense. Poets and philosophers can argue at length about the nature and significance \emph{truth}, but the truth functions in SL are just rules which transform input values into output values. To underscore this, in this chapter we will write `1' and `0' instead of `T' and `F'. Even though we interpret `1' as meaning `true' and `0' as meaning `false', computers can be programmed to fill out truth tables in a purely mechanical way. In a machine, `1' might mean that a register is switched on and `0' that the register is switched off. Mathematically, they are just the two possible values that a sentence of SL can have.
 
+\section{Teljes igazságtáblázatok}
+Azon kijelentések igazságértékeit amelyek csak egy logikai függvényt tartalmaznak, a karaktetisztikus igazságtáblázat adja meg arra a függvényre. Az előző fejezetben, a karakterisztikus igazságtáblázatban az `I'-t igaznak a `H'-t pedig hamisnak jelöltük. Fontos megjegyeznünk azonban, hogy ez nem az igazságról szól, sem mély, sem kozmikus értelemben. Költők és filozófusok hosszasan vitatkozhatnak az \emph{igazság} természetéről és jelentőségéről, de az igazság feladata a KL-ban pusztán a bemeneti értékek átalakítása kimeneti értékekké, szabályok segítségével. Ennek hangsúlyozására, ebben a fejezetben az `I' és `H' helyett `1' és `0' jelölést használnuk. Annak ellenére hogy az `1'-et `igaz'-nak és a `0'-t pedig `hamis'-nak értelmezzük, a számítógépeket beprogramozhatjuk úgy, hogy az igazságtáblázatokat teljesen mechanikus módon töltsék ki. Égy gépben az `1' jelentheti azt hogy a regiszter be van kapcsolva és a `0' pedig azt, hogy ki van kapcsolva. Matematikailag ez csak a két lehetséges érték, melyeket a KL kijelentései felvehetnek.
+
+
 Here are the truth tables for the connectives of SL, written in terms of 1s and 0s.
+
+Itt vannak a KL függvényeinek az igazságtáblázatai, egyesekkel és nullákal írva. 
 
 \begin{table}[h!]
 \begin{center}
@@ -38,8 +44,27 @@ Here are the truth tables for the connectives of SL, written in terms of 1s and 
 \caption{The characteristic truth tables for the connectives of SL.}
 \label{table.CharacteristicTTs}
 \end{table}
-
-
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c|c}
+\script{A} & \enot\script{A}\\
+\hline
+1 & 0\\
+0 & 1 
+\end{tabular}
+\ \ \ \ 
+\begin{tabular}{c|c|c|c|c|c}
+\script{A} & \script{B} & \script{A}\eand\script{B} & \script{A}\eor\script{B} & \script{A}\eif\script{B} & \script{A}\eiff\script{B}\\
+\hline
+1 & 1 & 1 & 1 & 1 & 1\\
+1 & 0 & 0 & 1 & 0 & 0\\
+0 & 1 & 0 & 1 & 1 & 0\\
+0 & 0 & 0 & 0 & 1 & 1
+\end{tabular}
+\end{center}
+\caption{A KL függvényeinek igazságtáblázatai}
+\label{table.CharacteristicTTs}
+\end{table}
 
 The characteristic truth table for conjunction, for example, gives the truth conditions for any sentence of the form $(\script{A}\eand\script{B})$. Even if the conjuncts \script{A} and \script{B} are long, complicated sentences, the conjunction is true if and only if both \script{A} and \script{B} are true. Consider the sentence $(H\eand I)\eif H$. We consider all the possible combinations of true and false for $H$ and $I$, which gives us four rows. We then copy the truth-values for the sentence letters and write them underneath the letters in the sentence.
 \begin{center}
@@ -53,10 +78,23 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
 \end{tabular}
 \end{center}
 Now consider the subsentence $H\eand I$. This is a conjunction \script{A}\eand\script{B} with $H$ as \script{A} and with $I$ as \script{B}. $H$ and $I$ are both true on the first row. Since a conjunction is true when both conjuncts are true, we write a 1 underneath the conjunction symbol. We continue for the other three rows and get this:
-%ZL fordítása vége
+
+A konjunkció karakterisztikus igazságtáblázata például, megadja bármely $(\script{A}\eand\script{B})$ alakú kijelentés igazságértékét. Még ha a konjunkció \script{A} és \script{B} része hosszú, összetett kijelentés is, a konjunkció akkor és csak akkor igaz, ha \script{A} és \script{B} is igaz. Tekintsük meg a $(P\eand Q)\eif P$ kijelentést. Vegyük figyelembe az igaz és hamis lehetőségek minden lehetséges kombinációját,  $P$ -ben és $Q$-ban, ami négy sort eredményez. Ezután lemásoljuk a kijelentésbetűk igazságértékeit a kijelentésben a betűk alá.
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
-$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+$P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
+\hline
+ 1 & 1 & \TTbf{1} & & \TTbf{1} & & \TTbf{1}\\
+ 1 & 0 & \TTbf{1} & & \TTbf{0} & & \TTbf{1}\\
+ 0 & 1 & \TTbf{0} & & \TTbf{1} & & \TTbf{0}\\
+ 0 & 0 & \TTbf{0} & & \TTbf{0} & & \TTbf{0}
+\end{tabular}
+\end{center}
+Most tekintsük a $P\eand Q$ részkijelentést. Ez egy \script{A}\eand\script{B} alakú konjunkció, amiben $P$ mint \script{A} és $Q$ mint \script{B} szerepel. $P$ és $Q$ is igaz az első sorban. Mivel a konjunkció igaz, ha mindkét konjunkció igaz, 1-et írunk a konjunkció szimbólum alá. Folytatjuk a többi három sorral, és ezt kapjuk:
+%LZ fordítása vége
+\begin{center}
+\begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
+$P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
 \hline
  & & \script{A} & \eand & \script{B} & & \\
  1 & 1 & 1 & \TTbf{1} & 1 & & 1\\
@@ -65,10 +103,10 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 & 0 & \TTbf{0} & 0 & & 0
 \end{tabular}
 \end{center}
-The entire sentence is a conditional \script{A}\eif\script{B} with $(H \eand I)$ as \script{A} and with $H$ as \script{B}. On the second row, for example, $(H\eand I)$ is false and $H$ is true. Since a conditional is true when the antecedent is false, we write a 1 in the second row underneath the conditional symbol. We continue for the other three rows and get this:
+The entire sentence is a conditional \script{A}\eif\script{B} with $(P \eand Q)$ as \script{A} and with $P$ as \script{B}. On the second row, for example, $(P\eand Q)$ is false and $P$ is true. Since a conditional is true when the antecedent is false, we write a 1 in the second row underneath the conditional symbol. We continue for the other three rows and get this:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
-$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+$P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
 \hline
  & &  & \script{A} &  &\eif &\script{B} \\
  1 & 1 &  & {1} &  &\TTbf{1} & 1\\
@@ -77,12 +115,12 @@ $H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
  0 & 0 &  & {0} &  &\TTbf{1} & 0
 \end{tabular}
 \end{center}
-The column of 1s underneath the conditional tells us that the sentence \mbox{$(H \eand I)\eif I$} is true regardless of the truth-values of $H$ and $I$. They can be true or false in any combination, and the compound sentence still comes out true. It is crucial that we have considered all of the possible combinations. If we only had a two-line truth table, we could not be sure that the sentence was not false for some other combination of truth-values.
+The column of 1s underneath the conditional tells us that the sentence \mbox{$(P \eand Q)\eif P$} is true regardless of the truth-values of $P$ and $Q$. They can be true or false in any combination, and the compound sentence still comes out true. It is crucial that we have considered all of the possible combinations. If we only had a two-line truth table, we could not be sure that the sentence was not false for some other combination of truth-values.
 
 In this example, we have not repeated all of the entries in every successive table. When actually writing truth tables on paper, however, it is impractical to erase whole columns or rewrite the whole table for every step. Although it is more crowded, the truth table can be written in this way:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
-$H$&$I$&$(H$&\eand&$I)$&\eif&$H$\\
+$P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
 \hline
  1 & 1 & 1 & {1} & 1 & 1 & 1\\
  1 & 0 & 1 & {0} & 0 & 1 & 1\\
