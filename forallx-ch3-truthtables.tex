@@ -201,23 +201,35 @@ Look at the columns for the main connectives; negation for the first sentence, c
 
 %KO fordítása vége
 
-%KB fordítása kezdet
-
-\subsection{Consistency}
+%KB fordítása kezdete
+\subsection*{Consistency}
 A set of sentences in English is consistent if it is logically possible for them all to be true at once.
 A set of sentences is \define{logically consistent in SL} if there is at least one line of a complete truth table on which all of the sentences are true. It is \define{inconsistent} otherwise.
+
+\subsection{A konzisztencia}
+Magyar mondatok egy halmaza konzisztens, ha logikusan lehetséges, hogy mindegyik egyszerre igaz.
+Egy mondatkészlet \define {logikailag következetes, más szóval konzisztens SL-ben}, ha van egy teljes igazságtáblanak legalább egy sora, amelyen az összes mondat igaz. Ellenkező esetben ez inkonzisztens.
 
 \subsection{Validity}
 An argument in English is valid if it is logically impossible for the premises to be true and for the conclusion to be false at the same time.
 An argument is \define{valid in SL} if there is no row of a complete truth table on which the premises are all 1 and the conclusion is 0; an argument is \define{invalid in SL} if there is such a row.
 
+\subsection*{Az érvényesség}
+Egy érv az magyar nyelvben akkor érvényes, ha logikusan lehetetlen, hogy a hipotézis igaz legyen, és a következtetés egyszerre téves.
+Az érv  \define {helyes, más szóval érvényes SL-ben}, ha nincsen olyan sor a teljes igazságtáblázatban, amelyen a hipotézisek mind 1-ek, és a következtetés 0; az érv \define {helytelen, vagy érvénytelen az SL-ben}, ha van ilyen sor.
+
+
 Consider this argument:
+
+Vegyük figyelembe ezt az érvet:
 \begin{earg}
 \item[] $\enot L \eif (J \eor L)$
 \item[] $\enot L$
 \item[\therefore] $J$
 \end{earg}
 Is it valid? To find out, we construct a truth table.
+
+Érvényes? Hogy megtudjuk, összeállítunk egy igazságtáblát.
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{6}{c}@{\TToff}|@{\TTon}*{2}{c}@{\TToff}|@{\TTon}c@{\TToff}}
 $J$&$L$&\enot&$L$&\eif&$(J$&\eor&$L)$&\enot&L&J\\
@@ -232,9 +244,14 @@ $J$&$L$&\enot&$L$&\eif&$(J$&\eor&$L)$&\enot&L&J\\
 Yes, the argument is valid.
 The only row on which both the premises are 1 is the second row, and on that row the conclusion is also 1.
 
+Igen, az érv érvényes.
+Az egyetlen sor, amelyen mindkét hipotézis 1, a második sor, és ezen a soron a következtetés szintén 1.
 
-\section{Partial truth tables}
+\section*{Partial truth tables}
+\section{Részleges igazságtáblák}
 In order to show that a sentence is a tautology, we need to show that it is 1 on every row. So we need a complete truth table. To show that a sentence is \emph{not} a tautology, however, we only need one line: a line on which the sentence is 0. Therefore, in order to show that something is not a tautology, it is enough to provide a one-line \emph{partial truth table}--- regardless of how many sentence letters the sentence might have in it.
+
+Annak érdekében, hogy megmutassuk, hogy egy mondat tautológia, meg kell mutatnunk, hogy minden sorban 1. Szóval szükség van egy teljes igazságtáblára. Hogy láthassuk egy mondat \emph{nem} tautológia, azonban csak egy sorra van szükségünk: egy sorra, amelyen a mondat 0. Ezért annak demonstrálásához, hogy valami nem tautológia, elegendő egy egysoros \emph{részleges igazságtábla} -- függetlenül attól, hogy hány mondatbetűből állhat a mondat.
 
 %KB fordítása vége
 
