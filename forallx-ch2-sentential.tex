@@ -1001,6 +1001,20 @@ Give a symbolization key and symbolize the following sentences in SL.
 \end{earg}
 
 
+\solutions
+\problempart
+\label{pr.spies}
+Adj egy szimbolizációs kulcsot és szimbolizáld az alábbi mondatokat KL-ben.
+\begin{earg}
+\item Alice és Bob mindketten kémek.
+\item Ha vagy Alice vagy Bob kém, akkor a kód már fel lett törve.
+\item Ha Alice és Bob sem kém, akkor a kód törhetetlen marad.
+\item A német nagykövetségen felfordulás lesz, ha csak valaki fel nem töri a kódot.
+\item A kód vagy fel lett már törve vagy még nem, a német nagykövetségen ettől függetlenül felfordulás lesz.
+\item Vagy Alice vagy Bob kém, de nem mindketten.
+\end{earg}
+
+
 \problempart Give a symbolization key and symbolize the following sentences in SL.
 \begin{earg}
 \item If Gregor plays first base, then the team will lose.
@@ -1008,6 +1022,16 @@ Give a symbolization key and symbolize the following sentences in SL.
 \item The team will either lose or it won't, but Gregor will play first base regardless.
 \item Gregor's mom will bake cookies if and only if Gregor plays first base.
 \item If there is a miracle, then Gregor's mom will not bake cookies.
+\end{earg}
+
+
+\problempart Adj egy szimbolizációs kulcsot és szimbolizáld az alábbi mondatokat KL-ben.
+\begin{earg}
+\item Ha Gregor az első bázison játszik, akkor a csapat veszíteni fog.
+\item A csapat veszíteni fog, ha csak nem történik csoda.
+\item A csapat akár veszíteni fog, akár nem, Gregor ettől függetlenül az első bázison fog játszani.
+\item Gregor anyja sütiket fog sütni, akkor és csak akkor, ha Gregor az első bázison játszik.
+\item Ha csoda történik, akkor Gregor anyja nem fog sütiket sütni.
 \end{earg}
 
 
@@ -1019,6 +1043,14 @@ For each argument, write a symbolization key and translate the argument as well 
 \item If Zoog remembered to do his chores, then things are clean but not neat. If he forgot, then things are neat but not clean. Therefore, things are either neat or clean--- but not both.
 \end{earg}
 
+
+\problempart
+Az összes érvre írj egy szimbolizációs kulcsot, és az érvet fordítsd le KL-ben olyan jól, ahogy csak lehet.
+\begin{earg}
+\item Ha Dorothy zongorán játszik reggel, akkor Roger házsártosan kel. Dorothy zongorán játszik reggel, hacsak nem zaklatott. Szóval ha Roger nem kel házsártosan, akkor Dorothy biztos hogy zaklatott.
+\item Vagy esni vagy havazni fog kedden. Ha esik, Neville szomorú lesz. Ha havazik, Neville fázni fog. Ebből adódóan Neville fázni fog vagy szomorú lesz kedden.
+\item Ha Zoog visszagondolt hogy csinálta a házimunkáját, akkor a dolgok tiszták voltak, de nem voltak rendben. Ha ő elfelejtette, akkor a dolgok nem tiszták. Ebből adódóan, a dolgok vagy rendben vannak vagy tiszták – de nem egyszerre.
+\end{earg}
 
 
 \solutions
@@ -1038,11 +1070,33 @@ For each of the following: (a) Is it a wff of SL? (b) Is it a sentence of SL, al
 \end{earg}
 
 
+\solutions
+\problempart
+\label{pr.wiffSL}
+A következő összesre: (a) Ez egy wff az KL-ből? (b) Ez egy mondat az KL-ből, mely engedélyezett a jelölési egyezmények esetén?
+\begin{earg}
+\item $(A)$
+\item $J_{374} \eor \enot J_{374}$
+\item $\enot \enot \enot \enot F$
+\item $\enot \eand S$
+\item $(G \eand \enot G)$
+\item $\script{A} \eif \script{A}$
+\item $(A \eif (A \eand \enot F)) \eor (D \eiff E)$
+\item $[(Z \eiff S) \eif W] \eand [J \eor X]$
+\item $(F \eiff \enot D \eif J) \eor (C \eand D)$
+\end{earg}
+
 
 \problempart
 \begin{earg}
 \item Are there any wffs of SL that contain no sentence letters? Why or why not?
 \item In the chapter, we symbolized an \emph{exclusive or} using \eor, \eand, and \enot. How could you translate an \emph{exclusive or} using only two connectives? Is there any way to translate an \emph{exclusive or} using only one connective?
+\end{earg}
+
+\problempart
+\begin{earg}
+\item Vannak olyan wffs-ek az KL-ből, melyek nem tartalmaznak betűket? Miért vagy miért nem?
+\item A bekezdésben, mi szimbolizáltunk egy \emph{exclusive or} használva \eor, \eand, és \enot -t. Hogy tudnál fordítani egy \emph{kizáró vagy}-ot, csak két kapcsolatot használva? Van olyan mód egy \emph{kizáró vagy} fordítására egy kapcsolatot használva?
 \end{earg}
 
 
