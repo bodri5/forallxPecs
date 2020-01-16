@@ -585,23 +585,40 @@ With the key given above, $\exists x Gx \eif Gl$ means that if there is some gui
 
 Something strange happened when we changed the scope of the quantifier, because the conditional in QL is a material conditional. In order to keep the meaning the same, we would have to change the quantifier: $\exists x Gx \eif Gl$ means the same thing as $\forall x (Gx \eif Gl)$, and $\exists x (Gx \eif Gl)$ means the same thing as $\forall x Gx \eif Gl$.
 
+Valami furcsa dolog történt, amikor megváltoztattuk a kvantor hatókörét, mivel a PL-hez tartozó feltétel egy lényeges implikáció. Ahhoz hogy megmaradjon az eredeti jelentése, érdemes lenne megváltoztatnunk a kvantort: $\exists x Gx \eif Gl$ jelentse azt, mint $\forall x (Gx \eif Gl)$, és $\exists x (Gx \eif Gl)$ jelentse ugyanazt, mint $\forall x Gx \eif Gl$.
+
 This oddity does not arise with other connectives or if the variable is in the consequent of the conditional. For example, $\exists x Gx \eand Gl$ means the same thing as $\exists x (Gx \eand Gl)$, and $Gl \eif \exists x Gx$ means the same things as $\exists x(Gl \eif Gx)$.
 
+Ez a furcsaság nem merül fel másik műveletekkel vagy ha a változó a konzekvenciában is szerepel. Például, $\exists x Gx \eand Gl$ ugyanazt jelenti, mint $\exists x (Gx \eand Gl)$, és $Gl \eif \exists x Gx$ jelentése megegyezik $\exists x(Gl \eif Gx)$ jelentésével. 
 
-\subsection{Ambiguous predicates}
+\subsection*{Ambiguous predicates}
+\subsection{Kétértelmű prédikátumok}
 
 Suppose we just want to translate this sentence:
+
+Tételezzük fel, hogy le szeretnénk fordítani a következő mondatokat:
 \begin{earg}
 \item[\ex{surgeon1}] Adina is a skilled surgeon.
 \end{earg}
+\begin{earg}
+\item[\ex{surgeon1}] Adina egy szakképzett sebész.
+\end{earg}
 Let the UD be people, let $Kx$ mean `$x$ is a skilled surgeon', and let $a$ mean Adina. Sentence \ref{surgeon1} is simply $Ka$.
 
+Az Univerzum legyen: emberek, $Kx$ pedig jelentse azt, hogy „$x$ egy tapasztalt sebész”, és $a$-t értelmezzük Adinának. A \ref{surgeon1} mondat egyszerűen csak $Ka$.
 
 Suppose instead that we want to translate this argument:
+
+Tegyük fel, hogy le akarjuk fordítani ezt az érvet:
 \begin{quote}
 The hospital will only hire a skilled surgeon. All surgeons are greedy. Billy is a surgeon, but is not skilled. Therefore, Billy is greedy, but the hospital will not hire him.
 \end{quote}
+\begin{quote}
+A kórház csak szakképzett sebészeket fog alkalmazni. Az összes sebész kapzsi. Billy sebész, de nem igazán jártas a munkájában. Emiatt Billy kapzsi, de a kórház nem fogja alkalmazni. Billy kapzsi és emiatt a kórház nem fogja alkalmazni. 
+\end{quote}
 We need to distinguish being a \emph{skilled surgeon} from merely being a \emph{surgeon}. So we define this symbolization key:
+
+Érdemes lenne különbséget tennünk aközött, ha valaki jártas a sebészet világában vagy csupán egy sima sebész.Így ezek segítségével értelmezzük ezt a szimbolizációs kulcsot:
 \begin{ekey}
 \item[UD:] people
 \item[Gx:] $x$ is greedy.
@@ -611,7 +628,18 @@ We need to distinguish being a \emph{skilled surgeon} from merely being a \emph{
 \item[b:] Billy
 \end{ekey}
 
+\begin{ekey}
+\item[Univerzum:] emberek
+\item[Gx:] $x$ kapzsi
+\item[Hx:] A kórház alkalmazza $x$-et.
+\item[Rx:] $x$ egy sebesz.
+\item[Kx:] $x$ tapasztalt.
+\item[b:] Billy
+\end{ekey}
+
 Now the argument can be translated in this way:
+
+Ezáltal le tudjuk fordítani ezt a érvelést:
 \begin{earg}
 \label{surgeon2}
 \item[] $\forall x\bigl[\enot (Rx \eand Kx) \eif \enot Hx\bigr]$
@@ -619,6 +647,7 @@ Now the argument can be translated in this way:
 \item[] $Rb \eand \enot Kb$
 \item[\therefore] $Gb \eand \enot Hb$
 \end{earg}
+
 
 %HD fordítása vége
 
