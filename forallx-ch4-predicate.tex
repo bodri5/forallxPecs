@@ -45,7 +45,11 @@ Vegyük észre, hogy $N$, és $E$ egyaránt, a zavarról szól, de mindkettő k�
 
 Once we have separate sentence letters for $N$ and $E$, however, we erase any connection between the two. They are just two atomic sentences which might be true or false independently. In English, it could never be the case that both no one and everyone was confused. As sentences of SL, however, there is a truth-value assignment for which $N$ and $E$ are both true.
 
+Először külön kijelentés betűink vannak $N$-re és $E$-re, viszont így bármilyen köztük lévő kapcsolatot törlünk. Csak két atomi állításunk van, amelyek függetlenül lehetnek igazak vagy hamisak. Viszont magyarban az sosem fordulhatna elő, hogy egyidejűleg senki sem és mindenki is össze van zavarodva. Bár az állítások KL-beli volta miatt létezik olyan igazság-érték megjelölés, melyre $N$ és $E$ is mindketten igazak.
+
 Expressions like `no one', `everyone', and `anyone' are called \emph{quantifiers}. By translating $N$ and $E$ as separate atomic sentences, we leave out the \emph{quantifier structure} of the sentences. Fortunately, the quantifier structure is not what makes this argument valid. As such, we can safely ignore it. To see this, we translate the argument to SL:
+
+Az olyan kifejezéseket, mint "senki", "mindenki" és "bárki" \emph{kvantoroknak} nevezzük. $N$ és $E$ külön atomi kijelentésekre való lefordításával kihagyjuk az állítások \emph{kvantor-szerkezetét}. Szerencsére nem a kvantor-szerkezet az, ami érvényessé teszi ezt az érvelést. Mi több, nyugodtan figyelmen kívül is hagyhatjuk azt. Hogy lássuk ezt, lefordítjuk az érvelést KL-ba:
 \begin{earg}
 \item[]$L \eif (N \eor E)$
 \item[]$E \eif B$
@@ -54,7 +58,11 @@ Expressions like `no one', `everyone', and `anyone' are called \emph{quantifiers
 \end{earg}
 This is a valid argument in SL. (You can do a truth table to check this.) 
 
+Ez egy érvényes érvelés KL-ban. (Igazságtáblázattal leellenőrizhető.)
+
 Now consider another argument. This one is also valid in English.
+
+Most vizsgáljunk meg egy másik érvelést. Ez is érvényes magyarul.
 
 \begin{quote}
 \label{willard1}
@@ -62,14 +70,30 @@ Willard is a logician. All logicians wear funny hats.\\
 \therefore\ Willard wears a funny hat.
 \end{quote}
 
+\begin{quote}
+\label{willard1}
+Vilmos egy logikával foglalkozó tudós. Minden logikával foglalkozó tudós vicces kalapot hord. \\
+\therefore\ Vilmos vicces kalapot hord.
+\end{quote}
+
 To symbolize it in SL, we define a symbolization key:
+
+Hogy szimbolizálhassuk ezt KL-ban, definiálunk hozzá egy szimbolizációs kulcsot:
 \begin{ekey}
 \item[L:] Willard is a logician.
 \item[A:] All logicians wear funny hats.
 \item[F:] Willard wears a funny hat.
 \end{ekey}
 
+\begin{ekey}
+\item[L:] Vilmos egy logikával foglalkozó tudós.
+\item[A:] Minden logikával foglalkozó tudós vicces kalapot hord.
+\item[F:] Vilmos vicces kalapot hord.
+\end{ekey}
+
 Now we symbolize the argument:
+
+Most szimbolizáljuk az érvelést:
 \begin{earg}
 \item[]$L$
 \item[]$A$
@@ -78,7 +102,11 @@ Now we symbolize the argument:
 
 This is \emph{invalid} in SL. (Again, you can confirm this with a truth table.) There is something very wrong here, because this is clearly a valid argument in English. The symbolization in SL leaves out all the important structure. Once again, the translation to SL overlooks quantifier structure: The sentence `All logicians wear funny hats' is about both logicians and hat-wearing. By not translating this structure, we lose the connection between Willard's being a logician and Willard's wearing a hat.
 
+Ez \emph{nem érvényes} KL-ban. (Ismét bebizonyítható igazságtáblázattal.) Valami nagy baj van itt, hiszen ez nyilvánvalóan egy érvényes érvelés magyarul. A szimbolizáció KL-ban kihagyja az összes fontos szerkezetet. A KL-ba való fordítás megint figyelmen kívül hagyja a kvantor-szerkezetet: A „Minden logikával foglalkozó tudós vicces kalapot hord” állítás mind a tudósokról, mind a kalaphordásról szól. Ezen szerkezet le nem fordításával elvesztjük a kapcsolatot Vilmos logikával foglalkozó tudós volta és Vilmos vicces kalapot hordása között.
+
 Some arguments with quantifier structure can be captured in SL, like the first example, even though SL ignores the quantifier structure. Other arguments are completely botched in SL, like the second example. Notice that the problem is not that we have made a mistake while symbolizing the second argument. These are the best symbolizations we can give for these arguments \emph{in SL}.
+
+Néhány kvantor-szerkezettel rendelkező érvelés leírható KL-ban, mint az első példában, még annak ellenére is, hogy a KL figyelmen kívül hagyja a kvantor-szerkezetet. Más érvelések pedig teljesen össze vannak csapva KL-ban, mint a második példában. Jegyezzük meg, hogy nem az a probléma, hogy hibát vétettünk a második érvelés szimbolizálásánál. Ezek a legjobb szimbolizációk, amiket csak adhatunk ezeknek az érveléseknek \emph{KL-ban}.
 
 %HD fordítása vége
 
