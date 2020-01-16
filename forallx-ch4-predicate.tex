@@ -243,7 +243,13 @@ Ha ezt a mondatot lefordítjuk PL-be, akkor unáris, bináris vagy ternárissá 
 
 In general, we can have predicates with as many places as we need. Predicates with more than one place are called \define{polyadic}. Predicates with $n$ places, for some number $n$, are called \define{n-place} or \define{n-adic}.
 
+Általánosságban, egy predikátumnak annyi változója lehet, amennyire csak szükségünk van. A egynél több változós predikátumokat \define {polyadikus}-nak
+vagy \define {többrétű}-nek nevezzük. Az $n$-változós predikátumokat \define {n-rétű}-nek nevezzük.
+
 In QL, we symbolize predicates with capital letters $A$ through $Z$, with or without subscripts. When we give a symbolization key for predicates, we will not use blanks; instead, we will use variables. By convention, constants are listed at the end of the key. So we might write a key that looks like this:
+
+A QL-ben nagybetűkkel szimbolizáljuk a predikátumokat: $A$-$Z$, indexekkel vagy azok nélkül. Ha szimbolizációs kulcsot adunk a predikátumokhoz, akkor nem használunk üres helyeket, ehelyett változókat fogunk használni. Megállapodás szerint az állandók a kulcs végén vannak listázva/felsorolva. Szóval írhatunk egy kulcsot, amely így néz ki:
+
 \begin{ekey}
 \item[Ax:] $x$ is angry.
 \item[Hx:] $x$ is happy.
@@ -253,28 +259,60 @@ In QL, we symbolize predicates with capital letters $A$ through $Z$, with or wit
 \item[d:] Donald
 \item[g:] Gregor
 \item[m:] Marybeth
+\end {ekey}
+
+\begin{ekey}
+\item [Ax:] $ x $ dühös.
+\item [Hx:] $ x $ boldog.
+\item [T $ _1 $ xy:] $ x $ ugyanolyan magas vagy magasabb, mint $ y $.
+\item [T $ _2 $ xy:] $ x $ ugyanolyan kemény vagy keményebb, mint $ y $.
+\item [Bxyz:] $ y $ $ x $ és $ z $ között van.
+\item [d:] Donald
+\item [g:] Gregor
+\item [m:] Marybeth
 \end{ekey}
 
 We can symbolize sentences that use any combination of these predicates and terms. For example:
-\begin{earg}
+
+Szimbolizálhatunk olyan mondatokat, amelyek ezen predikátumok és kifejezések bármilyen kombinációját használják. Például:
+
+\begin {earg}
 \nix{I am inclined to change these to Cordelia, Hamlet, and Macbeth}
 \item[\ex{terms1}] Donald is angry.
 \item[\ex{terms2}] If Donald is angry, then so are Gregor and Marybeth.
 \item[\ex{terms3}] Marybeth is at least as tall and as tough as Gregor.
 \item[\ex{terms4}] Donald is shorter than Gregor.
 \item[\ex{terms5}] Gregor is between Donald and Marybeth.
-\end{earg}
+\end {earg}
+
+\begin {earg}
+\nix {Hajlamos vagyok ezeket Cordelia, Hamlet és Macbeth-re változtatni}
+\item [\ex {terms1}] Donald dühös.
+\item [\ex {terms2}] Ha Donald dühös, akkor Gregor és Marybeth is.
+\item [\ex {terms3}] Marybeth legalább annyira magas és olyan kemény, mint Gregor.
+\item [\ex {terms4}] Donald alacsonyabb, mint Gregor.
+\item [\ex {terms5}] Gregor, Donald és Marybeth között van.
+\end {earg}
 
 Sentence \ref{terms1} is straightforward: $Ad$. The `$x$' in the key entry `$Ax$' is just a placeholder; we can replace it with other terms when translating.
 
+Az \ref{terms1} mondat egyértelmű: $Ad$. Az „$x$” az „$Ax$” kulcsbejegyzésben csak helyőrzõ; kicserélhetjük más kifejezésekkel a fordítás során.
+
 Sentence \ref{terms2} can be paraphrased as, `If $Ad$, then $Ag$ and $Am$.' QL has all the truth-functional connectives of SL, so we translate this as $Ad \eif (Ag \eand Am)$.
+
+Az \ref{terms2} mondat átfogalmazható így: „Ha $Ad$, akkor $Ag$ és $Am$.” A QL rendelkezik az SL logikai műveleteivel, tehát ezt $Ad \eif(Ag \eand Am)$-nek fordítjuk.
 
 Sentence \ref{terms3} can be translated as $T_1mg \eand T_2mg$.
 
+Az \ref{terms3} mondat lefordítható így: $T_1mg \eand T_2mg $.
+
 Sentence \ref{terms4} might seem as if it requires a new predicate. If we only needed to symbolize this sentence, we could define a predicate like $Sxy$ to mean `$x$ is shorter than $y$.' However, this would ignore the logical connection between `shorter' and `taller.' Considered only as symbols of QL, there is no connection between $S$ and $T_1$. They might mean anything at all. Instead of introducing a new predicate, we paraphrase sentence \ref{terms4} using predicates already in our key: `It is not the case that Donald is as tall or taller than Gregor.' We can translate it as $\enot T_1dg$.
+
+Az \ref{terms4} mondat úgy tűnik, hogy új predikátumot igényel. Ha csak ezt a mondatot kellene szimbolizálnunk, akkor definiálhatnánk egy olyan predikátumot, mint például a $Sxy$, ezalatt értve ezt: „$x$ alacsonyabb, mint $y$”. Ez azonban figyelmen kívül hagyná a logikai kapcsolatokat „alacsonyabb” és „magasabb” között. Csak a QL szimbólumainak tekintve, nincs kapcsolat $S$ és $T_1$ között. Talán bármit is jelenthetnek. Egy új predikátum bevezetése helyett a \ref{term4} mondatot újrafogalmazzuk a már meglévő predikátumok felhasználásával a kulcsban: „Nem az a helyzet, hogy Donald olyan magas vagy magasabb, mint Gregor.” Ezt fordíthatjuk így is: $ \enot T_1dg$.
 
 Sentence \ref{terms5} requires that we pay careful attention to the order of terms in the key. It becomes $Bdgm$.
 
+Az \ref{terms5} mondat megköveteli, hogy figyelmet fordítsunk a kulcsban szereplő kifejezések sorrendjére. Ez $Bdgm$ lesz.
 
 %TBA fordítása vége
 
