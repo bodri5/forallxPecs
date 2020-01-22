@@ -288,6 +288,14 @@ We can also ask about the logical relations \emph{between} two sentences. For ex
 \end{earg}
 These two sentences are both contingent, since John might not have gone to the store or washed dishes at all. Yet they must have the same truth-value. If either of the sentences is true, then they both are; if either of the sentences is false, then they both are. When two sentences necessarily have the same truth value, we say that they are \define{logically equivalent}.
 
+\subsection{Logikai ekvivalencia}
+Kérdezhetünk a logikai relációkról két kijelentés\emph{között} . Például:
+\begin{earg}
+\item[] John elment a boltba miután elmosta az edényeket.
+\item[] John elmosta az edényeket mielőtt elment a boltba.
+\end{earg}
+A két kijelentés kontingens, mivel lehet hogy John nem ment boltba vagy nem mosogatott edényeket. Mégis ugyanolyan igazságértékük kell legyen. Ha bármely kijelentés igaz, akkor mindkettő igaz; ha bármely kijelentés hamis, akkor mindkettő hamis. Amikor két kijelentésnek szükségszerűen azonos igazságértéke van, azt mondjuk, hogy \define{logikailag ekvivalensek}.
+
 \subsection{Consistency}
 Consider these two sentences:
 \begin{ekey}
@@ -296,7 +304,17 @@ Consider these two sentences:
 \end{ekey}
 Logic alone cannot tell us which, if either, of these sentences is true. Yet we can say that \emph{if} the first sentence (B1) is true, \emph{then} the second sentence (B2) must be false. And if B2 is true, then B1 must be false. It cannot be the case that both of these sentences are true.
 
+\subsection{Konzisztencia}
+Tekintsük ezt a két kijelentést:
+\begin{ekey}
+\item[B1] Az egyetlen testvérem magasabb mint én.
+\item[B2] Az egyetlen testvérem alacsonyabb mint én.
+\end{ekey}
+A logika önmagában nem képes megmondani hogy ezekből a kijelentésekből mely igaz, ha valamelyik igaz. Mégis azt mondhatjuk, hogy \emph{ha} az első kijelentés (B1) igaz, \emph{akkor} a második kijelentés (B2) hamis kell legyen. És ha B2 igaz, akkor B1 muszáj hamis legyen. Lehetetlen, hogy mindkét kijelentés igaz.
+
 If a set of sentences could not all be true at the same time, like B1--B2, they are said to be \define{inconsistent}. Otherwise, they are \define{consistent}.
+
+Ha egy kijelentéskészlet nem lehet egyszerre igaz, mint például a B1--B22, akkor azt mondjuk, hogy \define{inkonzisztens}. Egyéb esetben \define{konzisztens}.
 
 We can ask about the consistency of any number of sentences. For example, consider the following list of sentences:
 \label{MartianGiraffes}
@@ -308,7 +326,20 @@ We can ask about the consistency of any number of sentences. For example, consid
 \end{ekey}
 G1 and G4 together imply that there are at least four martian giraffes at the park. This conflicts with G3, which implies that there are no more than two martian giraffes there. So the set of sentences G1--G4 is inconsistent. Notice that the inconsistency has nothing at all to do with G2. G2 just happens to be part of an inconsistent set.
 
-Sometimes, people will say that an inconsistent set of sentences `contains a contradiction.' By this, they mean that it would be logically impossible for all of the sentences to be true at once. A set might be inconsistent even if each of the sentences in it is either contingent or tautologous. When a single sentence is a contradiction, then that sentence alone cannot be true.
+Akárhány kijelentés konzisztenciáját megvizsgálhatjuk. Vegyük például a következő kijelentések listáját:
+\label{MartianGiraffes}
+\begin{ekey}
+\item[G1] Legalább négy zsiráf van az állatkertben.
+\item[G2] Pontosan hét gorilla van az állatkertben.
+\item[G3] Az állatkertben legfeljebb két marslakó található.
+\item[G4] Az állatkertben minden zsiráf marslakó.
+\end{ekey}
+G1 és G4 együtt azt jelenti, hogy legalább négy marslakó zsiráf van az állatkertben. Ez ellentmond G3-nak, ami szerint legfeljebb két marslakó zsiráf van itt. Tehát a G1--G4 kijelentéskészlet inkonzisztens. Vegyük észre, hogy az inkonzisztenciának semmi köze sincs a G2-hez. A G2 csak egy inkonzisztens halmaz része.
+
+Sometimes, people will say that an inconsistent set of sentences ‘contains a contradiction.’ By this, they mean that it would be logically impossible for all of the sentences to be true at once. A set might be inconsistent even if each of the sentences in it is either contingent or tautologous. When a single sentence is a contradiction, then that sentence alone cannot be true.
+
+Időnként az emberek azt szokták mondani az inkonzisztens kijelentéskészletre hogy „ellentmondást tartalmaz.” Ez azt jelenti, hogy logikailag lehetetlen lenne, hogy az összes kijelentés egyszerre igaz legyen. Egy kijelentéskészlet inkonzisztens lehet, még akkor is, ha a benne lévő kijelentések kontingensek vagy tautológiák. Ha egyetlen kijelentés ellentmondásos, akkor a kijelentés önmagában nem lehet igaz.
+
 
 %KP fordítása vége
 
