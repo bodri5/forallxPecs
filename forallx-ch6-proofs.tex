@@ -988,6 +988,32 @@ The important point is that, happily, the proof system for QL is both sound and 
 \item $\{\script{A}_1,\script{A}_2,\ldots\}$ is \define{provably inconsistent} if and only if, for some sentence \script{B}, $\{\script{A}_1,\script{A}_2,\ldots\}\vdash(\script{B} \eand \enot \script{B})$.
 \end{itemize}
 
+MAGYAR RSZÖVEG
+A módszer lényege, hogy minden levezetési szabály esetén a szabály egymaga nem elég ahhoz, hogy egy igaz állítást meghamisítson. Ebből adódik, hogy a kombinációs szabályok nem elegendőek egy igaz állítás meghamisitásához sem. Mivel a bizonyitás az csak a sorok sorozata amelyet a levezetési szabálya támasztja alá ez elegendő a bebizonytáshoz, hogy minden bebizonyítható állítás igaz.
+
+Példa képpen vegyünk a {\eand}I szabályt. Tegyük fel, hogy ezek segítségével hozzá adunk \script{A}\eand\script{B}-t egy igaz állításhoz. Ez csak akkor működik, ha már \script{A} és \script{B} része az igaz állításnak. Ebből következik, hogy \script{A} és \script{B} részese a premisszának, vagy a igaz koknluziója egy másik premisszának. Vagyis minden modelben ahol a premisszák igazak, abban a modelben \script{A} és \script{B} is igazak. Tehát \script{A}\eand\script{B}-ből következik, hogy az {\eand}E szabályt alkalmazva egy igaz bizonyításból egy újabb igaz bizonyítás következik.
+
+Ahhoz, hogy megbizonyosodjunk, hogy a bizonyítási szabályaink konzisztensek ez előbbi folyamatot alkalmazunk kell másik levezetési szabályokon is. Mivel a deriválási szabályok konzekvensek az alap szabályokkal elegendő bebizonyítanunk, hogy a többi 16 alap szabály is ugyan így viselkednek. De ezek bizonyítása meghaladja e könyvnek a célkitűzését.
+
+Bebizonyítva, hogy minden bizonyítási rendszer valós következik, hogy minden elv egyben egy tautológia is.
+
+Még mindig meg lehet kérdezni: Miért is gondoljuk, hogy \emph{minden} igaz állítás az egy bebizonyítható állítás? Azért mert  $\script{A}\models\script{B}$ arra utal hogy $\script{A}\vdash\script{B}$?
+
+Ez a \define{teljesség} problémája. Egy bizonyítási rendszer akkor \define{véges}, ha valamennyi igaz állításra találunk bizonyítást. A QL nyelv végességét először Kurt Gödel bizonyította be 1929-ben. A bizonyítással ámbár ez a könyv nem kíván foglalkozni.
+
+
+A fontos pont, hogy szerencsére a bizonyítási rendzer a QL nyelvre egyben véges és bebizonyított. Ez nem minden bizonyítási rendszerről valamint nyelvről mondható el. De mivel a QL rendszerre igaz, választhatunk a meglévő bizonyítások közül olyan moelleket amik számunkra a legtöbb segítséget nyújtanak az adott feladatra
+
+
+\section*{Definiciók összegzése}
+\begin{itemize}
+\item A mondat \script{A} csak is akkor egy \define{elv} is ha $\vdash\script{A}$.
+
+\item Két mondtat \script{A} és \script{B} akkor \define{bizonyíthatóan megegyezőek}, ha $\script{A}\vdash\script{B}$ és $\script{B}\vdash\script{A}$.
+
+\item $\{\script{A}_1,\script{A}_2,\ldots\}$ \define{következetlen inconsisztens} csak és akkor ha \script{B}, $\{\script{A}_1,\script{A}_2,\ldots\}\vdash(\script{B} \eand \enot \script{B})$.
+\end{itemize}
+
 %NG fordítása vége
 
 \practiceproblems
