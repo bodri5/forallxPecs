@@ -761,9 +761,9 @@ F & F & T
 
 
 \section*{Other symbolization}
+\section{Más szimbolizálás}
 We have now introduced all of the connectives of SL. We can use them together to translate many kinds of sentences. Consider these examples of sentences that use the English-language connective `unless':
 
-\section{Más szimbolizálás}
 Bemutattuk az ítéletlogika összes műveletét. Használhatjuk őket együtt, hogy átalakíthassunk többféle mondatot. Tekintve ezeket a példákat, amire azt mondjuk „hacsak”:
 
 \begin{earg}
@@ -782,34 +782,58 @@ Bemutattuk az ítéletlogika összes műveletét. Használhatjuk őket együtt, 
 
 Let $J$ mean `You will wear a jacket' and let $D$ mean `You will catch a cold.'
 
+Legyen a $J$ jelentése a következő: „Viselni fogsz egy kabátot” és $D$-é meg: „Meg fogsz fázni.”
+
 We can paraphrase sentence \ref{unless1} as `Unless $J$, $D$.' This means that if you do not wear a jacket, then you will catch cold; with this in mind, we might translate it as $\enot J \eif D$. It also means that if you do not catch a cold, then you must have worn a jacket; with this in mind, we might translate it as $\enot D \eif J$.
+
+Át tudjuk fogalmazni \aref{unless1}. mondatot úgy is 'Hacsak $J$, $D$'. Ez azt jelenti, hogy ha nem viselsz kabátot, akkor meg fogsz fázni. Ezt figyelembe véve a következőképpen is le tudjuk fordítani: $\enot J \eif D$. Továbbá azt is jelenti, hogy, ha nem fáztál meg, akkor biztosan viseltél kabátot. Tekintettel erre fordíthatjuk így is: $\enot D \eif J$.
 
 Which of these is the correct translation of sentence \ref{unless1}? Both translations are correct, because the two translations are logically equivalent in SL.
 
+Melyik a helyes fordítása \aref{unless1}. mondatnak? Mindkettő helytálló, mert mindegyik fordítás logikailag ekvivalens a KL-ban.
+
 Sentence \ref{unless2}, in English, is logically equivalent to sentence \ref{unless1}. It can be translated as either $\enot J \eif D$ or $\enot D \eif J$.
+
+\Aref{unless2}. mondat magyarul logikailag ekvivalens \aref{unless1}. mondattal. Le lehet fordítani $\enot J \eif D$ -nek vagy $\enot D \eif J$ -nek is.
 
 When symbolizing sentences like sentence \ref{unless1} and sentence \ref{unless2}, it is easy to get turned around. Since the conditional is not symmetric, it would be wrong to translate either sentence as $J \eif \enot D$. Fortunately, there are other logically equivalent expressions. Both sentences mean that you will wear a jacket or--- if you do not wear a jacket--- then you will catch a cold. So we can translate them as $J \eor D$. (You might worry that the `or' here should be an \emph{exclusive or}. However, the sentences do not exclude the possibility that you might \emph{both} wear a jacket \emph{and} catch a cold; jackets do not protect you from all the possible ways that you might catch a cold.)
 
+Amikor a mondatokat szimbolizáljuk, mint a \ref{unless1}. és \ref{unless2}. mondat, akkor könnyű megfordítani őket. Mivel az implikáció nem szimmetrikus, ezért helytelen lenne bármelyik mondatot a következő módon forditani, $J \eif \enot D$. Szerencsére léteznek más logikailag ekvivalens kifejezések is. Mindkét mondat azt jelenti, hogy viselni fogsz kabátot vagy --ha nem viselsz kabátot, akkor-- meg fogsz fázni. Tehát $J \eor D$-nek is fordíthatjuk. (Lehetne aggódni, hogy a „vagy” jelen esetben \emph{kizáró vagy}-e, de a mondatok nem zárják ki a lehetőségét annak, hogy viselsz kabátot \emph{és} megfázol. A kabát nem véd meg a megfázás összes módjától.)
 
 \factoidbox{
 If a sentence can be paraphrased as `Unless \script{A}, \script{B},' then it can be symbolized as $\script{A}\eor\script{B}$.
 }
 
+\factoidbox{
+Ha egy mondat definiálhatunk úgy, hogy `Hacsak \script{A}, \script{B},' Akkor szimbolizálhatjuk a következőképpen $\script{A}\eor\script{B}$.
+}
+
 Symbolization of standard sentence types is summarized on p.~\pageref{app.symbolization}.
 
+Az alapvető mondatok szimbolizációja \apageref{app.symbolization}. oldalon van összefoglalva.
 
 
 
 
-\section{Sentences of SL}
+
+\section*{Sentences of SL}
+\section{Mondatok a KL-ban}
 The sentence `Apples are red, or berries are blue' is a sentence of English, and the sentence `$(A\eor B)$' is a sentence of SL. Although we can identify sentences of English when we encounter them, we do not have a formal definition of `sentence of English'. In SL, it is possible to formally define what counts as a sentence. This is one respect in which a formal language like SL is more precise than a natural language like English.
+
+Az, hogy „Az almák pirosak, vagy az áfonya kék” egy magyar nyelvű mondat, „$(A\eor B)$” pedig egy mondat a KL-ban. Habár felismerjük a magyar nyelv mondatait, amikor találkozunk velük, de nincsen egy formális definíciónk arra, hogy mi egy „magyar mondat”. Viszont KL-ban lehetséges formálisan meghatározni, mi számít egy mondatnak és mi nem. Ez az egyik szempont, amiben egy formális nyelv, mint a KL sokkal precízebb, mint egy természetes nyelv.
 
 It is important to distinguish between the logical language SL, which we are developing, and the language that we use to talk about SL. When we talk about a language, the language that we are talking about is called the \define{object language}. The language that we use to talk about the object language is called the \define{metalanguage}.
 \label{def.metalanguage}
 
+Ezért fontos különbséget tenni a KL logikai nyelve, amit kialakítunk, és a beszélt nyelvünk között. Amikor egy nyelvről beszélünk, akkor a nyelvet, amiről beszélünk úgy hívjuk, hogy \define{tárgynyelv}. Továbbá a nyelv, amit használunk az elmondására, azt meg \define{metanyelv}nek hívjuk.
+\label{def.metanyelv}
+
 The object language in this chapter is SL. The metalanguage is English--- not conversational English, but English supplemented with some logical and mathematical vocabulary. The sentence `$(A\eor B)$' is a sentence in the object language, because it uses only symbols of SL. The word `sentence' is not itself part of SL, however, so the sentence `This expression is a sentence of SL' is not a sentence of SL. It is a sentence in the metalanguage, a sentence that we use to talk \emph{about} SL.
 
+A tárgynyelv ebben a fejezetben az KL. A metanyelv meg a magyar -- nem a hétköznapi magyar, hanem az amelyik ki lett egészítve némi logikai és matematikai szókészlettel. Az a mondat, hogy „$(A\eor B)$” egy mondat a tárgynyelven, mert csak a KL szimbólumait használja. A „mondat” szó önmagában nem része a KL-nak, emellett „Ez a kifejezés egy mondata az KL-nak” sem egy mondata KL-nak. Ez egy mondat a metanyelvben, amit mi arra használunk, hogy a KL-ról beszéljünk.
 %PB fordítása vége
+
+%NCs fordítása kezdet
 
 In this section, we will give a formal definition for `sentence of SL.' The definition itself will be given in mathematical English, the metalanguage.
 
@@ -841,6 +865,8 @@ Since any sequence of symbols is an expression, many expressions of SL will be g
 Obviously, individual sentence letters like $A$ and $G_{13}$ will be wffs. We can form further wffs out of these by using the various connectives. Using negation, we can get $\enot A$ and $\enot G_{13}$. Using conjunction, we can get $A \eand G_{13}$, $G_{13} \eand A$, $A \eand A$, and $G_{13} \eand G_{13}$. We could also apply negation repeatedly to get wffs like $\enot \enot A$ or apply negation along with conjunction to get wffs like $\enot(A \eand G_{13})$ and $\enot(G_{13} \eand \enot G_{13})$. The possible combinations are endless, even starting with just these two sentence letters, and there are infinitely many sentence letters. So there is no point in trying to list all the wffs.
 
 Instead, we will describe the process by which wffs can be constructed. Consider negation: Given any wff \script{A} of SL, $\enot\script{A}$ is a wff of SL. It is important here that \script{A} is not the sentence letter $A$. Rather, it is a variable that stands in for any wff at all. Notice that this variable \script{A} is not a symbol of SL, so $\enot\script{A}$ is not an expression of SL. Instead, it is an expression of the metalanguage that allows us to talk about infinitely many expressions of SL: all of the expressions that start with the negation symbol. Because \script{A} is part of the metalanguage, it is called a \emph{metavariable}.
+
+%NCs fordítása vége
 
 We can say similar things for each of the other connectives. For instance, if \script{A} and \script{B} are wffs of SL, then $(\script{A}\eand\script{B})$ is a wff of SL. Providing clauses like this for all of the connectives, we arrive at the following formal definition for a {well-formed formula of SL}:
 
