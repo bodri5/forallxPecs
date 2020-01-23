@@ -964,20 +964,31 @@ Fortunately, there is a way of approaching this in a step-wise fashion. If using
 %NG fordítása kezdet
 The strategy is to show for every rule of inference that it alone could not make a valid argument into an invalid one. It follows that the rules used in combination would not make a valid argument invalid. Since a proof is just a series of lines, each justified by a rule of inference, this would show that every provable argument is valid.
 
+A módszer lényege, hogy megmutassuk, minden levezetési szabály esetén a szabály egymaga nem elég ahhoz, hogy egy helyes érvelést meghamisítson. Ebből adódik, hogy a szabályok kombinálása sem vezet egy helyes érvelés meghamisitásához. Mivel a bizonyitás csak sorok sorozata amelyeket mind egy levezetési szabály támaszt alá, ez elegendő annak a bebizonytáshoz, hogy minden bebizonyítható érvelés helyes.
+
 Consider, for example, the {\eand}I rule. Suppose we use it to add \script{A}\eand\script{B} to a valid argument. In order for the rule to apply, \script{A} and \script{B} must already be available in the proof. Since the argument so far is valid, \script{A} and \script{B} are either premises of the argument or valid consequences of the premises. As such, any model in which the premises are true must be a model in which \script{A} and \script{B} are true. According to the definition of \define{truth in QL}, this means that \script{A}\eand\script{B} is also true in such a model. Therefore, \script{A}\eand\script{B} validly follows from the premises. This means that using the {\eand}E rule to extend a valid proof produces another valid proof.
+
+Példa képpen vegyünk az {\eand}I szabályt. Tegyük fel, hogy ezek segítségével hozzáadjuk \script{A}\eand\script{B}-t egy helyes érveléshez. Ez csak akkor működik, ha már \script{A} és \script{B} része az érvelésnek. Mivel az érvelés eddig helyes volt, ezért \script{A} és \script{B} vagy az érvelés premisszái, vagy a premisszák helyes koknluziói. Vagyis minden modellben ahol a premisszák igazak, abban a modellben \script{A} és \script{B} is igazak. Tehát \script{A}\eand\script{B}-ből következik, hogy az {\eand}E szabályt alkalmazva egy igaz bizonyításból egy újabb igaz bizonyítás következik.
 
 In order to show that the proof system is sound, we would need to show this for the other inference rules. Since the derived rules are consequences of the basic rules, it would suffice to provide similar arguments for the 16 other basic rules. This tedious exercise falls beyond the scope of this book.
 
+Ahhoz, hogy megbizonyosodjunk, hogy a bizonyítási rendszerünk konzisztens ez előbbi folyamatot alkalmazunk kell a többi levezetési szabályra is. Mivel a deriválási szabályok konzekvensek az alap szabályokkal elegendő bebizonyítanunk, hogy a többi 16 alap szabály is ugyan így viselkednek. De ezek bizonyítása meghaladja e könyvnek a célkitűzését.
+
 Given a proof that the proof system is sound, it follows that every theorem is a tautology.
+
+Ha be van bizonyítva, hogy a bizonyítási rendszer konzisztens, következik, hogy minden tétel egyben tautológia is.
 
 It is still possible to ask: Why think that \emph{every} valid argument is an argument that can be proven?  That is, why think that $\script{A}\models\script{B}$ implies $\script{A}\vdash\script{B}$?
 
+Még mindig meg lehet kérdezni: Miért is gondoljuk, hogy \emph{minden} igaz állítás az egy bebizonyítható állítás? Vagyis miért gondoljuk, hogy  $\script{A}\models\script{B}$-ből következik $\script{A}\vdash\script{B}$?
+
 This is the problem of \define{completeness}. A proof system is \define{complete} if there is a proof of every valid argument. Completeness for a language like QL was first proven by Kurt G\"odel in 1929. The proof is beyond the scope of this book.
+
+Ez a \define{teljesség} problémája. Egy bizonyítási rendszer akkor \define{teljes}, ha valamennyi igaz állításra találunk bizonyítást. A QL nyelv teljességét először Kurt Gödel bizonyította be 1929-ben. A bizonyítással ámbár ez a könyv nem kíván foglalkozni.
 
 The important point is that, happily, the proof system for QL is both sound and complete. This is not the case for all proof systems and all formal languages. Because it is true of QL, we can choose to give proofs or construct models--- whichever is easier for the task at hand.
 
-
-
+A fontos pont, hogy szerencsére a bizonyítási rendzer a QL nyelvre egyben konzisztens és teljes. Ez nem minden bizonyítási rendszerről valamint nyelvről mondható el. De mivel a QL rendszerre igaz, választhatunk, hogy bizonyításokat adunk, vagy modelleket készítünk -- amelyik éppen könnyebb az adott feladatban.
 
 \section*{Summary of definitions}
 \begin{itemize}
@@ -988,30 +999,13 @@ The important point is that, happily, the proof system for QL is both sound and 
 \item $\{\script{A}_1,\script{A}_2,\ldots\}$ is \define{provably inconsistent} if and only if, for some sentence \script{B}, $\{\script{A}_1,\script{A}_2,\ldots\}\vdash(\script{B} \eand \enot \script{B})$.
 \end{itemize}
 
-MAGYAR RSZÖVEG
-A módszer lényege, hogy minden levezetési szabály esetén a szabály egymaga nem elég ahhoz, hogy egy igaz állítást meghamisítson. Ebből adódik, hogy a kombinációs szabályok nem elegendőek egy igaz állítás meghamisitásához sem. Mivel a bizonyitás az csak a sorok sorozata amelyet a levezetési szabálya támasztja alá ez elegendő a bebizonytáshoz, hogy minden bebizonyítható állítás igaz.
-
-Példa képpen vegyünk a {\eand}I szabályt. Tegyük fel, hogy ezek segítségével hozzá adunk \script{A}\eand\script{B}-t egy igaz állításhoz. Ez csak akkor működik, ha már \script{A} és \script{B} része az igaz állításnak. Ebből következik, hogy \script{A} és \script{B} részese a premisszának, vagy a igaz koknluziója egy másik premisszának. Vagyis minden modelben ahol a premisszák igazak, abban a modelben \script{A} és \script{B} is igazak. Tehát \script{A}\eand\script{B}-ből következik, hogy az {\eand}E szabályt alkalmazva egy igaz bizonyításból egy újabb igaz bizonyítás következik.
-
-Ahhoz, hogy megbizonyosodjunk, hogy a bizonyítási szabályaink konzisztensek ez előbbi folyamatot alkalmazunk kell másik levezetési szabályokon is. Mivel a deriválási szabályok konzekvensek az alap szabályokkal elegendő bebizonyítanunk, hogy a többi 16 alap szabály is ugyan így viselkednek. De ezek bizonyítása meghaladja e könyvnek a célkitűzését.
-
-Bebizonyítva, hogy minden bizonyítási rendszer valós következik, hogy minden elv egyben egy tautológia is.
-
-Még mindig meg lehet kérdezni: Miért is gondoljuk, hogy \emph{minden} igaz állítás az egy bebizonyítható állítás? Azért mert  $\script{A}\models\script{B}$ arra utal hogy $\script{A}\vdash\script{B}$?
-
-Ez a \define{teljesség} problémája. Egy bizonyítási rendszer akkor \define{véges}, ha valamennyi igaz állításra találunk bizonyítást. A QL nyelv végességét először Kurt Gödel bizonyította be 1929-ben. A bizonyítással ámbár ez a könyv nem kíván foglalkozni.
-
-
-A fontos pont, hogy szerencsére a bizonyítási rendzer a QL nyelvre egyben véges és bebizonyított. Ez nem minden bizonyítási rendszerről valamint nyelvről mondható el. De mivel a QL rendszerre igaz, választhatunk a meglévő bizonyítások közül olyan moelleket amik számunkra a legtöbb segítséget nyújtanak az adott feladatra
-
-
 \section*{Definiciók összegzése}
 \begin{itemize}
-\item A mondat \script{A} csak is akkor egy \define{elv} is ha $\vdash\script{A}$.
+\item Az \script{A} mondat akkor és csakis akkor egy \define{tétel}, ha $\vdash\script{A}$.
 
-\item Két mondtat \script{A} és \script{B} akkor \define{bizonyíthatóan megegyezőek}, ha $\script{A}\vdash\script{B}$ és $\script{B}\vdash\script{A}$.
+\item Két mondtat \script{A} és \script{B} akkor \define{bizonyíthatóan ekvivalensek}, ha $\script{A}\vdash\script{B}$ és $\script{B}\vdash\script{A}$.
 
-\item $\{\script{A}_1,\script{A}_2,\ldots\}$ \define{következetlen inconsisztens} csak és akkor ha \script{B}, $\{\script{A}_1,\script{A}_2,\ldots\}\vdash(\script{B} \eand \enot \script{B})$.
+\item $\{\script{A}_1,\script{A}_2,\ldots\}$ \define{bizonyíthatóan inkonzisztens} akkor és csakis akkor, ha egy \script{B} mondatra, $\{\script{A}_1,\script{A}_2,\ldots\}\vdash(\script{B} \eand \enot \script{B})$.
 \end{itemize}
 
 %NG fordítása vége
