@@ -1309,6 +1309,20 @@ Using the symbolization key given, translate each English-language sentence into
 \item[Tx:] Boris has tried $x$.
 \item[Bxy:] $x$ is better than $y$.
 \end{ekey}
+
+\solutions
+\problempart
+\label{pr.QLcandies}
+Az adott szimbolizációs kulcsot felhasználva fordítsunk le minden egyes (magyar-nyelvű) mondatot Predikátumlogikára.
+\begin{ekey}
+\item[UD:] cukorkák
+\item[Cx:] $x$ -nek csokoládé van a belsejében.
+\item[Mx:] $x$ -nek marcipán van a belsejében.
+\item[Sx:] $x$ -nek cukor van a belsejében.
+\item[Tx:] Boris megkóstolta $x$-et.
+\item[Bxy:] $x$ jobb, mint $y$.
+\end{ekey}
+
 \begin{earg}
 \item Boris has never tried any candy.
 \item Marzipan is always made with sugar.
@@ -1323,6 +1337,18 @@ Using the symbolization key given, translate each English-language sentence into
 \end{earg}
 
 
+\begin{earg}
+\item Boris egyetlen cukorkát sem kóstolt.
+\item A marcipános mindig cukrosan készül.
+\item Egyes cukorkák cukormentesek.
+\item A legeslegjobb cukorka a csokoládés.
+\item Nincs cukor, ami önmagánál jobb.
+\item Boris sosem kóstolt cukormentes csokoládét.
+\item Boris már kóstolta a marcipánost és a csokist, de sosem együtt.
+%\item Boris has tried nothing that is better than sugar-free marzipan.
+\item Bármely cukorka jobb csokisan, mint bármelyik csoki nélkül.
+\item Bármely cukorka jobb csokival és marcipánnal, mint bármely cukorka, amelyikben egyik sincs.
+\end{earg}
 
 \problempart
 Using the symbolization key given, translate each English-language sentence into QL.
@@ -1337,6 +1363,21 @@ Using the symbolization key given, translate each English-language sentence into
 \item[f:] Francesca
 \item[g:] the guacamole
 \end{ekey}
+
+\problempart
+Az adott szimbolizációs kulcsot felhasználva fordítsunk le minden egyes (magyar-nyelvű) mondatot Predikátumlogikára.
+\begin{ekey}
+\item[UD:] emberek és fogások egy pikniken
+\item[Rx:] $x$ elfogyott.
+\item[Tx:] $x$ az asztalon van.
+\item[Fx:] $x$ x egy étel.
+\item[Px:] $x$ egy ember.
+\item[Lxy:] $x$ kedveli $y$ -t.
+\item[e:] Eli
+\item[f:] Francesca
+\item[g:] a guacamole
+\end{ekey}
+
 \begin{earg}
 \item All the food is on the table.
 \item If the guacamole has not run out, then it is on the table.
@@ -1347,6 +1388,18 @@ Using the symbolization key given, translate each English-language sentence into
 \item Eli likes anyone who likes the guacamole.
 \item Eli likes anyone who likes the people that he likes.
 \item If there is a person on the table already, then all of the food must have run out.
+\end{earg}
+
+\begin{earg}
+\item Az összes étel az asztalon van.
+\item Ha a guacamole nem fogyott el, akkor az asztalon van.
+\item Mindenki szereti a guacamolét.
+\item Ha mindenki szereti a guacamolét, akkor Eli is.
+\item Francesca csak azokat a fogásokat szereti, amik már elfogytak.
+\item Francesca nem kedvel senkit, és Francescat nem kedveli senki.
+\item Eli kedvel bárkit, aki szereti a guacamolét.
+\item Eli kedvel bárkit, aki kedveli azokat az embereket, akiket Eli kedvel.
+\item Ha már ember van az asztalon, akkor az összes étel el kellett, hogy fogyjon.
 \end{earg}
 
 %NN fordítása vége
