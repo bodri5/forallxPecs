@@ -864,7 +864,7 @@ Háromféle szimbólum lehetséges a kijelentéslogikában:
 \begin{tabular}{|c|c|}
 \hline
 kijelentésváltozók & $A,B,C,\ldots,Z$\\
-szükségszerint indexelve & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
+szükség szerint indexelve & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
 \hline
 műveletek & \enot,\eand,\eor,\eif,\eiff\\
 \hline
@@ -875,23 +875,22 @@ zárójelek&( , )\\
 
 We define an \define{expression of SL} as any string of symbols of SL. Take any of the symbols of SL and write them down, in any order, and you have an expression.
 
-A \define{KL-beli kifejezés}t egy bármely, csak KL-beli szimbólumokat tartalmazó láncként definiáljuk. Ha kiválasztunk egy-, vagy több szimbólumot a KL szimbólumkészletéből, és bármely sorrendben leírjuk őket egymás után, akkor egy kifejezést kapunk.
+A \define{KL-beli kifejezés}t egy bármely, csak KL-beli szimbólumokat tartalmazó karakterláncként definiáljuk. Ha kiválasztunk egy, vagy több szimbólumot a KL szimbólumkészletéből, és bármely sorrendben leírjuk őket egymás után, akkor egy kifejezést kapunk.
 
-\subsection{Well-formed formulae}
-
-\subsection{Jól definiált kifejezések}
+\subsection*{Well-formed formulae}
+\subsection{Jól formált kifejezések}
 
 Since any sequence of symbols is an expression, many expressions of SL will be gobbledegook. A meaningful expression is called a \emph{well-formed formula}. It is common to use the acronym \emph{wff}; the plural is wffs.
 
-Mivel minden szimbólumsorozatot kifejezésnek tekintetünk, rengeteg kifejezés értelmetlen halandzsa lesz. Az ezen belüli értelmes kifejezések alhalmazára a \emph{jól definiált kifejezés} elnevezést használjuk. Gyakori röviditése a \emph{jdk} (többesszámban: \emph{jdk}-k).
+Mivel minden szimbólumsorozatot kifejezésnek tekintetünk, rengeteg kifejezés értelmetlen halandzsa lesz. Az ezen belüli értelmes kifejezések részhalmazára a \emph{jól formált kifejezés} elnevezést használjuk. Gyakori röviditése a \emph{jfk} (többesszámban: \emph{jfk}-k).
 
 Obviously, individual sentence letters like $A$ and $G_{13}$ will be wffs. We can form further wffs out of these by using the various connectives. Using negation, we can get $\enot A$ and $\enot G_{13}$. Using conjunction, we can get $A \eand G_{13}$, $G_{13} \eand A$, $A \eand A$, and $G_{13} \eand G_{13}$. We could also apply negation repeatedly to get wffs like $\enot \enot A$ or apply negation along with conjunction to get wffs like $\enot(A \eand G_{13})$ and $\enot(G_{13} \eand \enot G_{13})$. The possible combinations are endless, even starting with just these two sentence letters, and there are infinitely many sentence letters. So there is no point in trying to list all the wffs.
 
-Nyilvánvaló módon az egyetlen kijelentésváltozóból álló kifejezések, mint pl $A$ és $G_{13}$ jdk-k lesznek. Ezekből további jdk-kat tudunk formálni a különböző műveletek használatával; negáció használatával például $\enot A$ és $\enot G_{13}$, konjukció használatával pedíg $A \eand G_{13}$, $G_{13} \eand A$, $A \eand A$, és $G_{13} \eand G_{13}$ jdk-kat kapunk. Negáció többszöri használatával $\enot \enot A$, negáció és konjukció használatával pedíg $\enot(A \eand G_{13})$ és $\enot(G_{13} \eand \enot G_{13})$ jdk-kat kaphatunk. A lehetséges kombinációk száma végtelen, még csak ezt a két kijelentésváltozó használatánál is, és ezen felül még végtelen sok kijelentésváltozó is létezik, ezért semmi értelme nincs megpróbálni felsorolni az összes jdk-t.
+Nyilvánvaló módon az egyetlen kijelentésváltozóból álló kifejezések, mint pl. $A$ és $G_{13}$ jfk-k lesznek. Ezekből további jfk-kat tudunk formálni a különböző műveletek használatával; negáció használatával például $\enot A$ és $\enot G_{13}$, konjukció használatával pedíg $A \eand G_{13}$, $G_{13} \eand A$, $A \eand A$, és $G_{13} \eand G_{13}$ jfk-kat kapunk. Negáció többszöri használatával $\enot \enot A$, negáció és konjukció használatával pedíg $\enot(A \eand G_{13})$ és $\enot(G_{13} \eand \enot G_{13})$ jfk-kat kaphatunk. A lehetséges kombinációk száma végtelen, még csak ennek a két kijelentésváltozónak a használatával is, és ezen felül még végtelen sok kijelentésváltozó is létezik, ezért semmi értelme nincs megpróbálni felsorolni az összes jfk-t.
 
 Instead, we will describe the process by which wffs can be constructed. Consider negation: Given any wff \script{A} of SL, $\enot\script{A}$ is a wff of SL. It is important here that \script{A} is not the sentence letter $A$. Rather, it is a variable that stands in for any wff at all. Notice that this variable \script{A} is not a symbol of SL, so $\enot\script{A}$ is not an expression of SL. Instead, it is an expression of the metalanguage that allows us to talk about infinitely many expressions of SL: all of the expressions that start with the negation symbol. Because \script{A} is part of the metalanguage, it is called a \emph{metavariable}.
 
-Ehelyett leírjunk a folyamatot amely által jdk-kat tudunk konstruálni. A negáció definiálásának egy módja például: Bármely KL-beli jdk \script{A} esetén $\enot\script{A}$ is egy KL-beli jdk. Fontos megjegyeznünk hogy itt \script{A} nem egy kijelentés-, hanem egy bármely jdk értéket képviselő változó. Vegyük észre, hogy mivel \script{A} nem egy KL-beli szimbólunm, ezért $\enot\script{A}$ sem egy kijelentés a KL-ben; ehelyett egy metanyelvbeli kifejezés, amely megengedi számunkra hogy végtelenül sok KL-beli kifejezésről tudjunk beszélni, esetünkben minden negációval kezdődő kifejezésről. Mivel \script{A} a metanyelv tagja, ezért a hasonló változók elnevezése \emph{metaváltozó}.
+Ehelyett leírjuk a folyamatot amely által jfk-kat tudunk konstruálni. A negáció definiálásának egy módja például: Bármely KL-beli \script{A} jól formált kifejezés esetén $\enot\script{A}$ is egy KL-beli jfk. Fontos megjegyeznünk hogy itt \script{A} nem egy kijelentésváltozó, hanem egy bármely jfk értéket képviselő változó. Vegyük észre, hogy mivel \script{A} nem egy KL-beli szimbólum, ezért $\enot\script{A}$ sem egy kijelentés a KL-ban; ehelyett egy metanyelvbeli kifejezés, amely megengedi számunkra, hogy végtelenül sok KL-beli kifejezésről tudjunk beszélni, esetünkben minden negációval kezdődő kifejezésről. Mivel \script{A} a metanyelv tagja, ezért a hasonló változók elnevezése \emph{metaváltozó}.
 
 %NCs fordítása vége
 
