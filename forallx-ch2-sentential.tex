@@ -936,18 +936,27 @@ $$(((H \eif I) \eor (I \eif H)) \eand (J \eor K))$$
 could be written in this way:
 $$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
 
+%GZ fordítása kezdet
 
 Third, we will sometimes want to translate the conjunction of three or more sentences. For the sentence `Alice, Bob, and Candice all went to the party', suppose we let $A$ mean `Alice went', $B$ mean `Bob went', and $C$ mean `Candice went.' The definition only allows us to form a conjunction out of two sentences, so we can translate it as $(A \eand B) \eand C$ or as $A \eand (B \eand C)$. There is no reason to distinguish between these, since the two translations are logically equivalent. There is no logical difference between the first, in which $(A \eand B)$ is conjoined with $C$, and the second, in which $A$ is conjoined with $(B \eand C)$.  So we might as well just write $A \eand B \eand C$. As a matter of convention, we can leave out parentheses when we conjoin three or more sentences.
 
+Nincs logikai különbség az első -- ahol $(A \eand B)$-t konjugáljuk $C$-vel -- és a második között, -- ahol $A$-t konjugáljuk $(B \eand C)$-vel. Tehát mindkét esetben írhatunk $A \eand B \eand C$-t. Megegyezhetünk abban, hogy el lehet hagyni a zárójeleket, ha három, vagy több mondatot konjugálunk.
+
 Fourth, a similar situation arises with multiple disjunctions. `Either Alice, Bob, or Candice went to the party' can be translated as $(A \eor B) \eor C$ or as $A \eor (B \eor C)$. Since these two translations are logically equivalent, we may write $A \eor B \eor C$.
+
+Negyedik, egy hasonló szituáció kerekedik ki többszörös diszjunkcióval. „Vagy Alice, vagy Bob, vagy Candice elmentek a partira.” Ezt a mondatot lefordíthatjuk úgy, hogy $(A \eor B) \eor C$ vagy $A \eor (B \eor C)$. Ezen két fordítás logikailag ekvivalens, tehát írhatjuk, hogy $A \eor B \eor C$.
 
 These latter two conventions only apply to multiple conjunctions or multiple  disjunctions. If a series of connectives includes both disjunctions and conjunctions, then the parentheses are essential; as with $(A \eand B) \eor C$ and $A \eand (B \eor C)$. The parentheses are also required if there is a series of conditionals or biconditionals; as with $(A \eif B) \eif C$ and $A \eiff (B \eiff C)$.
 
+Ezen két konvenció csak többszörös konjunkcióra, vagy többszörös diszjunkcióra használható. Ha a kifejezés magába foglalja mind a diszjunkciót, mind a konjunkciót, akkor fontosak a zárójelek; például $(A \eand B) \eor C$ és $A \eand (B \eor C)$. A zárójelek szintén fontosak, ha a mondatban van implikációk vagy ekvivalenciák sorozata van, úgy, mint a következő példák: 	$(A \eif B) \eif C$, $A \eiff (B \eiff C)$.
+
 We have adopted these four rules as \emph{notational conventions}, not as changes to the definition of a sentence. Strictly speaking, $A \eor B \eor C$ is still not a sentence. Instead, it is a kind of shorthand. We write it for the sake of convenience, but we really mean the sentence $(A \eor (B \eor C))$.
+
+Elfogadtuk ezt a négy jelölési konvenciót úgy, mint egy mondat definíciója, amely nem változtatja a mondat jelentését. Szigorúan véve, $A \eor B \eor C$ még nem egy mondat. Ez egyfajta rövidítés. Csak a kényelem kedvéért írjuk ezt, de valójában azt értjük alatta, hogy $(A \eor (B \eor C))$.
 
 If we had given a different definition for a wff, then these could count as wffs. We might have written rule 3 in this way: ``If \script{A}, \script{B}, $\ldots$ \script{Z} are wffs, then $(\script{A}\eand\script{B}\eand\ldots\eand\script{Z})$, is a wff.'' This would make it easier to translate some English sentences, but would have the cost of making our formal language more complicated. We would have to keep the complex definition in mind when we develop truth tables and a proof system. We want a logical language that is \emph{expressively simple} and allows us to translate easily from English, but we also want a \emph{formally simple} language. Adopting notational conventions is a compromise between these two desires.
 
-
+Ha már adtunk különböző jelentést a jfk-eknek, akkor ezekkel jfk-ekként is számolhatunk. Megírhattuk a 3. szabályt a következő módon: „Ha \script{A}, \script{B}, $\ldots$ \script{Z} jfk-ek, akkor $(\script{A}\eand\script{B}\eand\ldots\eand\script{Z})$ is egy jfk”. Ez leegyszerűsítheti a dolgunkat a fordításban, de a nyelvi formulánk elkészítésének az ára még jobban megbonyolítja a dolgunkat. Meg kell tartanunk a komplex definíciót a fejünkben, amikor elkészítjük az igazságtáblázatot, és a bizonyítási sémát. Egy olyan logikai nyelvet akarunk, ami kimondottan egyszerű, és lehetővé teszi, hogy könnyen fordítsuk le a mondatokat, emellett egy formailag egyszerű nyelv. A jelképes konvenciók elfogadása egy kompromisszum, eközött a kettő között.
 
 \practiceproblems
 
@@ -967,6 +976,25 @@ If we had given a different definition for a wff, then these could count as wffs
 \item If those creatures are chimpanzees, then they are neither gorillas nor men in suits.
 \item Unless those creatures are men in suits, they are either chimpanzees or they are gorillas.
 \end{earg}
+
+\solutions
+\problempart Fordíts le az alábbi mondatokat kijelentéslogikára a megadott szimbolizációs kulcskészlet felhasználásával!
+\label{pr.monkeysuits}
+\begin{ekey}
+\item[M:] Azok a teremtmények férfiak öltönyben.
+\item[C:] Azok a teremtmények csimpánzok.
+\item[G:] Azok a teremtmények gorillák.
+\end{ekey}
+\begin{earg}
+\item Azok a teremtmények nem férfiak öltönyben.
+\item Azok a teremtmények férfiak öltönyben, vagy nem.
+\item Azok a teremtmények akár gorillák, vagy akár csimpánzok.
+\item Azok a teremtmények nem gorillák, de nem is csimpánzok.
+\item Ha azok a teremtmények csimpánzok, akkor se nem gorillák se nem férfiak öltönyben.
+\item Unless those creatures are men in suits, they are either chimpanzees or they are gorillas.
+\end{earg}
+
+%GZ fordítása vége
 
 %SzV fordítása kezdet
 
