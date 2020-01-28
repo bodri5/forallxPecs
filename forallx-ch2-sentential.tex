@@ -542,6 +542,21 @@ F & F & F
 
 Like conjunction, disjunction is symmetrical. \script{A}\eor\script{B} is logically equivalent to \script{B}\eor\script{A}.
 
+Az `\eor' szimbólum egy \emph{megengedő vagy}-ot jelent.
+Szóval $D \eor E$ igaz ha $D$ igaz, vagy ha $E$ igaz, vagy ha $D$ és $E$ is igazak. Csak akkor hamis, ha $D$ és $E$ is hamisak. Össze tudjuk foglalni a következő igázságtáblában a diszjunkciót:
+
+\begin{center}
+\begin{tabular}{c|c|c}
+\script{A} & \script{B} & \script{A}\eor\script{B} \\
+\hline
+I & I & I\\
+I & H & I\\
+H & I & I\\
+H & H & H
+\end{tabular}
+\end{center}
+
+Ahogy a konjukció, úgy a diszjunkció is szimmetrikus. Az \script{A}\eor\script{B} és a \script{B}\eor\script{A} logikailag ekvivalensek.
 
 These sentences are somewhat more complicated:
 
@@ -551,19 +566,40 @@ These sentences are somewhat more complicated:
 \item[\ex{or.xor}] You get either soup or salad, but not both.
 \end{earg}
 
+A következő állítások valamivel komplikáltabbak:
+
+\begin{earg}
+\item[\ex{or3}] Vagy nem kapsz levest, vagy nem kapsz salátát.
+\item[\ex{or4}] Nem kapsz se levest se salátát.
+\item[\ex{or.xor}] Vagy levest kapsz, vagy salátát, de mindkettőt nem.
+\end{earg}
+
 We let $S_1$ mean that you get soup and $S_2$ mean that you get salad.
+
+Jelentse $S_1$ azt hogy levest kapsz és $S_2$ azt hogy salátát.
 
 Sentence \ref{or3} can be paraphrased in this way: `Either \emph{it is not the case that} you get soup, or \emph{it is not the case that} you get salad.' Translating this requires both disjunction and negation. It becomes $\enot S_1 \eor \enot S_2$.
 
+\Aref{or3}. állítást úgy lehet értelmezni hogy „Vagy \emph{nem az az eset hogy} levest kapsz, vagy \emph{nem az az eset hogy} salátát kapsz.” Ennek a lefordításához kell diszjunkció és negáció is. Az lesz belőle, hogy: $\enot S_1 \eor \enot S_2$.
+
 Sentence \ref{or4} also requires negation. It can be paraphrased as, `\emph{It is not the case that} either that you get soup or that you get salad.' We need some way of indicating that the negation does not just negate the right or left disjunct, but rather negates the entire disjunction. In order to do this, we put parentheses around the disjunction: `It is not the case that $(S_1 \eor S_2)$.' This becomes simply $\enot (S_1 \eor S_2)$.
+
+\Aref{or4}. állítás is igényel negációt. Úgy lehet értelmezni hogy „\emph{nem az az eset hogy} vagy levest kapsz vagy salátát.” Szükségünk van egy módra hogy jelezni tudjuk hogy a negáció nem csak a jobb vagy a bal diszjunkt részt negálja, hanem az egész diszjunkciót. Ilyenkor zárójeleket használhatunk a diszjunkció köré. „Nem az az eset, hogy $(S_1 \eor S_2)$.” Ez egyszerűbben a következőképp néz ki $\enot (S_1 \eor S_2)$.
 
 Notice that the parentheses are doing important work here. The sentence $\enot S_1 \eor S_2$ would mean `Either you will not have soup, or you will have salad.'
 
+Jegyezzük meg, hogy a zárójeleknek fontos szerepük van itt. A(z) $\enot S_1 \eor S_2$ állítás azt jelentené hogy „Vagy nem kapsz levest, vagy salátát kapsz.”
+
 Sentence \ref{or.xor} is an \emph{exclusive or}. We can break the sentence into two parts. The first part says that you get one or the other. We translate this as $(S_1 \eor S_2)$. The second part says that you do not get both. We can paraphrase this as, `It is not the case both that you get soup and that you get salad.' Using both negation and conjunction, we translate this as $\enot(S_1 \eand S_2)$. Now we just need to put the two parts together. As we saw above, `but' can usually be translated as a conjunction. Sentence \ref{or.xor} can thus be translated as $(S_1 \eor S_2) \eand \enot(S_1 \eand S_2)$.
+
+\Aref{or.xor}. mondat egy \emph{kizáró vagy} állítás. Ezt az állítást két részre tudjuk bontani. Az első rész azt mondja, hogy vagy az egyiket kapod, vagy a másikat. Ezt úgy fordíthatjuk le hogy $(S_1 \eor S_2)$. A második rész azt mondja, hogy nem kaphatod meg mindkettőt. Ezt úgy értelmezhetjük hogy „Nem az az eset, hogy kapsz levest és salátát is.” Mind a negációt és konjukciót is használva lefordíthatjuk ezt úgy, hogy $\enot(S_1 \eand S_2)$. Most már csak össze kell raknunk a két oldalt. Ahogy láttuk feljebb, a „de” szót gyakran értelmezhetjük konjukciónak. Ezért \aref{or.xor} állítást lehet úgy fordítani hogy $(S_1 \eor S_2) \eand \enot(S_1 \eand S_2)$.
 
 Although `\eor' is an \emph{inclusive or}, we can symbolize an \emph{exclusive or} in {SL}. We just need more than one connective to do it.
 
+Habár a(z) '\eor' egy  \emph{kizáró vagy}, ábrázolhatjuk az \emph{kizáró vagy}-ot {KB}-ban. Csak egynél több műveletre van szükségünk.
+
 %SG fordítása vége
+
 %HÁ fordítása kezdet
 \subsection*{Conditional}
 \subsection{Implikáció}
