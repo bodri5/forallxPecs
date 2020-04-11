@@ -83,16 +83,31 @@ Az igazságfunkció, $é$ meghatározását szintén két lépésben fogjuk mego
 \subsection{Truth in SL}
 How can we define truth for an atomic sentence of SL? Consider, for example, the sentence $M$. Without an interpretation, we cannot say whether $M$ is true or false. It might mean anything. If we use $M$ to symbolize `The moon orbits the Earth', then $M$ is true. If we use $M$ to symbolize `The moon is a giant turnip', then $M$ is false.
 
+\subsection{"Igazság" a kijelentéslogikában}
+Hogyan tudjuk definiálni az igazságot egy atomi kijelentés esetén? Tekintsük például az $M$ kijelentést. Értelmezés nélkül nem mondhatjuk, hogy az $M$ igaz vagy hamis. Bármit jelenthet. Ha $M$ -mel azt jelöljük, hogy `A Hold a Föld körül kering', akkor $M$ igaz. Ha $M$ -mel azt jelöljük, hogy `A Hold egy hatalmas répa', akkor $M$ hamis.
+
 Moreover, the way you would discover whether or not $M$ is true depends on what $M$ means. If $M$ means `It is Monday,' then you would need to check a calendar. If $M$ means `Jupiter's moon Io has significant volcanic activity,' then you would need to check an astronomy text--- and astronomers know because they sent satellites to observe Io.
+
+Ráadásul a mód, ahogy eldöntjük, hogy $M$ igaz-e, függ attól, hogy $M$ mit jelent. Ha azt jelenti, hogy `Hétfő van,' akkor meg kell néznünk a naptárat. Ha azt jelenti, hogy `A Jupiter Io holdjának van jelentős vulkáni aktivitása,' akkor meg kell azt néznünk egy csillagászati szövegben--- és a csillagászok tudják ezt, hiszen küldtek műholdakat az Io megfigyelésére.
 
 When we give a symbolization key for SL, we provide an {interpretation} of the sentence letters that we use. The key gives an English language sentence for each sentence letter that we use. In this way, the interpretation specifies what each of the sentence letters \emph{means}. However, this is not enough to determine whether or not that sentence is true. The sentences about the moon, for instance, require that you know some rudimentary astronomy. Imagine a small child who became convinced that the moon is a giant turnip. She could understand what the sentence `The moon is a giant turnip' means, but mistakenly think that it was true.
 
+Amikor megadunk egy szimbolizációs kulcsot, gondoskodunk a kijenelentésre használt betű {értelmezéséről}. A kulcs ad egy magyar nyelvű mondatot minden betűnek, amit használunk. Ezen a módon az értelmezés megadja, hogy melyik betű mit \emph{jelent}. Habár ez nem elég ahhoz, hogy megállapítsuk, igaz-e a kijenetés. Például a Holdról szóló kijelentések megkövetelik, hogy legyen valamennyi ismeretünk a csillagászatról. Képzeljünk el egy kisgyermeket, akit meggyőznek arról, hogy a Hold egy hatalmas répa. Ő megérti, hogy mit jelent az az állítás, hogy `A Hold egy hatalmas répa', de tévesen gondolja azt, hogy ez igaz.
+
 Consider another example: If $M$ means `It is morning now', then whether it is true or not depends on when you are reading this. I know what the sentence means, but--- since I do not know when you will be reading this--- I do not know whether it is true or false.
+
+Tekintsünk egy másik példát: Ha az $M$ azt jelenti, hogy `Most reggel van', akkor az, hogy igaz-e vagy sem, attól függ, hogy mikor olvassuk. Tudjuk, mit jelent a kijelentés, de--- amíg nem tudjuk, mikor fogják olvasni--- nem tudjuk, hogy igaz-e vagy hamis.
 
 So an interpretation alone does not determine whether a sentence is true or false. Truth or falsity depends also on what the world is like. If $M$ meant `The moon is a giant turnip' and the real moon were a giant turnip, then $M$ would be true. To put the point in a general way, truth or falsity is determined by an interpretation \emph{plus} a way that the world is.
 
+Tehát önmagában egy értelmezés nem határozza meg, hogy a kijelentés igaz vagy hamis. Az "igazság" vagy "hamisság" attól is függ, hogy milyen a világ. Ha $M$ azt jelentette, hogy `A Hold egy hatalmas répa', és a valódi Hold egy hatalmas répa lenne, akkor $M$ igaz volna. A lényeg általános megfogalmazására: az igazság vagy hamisság az értelmezés, \emph{illetve} a világ milyensége révén megatározott.
+
 \begin{center}
 INTERPRETATION + STATE OF THE WORLD $\Longrightarrow$ TRUTH/FALSITY
+\end{center}
+
+\begin{center}
+ÉRTELMEZÉS + A VILÁG ÁLLÁSA $\Longrightarrow$ IGAZSÁG/HAMISSÁG
 \end{center}
 
 In providing a logical definition of truth, we will not be able to give an account of how an atomic sentence is made true or false by the world. Instead, we will introduce a \emph{truth value assignment}. Formally, this will be a function that tells us the truth value of all the atomic sentences. Call this function `$a$' (for `assignment'). We define $a$ for all sentence letters \script{P}, such that
@@ -102,6 +117,17 @@ a(\script{P}) =
 	\begin{array}{ll}
 	1 & \mbox{if \script{P} is true},\\
 	0 & \mbox{otherwise.}
+	\end{array}
+\right.
+\end{displaymath}
+
+Az igazság logikus meghatározásának megadásával nem fogjuk tudni, hogy egy atomi kijelentés igaz vagy hamis. Ehelyett bemutatjuk az \emph{igazságérték-hozzárendelés}-t. Formálisan ez egy függvény lesz, ami megmondja nekünk az igaz értékét minden atomi kijeletésnek. Nevezzük ezt a függvényt `$a$'-nak (az angol assignment = feladat szó révén). Definiáljuk $a$-t minden \script{P} kijelentés betűjének, úgy mint
+\begin{displaymath}
+a(\script{P}) =
+\left\{
+	\begin{array}{ll}
+	1 & \mbox{ha \script{P} igaz},\\
+	0 & \mbox{egyébként.}
 	\end{array}
 \right.
 \end{displaymath}
