@@ -5,13 +5,23 @@
 \chapter{Truth tables}
 \label{ch.TruthTables}
 
+\chapter{Igazságtáblázatok}
+\label{ch.TruthTables}
+
 This chapter introduces a way of evaluating sentences and arguments of SL. Although it can be laborious, the truth table method is a purely mechanical procedure that requires no intuition or special insight.
 
+Ebben a fejezetben a KL-ben előforduló kijelentések és változók egyik kiértékelési módjával ismerkedhetünk meg. Bár nehézkes feladat lehet, az igazságtáblázat módszer csak egy gépies eljárás, amihez nem szükséges megérzés vagy különleges látásmód.
+
 \section{Truth-functional connectives}
+\section{Igazságfüggvények}
 
 Any non-atomic sentence of SL is composed of atomic sentences with sentential connectives. The truth-value of the compound sentence depends only on the truth-value of the atomic sentences that comprise it. In order to know the truth-value of $(D\eiff E)$, for instance, you only need to know the truth-value of $D$ and the truth-value of $E$. Connectives that work in this way are called \define{truth-functional}.
 
+Bármely nem atomi kijelentés KL-ben előállítható atomi kijelentések és a függvények segítségével. Az összetett mondatok igazságértéke a benne szereplő atomi kijelentések igazságértékétől függ. Annak érdekében, hogy megtudjuk pl. $(D\eiff E)$ igazságértékét, elég, ha tudjuk $D$, valamint $E$ igazságértékeit. Az ilyen módon működő függvényeket igazságfüggvényeknek hívjuk.
+
 In this chapter, we will make use of the fact that all of the logical operators in SL are truth-functional--- it makes it possible to construct truth tables to determine the logical features of sentences. You should realize, however, that this is not possible for all languages. In English, it is possible to form a new sentence from any simpler sentence \script{X} by saying `It is possible that \script{X}.' The truth-value of this new sentence does not depend directly on the truth-value of \script{X}. Even if \script{X} is false, perhaps in some sense \script{X} \emph{could} have been true--- then the new sentence would be true. Some formal languages, called \emph{modal logics}, have an operator for {possibility}. In a modal logic, we could translate `It is possible that \script{X}' as {\large $\diamond$}\script{X}. However, the ability to translate sentences like these come at a cost: The {\large $\diamond$} operator is not truth-functional, and so modal logics are not amenable to truth tables.
+
+Ebben a fejezetben azt a tényt vesszük alapul, miszerint KL-ben minden logikai operátor igazságfüggvény – ez lehetővé teszi, hogy igazságtáblákat segítségével megállapíthassuk a mondatok logikai tulajdonságait. Figyelembe kell vennünk azonban, hogy ez nem lehetséges minden nyelv esetében. A magyar nyelvben előállíthatunk egy új kijelentést bármely egyszerűbb \script{X} kijelentésből azáltal, hogy "Lehetséges, hogy \script{X}."-et mondunk. Ennek az új kijelentésnek az igazságértéke nem függ közvetlenül az \script{X} igazságértékétől. Még ha \script{X} hamis is, néhány értelemben \script{X} \emph{lehetett volna} igaz – akkor pedig az új mondat igaz lenne. Néhány formális nyelv, mint a \emph{modális logika} rendelkezik olyan operátorral, mely a lehetőséget fejezi ki. Modális logikában a "Lehetséges, hogy \script{X}" mondatot úgy is fordíthatjuk, mint {\large $\diamond$}\script{X}. Azonban a képességnek, hogy ilyen mondatokat is fordíthassunk ára van: a {\large $\diamond$} operátor nem igazságfüggvény, így a modális logika nem terjed ki az igazságtáblázatokra.
 
 %GF fordítása vége
 
