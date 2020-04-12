@@ -930,6 +930,8 @@ Ehelyett leírjuk a folyamatot amely által jfk-kat tudunk konstruálni. A negá
 
 %NCs fordítása vége
 
+%MD fordítása kezdet
+
 We can say similar things for each of the other connectives. For instance, if \script{A} and \script{B} are wffs of SL, then $(\script{A}\eand\script{B})$ is a wff of SL. Providing clauses like this for all of the connectives, we arrive at the following formal definition for a {well-formed formula of SL}:
 
 \begin{enumerate}
@@ -952,6 +954,8 @@ The connective that you look to first in decomposing a sentence is called the \d
 
 \subsection{Sentences}
 Recall that a sentence is a meaningful expression that can be true or false. Since the meaningful expressions of SL are the wffs and since every wff of SL is either true or false, the definition for a sentence of SL is the same as the definition for a wff. Not every formal language will have this nice feature. In the language QL, which is developed later in the book, there are wffs which are not sentences. 
+
+%MD fordítása vége
 
 The recursive structure of sentences in SL will be important when we consider the circumstances under which a particular sentence would be true or false. The sentence $\enot \enot \enot D$ is true if and only if the sentence $\enot \enot D$ is false, and so on through the structure of the sentence until we arrive at the atomic components: $\enot \enot \enot D$ is true if and only if the atomic sentence $D$ is false. We will return to this point in the next chapter.
 
