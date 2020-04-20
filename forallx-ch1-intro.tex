@@ -148,18 +148,35 @@ Consider another example:
 \item[] This is a logic book.
 \item[\therefore] You are a logic student.
 \end{earg}
+
+Vegyünk egy másik példát:
+\begin{earg}
+\item[] Te olvasod ezt a könyvet.
+\item[] Ez egy logika könyv.
+\item[\therefore] Te egy logika hallgató vagy.
+\end{earg}
+
 This is not a terrible argument. Most people who read this book are logic students. Yet, it is possible for someone besides a logic student to read this book. If your roommate picked up the book and thumbed through it, they would not immediately become a logic student. So the premises of this argument, even though they are true, do not guarantee the truth of the conclusion. Its logical form is less than perfect.
+
+Ez nem egy szörnyű érv. A legtöbb ember, aki olvassa ezt a könyvet az logika hallgató. Ennek ellenére lehetséges, hogy a logika hallgatók mellett más is elolvassa ezt a könyvet. Ha a szobatársaid felveszik a könyvet és átfutnak rajta, attól ők még nem lesznek egyből logika hallgatók. Tehát, ha ennek az érvnek a feltevései bár igazak is, attól ez még nem garantálja a következtetés igazságát. A logikai formája kevésbé tökéletes.
 
 An argument that had no weakness of the second kind would have perfect logical form. If its premises were true, then its conclusion would \emph{necessarily} be true. We call such an argument `deductively valid' or just `valid.'
 
+Egy érvnek, amelynek nincs másodfajú gyengesége, tökéletes logikus formája lenne. Ha a feltevések igazak voltak, akkor a következtetésnek is \emph{szükségszerűen} igaznak kell lennie. Egy ilyen érvet deduktívan érvényesnek vagy csak simán érvényesnek nevezünk.
+
 Even though we might count the argument above as a good argument in some sense, it is not valid; that is, it is `invalid.' One important task of logic is to sort valid arguments from invalid arguments.
 
+Annak ellenére, hogy a fenti érvet jónak tekinthetjük néhány szempont alapján, attól ez még nem érvényes, azaz érvénytelen. Egy fontos logikai feladat, hogy szétválasszuk az érvényes érveket az érvénytelenektől.
 
-
-\section{Deductive validity}
+\section*{Deductive validity}
+\section{Deduktív érvényesség}
 An argument is deductively \define{valid} if and only if it is impossible for the premises to be true and the conclusion false.
 
+Egy érv deduktívan \define{érvényes} akkor és csak is akkor, ha lehetetlen, hogy a feltevések igazak legyenek és a következtetések hamisak.
+
 The crucial thing about a valid argument is that it is impossible for the premises to be true \emph{at the same time} that the conclusion is false. Consider this example:
+
+A legfontosabb dolog az érvényes érvnél, hogy az lehetetlen, hogy a feltevések igazak \emph{ugyanabban az időben}, amikor a következtetés hamis. Nézzük ezt a példát:
 
 \begin{earg}
 \item[] Oranges are either fruits or musical instruments.
@@ -167,14 +184,30 @@ The crucial thing about a valid argument is that it is impossible for the premis
 \item[\therefore] Oranges are musical instruments.
 \end{earg}
 
+\begin{earg}
+\item[] A narancsok vagy gyümölcsök vagy zenei hangszerek.
+\item[] A narancsok nem gyümölcsök.
+\item[\therefore] A narancsok zenei hangszerek.
+\end{earg}
+
 The conclusion of this argument is ridiculous. Nevertheless, it follows validly from the premises. This is a valid argument. \emph{If} both premises were true, \emph{then} the conclusion would necessarily be true.
 
+Ennek az érvnek a következtetése nevetséges. Ennek ellenére érvényesen következik a feltevésből. Ez egy érvényes érv. \emph{Ha} mindkét feltevés igaz lett volna, \emph{akkor} a következtetésnek is igaznak kellett volna lennie.
+
 This shows that a deductively valid argument does not need to have true premises or a true conclusion. Conversely, having true premises and a true conclusion is not enough to make an argument valid. Consider this example:
+
+Ez megmutatja, hogy a deduktívan érvényes érvnek nem kell, hogy legyen igaz feltevése vagy igaz következtetése. Ezzel szemben, ha vannak igaz feltevései és igaz következtetése az nem elég ahoz, hogy az érv érvényes legyen. Nézzük ezt a példát:
 
 \begin{earg}
 \item[] London is in England.
 \item[] Beijing is in China.
 \item[\therefore] Paris is in France.
+\end{earg}
+
+\begin{earg}
+\item[] London Angliában van.
+\item[] Peking Kínában van.
+\item[\therefore] Párizs Franciaországban van.
 \end{earg}
 
 %SB fordítása vége
