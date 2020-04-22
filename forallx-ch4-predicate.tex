@@ -1065,27 +1065,56 @@ It might be tempting to add a predicate so that $Tx$ would mean `$x$ is a thing 
 Techniques for symbolizing expressions of quantity (`at most', `at least', and `exactly') are summarized on p.~\pageref{summary.atleast}.
 
 
-\subsection{Definite descriptions}
+%MB fordítása kezdete
+
+\subsection*{Definite descriptions}
+\subsection{Határozott leírások}
+
 \label{subsec.defdesc}
 Recall that a constant of QL must refer to some member of the UD. This constraint allows us to avoid the problem of non-referring terms. Given a UD that included only actually existing creatures but a constant $c$ that meant `chimera' (a mythical creature), sentences containing $c$ would become impossible to evaluate.
 
+Emlékezzünk, hogy a PL egy konstansának az Univerzum egy tagjára kell hivatkoznia. Ez a megszorítás lehetővé teszi, hogy elkerüljük a nem hivatkozó kifejezéseket. Abban az esetben, ha egy csak létező teremtményeket tartalmazó Univerzumban lenne egy $c$ konstans, mely „chimera”-t (egy mítikus lényt) jelent, a $c$-t tartalmazó mondatokat lehetetlen lenne kiértékelni.
+
 The most widely influential solution to this problem was introduced by Bertrand Russell in 1905. Russell asked how we should understand this sentence:
+
+A legnagyobb befolyással bíró megoldást erre a problémára Bertrand Russel mutatta be 1905-ben. Russel feltette a kérdést, hogyan értelmezzük a következő mondatot:
 \begin{earg}
 \item[\ex{defdesc1}] The present king of France is bald.
 \end{earg}
+\begin{earg}
+\item[\ex{defdesc1}] Franciaország jelenlegi királya kopasz.
+\end{earg}
 The phrase `the present king of France' is supposed to pick out an individual by means of a definite description. However, there was no king of France in 1905 and there is none now. Since the description is a non-referring term, we cannot just define a constant to mean `the present king of France' and translate the sentence as $Kf$.
+
+A „jelenlegi királya” kifejezés egy egyént választ ki a határozott leírás szerint. Azonban, Franciaországban nem volt király 1905-ben, illetve ma sincsen. Mivel a leírás egy nem hivatkozó kifejezés, nem tudunk csak úgy definiálni egy konstanst a „jelenlegi király” jelentéssel és $Kf$-ként értelmezni a mondatot.
 
 Russell's idea was that sentences that contain definite descriptions have a different logical structure than sentences that contain proper names, even though they share the same grammatical form. What do we mean when we use an unproblematic, referring description, like `the highest peak in Washington state'? We mean that there is such a peak, because we could not talk about it otherwise. We also mean that it is the only such peak. If there was another peak in Washington state of exactly the same height as Mount Rainier, then Mount Rainier would not be \emph{the} highest peak.
 
+Russel ötlete az volt, hogy a határozott leírásokat tartalmazó mondatok logikai struktúrája különbözik az olyanoktól, melyekben tulajdonnevek szerepelnek, még ha ugyanolyan nyelvtani formát is öltenek. Mit értünk az alatt, amikor egy problémamentes, hivatkozó leírást használunk, mint „Washington állam legmagasabb pontja?” Úgy értjük, hogy létezik ilyen pont, különben nem tudnánk beszélni róla. Úgy is értjük, hogy csak egyetlen ilyen pont van. Ha lenne egy másik pont is Washingtonban, pontosan a Rainier-hegy magasságával, akkor a Rainer-hegy már nem lenne a  \emph{leg}-magasabb pont.
+
 According to this analysis, sentence \ref{defdesc1} is saying three things. First, it makes an \emph{existence} claim: There is some present king of France. Second, it makes a \emph{uniqueness} claim: This guy is the only present king of France. Third, it makes a claim of \emph{predication}: This guy is bald.
+
+Ezen elemzés szerint, \aref{defdesc1}. számú mondat három dolgot állít. Elsősorban, egy \emph{létezést}-t jelent ki: Jelenleg van Franciaországnak egy királya. Másodszor, \emph{egyediség}-et is megállapít: Ez az ember az egyetlen király Franciaországban. A harmadik a mondat \emph{állítmánya}: Ez az ember kopasz.
 
 In order to symbolize definite descriptions in this way, we need the identity predicate. Without it, we could not translate the uniqueness claim which (according to Russell) is implicit in the definite description.
 
+Ahhoz, hogy ilyen módon szimbolizáljuk a határozott leírásokat, szükségünk van az identitás predikátumra. Enélkül nem tudnánk értelmezni az egyediség állítását, ami (Russel szerint) magától értetődő a határozott leírásban.
+
 Let the UD be \emph{people actually living}, let $Fx$ mean `$x$ is the present king of France', and let $Bx$ mean `$x$ is bald.' Sentence \ref{defdesc1} can then be translated as $\exists x\bigl[Fx \eand \enot\exists y(Fy \eand x\neq y) \eand Bx\bigr]$. This says that there is some guy who is the present king of France, he is the only present king of France, and he is bald.
+
+Legyen az Univerzum az \emph{élő emberek}, $Fx$ jelentse, hogy $x$ jelenleg francia király, valamint $Bx$ jelentse, hogy $x$ kopasz. \Aref{defdesc1}. számú mondat most így értelmezhető: $\exists x\bigl[Fx \eand \enot\exists y(Fy \eand x\neq y) \eand Bx\bigr]$. Ezzel azt állítjuk, hogy van egy ember, aki most Franciaország királya, ő az egyetlen király, és ő kopasz.
 
 Understood in this way, sentence \ref{defdesc1} is meaningful but false. It says that this guy exists, but he does not.
 
+Így értelmezve a mondatnak van jelentése, de hamis. Azt mondja, hogy ez az ember létezik, de mégsem.
+
 The problem of non-referring terms is most vexing when we try to translate negations. So consider this sentence:
+
+A nem hivatkozó kifejezés problémája akkor a legbosszantóbb, amikor negációt próbálunk értelmezni. Vegyük a következő mondatot:
+
+%MB fordítása vége
+
+
 \begin{earg}
 \item[\ex{defdesc2}] The present king of France is not bald.
 \end{earg}
