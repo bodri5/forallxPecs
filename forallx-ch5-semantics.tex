@@ -134,6 +134,8 @@ a(\script{P}) =
 
 %FN fordítása vége
 
+%SzGyÁ fordítása kezdet
+
 This means that $a$ takes any sentence of SL and assigns it either a one or a zero; one if the sentence is true, zero if the sentence is false. The details of the function $a$ are determined by the meaning of the sentence letters together with the state of the world. If $D$ means `It is dark outside', then $a(D)=1$ at night or during a heavy storm, while $a(D)=0$ on a clear day.
 
 You can think of $a$ as being like a row of a truth table. Whereas a truth table row assigns a truth value to a few atomic sentences, the truth value assignment assigns a value to every atomic sentence of SL. There are infinitely many sentence letters, and the truth value assignment gives a value to each of them. When constructing a truth table, we only care about sentence letters that affect the truth value of sentences that interest us. As such, we ignore the rest. Strictly speaking, every row of a truth table gives a \emph{partial} truth value assignment.
@@ -198,6 +200,10 @@ It might seem as if this definition is circular, because it uses the word `and' 
 	\end{array}\right.
 \end{displaymath}
 
+%SzGyÁ fordítása vége
+
+%KML fordítása kezdet
+
 \item If \script{A} is $(\script{B}\eiff\script{C})$ for some sentences \script{B,C}, then
 \begin{displaymath}v(\script{A}) =
 	\left\{\begin{array}{ll}
@@ -225,6 +231,11 @@ We can talk about entailment between more than two sentences: $$\{\script{A}_1,\
 We can also use the symbol with just one sentence: $\models\script{C}$ means that \script{C} is true for all truth value assignments. This is equivalent to saying that the sentence is entailed by anything.
 
 The double turnstile symbol allows us to give concise definitions for various concepts of SL:
+
+%KML fordítása vége
+
+%DG fordítása kezdet
+
 \begin{quote}
 A \define{tautology in SL} is a sentence \script{A}  such that $\models\script{A}$.
 
@@ -258,6 +269,10 @@ What is an interpretation in QL? Like a symbolization key for QL, an interpretat
 \end{ekey}
 Consider the sentence $Fb$. The sentence is true on this interpretation, but--- just as in SL--- the sentence is not true \emph{just because} of the interpretation. Most people in our culture know that Batman fights crime, but this requires a modicum of knowledge about comic books. The sentence $Fb$ is true because of the interpretation \emph{plus} some facts about comic books. This is especially obvious when we consider $Fw$. Bruce Wayne is the secret identity of the Batman in the comic books--- the identity claim $b=w$ is true--- so $Fw$ is true. Since it is a \emph{secret} identity, however, other characters do not know that $Fw$ is true even though they know that $Fb$ is true.
 
+%DG fordítása vége
+
+%HP fordítása kezdet
+
 We could try to characterize this as a truth value assignment, as we did for SL. The truth value assignment would assign 0 or 1 to each atomic wff: $Fb$, $Fw$, and so on. If we were to do that, however, we might just as well translate the sentences from QL to SL by replacing $Fb$ and $Fw$ with sentence letters. We could then rely on the definition of truth for SL, but at the cost of ignoring all the logical structure of predicates and terms. In writing a symbolization key for QL, we do not give separate definitions for $Fb$ and $Fw$. Instead, we give meanings to $F$, $b$, and $w$. This is essential because we want to be able to use quantifiers. There is no adequate way to translate $\forall x Fx$ into SL.
 
 So we want a formal counterpart to an interpretation for predicates and constants, not just for sentences. We cannot use a truth value assignment for this, because a predicate is neither true nor false. In the interpretation given above, $F$ is true \emph{of} the Batman (i.e., $Fb$ is true), but it makes no sense at all to ask whether $F$ on its own is true. It would be like asking whether the English language fragment `$\ldots$fights crime' is true.
@@ -275,6 +290,10 @@ Sometimes it is possible to list all of the things that are in the extension of 
 	\extension{M} & \{Bruce Wayne, Alfred the butler, Dick Grayson\}
 \end{partialmodel}
 You do not need to know anything about comic books to be able to determine that, on this interpretation, $Mw$ is true: Bruce Wayne is just specified to be one of the things that is $M$. Similarly, $\exists x Mx$ is obviously true on this interpretation: There is at least one member of the UD that is an $M$--- in fact, there are three of them.
+
+%HP fordítása vége
+
+%HM fordítása kezdet
 
 What about the sentence $\forall x  Mx$? The sentence is false, because it is not true that all members of the UD are $M$. It requires the barest minimum of knowledge about comic books to know that there are other characters besides just these three. Although we specified the extension of $M$ in a formally precise way, we still specified the UD with an English language description. Formally speaking, a UD is just a set of members.
 
@@ -296,6 +315,10 @@ To see how this works, consider this symbolization key:
 \item[f:] Mister Fine
 \end{ekey}
 If you do not know anything about the Three Stooges, you will not be able to say which sentences of QL are true on this interpretation. Perhaps you just remember Larry, Curly, and Moe. Is the sentence $Hf$ true or false? It depends on which of the stooges is Mister Fine.
+
+%HM fordítása vége
+
+%TKL fordítása kezdet
 
 What is the model that corresponds to this interpretation? There were six people who played as part of the Three Stooges over the years, so the UD will have six members: Larry Fine, Moe Howard, Curly Howard, Shemp Howard, Joe Besser, and Curly Joe DeRita. Curly, Joe, and Curly Joe were the only completely bald stooges. The result is this model:
 \begin{partialmodel}
@@ -326,6 +349,9 @@ The extension of a two-place predicate like $L$ is somewhat vexing. It seems as 
 The problem is that sets can be written in any order, so this would be the same as writing $\extension{L}=\{8,7,6,5,4,3,2,1\}$. This does not tell us which of the members of the set are less than which other members.
 
 We need some way of showing that 1 is less than 8 but that 8 is not less than 1. The solution is to have the extension of $L$ consist of pairs of numbers. An \define{ordered pair} is like a set with two members, except that the order \emph{does} matter. We write ordered pairs with angle brackets `$\openntuple$' and `$\closentuple$'. The ordered pair \mbox{\ntuple{foo, bar}} is different than the ordered pair \mbox{\ntuple{bar, foo}}. The extension of $L$ is a collection of ordered pairs, all of the pairs of numbers in the UD such that the first number is less than the second. Writing this out completely:
+
+%TKL fordítása vége
+
 \begin{quote}
 $\extension{L}=$ \{\ntuple{1,2}, \ntuple{1,3}, \ntuple{1,4}, \ntuple{1,5}, \ntuple{1,6}, \ntuple{1,7}, \ntuple{1,8}, \ntuple{1,9},
 \ntuple{2,3}, \ntuple{2,4}, \ntuple{2,5}, \ntuple{2,6}, \ntuple{2,7}, \ntuple{2,8}, \ntuple{2,9},
