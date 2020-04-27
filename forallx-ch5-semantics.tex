@@ -352,6 +352,8 @@ We need some way of showing that 1 is less than 8 but that 8 is not less than 1.
 
 %TKL fordítása vége
 
+%MD fordítása kezdet
+
 \begin{quote}
 $\extension{L}=$ \{\ntuple{1,2}, \ntuple{1,3}, \ntuple{1,4}, \ntuple{1,5}, \ntuple{1,6}, \ntuple{1,7}, \ntuple{1,8}, \ntuple{1,9},
 \ntuple{2,3}, \ntuple{2,4}, \ntuple{2,5}, \ntuple{2,6}, \ntuple{2,7}, \ntuple{2,8}, \ntuple{2,9},
@@ -385,6 +387,9 @@ Notice that although identity always has the same interpretation, it does not al
 
 If the referent of two constants is the same, then anything which is true of one is true of the other. For example, if $\referent{a}=\referent{b}$, then $Aa\eiff Ab$, $Ba\eiff Bb$, $Ca\eiff Cb$, $Rca\eiff Rcb$, $\forall x Rxa\eiff \forall x Rxb$, and so on for any two sentences containing $a$ and $b$. However, the reverse is not true.
 
+%MD fordítása vége
+
+%NV fordítása kezdet
 
 \label{model.nonidentity}
 It is possible that anything which is true of $a$ is also true of $b$, yet for $a$ and $b$ still to have different referents. This may seem puzzling, but it is easy to construct a model that shows this. Consider this model:
@@ -422,6 +427,7 @@ An argument `` $\script{P}_1, \script{P}_2, \cdots$, \therefore\ \script{C} '' i
 
 Two sentences \script{A} and \script{B} are \define{logically equivalent in QL} if and only if both $\script{A}\models\script{B}$ and $\script{B}\models\script{A}$.
 
+%NV fordítása vége
 
 %SPH fordítása kezdet
 
@@ -490,7 +496,11 @@ Felmerülhet a kérdés: Mit jelent az $A$ predikátum magyarul? A részleges mo
 \item[$Bx$:] $x$-et a 20. században alapították.
 \item[$d$:] a Fények Városa.
 \end{ekey}
+
 %SPH fordítása vége
+
+%HAI fordítása kezdet
+
 However, all that the partial model tells us is that $A$ is a predicate which is true of Paris and Paris. There are indefinitely many predicates in English that have this extension. $Axy$ might instead translate `$x$ is the same size as $y$' or `$x$ and $y$ are both cities.' Similarly, $Bx$ is some predicate that does not apply to Paris; it might instead translate `$x$ is on an island' or `$x$ is a subcompact car.' When we specify the extensions of $A$ and $B$, we do not specify what English predicates $A$ and $B$ should be used to translate. We are concerned with whether the $\forall xAxx \eif Bd$ comes out true or false, and all that matters for truth and falsity in QL is the information in the model: the UD, the extensions of predicates, and the referents of constants.
 
 
@@ -519,6 +529,9 @@ Back on p.~\pageref{surgeon3correct}, we said that this argument would be invali
 \item[] $(Rc \eand K_1c) \eand Tc$
 \item[\therefore] $Tc \eand K_2c$
 \end{earg}
+
+%HAI fordítása vége
+
 In order to show that it is invalid, we need to show that there is some model in which the premises are true and the conclusion is false. We can construct such a model deliberately. Here is one way to do it:
 \begin{partialmodel}
 	UD			& \{Bj\"ork\}\\
