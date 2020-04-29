@@ -155,7 +155,13 @@ Most of the columns underneath the sentence are only there for bookkeeping purpo
 
 A \define{complete truth table} has a row for all the possible combinations of 1 and 0 for all of the sentence letters. The size of the complete truth table depends on the number of different sentence letters in the table. A sentence that contains only one sentence letter requires only two rows, as in the characteristic truth table for negation. This is true even if the same letter is repeated many times, as in the sentence
 $[(C\eiff C) \eif C] \eand \enot(C \eif C)$.
+
+Egy \define{teljes igazságtáblázatban} van egy sor minden 0 és 1-es kombinációra a kifejezésben megtalálható tagokhoz. Az igazságtábla teljes mérete attól függ, hogy hány különböző tag van a kifejezésünkben. Egy kifejezésnél, amiben csupán egy tag szerepel, csak 2 sorra van szükség, mint a tagadás karakterisztikus igazságtáblájánál. Ez akkor is igaz, ha ugyanaz a tag többször is szerepel, mint a $[(C\eiff C) \eif C] \eand \enot(C \eif C)$ kifejezésben.
+
 The complete truth table requires only two lines because there are only two possibilities: $C$ can be true or it can be false. A single sentence letter can never be marked both 1 and 0 on the same row. The truth table for this sentence looks like this:
+
+A teljes igazságtáblának csak két sorra van szüksége, mivel két lehetőség van: $C$ vagy igaz, vagy hamis. Ugyanaz a kijelentésbetű sosem lehet néhol 1-es néhol 0 ugyanabban a sorban. Az igazságtábla ehhez a kifejezéshez így néz ki:
+
 \begin{center}
 \begin{tabular}{c|@{\TTon}*{15}{c}@{\TToff}}
 $C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
@@ -166,9 +172,16 @@ $C$&$[($&$C$&\eiff&$C$&$)$&\eif&$C$&$]$&\eand&\enot&$($&$C$&\eif&$C$&$)$\\
 \end{center}
 Looking at the column underneath the main connective, we see that the sentence is false on both rows of the table; i.e., it is false regardless of whether $C$ is true or false.
 
+A fő logikai művelethez tartozó oszlopban láthatjuk, hogy mindkét érték hamis; vagyis hamis függetlenül attól, hogy $C$ igaz-e vagy sem.
+
 A sentence that contains two sentence letters requires four lines for a complete truth table, as in the characteristic truth tables and the table for $(H \eand I)\eif I$.
 
+Egy kifejezésben amiben két tag is van, négy sorra van szükség az igazságtáblához, mint a karakterisztikus igazsgátáblákban és a $(H \eand I)\eif I$ kifejezés táblájában is.
+
 A sentence that contains three sentence letters requires eight lines. For example:
+
+Ha egy kifejezésben három tag van, akkor nyolc sorra van szükség. Példa:
+
 \begin{center}
 \begin{tabular}{c|c|c|@{\TTon}*{5}{c}@{\TToff}}
 $M$&$N$&$P$&$M$&\eand&$(N$&\eor&$P)$\\
@@ -186,9 +199,16 @@ $M$&$N$&$P$&$M$&\eand&$(N$&\eor&$P)$\\
 \end{center}
 From this table, we know that the sentence $M\eand(N\eor P)$ might be true or false, depending on the truth-values of $M$, $N$, and $P$.
 
+Ebből a táblából megállapíthatjuk, hogy a $M\eand(N\eor P)$ kifejezés lehet igaz vagy hamis az $M$, $N$, és $P$ értékei alapján.
+
 A complete truth table for a sentence that contains four different sentence letters requires 16 lines. Five letters, 32 lines. Six letters, 64 lines. And so on. To be perfectly general: If a complete truth table has $n$ different sentence letters, then it must have $2^n$ rows.
 
+Egy teljes igazságtábla egy négy tagos kifejezés esetében 16 sort tartalmaz. Öt tagnál 32 sort, hat tagnál 64 sort, és így tovább.
+A teljesség érdekében: Ha egy teljes igazságtáblának $n$ különböző tagja van, akkor $2^n$ a sorok száma.
+
 In order to fill in the columns of a complete truth table, begin with the right-most sentence letter and alternate 1s and 0s. In the next column to the left, write two 1s, write two 0s, and repeat. For the third sentence letter, write four 1s followed by four 0s. This yields an eight line truth table like the one above. For a 16 line truth table, the next column of sentence letters should have eight 1s followed by eight 0s. For a 32 line table, the next column would have 16 1s followed by 16 0s. And so on.
+
+Hogy feltöltsük az oszlopokat egy teljes igazságtáblában, jobb oldalról indulva váltakozva írjunk 1-et és 0-t. Az egyel jobbra lévő oszlopba írjunk két 1-et, két 0-t, ismételve. Jobbról a 3. oszlopba négy 1-est aztán négy 0-t. Így egy 8 soros igazságtáblát kapunk, mint az fent is látszik. Egy 16 soros igazságtáblánál a következő oszlopba nyolc 1-est és nyolc 0-t írunk. Egy 32 soros táblához a következő oszlopba 16 1-est és 16 0-t. Nagyobb tábláknál ezt az elvet folytatjuk.
 
 %CZG fordítása vége
 
