@@ -554,9 +554,27 @@ Answer each of the questions below and justify your answer.
 %\script{A} and \script{B} have different truth values on at least one line of a complete truth table, and $(\script{A}\eor\script{B})$ will be true on that line. On other lines, it might be true or false. So $(\script{A}\eor\script{B})$ is either a tautology or it is contingent; it is \emph{not} a contradiction.
 \end{earg}
 
+\solutions
+\problempart
+\label{pr.TT.concepts}
+Válaszold meg az alábbi kérdéseket és válaszodat igazold!
+\begin{earg}
+\item Tegyük fel, hogy \script{A} és \script{B} logikailag ekvivalensek. Ebben az esetben mit lehet elmondani $\script{A}\eiff\script{B}$?
+\item Tegyük fel, hogy $(\script{A}\eand\script{B})\eif\script{C}$ kontingens. Mit tudsz elmondani az ``\script{A}, \script{B}, \therefore\script{C}'' argumentumról?
+\item Tegyük fel, hogy $\{\script{A},\script{B}, \script{C}\}$ inkonzistens. Mit tudsz elmondani $(\script{A}\eand\script{B}\eand\script{C})$-ről?
+\item Tegyük fel, hogy \script{A} egy kontradikció. Mit tudsz elmondani ``\script{A}, \script{B}, \therefore\script{C}'' argumentumról?
+\item Tegyük fel, hogy \script{C} tautológia. Ebben az esetben mit lehet elmondani ``\script{A}, \script{B}, \therefore\script{C}'' argumentumról?
+\item Tegyük fel, hogy \script{A} és \script{B} logikailag ekvivalensek. Mit tudsz elmondani $(\script{A}\eor\script{B})$-ről?
+\item Tegyük fel, hogy \script{A} és \script{B} \emph{nem} logikailag ekvivalensek. Mit tudsz elmondani $(\script{A}\eor\script{B})$-ről?
+\end{earg}
+
 \problempart
 \label{pr.altConnectives}
 We could leave the biconditional (\eiff) out of the language. If we did that, we could still write `$A\eiff B$' so as to make sentences easier to read, but that would be shorthand for $(A\eif B) \eand (B\eif A)$. The resulting language would be formally equivalent to SL, since $A\eiff B$ and $(A\eif B) \eand (B\eif A)$ are logically equivalent in SL. If we valued formal simplicity over expressive richness, we could replace more of the connectives with notational conventions and still have a language equivalent to SL. 
+
+\problempart
+\label{pr.altConnectives}
+Az ekvivalenciát (\eiff) ki lehetne hagyni a nyelvből. Ekkora `$A\eiff B$'-t ugyanúgy felírhatnánk csak, hogy könnyítsünk a mondatok olvashatóságán, de ez csupán az $(A\eif B) \eand (B\eif A)$ kifejezésnek lenne a rövidítése. Az így kapott nyelv pedig formálisan ekvivalens lenne KL-lel, mivel $A\eiff B$, valamint $(A\eif B) \eand (B\eif A)$ logikailag ekvivalensek KL-ben. Ha a formai egyszerűséget többre tartanánk, mint a gazdag szemléltetés módot, akkor több műveletet is helyettesíthetnénk jelölési konvenciókkal és továbbra is olyan nyelvet kapnánk, ami ekvivalens KL-lel.
 
 There are a number of equivalent languages with only two connectives. It would be enough to have only negation and the material conditional. Show this by writing sentences that are logically equivalent to each of the following using only parentheses, sentence letters, negation (\enot), and the material conditional (\eif).
 \begin{earg}
@@ -570,7 +588,21 @@ There are a number of equivalent languages with only two connectives. It would b
 %...
 % Break out of the {earg} environment to give new instructions. 
 
+Számos két műveletet tartalmazó ekvivalens nyelv létezik. Elegendő lenne csupán negáció és implikáció. Bizonyítsd ezt olyan mondatokkal, melyek logikailag ekvivalensek a következőkkel, kizárólag zárójeleket, kijelentésváltozókat, negációt (\enot), és implikációt használva (\eif).
+\begin{earg}
+\item\leftsolutions\ $A\eor B$
+%$\enot A \eif B$
+\item\leftsolutions\ $A\eand B$
+%$\enot(A \eif \enot B)$
+\item\leftsolutions\ $A\eiff B$
+%$\enot [(A\eif B) \eif \enot(B\eif A)]$
+\end{earg}
+%...
+% Break out of the {earg} environment to give new instructions.
+
 We could have a language that is equivalent to SL with only negation and disjunction as connectives. Show this: Using only parentheses, sentence letters, negation (\enot), and disjunction (\eor), write sentences that are logically equivalent to each of the following.
+
+KL-lel ekvivalens olyan nyelvünk is lehetne, mely műveletként csak negációt és diszjunkciót tartalmaz. Bizonyítsd ezt: használj kizárólag zárójeleket, kijelentésváltozókat, negációt (\enot), és diszjunkciót (\eor), írj olyan mondatokat melyek logikailag ekvivalensek az alábbiakkal.
 % Resume the {earg} environment and restore the counter.
 %...
 \begin{earg}
@@ -584,6 +616,8 @@ We could have a language that is equivalent to SL with only negation and disjunc
 \end{earg}
 %...
 The \emph{Sheffer stroke} is a logical connective with the following characteristic truthtable:
+
+A \emph{Sheffer-funktor} (negált konjunkció) egy logikai művelet, a következő igazságtáblával:
 \begin{center}
 \begin{tabular}{c|c|c}
 \script{A} & \script{B} & \script{A}$|$\script{B}\\
@@ -599,8 +633,15 @@ The \emph{Sheffer stroke} is a logical connective with the following characteris
 \setcounter{eargnum}{\arabic{OLDeargnum}}
 \item Write a sentence using the connectives of SL that is logically equivalent to $(A|B)$.
 \end{earg}
+
+\begin{earg}
+\setcounter{eargnum}{\arabic{OLDeargnum}}
+\item Írj egy mondatot az KL műveleteit használva, amely logikailag ekvivalens $(A|B)$-vel.
+\end{earg}
 %...
 Every sentence written using a connective of SL can be rewritten as a logically equivalent sentence using one or more Sheffer strokes. Using only the Sheffer stroke, write sentences that are equivalent to each of the following. 
+
+Bármely KL-i művelettel felírt mondat logikailag ekvivalens módon újraírható egy vagy több Sheffer-funktor használatával. Írj az alábbiakkal ekvivalens mondatokat, kizárólag Sheffer-funktort használva.
 %...
 \begin{earg}
 \setcounter{eargnum}{\arabic{OLDeargnum}}
