@@ -532,6 +532,8 @@ Back on p.~\pageref{surgeon3correct}, we said that this argument would be invali
 
 %HAI fordítása vége
 
+%GR fordítása kezdet
+
 In order to show that it is invalid, we need to show that there is some model in which the premises are true and the conclusion is false. We can construct such a model deliberately. Here is one way to do it:
 \begin{partialmodel}
 	UD			& \{Bj\"ork\}\\
@@ -557,6 +559,10 @@ Nevertheless, $Raa\eiff Raa$ is obviously a tautology. We can prove it with a si
 There are two kinds of models: those in which ${\langle}\referent{a},\referent{a}{\rangle}$ is in the extension of $R$ and those in which it is not. In the first kind of model, $Raa$ is true; by the truth table for the biconditional, $Raa\eiff Raa$ is also true. In the second kind of model, $Raa$ is false; this makes $Raa\eiff Raa$ true. Since the sentence is true in both kinds of model, and since every model is one of the two kinds, $Raa\eiff Raa$ is true in every model. Therefore, it is a tautology.
 \end{quote}
 This argument is valid, of course, and its conclusion is true. However, it is not an argument in QL. Rather, it is an argument in English \emph{about} QL; it is an argument in the metalanguage. There is no formal procedure for evaluating or constructing natural language arguments like this one. The imprecision of natural language is the very reason we began thinking about formal languages.
+
+%GR fordítása vége
+
+%RA fordítása kezdet
 
 There are further difficulties with this approach.
 
@@ -599,7 +605,9 @@ Is the argument \mbox{`\script{P}, \therefore\ \script{C}'} valid? & {show that 
 
 
 
+%RA fordítása vége
 
+%KM fordítása kezdet
 
 
 \section{Truth in QL}
@@ -620,6 +628,8 @@ We were able to give a recursive definition of truth for SL because every well-f
 \subsection{Satisfaction}
 
 The formula $Px$ says, roughly, that $x$ is one of the $P$s. This cannot be quite right, however, because $x$ is a variable and not a constant. It does not name any particular member of the UD. Instead, its meaning in a sentence is determined by the quantifier that binds it. The variable $x$ must stand-in for every member of the UD in the sentence $\forall xPx$, but it only needs to stand-in for one member in $\exists xPx$. Since we want the definition of satisfaction to cover $Px$ without any quantifier whatsoever, we will start by saying how to interpret a free variable like the $x$ in $Px$.
+
+%KM fordítása vége
 
 We do this by introducing a \emph{variable assignment}. Formally, this is a function that matches up each variable with a member of the UD. Call this function `a.' (The `a' is for `assignment', but this is not the same as the truth value assignment that we used in defining truth for SL.)
 
@@ -653,6 +663,8 @@ For each term $t_i$: If $t_i$ is a constant, then $\Omega_i = \referent{t_i}$. I
 	0 & \mbox{otherwise.}
 	\end{array}\right.
 \end{displaymath}
+
+%PG fordítása kezdet
 
 \item If \script{A} is $(\script{B}\eand\script{C})$ for some wffs \script{B,C}, then
 \begin{displaymath}s(\script{A}, a) =
@@ -713,6 +725,8 @@ This definition follows the same structure as the definition of a wff for QL, so
 Consider a simple sentence like $\forall xPx$. By part 7 in the definition of satisfaction, this sentence is satisfied if $a[\Omega|x]$ satisfies $Px$ in \model{M} for every $\Omega$ in the UD. By part 1 of the definition, this will be the case if every $\Omega$ is in the extension of $P$. Whether $\forall xPx$ is satisfied does not depend on the particular variable assignment $a$. If this sentence is satisfied, then it is true. This is a formalization of what we have said all along: $\forall xPx$ is true if everything in the UD is in the extension of $P$.
 
 The same thing holds for any sentence of QL. Because all of the variables are bound, a sentence is satisfied or not regardless of the details of the variable assignment. So we can define truth in this way: A sentence \script{A} is \define{true in} \model{M} if and only if some variable assignment satisfies \script{A} in $M$; \script{A} is \define{false in} \model{M} otherwise.
+
+%PG fordítása vége
 
 Truth in QL is \emph{truth in a model}. Sentences of QL are not flat-footedly true or false as mere symbols, but only relative to a model. A model provides the meaning of the symbols, insofar as it makes any difference to truth and falsity.
 
