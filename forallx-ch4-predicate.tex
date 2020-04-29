@@ -637,32 +637,63 @@ Sentence \ref{pronoun1} can be paraphrased as, `If Lemmy can play guitar, then \
 
 %PR fordítása kezdet
 
+
 Sentence \ref{pronoun2} must be paraphrased differently: `If a person can play guitar, then \emph{that person} is a rock star.' This sentence is not about any particular person, so we need a variable. Translating halfway, we can paraphrase the sentence as, `For any person $x$, if $x$ can play guitar, then $x$ is a rockstar.' Now this can be translated as $\forall x (Gx \eif Rx)$. This is the same as, `Everyone who can play guitar is a rock star.'
+
+\Aref{pronoun2}. mondatot másképpen kell megfogalmazni: „Ha egy ember tud játszani gitáron, akkor az az ember egy rocksztár.” Ez a mondat nem egy speciális emberről szól, ezért szükségünk van egy változóra. Másképpen lefordítva ezt a mondatot újra fogalmazhatjuk így: „Bármely $x$ személy esetén, ha $x$ tud játszani gitáron, akkor $x$ egy rocksztár.” Ebben az esetben ezt lehet úgy fordítani, mint $\forall x (Gx \eif Rx)$. Ez ugyanaz, mint „Mindenki, aki tud játszani gitáron az egy rocksztár.”
 
 
 Consider these further sentences:
+
+Tekintsük továbbá a következő mondatokat:
+
 
 \begin{earg}
 \item[\ex{anyone1}] If anyone can play guitar, then Lemmy can.
 \item[\ex{anyone2}] If anyone can play guitar, then he or she is a rock star.
 \end{earg}
 
+\begin{earg}
+\item[\ex{anyone1}] Ha bárki tud játszani gitáron, akkor Lemmy tud.
+\item[\ex{anyone2}] Ha bárki tud játszani gitáron, akkor ő egy rocksztár.
+\end{earg}
+
 These two sentences have the same antecedent (`If anyone can play guitar$\ldots$'), but they have different logical structures.
+
+Ennek a két mondatnak azonos az előzménye („Ha bárki tud játszani gitáron $\ldots$”), de különböző logikai felépítése van.
+
 
 Sentence \ref{anyone1} can be paraphrased, `If someone can play guitar, then Lemmy can play guitar.' The antecedent and consequent are separate sentences, so it can be symbolized with a conditional as the main logical operator: $\exists x Gx \eif Gl$.
 
+\Aref{anyone1}. mondat megfogalmazható úgy, hogy „Ha valaki tud játszani gitáron, akkor Lemmy tud játszani gitáron.” Az előzmény és a konzekvencia elkülönítik a mondatokat, úgyhogy szimbolizálni lehet egy implikációval, mint fő logikai operátorral: $\exists x Gx \eif Gl$.
+
+
 Sentence \ref{anyone2} can be paraphrased, `For anyone, if that one can play guitar, then that one is a rock star.' It would be a mistake to symbolize this with an existential quantifier, because it is talking about everybody. The sentence is equivalent to `All guitar players are rock stars.' It is best translated as $\forall x(Gx \eif Rx)$.
+
+\Aref{anyone2}. mondat megfogalmazható úgy, hogy „Bárki, ha tud játszani gitáron, akkor ő egy rocksztár.” Hiba lenne ezt egy egzisztenciális kvantorral szimbolizálni, mert a mondat mindenkiről beszél. A mondat így egyenértékű azzal, hogy „Minden gitáros rocksztár.” A legjobb fordítása a $\forall x(Gx \eif Rx)$. 
+
 
 The English words `any' and `anyone' should typically be translated using quantifiers. As these two examples show, they sometimes call for an existential quantifier (as in sentence \ref{anyone1}) and sometimes for a universal quantifier (as in sentence \ref{anyone2}). If you have a hard time determining which is required, paraphrase the sentence with an English language sentence that uses words besides `any' or `anyone.'
 
+A magyar „bármi” és „bárki” szavak fordításánál tipikusan a kvantorokat kell használni. Ahogyan ez a két példa mutatja, néha egzisztenciális kvantorokat (ahogyan \aref{anyone1} mondatban) és néha univerzális kvantorokat (ahogyan \aref{anyone2} mondatban). Ha nehéz meghatározni, hogy melyik a megfelelő, újra kell fogalmazni a mondatot magyar nyelven, úgy, hogy használjuk a „bármi” és „bárki” szavakat. 
 
-\subsection{Quantifiers and scope}
+
+\subsection*{Quantifiers and scope}
+\subsection{Kvantorok és hatásköreik}
+
 
 In the sentence $\exists x Gx \eif Gl$, the scope of the existential quantifier is the expression $Gx$. Would it matter if the scope of the quantifier were the whole sentence? That is, does the sentence $\exists x (Gx \eif Gl)$ mean something different?
 
+A $\exists x Gx \eif Gl$ mondatban, az egzisztenciális kvantor hatásköre a $Gx$ kifejezés. Számítana az, ha a kvantor hatásköre az egész mondat lenne? Azaz a $\exists x (Gx \eif Gl)$ mondat valami mást jelentene?
+
+
 With the key given above, $\exists x Gx \eif Gl$ means that if there is some guitarist, then Lemmy is a guitarist. $\exists x (Gx \eif Gl)$ would mean that there is some person such that if that person were a guitarist, then Lemmy would be a guitarist. Recall that the conditional here is a material conditional; the conditional is true if the antecedent is false. Let the constant $p$ denote the author of this book, someone who is certainly not a guitarist. The sentence $Gp \eif Gl$ is true because $Gp$ is false. Since someone (namely $p$) satisfies the sentence, then $\exists x (Gx \eif Gl)$ is true. The sentence is true because there is a non-guitarist, regardless of Lemmy's skill with the guitar.
 
+A fent megadott kulccsal, $\exists x Gx \eif Gl$ azt jelenti, ha van néhány gitáros, akkor Lemmy gitáros. $\exists x (Gx \eif Gl)$ azt jelentené, hogy van valaki, aki ha gitáros lenne, akkor Lemmy gitáros lenne. Emlékezzünk arra, hogy az implikáció, itt anyagi implikáció; az implikáció igaz, ha az előfeltétel hamis. Jelölje az állandó $p$ a könyv szerzőjét, valakit, aki biztosan nem gitáros. A $Gp \eif Gl$ mondat igaz, mert $Gp$ hamis. Mivel valaki ($p$) kielégíti a mondatot, $\exists x (Gx \eif Gl)$ igaz. A mondat igaz, mert van egy nem gitáros, leszámítva Lemmyt, aki tud gitározni.
+
+
 %PR fordítása vége
+
 
 %HD fordítása kezdet
 
