@@ -981,21 +981,38 @@ Emlékezzünk vissza arra, hogy a mondat egy jelentőségteljes kifejezés, amel
 
 The recursive structure of sentences in SL will be important when we consider the circumstances under which a particular sentence would be true or false. The sentence $\enot \enot \enot D$ is true if and only if the sentence $\enot \enot D$ is false, and so on through the structure of the sentence until we arrive at the atomic components: $\enot \enot \enot D$ is true if and only if the atomic sentence $D$ is false. We will return to this point in the next chapter.
 
+A mondatok rekurzív struktúrája a KL-ben lesz fontos, amikor figyelembe vesszük annak körülményeit, mikor lesz az adott mondat igaz vagy hamis. A $\enot \enot \enot D$ mondat akkor és csakis akkor igaz, ha a $\enot \enot D$ mondat hamis, és így tovább a mondat struktúráján keresztül amíg nem érünk el az atomi komponensekhez: $\enot \enot \enot D$ akkor és csakis akkor igaz, ha az atomi mondat $D$ hamis. Erre még visszatérünk a következő fejezetben.
 
 %\null{This should come as no surprise. In English, there are meaningful expressions that are not sentences. Take, for example, `the tallest peak in the Himalayas.'}
+%\null{Ennek nem kéne meglepetésnek lennie.Az Angol nyelvben vannak jelentőségteljes kifejezések amik nem mondatok. Például, `a legmagasabb hegycsúcs a Himalájában található
 
-
-\subsection{Notational conventions}
+\subsection*{Notational conventions}
+\subsection{Jelölési szabályok}
 \label{SLconventions}
 A wff like $(Q \eand R)$ must be surrounded by parentheses, because we might apply the definition again to use this as part of a more complicated sentence. If we negate $(Q \eand R)$, we get $\enot(Q \eand R)$. If we just had $Q \eand R$ without the parentheses and put a negation in front of it, we would have $\enot Q \eand R$. It is most natural to read this as meaning the same thing as $(\enot Q \eand R)$, something very different than $\enot(Q\eand R)$. The sentence $\enot(Q \eand R)$ means that it is not the case that both $Q$ and $R$ are true; $Q$ might be false or $R$ might be false, but the sentence does not tell us which. The sentence $(\enot Q \eand R)$ means specifically that $Q$ is false and that $R$ is true. As such, parentheses are crucial to the meaning of the sentence.
 
+
+A jfk mint $(Q \eand R)$ zárójelekben kell lennie,mert talán használhatjuk a defenicíót megint, hogy része legyen egy még inkább komplikáltabb mondatnak.Ha tagadjuk $(Q \eand R)$, akkor $\enot(Q \eand R)$ kapunk.Ha pedig csak $Q \eand R$ van a zárójelek nélkül és egy tagadá jelet teszünk elé akkor $\enot Q \eand R$ kapnánk.Természetesen, hogy ezt úgy olvassuk mintha ugyanaz lenne mint a $(\enot Q \eand R)$,valami teljesen különböző mint $\enot(Q\eand R)$.A $\enot(Q \eand R)$ azt jelenti, hogy nem igaz $Q$ és $R$ is; $Q$ lehet hamis vagy $R$ lehet hamis, de a mondat nem mondja el, hogy melyik.A $(\enot Q \eand R)$ azt jelenti, hogy pontosan $Q$ hamis és $R$ igaz.A zárójelek végzetesen fontosak a mondat jelentéséhez.
+
 So, strictly speaking, $Q \eand R$ without parentheses is \emph{not} a sentence of SL. When using SL, however, we will often be able to relax the precise definition so as to make things easier for ourselves. We will do this in several ways.
+
+Szóval szigorúan értve,$Q \eand R$ a zárójelek nélkül \emph{nem} a mondata a KL-nek. Amikor KL-t hazsnálunk,azonban gyakran megengedjük magunknak, hogy eltekintsünk a pontos jelentéstől, hogy a dolgokat könyebbé tegyük magunk számára. Ezt többféleképpen tehetjük meg.
+
 
 First,  we understand that $Q \eand R$ means the same thing as $(Q \eand R)$. As a matter of convention, we can leave off parentheses that occur \emph{around the entire sentence}.
 
+Először is meg kell értenünk, hogy $Q \eand R$ ugyanazt jelenti mint $(Q \eand R)$.Jelölési szempontból lehagyhatjuk a zárójeleket amik az \emph{egész mondat körül vannak}.
+
 Second, it can sometimes be confusing to look at long sentences with many, nested pairs of parentheses. We adopt the convention of using square brackets `[' and `]' in place of parenthesis. There is no logical difference between $(P\eor Q)$ and $[P\eor Q]$, for example. The unwieldy sentence
+
+Másodszor néha zavaró lehet hosszú mondatok a sok beágyazott zárójeleikkel nézni.Alkalmazzuk a szögletes zárójeles jelölést `[' ls `]' a zárójelek helyett.Példaképpen nincsen logikai különbség $(P\eor Q)$ ls  $[P\eor Q]$ között.A kezelhetetlen mondat:
+
 $$(((H \eif I) \eor (I \eif H)) \eand (J \eor K))$$
 could be written in this way:
+$$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
+
+$$(((H \eif I) \eor (I \eif H)) \eand (J \eor K))$$
+Így is lehetne írni:
 $$\bigl[(H \eif I) \eor (I \eif H)\bigr] \eand (J \eor K)$$
 
 %CsSz fordítása vége
