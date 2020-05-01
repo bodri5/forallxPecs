@@ -446,17 +446,34 @@ What we did here was replace words like `man' or `carrot' with symbols like `M' 
 
 Starting with an argument in a \emph{natural language} like English, we translate the argument into a \emph{formal language}. Parts of the English sentences are replaced with letters and symbols. The goal is to reveal the formal structure of the argument, as we did with these two.
 
+Ha veszünk egy kijelentés \emph{természetes nyelven} példál magyarul, átírjuk ezt \emph{formális nyelvre}. Az magyar mondat egy részét helyettesítjük betűkkel és szimbólumokkal. A cél, hogy megtaláljuk a formális megfelelőjét, ahogy tettük ezt az előző kettőnél.
+
 There are formal languages that work like the symbolization we gave for these two arguments. A logic like this was developed by Aristotle, a philosopher who lived in Greece during the 4th century BC. Aristotle was a student of Plato and the tutor of Alexander the Great. Aristotle's logic, with some revisions, was the dominant logic in the western world for more than two millennia.
+
+Vannak olyan formális nyelvek, amik olyan szimbolizmusban működnek, mint az előző két esetben. Ez a fajta logika Arisztotelésztől származik, egy görög filozófustól, aki az i.e. 4. században élt. Arisztotelész Plátó tanítványa volt és Nagy Sándor tanítója. Arisztotelész által lefektetett formalizmus, némi változatásokkal dominálta a nyugati világ logikáját több mint két évezredig.
 
 In Aristotelean logic, categories are replaced with capital letters. Every sentence of an argument is then represented as having one of four forms, which medieval logicians labeled in this way: (A) All $A$s are $B$s. (E) No $A$s are $B$s. (I) Some $A$ is $B$. (O) Some $A$ is not $B$.
 
+Az arisztotelészi logikában a kategóriákat nagy betűkkel helyettesítjük. Az érvelés minden mondata helyettesíthető a négy alábbi forma egyikével, amit a középkorban az alábbi módon jeöltek: (A) Minden $A$ $B$. (E) Nincsen $A$, ami $B$. (I) Néhány $A$ $B$.
+(0) Néhány $A$ nem $B$.
+
 It is then possible to describe valid \emph{syllogisms}, three-line arguments like the two we considered above. Medieval logicians gave mnemonic names to all of the valid argument forms. The form of our two arguments, for instance, was called \emph{Barbara}. The vowels in the name, all As, represent the fact that the two premises and the conclusion are all (A) form sentences.
 
-There are many limitations to Aristotelean logic. One is that it makes no distinction between kinds and individuals. So the first premise might just as well be written `All $S$s are $M$s': All Socrateses are men. Despite its historical importance, Aristotelean logic has been superceded. The remainder of this book will develop two formal languages.
+Ez egy lehetséges módja egy érvényes szillogizmus leírásának, az olyan három-soros érveléseknek, mint a fenti kettőnek. A középkorban a logikával foglalkozók könnyebben megjegyezhető szavakat rendeltek az egyes érvényes érvelési formához. A mi két érvelésünk formáját például \emph{Barbarának} hívták. A magánhangzók a névben mindk A-k, ez reprezentálja a tényt, hogy a két premissza és a következtetés mind (A) formájú mondatok. 
 
-The first is SL, which stands for \emph{sentential logic}. In SL, the smallest units are sentences themselves. Simple sentences are represented as letters and connected with {logical connectives} like `and' and `not' to make more complex sentences.
+
+There are many limitations to Aristotelean logic. One is that it makes no distinction between kinds and individuals. So the first premise might just as well be written `All $S$s are $M$s': All Socrateses are men. Despite its historical importance, Aristotelean logic has been superceded. The remainder of this book will develop two formal languages. 
+
+Sok hátránya van az Arisztotelészi logikának. Egyik az, hogy nem tesz különbséget egyének és csoportok között. Tehát az első premisszát így is megfogalmazhattuk volna: „Minden $S$ $M$”: „Minden Szókrátészok emberek”. A történelmi jelentősége ellenére, az Arisztotelészi logikát másfajta logikával helyettesítették. A könyv hátralévő része ezeket tárgyalja.
+
+The first is SL, which stands for \emph{sentential logic}. In SL, the smallest units are sentences themselves. Simple sentences are represented as letters and connected with {logical connectives} like and' andnot' to make more complex sentences.
+
+Az első az úgynevezett \emph{kijelentéslogika} (sentiential logic) továbbiakban KL. Ebben a fajta logikában a legkisebb elemek maguk a mondatok (kijelentések). Az egyszerű mondatokat, amiket betűkkel jelölnek, logikai műveletek kötik össze, mint az $és$, és a $nem$, így képezhetőek bonyolultabb kijelentések.
+
 
 The second is QL, which stands for \emph{quantified logic}. In QL, the basic units are objects, properties of objects, and relations between objects.
+
+A másik az ún. \emph{predikátum logika} (quantified logic) továbbiakban PL. A legkisebb elemei az objektumok, ezek tulajdonságai, valamint a kapcsolat az objektumok között.
 
 
 
@@ -464,10 +481,14 @@ The second is QL, which stands for \emph{quantified logic}. In QL, the basic uni
 %\subsection{Why there are different formal languages}
 When we translate an argument into a formal language, we hope to make its logical structure clearer. We want to include enough of the structure of the English language argument so that we can judge whether the argument is valid or invalid. If we included every feature of the English language, all of the subtlety and nuance, then there would be no advantage in translating to a formal language. We might as well think about the argument in English.
 
+Ha átírunk egy érvet formális nyelvre, abban reménykedünk, hogy a logikai struktúrája tisztább lesz. Minél többet bele akarunk fogalalni a természetes nyelv struktúrájából, hogy el tudjuk dönteni, hogy az érvelés helyes, vagy helytelen. Ha a természetes nyelv minden jellenzőjével tisztában vagyunk, minden finomságával együtt, akkor nem lenne előnye a formális nyelv használatának. Ebben az esetben ugyan olyan jól tudánk az érvelést természetes nyelven tárgyalni.
+
 At the same time, we would like a formal language that allows us to represent many kinds of English language arguments. This is one reason to prefer QL to Aristotelean logic; QL can represent every valid argument of Aristotelean logic and more.
 
-%KM fordítása vége
+ 
+Egyúttal szeretnénk, hogy a formális nyelv tegyen lehetővé sokféle természetes nyelvű érvelést. Ezért elterjettebb a predikátum logika, mint az Arisztotelészi logika; PL az Arisztotelészi logika minden lehetséges érvét le tudja írni és még annál többet.
 
+%KM fordítása vége
 
 %CsB fordítása kezdet
 
