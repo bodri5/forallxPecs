@@ -852,29 +852,54 @@ For example: If your conclusion is a conditional $\script{A}\eif\script{B}$, pla
 \paragraph{Work forwards from what you have.}
 When you are starting a proof, look at the premises; later, look at the sentences that you have derived so far. Think about the elimination rules for the main operators of these sentences. These will tell you what your options are.
 
+\paragraph{Dolgozzon előre abból amilye van.}
+Amikor egy bizonyítást kezd, nézze meg a feltételeket; majd nézze meg az eddig kapott tételeket. Gondoljon ezeknek a tételeknek a fő műveleteire vonatkozó eliminációs szabályokra. Ezek majd elárulják mik a lehetőségei.
+
 For example: If you have $\forall x\script{A}$, think about instantiating it for any constant that might be helpful. If you have $\exists x\script{A}$ and intend to use the $\exists$E rule, then you should assume $\script{A}[c|x]$ for some $c$ that is not in use and then derive a conclusion that does not contain $c$.
+
+Például: Ha Önnek adott $\forall x\script{A}$, gondoljon a szemléltetésére bármely olyan állandóval amely hasznos lehet. Ha Önnek adott $\exists x\script{A}$ és szándékában áll használni a $\exists$E szabályt, akkor feltételezheti $\script{A}[c|x]$ -t néhány olyan $c$-re amely nincs használatban, ekkor levonhat egy olyan következtetést, amely nem tartalmazza c-t.
 
 For a short proof, you might be able to eliminate the premises and introduce the conclusion. A long proof is formally just a number of short proofs linked together, so you can fill the gap by alternately working back from the conclusion and forward from the premises.
 
+Egy rövid bizonyításnál, talán sikeresen eliminálhatja a feltételeket és bemutathatja a következtetést. Formailag egy hosszú bizonyítás csak sok rövid bizonyítás összekapcsolva, tehát kitöltheti a rést azáltal, hogy felváltva dolgozik. Visszafelé a következtetéstől és előrefelé a feltételektől. 
 
 \paragraph{Change what you are looking at.}
 Replacement rules can often make your life easier. If a proof seems impossible, try out some different substitutions.
 
+\paragraph{Minden csak nézőpont kérdése.}
+A behelyettesítési szabályok gyakran megkönnyíthetik az életét. Ha egy bizonyítás lehetetlennek tűnik, próbáljon ki más helyettesítéseket.
+
 For example: It is often difficult to prove a disjunction using the basic rules. If you want to show $\script{A}\eor\script{B}$, it is often easier to show $\enot\script{A}\eif\script{B}$ and use the MC rule.
+
+Például: Általában nehéz bebizonyítani egy diszjunkciót az alap szabályok alkalmazásával. Ha meg akarja mutatni, hogy $\script{A}\eor\script{B}$, akkor gyakran inkább egyszerűbb bebizonyítani, hogy $\enot\script{A}\eif\script{B}$ az MC szabály felhasználásával.
 
 Showing $\enot \exists x\script{A}$ can also be hard, and it is often easier to show  $\forall x\enot \script{A}$ and use the QN rule.
 
+Belátni, hogy $\enot \exists x\script{A}$ is nehéz lehet és általában könnyebb megmutatni, hogy $\forall x\enot \script{A}$ és alkalmazni a QN szabályt.
+
 Some replacement rules should become second nature. If you see a negated disjunction, for instance, you should immediately think of DeMorgan's rule.
+
+Néhány behelyettesítési szabály magától értetődővé kell hogy váljon. Ha például egy negált diszjunkcióval találkozik, egyből DeMorgan szabályára kell gondolnia.
 
 \paragraph{Do not forget indirect proof.}
 If you cannot find a way to show something directly, try assuming its negation.
 
+\paragraph{Ne feledkezzen meg az indirekt bizonyításról.}
+Ha nem tud bebizonyítani valamit direkt módon, próbálja meg feltenni az ellenkezőjét.
+
 Remember that most proofs can be done either indirectly or directly. One way might be easier--- or perhaps one sparks your imagination more than the other--- but either one is formally legitimate.
+
+A legtöbb bizonyítás elvégezhető indirekt és direkt módon is. Az egyik talán könnyebb -- vagy esetleg az egyik jobban mozgatja a képzelőerejét, mint a másik -- de mindkét módszer formálisan elfogadott.
 
 \paragraph{Repeat as necessary.} Once you have decided how you might be able to get to the conclusion, ask what you might be able to do with the premises. Then consider the target sentences again and ask how you might reach them.
 
+\paragraph{Szükség szerint ismételjen.} Miután eldöntötte, hogyan juthat el a következtetésre, kérdezze meg, mit tehetne a feltételekkel. Ezután vegye fontolóra célként kitűzött tételeket, és nézze meg, hogyan érheti el őket.
+
 \paragraph{Persist.}
 Try different things. If one approach fails, then try something else.
+
+\paragraph{Legyen kitartó.}
+Próbáljon ki különböző dolgokat. Ha egy megközelítés nem sikerül, akkor próbáljon ki valami mást.
 
 %ZsGy fordítása vége
 
