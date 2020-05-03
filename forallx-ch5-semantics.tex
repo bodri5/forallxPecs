@@ -239,26 +239,48 @@ The double turnstile symbol allows us to give concise definitions for various co
 \begin{quote}
 A \define{tautology in SL} is a sentence \script{A}  such that $\models\script{A}$.
 
+Egy \define{tautológia a kijelentéslogikában} egy olyan \script{A} kijelentés, melyre igaz, hogy $\models\script{A}$.
+
 A \define{contradiction in SL} is a sentence \script{A} such that $\models\enot\script{A}$.
+
+Egy  \define{ellentmondás a kijelentéslogikában} egy olyan \script{A} kijelentés, melyre igaz, hogy $\models\enot\script{A}$.
 
 A sentence is \define{contingent in SL} if and only if it is neither a tautology nor a contradiction.
 
+Egy kijelentés \define{kontingens a kijelentéslogikában} akkor és csakis akkor, ha nem tautológia és nem is ellentmondás.
+
 An argument `` $\script{P}_1, \script{P}_2, \cdots$, \therefore\ \script{C} '' is \define{valid in SL} if and only if $\{\script{P}_1,\script{P}_2,\cdots\}\models\script{C}$.
+
+A `` $\script{P}_1, \script{P}_2, \cdots$, \therefore\ \script{C} kijelentés akkor és csakis akkor '' \define{érvényes a kijelentéslogikában} , ha $\{\script{P}_1,\script{P}_2,\cdots\}\models\script{C}$.
 
 Two sentences \script{A} and \script{B} are \define{logically equivalent in SL} if and only if both $\script{A}\models\script{B}$ and $\script{B}\models\script{A}$.
 \end{quote}
 
+Két kijelentés \script{A} és \script{B} akkor és csakis akkor \define{egyenértékűek a kijelentéslogikában} , ha $\script{A}\models\script{B}$ és $\script{B}\models\script{A}$.
+\end{quote}
+
 Logical consistency is somewhat harder to define in terms of semantic entailment. Instead, we will define it in this way:
+
+A logikai konzisztencia valamivel nehezebben megfogalmazható a szemantikus következetesség keretein belül. Ehelyett mi a következőképp fogjuk definiálni:
 
 \begin{quote}
 \label{def.consistencySL}
 The set $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ is \define{consistent in SL} if and only if there is at least one truth value assignment for which all of the sentences are true. The set is \define{inconsistent in SL} if and if only there is no such assignment.
 \end{quote}
 
+\begin{quote}
+\label{def.consistencySL}
+Az $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ halmaz akkor és csakis akkor \define{konzisztens a kijelentéslogikában} , ha létezik legalább egy igazság érték hozzárendelés amelyre az összes kijelentés igaz. A halmaz akkor és csakis akkor \define{inkonzisztens a kijelentéslogikában} , ha nem létezik ilyen hozzárendelés.
+\end{quote}
+
 \section{Interpretations and models in QL}
+
+\section{Interpretációk és modellek a Predikátumlogikában}
 
 In SL, an interpretation or symbolization key specifies what each of the sentence letters means. The interpretation of a sentence letter along with the state of the world determines whether the sentence letter is true or false.
 Since the basic units are sentence letters, an interpretation only matters insofar as it makes sentence letters true or false. Formally, the semantics for SL is strictly in terms of truth value assignments. Two interpretations are the same, formally, if they make for the same truth value assignment.
+
+A kijelentéslogikában, egy interpretáció vagy szimbolikai kulcs adja meg, hogy mit jelentenek a kijelentésekben található változók. A kijelentés egy változójának interpretációja, és a világ állapota dönti el, hogy az adott változó igaz, vagy hamis lesz-e. Mivel az alapvető mértékegységek kijelentésváltozók, egy interpretáció csak azért számít, mert meghatározza a változó igaz vagy hamis létét. Hivatalosan, a kijelentéslogika jelentéstana csakis az érvényességi értékátadásokból áll. Két interpretáció egyező formálisan, ha ugyanazt az érvényességi értékátadást jelentik.
 
 What is an interpretation in QL? Like a symbolization key for QL, an interpretation requires a UD, a schematic meaning for each of the predicates, and an object that is picked out by each constant. For example:
 \begin{ekey}
@@ -268,6 +290,16 @@ What is an interpretation in QL? Like a symbolization key for QL, an interpretat
 \item[w:] Bruce Wayne
 \end{ekey}
 Consider the sentence $Fb$. The sentence is true on this interpretation, but--- just as in SL--- the sentence is not true \emph{just because} of the interpretation. Most people in our culture know that Batman fights crime, but this requires a modicum of knowledge about comic books. The sentence $Fb$ is true because of the interpretation \emph{plus} some facts about comic books. This is especially obvious when we consider $Fw$. Bruce Wayne is the secret identity of the Batman in the comic books--- the identity claim $b=w$ is true--- so $Fw$ is true. Since it is a \emph{secret} identity, however, other characters do not know that $Fw$ is true even though they know that $Fb$ is true.
+
+Mi egy interpretáció a predikátumlogikában? Mint egy szimbolikus kulcs a predikátumlogikának, egy interpretációhoz szükséges egy a alap halmaz (UD), egy sematikus jelentés minden egyes predikátumnak, és egy objektum amelyet minden konstans felhasznál. Például:
+\begin{ekey}
+\item[UD:] képregények karakterei
+\item[Fx:] $x$ a bűnözés ellen küzd.
+\item[b:] Batman
+\item[w:] Bruce Wayne
+\end{ekey}
+Vegyük példának az $Fb$ kijelentést. A kijelentés ezen interpretációval igaz, de---pont mint a kijelentéslogikában--- a kijelentés nem \emph{csak} az interpretáció miatt igaz. Szinte mindenki tudja, hogy Batman a bűnözés ellen küzd, de ehhez szükséges egy minimális tudás a képregények világáról. A $Fb$ kijelentés az interpretáció \emph{és} a képregényekről szerzett tudásunk miatt igaz. Ez abban az esetben különösen egyértelmű, ha $Fw$-t vesszük figyelembe. Bruce Wayne Batman titkos identitása a képregényekben--- az identitásokról tehát kijelenthetjük, hogy $b=w$--- szóval $Fw$ is igaz. Mivel ez egy \emph{titkos} identitás, a többi karakter nem tudja, hogy $Fw$ igaz, pedig az tudtukban áll, hogy a $Fb$ kijelentés igaz.
+
 
 %DG fordítása vége
 
