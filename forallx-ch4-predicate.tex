@@ -453,19 +453,36 @@ One option is to say that sentence \ref{chimera1} is not true, because there is 
 
 Since we cannot say that they are both false, what should we do? Another option is to say that sentence \ref{chimera1} is \emph{meaningless} because it talks about a non-existent thing. So $Ac$ would be a meaningful expression in QL for some interpretations but not for others. Yet this would make our formal language hostage to particular interpretations. Since we are interested in logical form, we want to consider the logical force of a sentence like $Ac$ apart from any particular interpretation. If $Ac$ were sometimes meaningful and sometimes meaningless, we could not do that.
 
+Mit tegyünk hát, ha nem állíthatjuk, hogy mindkét eset hamis? Egy másik lehetőség az, hogy azt mondjuk, hogy a \ref{chimera1} mondat \emph{értelmetlen}, mert nem létező dologról beszél. Így az $Ac$ néhány értelmezés szerint jelentésteli lehet a PL-ben, míg egyéb esetekben nem. Ez azonban túszul ejtené a formális nyelvünk bizonyos értelmezésekhez. Mivel minket a logikai formula érdekel, szeretnénk mérlegelni olyan mondatok erejét, mint az $Ac$ külön más részleges interpretációktól. Nem engedhetjük meg, hogy $Ac$ néhol értelmes és néhol értelmetlen legyen. 
+
 This is the \emph{problem of non-referring terms}, and we will return to it later (see p.~\pageref{subsec.defdesc}.) The important point for now is that each constant of QL \emph{must} refer to something in the UD, although the UD can be any set of things that we like. If we want to symbolize arguments about mythological creatures, then we must define a UD that includes them. This option is important if we want to consider the logic of stories. We can translate a sentence like `Sherlock Holmes lived at 221B Baker Street' by including fictional characters like Sherlock Holmes in our UD.
 
+Ez a probléma a \emph{nem hivatkozó változók problémája}, később még visszatérünk rá (see p.~\pageref{subsec.defdesc}.) A fontos szempont jelenleg, hogy a PL minden változójának hivatkozni \emph{kell} valamire az UD-ben, habár az UD-ben bármilyen tetszőleges dolog rögzíthető. Ha mitológiai lények tulajdonságait akarjuk szimbolizálni, akkor muszáj egy olyan UD-t definiálnunk, amely magába foglalja őket. Ez a lehetőség fontos, ha történetek logikáját szeretnénk megvizsgálni. Lefordíthatunk egy olyan mondatot, mint “Sherlock Holmes a Baker Street 221B alatt lakott”, úgy, hogy olyan képzeletbeli karaktereket tüntenünk fel az UD-nkben, mint Sherlock Holmes.
 
-
-\section{Translating to QL}
+\section*{Translating to QL}
+\section{QL-re fordítás}
 We now have all of the pieces of QL. Translating more complicated sentences will only be a matter of knowing the right way to combine predicates, constants, quantifiers, variables, and connectives. Consider these sentences:
+
+Most, hogy minden darabja megvan a PL-nek, bonyolultabb mondatok fordításának csak az lehet az akadálya, hogy megfelelően tudjuk kombinálni a predikátumokat, konstansokat, kvantorokat és a műveleteket. Vizsgáljuk meg a következő mondatokat: 
+
 \begin{earg}
 \item[\ex{quan1}] Every coin in my pocket is a quarter.
 \item[\ex{quan2}] Some coin on the table is a dime.
 \item[\ex{quan3}] Not all the coins on the table are dimes.
 \item[\ex{quan4}] None of the coins in my pocket are dimes.
 \end{earg}
+
+\begin{earg}
+\item[\ex{quan1}] Minden érme a zsebemben egy negyed dolláros.
+\item[\ex{quan2}] Néhány érme az asztalon egy tíz centes.
+\item[\ex{quan3}] Nem minden érme az asztalon egy tíz centes. 
+\item[\ex{quan4}] A zsebemben lévő érmék egyike sem egy tíz centes.
+\end{earg}
+
 In providing a symbolization key, we need to specify a UD. Since we are talking about coins in my pocket and on the table, the UD must at least contain all of those coins. Since we are not talking about anything besides coins, we let the UD be all coins. Since we are not talking about any specific coins, we do not need to define any constants. So we define this key:
+
+A szimbólizációs kulcs megadásakor meg kell határozni az UD-t. Mivel a zsebünkben és az asztalon lévő érmékről beszélünk, az UD-nek legalább ezeket mind tartalmaznia kell. Mivel nem beszélünk másról csak érmékről, így lehet az UD minden érme összessége. Mivel nem konkrét érmékről beszélünk, nem szükséges konstansokat definiálnunk. Így mi ezeket a kulcsokat definiálhatjuk:
+
 \begin{ekey}
 \item[UD:] all coins
 \item[Px:] $x$ is in my pocket.
@@ -473,9 +490,22 @@ In providing a symbolization key, we need to specify a UD. Since we are talking 
 \item[Qx:] $x$ is a quarter.
 \item[Dx:] $x$ is a dime.
 \end{ekey}
+
+\begin{ekey}
+\item[UD:] minden érme
+\item[Px:] $x$ a zsebemben van.
+\item[Tx:] $x$ az asztalon van.
+\item[Qx:] $x$ egy negyed doláros.
+\item[Dx:] $x$ egy tíz centes.
+\end{ekey}
+
 Sentence \ref{quan1} is most naturally translated with a universal quantifier. The universal quantifier says something about everything in the UD, not just about the coins in my pocket. Sentence \ref{quan1} means that (for any coin) \emph{if} that coin is in my pocket, \emph{then} it is a quarter. So we can translate it as $\forall x(Px \eif Qx)$.
 
-%NV fordítása vége
+A 14. mondatot természetesen fordíthatjuk univerzális kvantorral. Az univerzális kvantor mond valamit minden UD-ben található dologról, nemcsak a zsebemben lévő érmékről.
+A \ref{quan1} mondat azt jelenti, hogy (bármilyen érmére) \emph{ha} az az én zsebemben van, \emph{akkor} az negyed dolláros. Szóval mi lefordíthatjuk, úgy mint $\forall x(Px \eif Qx)$.
+
+%NV fordítása vége 
+	
 
 %NG fordítása kezdet
 
