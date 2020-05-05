@@ -476,41 +476,61 @@ If the referent of two constants is the same, then anything which is true of one
 
 %NV fordítása kezdet
 
+%NV fordítása kezdet
+
 \label{model.nonidentity}
 It is possible that anything which is true of $a$ is also true of $b$, yet for $a$ and $b$ still to have different referents. This may seem puzzling, but it is easy to construct a model that shows this. Consider this model:
+
+Lehetséges, hogy bármi, ami igaz az $a$-ra, igaz a $b$-re is és ennek ellenére $a$ és $b$ továbbra is eltérő jelöléssel rendelkezik. Ez rejtélyesnek tűnhet, de könnyen felépíthető egy modell, amely ezt mutatja. Vegyük figyelembe ezt a modellt:
 \begin{partialmodel}
 UD & \{Rosencrantz, Guildenstern\}\\
 \referent{a} & Rosencrantz\\
 \referent{b} & Guildenstern\\
 for all predicates \script{P}, \extension{\script{P}} & $\emptyset$\\
+minden predikátumra \script{P}, \extension{\script{P}} & $\emptyset$\\
 \extension{=} & \{\ntuple{Rosencrantz, Rosencrantz},\\
 \multicolumn{2}{r}{\ntuple{Guildenstern, Guildenstern}\}}
 \end{partialmodel}
 This specifies an extension for every predicate of QL: All the infinitely-many predicates are empty. This means that both $Aa$ and $Ab$ are false, and they are equivalent; both $Ba$ and $Bb$ are false; and so on for any two sentences that contain $a$ and $b$. Yet $a$ and $b$ refer to different things. We have written out the extension of identity to make this clear: The ordered pair $\langle\referent{a},\referent{b}\rangle$ is not in it. In this model, $a=b$ is false and $a\neq b$ is true.
 
+Ez megadja a kiterjedést PL minden predikátumára: Az összes végtelen sok predikátum üres. Ez azt jelenti, hogy mind $Aa$, mind $Ab$ hamisak és egyenértékűek; mind $Ba$, mind $Bb$ hamis; és így tovább minden olyan két mondatra, amelyek tartalmazzák az $a$-t és a $b$-t. Az $a$ és $b$ azonban különféle dolgokra vonatkoznak. Az identitás kiterjesztését azért fogalmaztuk meg, hogy ez világossá váljon: Az $\langle\referent{a},\referent{b}\rangle$ rendezett pár nincs benne. Ebben a modellben $a=b$ hamis és a $a\neq b$ igaz. 
 
 
 
 
 
-\section{Working with models}
+\section*{Working with models}
+\section{Modellekkel való munka}
 \label{sec.UsingModels}
 
 
 We will use the double turnstile symbol for QL much as we did for SL. `$\script{A}\models\script{B}$' means that `\script{A} entails \script{B}': When \script{A} and \script{B} are two sentences of QL, $\script{A}\models\script{B}$ means that there is no model in which \script{A} is true and \script{B} is false. $\models\script{A}$ means that \script{A} is true in every model.
 
+A kettős forgóajtó szimbólumot fogjuk használni a PL-hez, ugyanúgy, mint a KL-hez. „$\script{A}\models\script{B}$” azt jelenti, hogy „\script{A} ha \script{B}”: Amikor \script{A} és \script{B} PL két kijelentése, $\script{A}\models\script{B}$  azt jelenti, hogy nincs olyan modell, amelyben \script{A} igaz, \script{B} pedig hamis. $\models\script{A}$ azt jelenti, hogy  \script{A} igaz minden modellben.
+
 This allows us to give definitions for various concepts in QL. Because we are using the same symbol, these definitions will look similar to the definitions in SL. Remember, however, that the definitions in QL are in terms of \emph{models} rather than in terms of truth value assignments.
+
+Ez lehetővé teszi számunkra, hogy meghatározásokat adjunk a PL különböző fogalmaira. Mivel ugyanazt a szimbólumot használjuk, ezek a meghatározások hasonlóak lesznek a KL meghatározásaihoz. Ne feledje azonban, hogy a PL definíciói inkább \emph{modellek} szempontjából, mintsem igazság érték szempontjából léteznek. 
 
 \begin{quote}
 A \define{tautology in QL} is a sentence \script{A} that is true in every model; i.e.,  $\models\script{A}$.
 
+A \define{PL-ben található tautológia } egy \script{A} kijelentés, amely igaz minden modellben; vagyis:  $\models\script{A}$.
+
 A \define{contradiction in QL} is a sentence \script{A} that is false in every model; i.e., $\models\enot\script{A}$.
+A \define{PL egy ellentmondása} egy \script{A} kijelentés, amely hamis minden modellben; azaz, $\models\enot\script{A}$.
 
 A sentence is \define{contingent in QL} if and only if it is neither a tautology nor a contradiction.
 
+Egy kijelentés akkor és csak akkor \define{kontingens QL-ben}, ha nem tautológia és nem ellentmondás.
+
 An argument `` $\script{P}_1, \script{P}_2, \cdots$, \therefore\ \script{C} '' is \define{valid in QL} if and only if there is no model in which all of the premises are true and the conclusion is false; i.e., $\{\script{P}_1,\script{P}_2,\cdots\}\models\script{C}$. It is \define{invalid in QL} otherwise.
 
+Egy „$\script{P}_1, \script{P}_2, \cdots$, \therefore\ \script{C}” argumentum, akkor és csak akkor \define{érvényes PL-ben } ha nincs olyan modell, amelyben az összes premissza igaz, és a következtetés hamis; vagyis,  $\{\script{P}_1,\script{P}_2,\cdots\}\models\script{C}$. Máskülönben \define{érvénytelen a PL-ben.}
+
 Two sentences \script{A} and \script{B} are \define{logically equivalent in QL} if and only if both $\script{A}\models\script{B}$ and $\script{B}\models\script{A}$.
+
+Két kijelentés  \script{A} és \script{B} akkor és csak akkor \define{logikailag ekvivalens PL-ben}, ha mind  $\script{A}\models\script{B}$ és $\script{B}\models\script{A}$.
 
 %NV fordítása vége
 
