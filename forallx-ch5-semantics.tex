@@ -608,8 +608,12 @@ Felmerülhet a kérdés: Mit jelent az $A$ predikátum magyarul? A részleges mo
 
 However, all that the partial model tells us is that $A$ is a predicate which is true of Paris and Paris. There are indefinitely many predicates in English that have this extension. $Axy$ might instead translate `$x$ is the same size as $y$' or `$x$ and $y$ are both cities.' Similarly, $Bx$ is some predicate that does not apply to Paris; it might instead translate `$x$ is on an island' or `$x$ is a subcompact car.' When we specify the extensions of $A$ and $B$, we do not specify what English predicates $A$ and $B$ should be used to translate. We are concerned with whether the $\forall xAxx \eif Bd$ comes out true or false, and all that matters for truth and falsity in QL is the information in the model: the UD, the extensions of predicates, and the referents of constants.
 
+A részleges modell azonban azt mondja nekünk, hogy a $A$ predátum, ami igaz Párizsra és Párizsra. Határtalanul sok olyan predikátum van angolul, amelyek rendelkeznek ezzel a kiterjesztéssel. A $Axy$ ehelyett fordíthatja, hogy a `$x$ azonos méretű, mint a $y$', vagy `$x$ és $y$ egyaránt város.' Hasonlóképpen, a $Bx$ olyan predikátum, amely nem vonatkozik Párizsra; ehelyett fordíthatja: `$x$ egy szigeten van” vagy `$x$ egy subcompact auto.' Amikor megadjuk a $A$ és $B$ kiterjesztéseit, akkor nem határozzuk meg, hogy az angol melyiket predikálja $A$-t és $B$-t kell fordítani. Aggódunk amiatt, hogy a $\forall xAxx \eif Bd$ valóban vagy hamisnak tűnik-e, és a QL-ben az igazság és a hamisság szempontjából fontos a modellben szereplő információ: az UD, a predikátumok kiterjesztései és a hivatkozások állandók száma.
+
 
 We can just as easily show that $\forall xAxx \eif Bd$ is not a contradiction. We need only specify a model in which $\forall xAxx \eif Bd$ is true; i.e., a model in which either $\forall x Axx$ is false or $Bd$ is true. Here is one such partial model:
+
+Ugyanolyan könnyen meg tudjuk mutatni, hogy a $\forall xAxx \eif Bd$ nem ellentmondás. Csak azt a modellt kell megadnunk, amelyben a $\forall xAxx \eif Bd$ igaz; vagyis egy olyan modell, amelyben a $\forall x Axx$ hamis, vagy $Bd$  igaz. Itt van egy ilyen részleges modell:
 \begin{partialmodel}
 	UD			& \{Paris\}\\
 	\extension{A} 	& \{\ntuple{Paris,Paris}\}\\
@@ -619,17 +623,28 @@ We can just as easily show that $\forall xAxx \eif Bd$ is not a contradiction. W
 
 We have now shown that $\forall xAxx \eif Bd$ is neither a tautology nor a contradiction. By the definition of `contingent in QL,' this means that 
 $\forall xAxx \eif Bd$ is contingent. In general, showing that a sentence is contingent will require two models: one in which the sentence is true and another in which the sentence is false.
+Megmutattuk, hogy a $\forall xAxx \eif Bd$ sem tautológia, sem ellentmondás. A 'kontingens QL-ben' meghatározása azt jelenti $\forall xAxx \eif Bd$ függő. Általában annak megállapításához, hogy egy mondat függő, két modellre van szükség: az egyikben a mondat igaz, a másikban pedig a hamis mondat.
 
 Suppose we want to show that $\forall x Sx$ and $\exists x Sx$ are not logically equivalent. We need to construct a model in which the two sentences have different truth values; we want one of them to be true and the other to be false. We start by specifying a UD. Again, we make the UD small so that we can specify extensions easily. We will need at least two members. Let the UD be \{Duke, Miles\}. (If we chose a UD with only one member, the two sentences would end up with the same truth value. In order to see why, try constructing some partial models with one-member UDs.)
 
+Tegyük fel, hogy meg akarjuk mutatni, hogy a $\forall x Sx$ és $\exists x Sx$ logikailag nem ekvivalensek. Olyan modellt kell létrehoznunk, amelyben a két mondat eltérő igazságértékekkel rendelkezik; azt akarjuk, hogy egyikük igaz legyen, a másik hamis. Kezdjük az UD megadásával. Újra kicsinyítjük az UD-t, hogy könnyedén meghatározhassuk a kiterjesztéseket. Legalább két tagra lesz szükségünk. Legyen az UD be \{Duke, Miles\}. (Ha csak egy taggal rendelkező UD-t választunk, akkor a két mondat ugyanazzal az igazság-értékkel jár. Annak érdekében, hogy megtudja, miért, próbáljon meg felépíteni néhány részleges modellt egytagú UD-kkel.)
+
 We can make $\exists x Sx$ true by including something in the extension of $S$, and we can make $\forall x Sx$ false by leaving something out of the extension of $S$. It does not matter which one we include and which one we leave out. Making Duke the only $S$, we get a partial model that looks like this:
+
+Megalapozhatjuk, hogy a $\exists x Sx$ -nak igaznak, ha valamit belefoglalunk a $S$ kiterjesztésébe, és ha $\forall x Sx$ -ot hamisnak tesszük, ha valamit kihagyunk a $ S $ kiterjesztéséből. Nem számít, melyiket belefoglaljuk, és melyiket hagyjuk ki. Ha Duke az egyetlen $S$, akkor egy részleges modellt kapunk, amely így néz ki:
 \begin{partialmodel}
 	UD			& \{Duke, Miles\}\\
 	\extension{S}	& \{Duke\}
 \end{partialmodel}
 This partial model shows that the two sentences are \emph{not} logically equivalent.
 
+This partial model shows that the two sentences are \emph{not} logically equivalent.
+
+Ez a részleges modell azt mutatja, hogy a két mondat logikailag \emph{not}  logikailag ekvivalens.
+
 Back on p.~\pageref{surgeon3correct}, we said that this argument would be invalid in QL:
+
+Visszatérve a p.~\pageref{surgeon3correct}, azt mondtuk, hogy ez az érv érvénytelen lenne a QL-ben:
 \begin{earg}
 \item[] $(Rc \eand K_1c) \eand Tc$
 \item[\therefore] $Tc \eand K_2c$
