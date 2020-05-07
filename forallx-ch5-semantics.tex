@@ -934,6 +934,18 @@ UD & \{Waylan, Willy, Johnny\}\\
 \extension{R} & \{\ntuple{Waylan, Willy},\ntuple{Willy, Johnny},\ntuple{Johnny, Waylan}\}\\
 \referent{m} & Johnny
 \end{partialmodel}
+
+\solutions
+\problempart
+\label{pr.TorF2}
+Határozza meg, hogy az egyes mondatok igazak vagy hamisak-e az adott modellben.
+\begin{partialmodel}
+UD & \{Waylan, Willy, Johnny\}\\
+\extension{H} & \{Waylan, Willy, Johnny\}\\
+\extension{W} & \{Waylan, Willy\}\\
+\extension{R} & \{\ntuple{Waylan, Willy},\ntuple{Willy, Johnny},\ntuple{Johnny, Waylan}\}\\
+\referent{m} & Johnny
+\end{partialmodel}
 \begin{earg}
 \item $\exists x(Rxm \eand Rmx)$
 \item $\forall x(Rxm \eor Rmx)$
@@ -950,6 +962,17 @@ UD & \{Waylan, Willy, Johnny\}\\
 \problempart
 \label{pr.TorF3}
 Determine whether each sentence is true or false in the model given.
+\begin{partialmodel}
+	UD			& \{Lemmy, Courtney, Eddy\}\\
+	\extension{G}	& \{Lemmy, Courtney, Eddy\}\\
+	\extension{H}	& \{Courtney\}\\
+	\extension{M}	& \{Lemmy, Eddy\}\\
+	\referent{c}	& Courtney\\
+	\referent{e}	& Eddy
+\end{partialmodel}
+\problempart
+\label{pr.TorF3}
+Határozza meg, hogy az egyes mondatok igazak vagy hamisak-e az adott modellben.
 \begin{partialmodel}
 	UD			& \{Lemmy, Courtney, Eddy\}\\
 	\extension{G}	& \{Lemmy, Courtney, Eddy\}\\
@@ -988,11 +1011,34 @@ Write out the model that corresponds to the interpretation given.
 \item{Ux:} $x$ is thought to be unlucky.
 \item{Nxy:} $x$ is the next number after $y$.
 \end{ekey}
-
+\solutions
+\problempart
+\label{pr.InterpretationToModel}
+Készítse el a modellt ami igazodik az adott interpretációhoz.
+\begin{ekey}
+\item{UD:} természetes számok 10-től 13-ig
+\item{Ox:} $x$ páratlan. 
+\item{Sx:} $x$ kisebb mint 7.
+\item{Tx:} $x$ egy két számjegyű szám.
+\item{Ux:} $x$ a balszerencse jelképe.
+\item{Nxy:} $x$ az $y$ után következő szám.
+\end{ekey}
 
 \problempart
 \label{pr.Contingent}
 Show that each of the following is contingent.
+\begin{earg}
+\item \leftsolutions\ $Da \eand Db$
+\item \leftsolutions\ $\exists x Txh$
+\item \leftsolutions\ $Pm \eand \enot\forall x Px$
+\item $\forall z Jz \eiff \exists y Jy$
+\item $\forall x (Wxmn \eor \exists yLxy)$
+\item $\exists x (Gx \eif \forall y My)$
+\end{earg}
+\problempart
+\label{pr.Contingent}
+
+Mutassa be, hogy mindegyik kontingens.
 \begin{earg}
 \item \leftsolutions\ $Da \eand Db$
 \item \leftsolutions\ $\exists x Txh$
@@ -1017,7 +1063,21 @@ Show that the following pairs of sentences are not logically equivalent.
 \item $\forall x\exists y Rxy$, $\exists x\forall y Rxy$
 \item $\forall x\exists y Rxy$, $\forall x\exists y Ryx$
 \end{earg}
-
+\solutions
+\problempart
+\label{pr.NotEquiv}
+Mutassa be, hogy ezek a mondatpárok logikailag nem ekvivalensek.
+\begin{earg}
+\item $Ja$, $Ka$
+\item $\exists x Jx$, $Jm$
+\item $\forall x Rxx$, $\exists x Rxx$
+\item $\exists x Px \eif Qc$, $\exists x (Px \eif Qc)$
+\item $\forall x(Px \eif \enot Qx)$, $\exists x(Px \eand \enot Qx)$
+\item $\exists x(Px \eand Qx)$, $\exists x(Px \eif Qx)$
+\item $\forall x(Px\eif Qx)$, $\forall x(Px \eand Qx)$
+\item $\forall x\exists y Rxy$, $\exists x\forall y Rxy$
+\item $\forall x\exists y Rxy$, $\forall x\exists y Ryx$
+\end{earg}
 
 
 \problempart
@@ -1034,10 +1094,37 @@ Show that the following sets of sentences are consistent.
 \item \{$\exists z(Nz \eand Ozz)$, $\forall x\forall y(Oxy \eif Oyx)$\}
 \item \{$\enot \exists x \forall y Rxy$, $\forall x \exists y Rxy$\}
 \end{earg}
+\problempart
+Mutassa be, hogy a következő mondatok konzisztensek.
+\begin{earg}
+\item \{Ma, \enot Na, Pa, \enot Qa\}
+\item \{$Lee$, $Lef$, $\enot Lfe$, $\enot Lff$\}
+\item \{$\enot (Ma \eand \exists x Ax)$, $Ma \eor Fa$, $\forall x(Fx \eif Ax)$\}
+\item \{$Ma \eor Mb$, $Ma \eif \forall x \enot Mx$\}
+\item \{$\forall y Gy$, $\forall x (Gx \eif Hx)$, $\exists y \enot Iy$\}
+\item \{$\exists x(Bx \eor Ax)$, $\forall x \enot Cx$, $\forall x\bigl[(Ax \eand Bx) \eif Cx\bigr]$\}
+\item \{$\exists x Xx$, $\exists x Yx$, $\forall x(Xx \eiff \enot Yx)$\}
+\item \{$\forall x(Px \eor Qx)$, $\exists x\enot(Qx \eand Px)$\}
+\item \{$\exists z(Nz \eand Ozz)$, $\forall x\forall y(Oxy \eif Oyx)$\}
+\item \{$\enot \exists x \forall y Rxy$, $\forall x \exists y Rxy$\}
+\end{earg}
 
 
 \problempart
 Construct models to show that the following arguments are invalid.
+\begin{earg}
+\item $\forall x(Ax \eif Bx)$, \therefore\ $\exists x Bx$
+\item $\forall x(Rx \eif Dx)$, $\forall x(Rx \eif Fx)$, \therefore\ $\exists x(Dx \eand Fx)$
+\item $\exists x(Px\eif Qx)$, \therefore $\exists x Px$
+\item $Na \eand Nb \eand Nc$, \therefore\ $\forall x Nx$
+\item $Rde$, $\exists x Rxd$, \therefore\ $Red$
+\item $\exists x(Ex \eand Fx)$, $\exists x Fx \eif \exists x Gx$, \therefore\ $\exists x(Ex \eand Gx)$
+\item $\forall x Oxc$, $\forall x Ocx$, \therefore\ $\forall x Oxx$
+\item $\exists x(Jx \eand Kx)$, $\exists x \enot Kx$, $\exists x \enot Jx$, \therefore\ $\exists x(\enot Jx \eand \enot Kx)$
+\item $Lab \eif \forall x Lxb$, $\exists x Lxb$, \therefore\ $Lbb$
+\end{earg}
+\problempart
+Készítsen modelleket amelyek bemutatják, hogy a következő érvelések hibásak.
 \begin{earg}
 \item $\forall x(Ax \eif Bx)$, \therefore\ $\exists x Bx$
 \item $\forall x(Rx \eif Dx)$, $\forall x(Rx \eif Fx)$, \therefore\ $\exists x(Dx \eand Fx)$
@@ -1075,6 +1162,29 @@ is consistent.
 \item Show that \{$\exists x\exists y(Zx \eand Zy \eand x=y)$, $\enot Zd$, $d=s$\} is consistent.
 \item Show that `$\forall x(Dx \eif \exists y Tyx)$ \therefore\ $\exists y \exists z\ y\neq z$' is invalid.
 \end{earg}
+\problempart
+%problem using identity, with solutions
+\label{pr.IdentityModels}
+
+\begin{earg}
+\item\leftsolutions\ Mutassa be, hogy $\{{\enot}Raa, \forall x (x=a \eor Rxa)\}$
+konzisztens.
+%Sok lehetőség adott. Például:
+%\begin{partialmodel}
+%UD & \{Harry, Sally\}\\
+%\extension{R} &\{\ntuple{Sally, Harry}\}\\
+%\referent{a} & Harry
+%\end{partialmodel}
+\item\leftsolutions\ Mutassa be, hogy $\{\forall x\forall y\forall z(x=y \eor y=z \eor x=z),
+\exists x\exists y\ x\neq y\}$ konzisztens.
+%Nincsenek predikátumok, sem konstansok, szóval csak az Univerzumot kell megadnunk.
+%Bármilyen két tagú Univerzum elég.
+\item\leftsolutions\ Mutassa be, hogy $\{\forall x\forall y\ x=y, \exists x\ x \neq a\}$ inkonzisztens.
+%We need to show that it is impossible to construct a model in which these are both true. Suppose $\exists x\ x \neq a\$ is true in a model. There is something in the universe of discourse that is \emph{not} the referent of $a$. So there are at least two things in the universe of discourse: \referent{a} and this other thing. Call this other thing \script{b}--- we know $a \neq \script{b}$. But if $a \neq \script{b}$, then $\forall x\forall y\ x=y$ is false. So the first sentence must be false if the second sentence is true is true. As such, there is no model in which they are both true. Therefore, they are inconsistent.
+\item Mutassa be, hogy $\exists x (x = h \eand x = i)$ kontingens.
+\item Mutassa be, hogy \{$\exists x\exists y(Zx \eand Zy \eand x=y)$, $\enot Zd$, $d=s$\} konzisztens.
+\item Mutassa be, hogy `$\forall x(Dx \eif \exists y Tyx)$ \therefore\ $\exists y \exists z\ y\neq z$' hibás.
+\end{earg}
 
 
 
@@ -1088,6 +1198,17 @@ is consistent.
 Does this definition lead to any different sets being consistent than the definition on  p.~\pageref{def.consistencySL}? Explain your answer.
 
 \item\leftsolutions\ Our definition of truth says that a sentence \script{A} is \define{true in} \model{M} if and only if some variable assignment satisfies \script{A} in $M$. Would it make any difference if we said instead that \script{A} is \define{true in} \model{M} if and only if \emph{every} variable assignment satisfies \script{A} in $M$? Explain your answer.
+\end{earg}
+
+\problempart
+\label{pr.SemanticsEssay}
+\begin{earg}
+\item Sok logika könyv így definiálja a konzisztenciát és az inkonzisztenciát:
+„Egy halmaz $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ akkor és csak akkor konzisztens, ha $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}\models(\script{B}\eand\enot\script{B})$ valamilyen \script{B} mondatra. A halmaz konzisztens ha nem inkonzisztens.”
+
+Vezet-e ez a definíció bármely más konzisztens halmazhoz mint a definíció a \pageref{def.consistencySL}. oldalon? Válaszod igazold.
+
+\item\leftsolutions\ Az igazságról való definíciónk azt mondja, egy \script{A} kijelentés \define{igaz} az \model{M} modellben akkor és csak akkor, ha van olyan változó amely kielégíti \script{A}-t $M$-ben. Lenne bármilyen különbség, ha azt mondanánk, hogy \script{A} \define{igaz} \model{M}-ben akkor és csak akkor, ha minden változó kielégíti \script{A}-t $M$-ben? Válaszod indokold .
 \end{earg}
 
 %SR fordítása vége
