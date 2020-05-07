@@ -437,8 +437,7 @@ We need some way of showing that 1 is less than 8 but that 8 is not less than 1.
 
 %TKL fordítása vége
 
-%MD fordítása kezdet
-
+%MD fordítás kezdete
 \begin{quote}
 $\extension{L}=$ \{\ntuple{1,2}, \ntuple{1,3}, \ntuple{1,4}, \ntuple{1,5}, \ntuple{1,6}, \ntuple{1,7}, \ntuple{1,8}, \ntuple{1,9},
 \ntuple{2,3}, \ntuple{2,4}, \ntuple{2,5}, \ntuple{2,6}, \ntuple{2,7}, \ntuple{2,8}, \ntuple{2,9},
@@ -453,26 +452,40 @@ $\extension{L}=$ \{\ntuple{1,2}, \ntuple{1,3}, \ntuple{1,4}, \ntuple{1,5}, \ntup
 
 Three-place predicates will work similarly; the extension of a three-place predicate is a set of ordered triples where the predicate is true of those three things \emph{in that order}. So the extension of $T$ in this model will contain ordered triples like \ntuple{2,4,8}, because $2\times 4 = 8$.
 
+A három tagú predikátumok hasonlóan fognak működni; a három tagú predikátum kiterjedése olyan rendezett hármasok halmaza ahol a predikátum a rendezett hármas elemeire igaz. \emph{ebben a sorrendben}. Tehát a $T$ kiterjedése ebben a modellben olyan rendezett hármasokat fog tartalamzni mint a \ntuple{2,4,8},mert $2\times 4 = 8$.
+
 Generally, the extension of an n-place predicate is a set of all ordered n-tuples ${\langle}a_1, a_2,\ldots, a_n{\rangle}$ such that $a_1$--$a_n$ are members of the UD and the predicate is true of $a_1$--$a_n$ in that order.
 
-
+Általánosan, egy n-tagú predikátum kiterjedése  n-tagú rendezett halmazok halmaza ${\langle}a_1, a_2,\ldots, a_n{\rangle}$ úgy, hogy $a_1$--$a_n$ elemei az UD-nak és a predikátum igaz az  $a_1$--$a_n$ elemekre ebben a sorrendben.
 
 
 %\fix{An an interpretation (along with facts about the world) pick out a particular model.But note that the reverse is not true. A model does not pick out a specific interpretation, since different predicates can have the same extension.}
 
+%\fix {Egy értelmezés (a világgal kapcsolatos tényekkel együtt) válogat egy adott modellt. De vegye figyelembe, hogy az ellenkezője nem igaz. A modell nem választ ki konkrét értelmezést, mivel a különböző predikátumok ugyanazzal a kiterjesztéssel rendelkezhetnek.}
 
-\section{Semantics for identity}
+
+\section*{Semantics for identity}
+\section{Szemantika az azonossághoz}
 Identity is a special predicate of QL. We write it a bit differently than other two-place predicates: $x=y$ instead of $Ixy$. We also do not need to include it in a symbolization key. The sentence $x=y$ always means `$x$ is identical to $y$,'  and it cannot be interpreted to mean anything else. In the same way, when you construct a model, you do not get to pick and choose which ordered pairs go into the extension of the identity predicate. It always contains just the ordered pair of each object in the UD with itself.
+
+Az azonosság a PL egy speciális predikátuma. Kicsit másképp írjuk, mint a többi két-tagú predikátumot: $ x = y $, az $ Ixy $ helyett. Nem kell beillesztenünk a szimbolizációs kulcsba. Az $ x = y $ mondat mindig azt jelenti, hogy „$ x $ azonos  $ y $ -nal”, és nem értelmezhető másként. Ugyanígy, amikor modellt állít fel, akkor nem kell kiválasztania, hogy melyik rendezett párok kerülnek az azonosság predikátum kiterjedésébe. Mindig csak az UD eleminek önmgaukkal vett rendezett párjait tartalmazza.
 
 The sentence $\forall x Ixx$, which contains an ordinary two-place predicate, is contingent. Whether it is true for an interpretation depends on how you interpret $I$, and whether it is true in a model depends on the extension of $I$.
 
+A $ \forall x Ixx$ kijelentés, amely egy közönséges két tagú predikátumot tartalmaz, kontingens. Hogy igaz-e egy értelmezésre az attól függ, hogy miként értelmezi az $I$-t, és hogy igaz-e egy modellben az pedig $I$ kiterjedésétől függ.
+
 The sentence $\forall x\ x=x$ is a tautology. The extension of identity will always make it true.
+
+A $\forall x\ x=x$ kijelentés egy tautológia. Az azonosság kiterjedése mindig igazzá fogja tenni.
 
 Notice that although identity always has the same interpretation, it does not always have the same extension. The extension of identity depends on the UD. If the UD in a model is the set \{Doug\}, then $\extension{=}$ in that model is \{\ntuple{Doug, Doug}\}. If the UD is the set \{Doug, Omar\}, then $\extension{=}$ in that model is \{\ntuple{Doug, Doug}, \ntuple{Omar, Omar}\}. And so on.
 
+Vegye figyelembe, hogy bár az azonosság mindig azonos módon van értelmezve, nem mindig azonos kiterjedésű. Az identitás kiterjedése az UD-től függ. Ha a modell UD-je a \{Doug\}, akkor a $\extension{=}$ ebben a modellben \{\ntuple {Doug, Doug}\}. Ha az UD a \{Doug, Omar\}, akkor a $ \extension{=}$ ebben a modellben\{\ntuple {Doug, Doug}, \ntuple {Omar, Omar} \}. Stb.
+
 If the referent of two constants is the same, then anything which is true of one is true of the other. For example, if $\referent{a}=\referent{b}$, then $Aa\eiff Ab$, $Ba\eiff Bb$, $Ca\eiff Cb$, $Rca\eiff Rcb$, $\forall x Rxa\eiff \forall x Rxb$, and so on for any two sentences containing $a$ and $b$. However, the reverse is not true.
 
-%MD fordítása vége
+Ha a két konstans jelölése azonos, akkor bármi, ami az egyikre igaz, a másikra is igaz. Például ha $\referent{a}=\referent{b}$, akkor $Aa\eiff Ab$, $Ba\eiff Bb$, $Ca\eiff Cb$, $Rca\eiff Rcb$, $\forall x Rxa\eiff \forall x Rxb$, és így tovább bármely két kijelentésre amely tartalmazza $a$-t és $b$-t. Habár a megfordítása nem igaz.
+%MD fordítás vége
 
 %NV fordítása kezdet
 
@@ -493,7 +506,7 @@ minden predikátumra \script{P}, \extension{\script{P}} & $\emptyset$\\
 \end{partialmodel}
 This specifies an extension for every predicate of QL: All the infinitely-many predicates are empty. This means that both $Aa$ and $Ab$ are false, and they are equivalent; both $Ba$ and $Bb$ are false; and so on for any two sentences that contain $a$ and $b$. Yet $a$ and $b$ refer to different things. We have written out the extension of identity to make this clear: The ordered pair $\langle\referent{a},\referent{b}\rangle$ is not in it. In this model, $a=b$ is false and $a\neq b$ is true.
 
-Ez megadja a kiterjedést PL minden predikátumára: Az összes végtelen sok predikátum üres. Ez azt jelenti, hogy mind $Aa$, mind $Ab$ hamisak és egyenértékűek; mind $Ba$, mind $Bb$ hamis; és így tovább minden olyan két mondatra, amelyek tartalmazzák az $a$-t és a $b$-t. Az $a$ és $b$ azonban különféle dolgokra vonatkoznak. Az identitás kiterjesztését azért fogalmaztuk meg, hogy ez világossá váljon: Az $\langle\referent{a},\referent{b}\rangle$ rendezett pár nincs benne. Ebben a modellben $a=b$ hamis és a $a\neq b$ igaz. 
+Ez megadja a kiterjedést PL minden predikátumára: Az összes végtelen sok predikátum üres. Ez azt jelenti, hogy mind $Aa$, mind $Ab$ hamisak és egyenértékűek; mind $Ba$, mind $Bb$ hamis; és így tovább minden olyan két mondatra, amelyek tartalmazzák az $a$-t és a $b$-t. Az $a$ és $b$ azonban különféle dolgokra vonatkoznak. Az identitás kiterjedését azért fogalmaztuk meg, hogy ez világossá váljon: Az $\langle\referent{a},\referent{b}\rangle$ rendezett pár nincs benne. Ebben a modellben $a=b$ hamis és az $a\neq b$ igaz. 
 
 
 
