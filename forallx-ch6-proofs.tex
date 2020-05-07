@@ -191,11 +191,15 @@ The argument is certainly a valid one. What should the conditional introduction 
 
 We begin the proof by writing down the premise of the argument and drawing a horizontal line, like this:
 
+A bizonyítást úgy kezdjük, hogy leírjuk a kijelentés premisszáját, majd egy vízszintes vonalat húzunk:
+
 \begin{proof}
 	\hypo{rf}{R \eor F}
 \end{proof}
 
 If we had $\enot R$ as a further premise, we could derive $F$ by the {\eor}E rule. We do not have $\enot R$ as a premise of this argument, nor can we derive it directly from the premise we do have--- so we cannot simply prove $F$. What we will do instead is start a \emph{subproof}, a proof within the main proof. When we start a subproof, we draw another vertical line to indicate that we are no longer in the main proof. Then we write in an assumption for the subproof. This can be anything we want. Here, it will be helpful to assume $\enot R$. Our proof now looks like this:
+
+Ha $\enot R$ további premissza volna, $F$-et származtathatnánk a {\eor}E szabályból. $\enot R$ most nem a premisszája a kijelentésünknek, és a meglévőből sem tudjuk származtatni--- így nem tudjuk egyszerűen bizonyítani $F$-et. Ehelyett egy \emph{albizonyítást} kezdünk, azaz egy bizonyítást a fő bizonyításon belül. Amikor egy albizonyítást kezdünk, függőleges vonalat húzunk, ezzel elválasztva a fő bizonyítástól. Ezután beírunk egy feltételt az albizonyításba. Ez bármi lehet amit csak szeretnénk. Esetünkben hasznos lehet a $\enot R$ feltétel. Jelenleg így néz ki tehát a bizonyítás:
 
 \begin{proof}
 	\hypo{rf}{R \eor F}
@@ -206,6 +210,8 @@ If we had $\enot R$ as a further premise, we could derive $F$ by the {\eor}E rul
 
 It is important to notice that we are not claiming to have proven $\enot R$. We do not need to write in any justification for the assumption line of a subproof. You can think of the subproof as posing the question: What could we show \emph{if} $\enot R$ were true? For one thing, we can derive $F$. So we do:
 
+Fontos megjegyezni, hogy nem állítjuk $\enot R$ bebizonyítását. Nem szükséges igazolnunk az albizonyítás feltételezésének a sorát. Gondolhatunk az albizonyításra, mint a következő kérdésre: Mit tudnánk megmutatni, \emph{ha} $\enot R$ igaz volna? Elsőkörön származtathatnánk $F$-t. Tegyük is meg:
+
 \begin{proof}
 	\hypo{rf}{R \eor F}
 	\open
@@ -215,6 +221,9 @@ It is important to notice that we are not claiming to have proven $\enot R$. We 
 \end{proof}
 
 This has shown that \emph{if} we had $\enot R$ as a premise, \emph{then} we could prove $F$. In effect, we have proven $\enot R \eif F$. So the conditional introduction rule ({\eif}I) will allow us to close the subproof and derive $\enot R \eif F$ in the main proof. Our final proof looks like this:
+
+Ez megmutatta, hogy \emph{ha} $\enot R$ egy premissza volna, \emph{akkor} bizonyítani tudnánk $F$-et. Cserébe bebizonyítottuk ezt: $\enot R \eif F$. Tehát az implikáció bevezetés szabálya ({\eif}I) megengedi számunkra az albizonyítás lezárását, és $\enot R \eif F$ származtatását a fő bizonyításban. A végső bizonyítás tehát:
+
 
 \begin{proof}
 	\hypo{rf}{R \eor F}
@@ -228,7 +237,11 @@ This has shown that \emph{if} we had $\enot R$ as a premise, \emph{then} we coul
 
 Notice that the justification for applying the {\eif}I rule is the entire subproof. Usually that will be more than just two lines.
 
+Vegyük észre, hogy a {\eif}I szabály használatát a teljes albizonyítás tette lehetővé. Általában ez több, mint két sor lesz.
+
 It may seem as if the ability to assume anything at all in a subproof would lead to chaos: Does it allow you to prove any conclusion from any premises? The answer is no, it does not. Consider this proof:
+
+Úgy tűnhet, hogy a bármi feltételezésének a lehetősége az albizonyításban káoszhoz vezethet: Bármilyen következtetést bizonyíthatunk bármilyen premisszából? A válasz nem. Nézzük ezt a bizonyítást:
 
 %KN fordítása vége
 
