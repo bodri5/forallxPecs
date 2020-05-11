@@ -309,7 +309,11 @@ Although it is always permissible to open a subproof with any assumption you ple
 
 The {\eif}I rule also requires that the consequent of the conditional be the last line of the subproof. It is always permissible to close a subproof and discharge its assumptions, but it will not be helpful to do so until you get what you want.
 
+Az {\eif}I szabály azt is megköveteli, hogy az inplikáció következménye legyen az alsó réteg utolsó sora. Mindig megengedett az alsó korlát lezárása és a feltételezéseinek teljesítése, de addig nem lesz hasznos, amíg meg nem kapja azt, amit szeretne.
+
 Now consider the conditional elimination rule. Nothing follows from $M\eif N$ alone, but if we have both $M \eif N$ and $M$, then we can conclude $N$. This rule, modus ponens, will be the conditional elimination rule ({\eif}E).
+
+Most vegyük az implikáció eliminálási szabályát. Semmi nem következik az $M\eif N$-ből önmagában, de ha $M \eif N$ és $M$ egyaránt szerepel, akkor következtethetünk $N$-t. Ez a modus ponens szabály lesz a feltételes eliminációs szabály ({\eif}E).
 
 \begin{proof}
 	\have[m]{ab}{\script{A}\eif\script{B}}
@@ -318,6 +322,9 @@ Now consider the conditional elimination rule. Nothing follows from $M\eif N$ al
 \end{proof}
 
 Now that we have rules for the conditional, consider this argument:
+
+Most, hogy megvannak a feltételekre vonatkozó szabályok, nézzük meg az alábbi állításokat:
+
 \label{proofHS}
 \begin{earg}
 \item[] $P \eif Q$
@@ -325,6 +332,8 @@ Now that we have rules for the conditional, consider this argument:
 \item[\therefore] $P \eif R$
 \end{earg}
 We begin the proof by writing the two premises as assumptions. Since the main logical operator in the conclusion is a conditional, we can expect to use the {\eif}I rule. For that, we need a subproof--- so we write in the antecedent of the conditional as assumption of a subproof:
+
+A bizonyítást azzal kezdjük, hogy feltesszük a két állítást. Mivel a következtetés fő logikai operátora az implikáció, elvárható az {\eif}I szabály használata. Ehhez szükség van egy alsó védelemre -- tehát azt írjuk az állítás alá, mint egy alsó védelem feltétel:
 
 \begin{proof}
 	\hypo{pq}{P \eif Q}
@@ -336,12 +345,26 @@ We begin the proof by writing the two premises as assumptions. Since the main lo
 
 We made $P$ available by assuming it in a subproof, allowing us to use {\eif}E on the first premise. This gives us $Q$, which allows us to use {\eif}E on the second premise. Having derived  $R$, we close the subproof. By assuming $P$ we were able to prove $R$, so we apply the {\eif}I rule and finish the proof.
 
+A $P$-t úgy tettük elérhetővé, hogy azt egy alsó védelemben feltételezzük, lehetővé téve az {\eif}E használatát az első feltevésen. Ez megadja a $Q$ értéket, amely lehetővé teszi az {\eif}E használatát a második feltevésen. Miután megkaptuk $R$-t, lezárjuk az alsó réteget. $P$ feltételezésével képesek voltunk $R$-t bizonyítani, tehát az {\eif}I szabályt alkalmazzuk és befejezzük a bizonyítást.
+
 \label{HSproof}
 \begin{proof}
 	\hypo{pq}{P \eif Q}
 	\hypo{qr}{Q \eif R}
 	\open
 		\hypo{p}{P}\by{want $R$}{}
+		\have{q}{Q}\ce{pq,p}
+		\have{r}{R}\ce{qr,q}
+	\close
+	\have{pr}{P \eif R}\ci{p-r}
+\end{proof}
+
+\label{HSproof}
+\begin{proof}
+	\hypo{pq}{P \eif Q}
+	\hypo{qr}{Q \eif R}
+	\open
+		\hypo{p}{P}\by{$R$-t szeretnénk}{}
 		\have{q}{Q}\ce{pq,p}
 		\have{r}{R}\ce{qr,q}
 	\close
