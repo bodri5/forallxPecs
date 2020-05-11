@@ -628,7 +628,7 @@ $\enot(\script{A}\eand\script{B}) \Longleftrightarrow (\enot\script{A}\eor\enot\
 
 Because $\script{A}\eif\script{B}$ is a \emph{material conditional}, it is equivalent to $\enot\script{A}\eor\script{B}$. A further replacement rule captures this equivalence. We abbreviate the rule MC, for `material conditional.' It takes two forms:
 
-Mivel $\script{A}\eif\script{B}$ is a \emph{anyagi feltétel}, egyenértékű $\enot\script{A}\eor\script{B}$ -vel. Egy további helyettesítő szabály rögzíti ezt az egyenértékűséget. Az MC szabályt rövidítjük az „anyagi feltétel” kifejezésre. Ez kétféle lehet:
+Mivel $\script{A}\eif\script{B}$ is \emph{anyagi feltétel}, egyenértékű $\enot\script{A}\eor\script{B}$-vel. Egy további helyettesítő szabály rögzíti ezt az egyenértékűséget. Az MC szabályt rövidítjük az „anyagi feltétel” kifejezésre. Ez kétféle lehet:
 
 \begin{center}
 \begin{tabular}{rl}
@@ -639,11 +639,11 @@ $(\script{A}\eor\script{B}) \Longleftrightarrow (\enot\script{A}\eif\script{B})$
 
 Now consider this argument: $\enot(P \eif Q)$, \therefore\ $P \eand \enot Q$
 
-Most fontolja meg ezt az állítást: $\enot(P \eif Q)$, \therefore\ $P \eand \enot Q$
+Most vegyük ezt az állítást: $\enot(P \eif Q)$, \therefore\ $P \eand \enot Q$
 
 As always, we could prove this argument using only the basic rules. With rules of replacement, though, the proof is much simpler:
 
-Mint mindig, ezt az állítást csak az alapszabályok segítségével tudtuk bizonyítani. A csereszabályokkal azonban a bizonyítás sokkal egyszerűbb:
+Mint mindig, ezt az állítást csak az alapszabályok segítségével be tudnánk bizonyítani. A csereszabályokkal azonban a bizonyítás sokkal egyszerűbb:
 
 \begin{proof}
 	\hypo{1}{\enot(P \eif Q)}
@@ -654,7 +654,7 @@ Mint mindig, ezt az állítást csak az alapszabályok segítségével tudtuk bi
 
 A final replacement rule captures the relation between conditionals and biconditionals. We will call this rule biconditional exchange and abbreviate it {\eiff}{ex}.
 
-A végső csereszabály rögzíti a feltételes és a kétfeltételes feltétel közötti kapcsolatot. Ezt a szabályt kétfeltételes cserének nevezzük és {\eiff}{ex} -nek rövidítjük.
+A végső csereszabály rögzíti az implikáció és az ekvivalencia közötti kapcsolatot. Ezt a szabályt kétfeltételes cserének nevezzük és {\eiff}{ex} -nek rövidítjük.
 
 \begin{center}
 \begin{tabular}{rl}
@@ -693,17 +693,17 @@ $[(\script{A}\eif\script{B})\eand(\script{B}\eif\script{A})] \Longleftrightarrow
 %Nincs szükségünk ezekre a kibővített verziókra, mivel bármely adott n-re származékos szabályként bizonyíthatjuk őket.
 
 
-\section{Rules for quantifiers}
+\section*{Rules for quantifiers}
 
-\section{A mennyiségi meghatározókra vonatkozó szabályok}
+\section{A kvantorokra vonatkozó szabályok}
 
 For proofs in QL, we use all of the basic rules of SL plus four new basic rules: both introduction and elimination rules for each of the quantifiers.
 
-A QL bizonyításaihoz az SL összes alapszabályát, valamint négy új alapszabályt használunk: a bevezetési és a megszüntetési szabályokat is az egyes mennyiségi meghatározókra.
+A PL bizonyításaihoz a KL összes alapszabályát, valamint négy új alapszabályt használunk: a bevezetési és a megszüntetési szabályokat az egyes kvantorokra.
 
 Since all of the derived rules of SL are derived from the basic rules, they will also hold in QL. We will add another derived rule, a replacement rule called quantifier negation.
 
-Mivel az SL összes származtatott szabálya az alapszabályokból származik, QL-ben is megmaradnak. Felveszünk egy újabb származtatott szabályt, egy helyettesítő szabályt, melyet kvantitatív tagadásnak hívnak.
+Mivel az KL összes származtatott szabálya az alapszabályokból származik, PL-ben is megmaradnak. Felveszünk egy újabb származtatott szabályt, egy helyettesítő szabályt, melyet kvantor tagadásnak hívnak.
 
 \subsection{Substitution instances}
 
@@ -711,7 +711,7 @@ Mivel az SL összes származtatott szabálya az alapszabályokból származik, Q
 
 In order to concisely state the rules for the quantifiers, we need a way to mark the relation between quantified sentences and their instances. For example, the sentence $Pa$ is a particular instance of the general claim $\forall x Px$.
 
-A mennyiségi meghatározókra vonatkozó szabályok rövid ismertetése érdekében, szükségünk van egy módra a számszerűsített mondatok és azok példányai közötti kapcsolat megjelölésére. Például a $Pa$ a $\forall x Px$ általános igény különleges példánya.
+A kvantorokra vonatkozó szabályok rövid ismertetése érdekében, szükségünk van egy módra a kvantifikált mondatok és azok példányai közötti kapcsolat megjelölésére. Például a $Pa$ a $\forall x Px$ általános kijelentés egy bizonyos példánya.
 
 %LLM fordítása vége
 
