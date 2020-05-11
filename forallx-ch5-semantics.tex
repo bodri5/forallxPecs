@@ -403,9 +403,18 @@ If you do not know anything about the Three Stooges, you will not be able to say
 
 %HM fordítása vége
 
-%TKL fordítása kezdet
+%TKK fordítása kezdet
 
 What is the model that corresponds to this interpretation? There were six people who played as part of the Three Stooges over the years, so the UD will have six members: Larry Fine, Moe Howard, Curly Howard, Shemp Howard, Joe Besser, and Curly Joe DeRita. Curly, Joe, and Curly Joe were the only completely bald stooges. The result is this model:
+
+Mi az a modell, amely megfelel ennek az interpretációnak? Hat ember volt, akik az évek során A Három Besúgó komikus társulat tagjaként játszottak, így legyen az Unió hat elemű: Larry Fine, Moe Howard, Curly Howard, Shemp Howard, Joe Besser és Curly DeRita. Curly és Joe voltak teljesen kopasz `besúgók'. Az eredmény a következő modell:
+
+\begin{partialmodel}
+	UD & \{Larry, Curly, Moe, Shemp, Joe, Curly Joe\}\\
+	\extension{H} & \{Larry, Moe, Shemp\}\\
+	\referent{f} & Larry
+\end{partialmodel}
+
 \begin{partialmodel}
 	UD & \{Larry, Curly, Moe, Shemp, Joe, Curly Joe\}\\
 	\extension{H} & \{Larry, Moe, Shemp\}\\
@@ -414,7 +423,12 @@ What is the model that corresponds to this interpretation? There were six people
 
 You do not need to know anything about the Three Stooges in order to evaluate whether sentences are true or false in this \emph{model}. $Hf$ is true, since the referent of $f$ (Larry) is in the extension of $H$. Both $\exists x Hx$ and $\exists x \enot Hx$ are true, since there is at least one member of the UD that is in the extension of $H$ and at least one member that is not in the extension of $H$. In this way, the model captures all of the formal significance of the interpretation.
 
+Semmilyen információval nem kell rendelkeznünk A Három Besúgóról, hogy megállapíthassuk, melyik állítás igaz és melyik hamis a modellben. $Hf$ igaz, mivel $f$ (Larry) referencia $H$ kiterjesztésben is megtalálható. A $\exists x Hx$ és $\exists x \enot Hx$ kifejezések is igazak, hiszen van legalább egy olyan eleme az Uniónak, amely megtalálható $H$ kiterjesztésében, és van legalább egy olyan, amely nincs benne $H$ kiterjesztésében. Így a modell minden formális szignifikanciáját tartalmazza az interpretációnak.
+
 Now consider this interpretation:
+
+Most vegyük ezt az interpretációt:
+
 \begin{ekey}
 \item{UD:} whole numbers less than 10
 \item{Ex:} $x$ is even.
@@ -425,17 +439,34 @@ Now consider this interpretation:
 What is the model that goes with this interpretation?
 The UD is the set $\{1,2,3,4,5,6,7,8,9\}$.
 
+\begin{ekey}
+\item{UD:} a 10-nél kisebb egész számok.
+\item{Ex:} $x$ páros.
+\item{Nx:} $x$ negatív.
+\item{Lxy:} $x$ kisebb, mint $y$.
+\item{Txyz:} $x$-et szorozva $y$-al, $z$-t kapunk.
+\end{ekey}
+Mi az a modell, amelyet ez alapján készíthetünk?
+Az Unió készlete: $\{1,2,3,4,5,6,7,8,9\}$.
+
 The extension of a one-place predicate like $E$ or $N$ is just the subset of the UD of which the predicate is true. Roughly speaking, the extension of the predicate $E$ is the set of $E$s in the UD.
 The extension of $E$ is the subset $\{2,4,6,8\}$. There are many even numbers besides these four, but these are the only members of the UD that are even. There are no negative numbers in the UD, so $N$ has an empty extension; i.e. $\extension{N}=\emptyset$.
 
+Az olyan kiterjesztések, melyek egy-változós predikátumokhoz tartoznak, mint például az $E$ vagy az $N$, csak részhalmazai az Uniónak. Az ilyen kiterjesztésekbe azok az elemek tartoznak, melyekre adott predikátum igaz. Durván mondva az $E$ predikátum kiterjesztése az $E$-k halmaza az Unióban. Az $E$ kiterjesztése $\{2,4,6,8\}$. Rengeteg páros van ezen a négy számon kívül, azonban csak ezek az adott Unió páros elemei. Nincsenek negatív számok ebben az Unióban, tehát $N$ üres kiterjesztésű; $\extension{N}=\emptyset$.
 
 The extension of a two-place predicate like $L$ is somewhat vexing. It seems as if the extension of $L$ ought to contain 1, since 1 is less than all the other numbers; it ought to contain 2, since 2 is less than all of the other numbers besides 1; and so on. Every member of the UD besides 9 is less than some member of the UD. What would happen if we just wrote $\extension{L}=\{1,2,3,4,5,6,7,8\}$?
 
+Egy két-változós predikátum, mint például $L$, némileg bosszantó. Azt gondolhatnánk, hogy $L$ kiterjesztésének tartalmaznia kéne az 1-et, hiszen 1 az összes többi számnál kisebb; ugyanígy tartalmaznia kéne 2-t, mivel 2 kisebb minden másik számnál 1-et kivéve; és így tovább. Az Unió összes eleme kisebb egy másik elemnél, 9-et kivéve. Mi lenne, ha csak ennyit írnánk: $\extension{L}=\{1,2,3,4,5,6,7,8\}$?
+
 The problem is that sets can be written in any order, so this would be the same as writing $\extension{L}=\{8,7,6,5,4,3,2,1\}$. This does not tell us which of the members of the set are less than which other members.
+
+A probléma, hogy a halmazok elemeinek sorrendje felcserélhető, így az előbbi kiterjesztés megegyezne a következővel: $\extension{L}=\{8,7,6,5,4,3,2,1\}$. Ebből sajnos nem tudjuk megállapítani, hogy a halmaz melyik eleme kisebb melyik másik elemnél.
 
 We need some way of showing that 1 is less than 8 but that 8 is not less than 1. The solution is to have the extension of $L$ consist of pairs of numbers. An \define{ordered pair} is like a set with two members, except that the order \emph{does} matter. We write ordered pairs with angle brackets `$\openntuple$' and `$\closentuple$'. The ordered pair \mbox{\ntuple{foo, bar}} is different than the ordered pair \mbox{\ntuple{bar, foo}}. The extension of $L$ is a collection of ordered pairs, all of the pairs of numbers in the UD such that the first number is less than the second. Writing this out completely:
 
-%TKL fordítása vége
+Valahogy jelölnünk kell, hogy 1 kisebb, mint 8, de 8 nem kisebb, mint 1. A megoldás, hogy $L$ kiterjesztése számpárokból áll. Egy \define{EGYMÁSHOZ RENDELT PÁR}  olyan, mint egy kételemű halmaz, kivéve, hogy a számok sorrendje itt igenis számít. Egymáshoz rendelt párokat `kacsacsőrök' (`$\openntuple$' és `$\closentuple$') közé írjuk.  Az egymáshoz rendelt pár \mbox{\ntuple{foo, bar}} nem egyenlő a \mbox{\ntuple{bar, foo}} párossal. Az $L$ kiterjesztése több ilyen egymáshoz rendelt számpárból áll, mely párok elemei az Unióban megtalálhatóak, és az első elem kisebb, mint a második. Írjuk fel a teljes kiterjesztést:
+
+%TKK fordítása vége
 
 %MD fordítás kezdete
 \begin{quote}
