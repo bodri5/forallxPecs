@@ -723,6 +723,8 @@ It is legitimate to infer $\exists x Px$ if you know that \emph{something} is a 
 
 %BA fordítása vége
 
+%WN fordítása kezdet
+
 This is the existential introduction rule ($\exists$I):
 
 \begin{proof}
@@ -755,6 +757,10 @@ It makes no difference to the meaning of the sentence whether we use the variabl
 \end{proof}
 
 We have derived $Ma$. Nothing stops us from using the same justification to derive $Mb$, $\ldots$, $Mj_2$, $\ldots$, $Ms_7$, $\ldots$, and so on until we run out of space or patience. We have effectively shown the way to prove $M\script{c}$ for any constant \script{c}. From this, $\forall y My$ follows.
+
+%WN fordítása vége
+
+%BB fordítása kezdet
 
 \begin{proof}
 	\hypo{x}{\forall x Mx}
@@ -797,6 +803,11 @@ Note also that the constant may not occur in any \emph{undischarged} assumption,
 A sentence with an existential quantifier tells us that there is \emph{some} member of the UD that satisfies a formula. For example, $\exists x Sx$ tells us (roughly) that there is at least one $S$. It does not tell us \emph{which} member of the UD satisfies $S$, however. We cannot immediately conclude $Sa$, $Sf_{23}$, or any other substitution instance of the sentence. What can we do?
 
 Suppose that we knew both $\exists x Sx$ and $\forall x(Sx \eif Tx)$. We could reason in this way:
+
+%BB fordítása vége
+
+%GM fordítása kezdet
+
 \begin{quote}
 Since $\exists x Sx$, there is something that is an $S$. We do not know which constants refer to this thing, if any do, so call this thing `Ishmael'. From $\forall x(Sx \eif Tx)$, it follows that if Ishmael is an $S$, then it is a $T$. Therefore, Ishmael is a $T$.  Because Ishmael is a $T$, we know that $\exists x Tx$.
 \end{quote}
@@ -823,6 +834,8 @@ Since the proxy constant is just a place holder that we use inside the subproof,
 The easiest way to satisfy these requirements is to pick an entirely new constant when you start the subproof, and then not to use that constant anywhere else in the proof. Once you close the subproof, do not mention it again.
 
 With this rule, we can give a formal proof that $\exists x Sx$ and $\forall x(Sx \eif Tx)$ together entail $\exists x Tx$.
+
+%GM fordítása vége
 
 \begin{proof}
 	\hypo{es}{\exists x Sx}
