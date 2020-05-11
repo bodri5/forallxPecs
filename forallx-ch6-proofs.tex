@@ -926,12 +926,19 @@ Since QN is a replacement rule, it can be used on whole sentences or on subformu
 
 %KT fordítása kezdet
 
-\section{Rules for identity}
+\section*{Rules for identity}
+\section{Az identitás szabályai}
 The identity predicate is not part of QL, but we add it when we need to symbolize certain sentences. For proofs involving identity, we add two rules of proof.
+
+Az identitás predikátum nem része a PL-nek, de amikor bizonyos mondatokat kell szimbolizálnunk, hozzáadjuk. Az identitással kapcsolatos bizonyításokhoz két szabályt adunk hozzá.
 
 Suppose you know that many things that are true of $a$ are also true of $b$. For example: $Aa\eand Ab$, $Ba\eand Bb$, $\enot Ca\eand\enot Cb$, $Da\eand Db$, $\enot Ea\eand\enot Eb$, and so on. This would not be enough to justify the conclusion $a=b$. (See p.~\pageref{model.nonidentity}.) In general, there are no sentences that do not already contain the identity predicate that could justify the conclusion $a=b$. This means that the identity introduction rule will not justify $a=b$ or any other identity claim containing two different constants.
 
+Tegyük fel, hogy számos dolog, amely igaz  $a$-ra, az igaz $b$-re. Például: $Aa\eand Ab$, $Ba\eand Bb$, $\enot Ca\eand\enot Cb$, $Da\eand Db$, $\enot Ea\eand\enot Eb$, és így tovább. Ez nem lenne elegendő $a=b$ következtetés igazolásához. (Lásd a \pageref{model.nonidentity}. oldalt.) Általában nincs olyan mondat, amely nem tartalmazza az identitás predikátumot, amely igazolhatná $a=b$ következtetést. Ez azt jelenti, hogy az identitás bevezetési szabálya nem igazolja $a=b$-t vagy bármely más identitási igényt, amely tartalmaz két különálló állandót.
+
 However, it is always true that $a=a$. In general, no premises are required in order to conclude that something is identical to itself. So this will be the identity introduction rule, abbreviated {=}I:
+
+Azonban $a=a$ mindig igaz. Általában nincs szükség premisszákra annak belátásához, hogy valami azonos önmagával. Ez lesz tehát az identitás bevezetési szabálya, rövidítve {=}I:
 
 \begin{proof}
 	\have[\ \,\,\,]{x}{\script{c}=\script{c}} \by{=I}{}
@@ -939,14 +946,25 @@ However, it is always true that $a=a$. In general, no premises are required in o
 
 Notice that the {=}I rule does not require referring to any prior lines of the proof. For any constant \script{c}, you can write $\script{c}=\script{c}$ on any point with only the {=}I rule as justification.
 
+Vegyük észre, hogy az {=}I szabályhoz nem szükségesek a bizonyítás előző sorai. Bármely \script{c} konstansra, bármely ponton felírható, hogy $\script{c}=\script{c}$, erre az {=}I szabály az igazolás.
+
 If you have shown that $a=b$, then anything that is true of $a$ must also be true of $b$. For any sentence with $a$ in it, you can replace some or all of the occurrences of $a$ with $b$ and produce an equivalent sentence. For example, if you already know $Raa$, then you are justified in concluding $Rab$, $Rba$, $Rbb$.
+
+Ha belátjuk, hogy $a=b$, akkor minden, ami igaz $a$-ra, az $b$-re is igaz kell legyen. Bármely $a$-t tartalmazó mondatra igaz, hogy ha $a$ néhány vagy mindegyik előfordulását $b$-re cseréljük, akkor az eredetivel ekvivalens mondatot kapunk. Például, ha $Raa$ már ismert, akkor $Rab$, $Rba$, $Rbb$ következtetések igazoltak.
 
 
 The identity elimination rule ({=}E) allows us to do this. It justifies replacing terms with other terms that are identical to it.
 
+Az identitás eliminálási szabálya ({=}E) lehetővé teszi ezt. Biztosítja a kifejezések helyettesítését más kifejezésekkel, amelyek azonosak vele.
+
 For writing the rule, we will introduce a new bit of symoblism. For a sentence \script{A} and constants \script{c} and \script{d}, \script{A}{\script{c}$\circlearrowleft$\script{d}} is a sentence produced by replacing some or all instances of \script{c} in \script{A} with \script{d} or replacing instances of \script{d} with \script{c}. This is not the same as a substitution instance, because one constant need not replace every occurrence of the other (although it may).
 
+A szabály megírásához a szimbolizmus egy új részét vezetjük be. Egy \script{A} mondatra és \script{c}, \script{d} konstansokra, \script{A}{\script{c}$\circlearrowleft$\script{d}} egy olyan mondat, amelyet úgy kaptunk meg, hogy \script{c} néhány vagy minden példányának \script{A}-beli előfordulását \script{d} példányaira cseréltük vagy \script{d} példányait \script{c}-re cseréltük. Ez nem ugyanaz, mint egy helyettesítő példány, mert egy konstansnak nem szükséges helyettesítenie a másik minden egyes előfordulását (bár erre lehetőség van).
+
 We can now concisely write {=}E in this way:
+
+{=}E tömören:
+
 \begin{proof}
 	\have[m]{e}{\script{c}=\script{d}}
 	\have[n]{a}{\script{A}}
@@ -995,6 +1013,9 @@ We can now concisely write {=}E in this way:
 %\end{proof}
 
 To see the rules in action, consider this proof:
+
+Ahhoz, hogy lássuk a szabályt működés közben, vizsgáljuk meg ezt a bizonyítást:
+
 \begin{proof}
 	\hypo{one}{\forall x\forall y\ x=y}
 	\hypo{eb}{\exists x Bx}
