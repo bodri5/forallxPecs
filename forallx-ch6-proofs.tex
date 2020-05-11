@@ -191,11 +191,15 @@ The argument is certainly a valid one. What should the conditional introduction 
 
 We begin the proof by writing down the premise of the argument and drawing a horizontal line, like this:
 
+A bizonyítást úgy kezdjük, hogy leírjuk a kijelentés premisszáját, majd egy vízszintes vonalat húzunk:
+
 \begin{proof}
 	\hypo{rf}{R \eor F}
 \end{proof}
 
 If we had $\enot R$ as a further premise, we could derive $F$ by the {\eor}E rule. We do not have $\enot R$ as a premise of this argument, nor can we derive it directly from the premise we do have--- so we cannot simply prove $F$. What we will do instead is start a \emph{subproof}, a proof within the main proof. When we start a subproof, we draw another vertical line to indicate that we are no longer in the main proof. Then we write in an assumption for the subproof. This can be anything we want. Here, it will be helpful to assume $\enot R$. Our proof now looks like this:
+
+Ha $\enot R$ további premissza volna, $F$-et származtathatnánk a {\eor}E szabályból. $\enot R$ most nem a premisszája a kijelentésünknek, és a meglévőből sem tudjuk származtatni--- így nem tudjuk egyszerűen bizonyítani $F$-et. Ehelyett egy \emph{albizonyítást} kezdünk, azaz egy bizonyítást a fő bizonyításon belül. Amikor egy albizonyítást kezdünk, függőleges vonalat húzunk, ezzel elválasztva a fő bizonyítástól. Ezután beírunk egy feltételt az albizonyításba. Ez bármi lehet amit csak szeretnénk. Esetünkben hasznos lehet a $\enot R$ feltétel. Jelenleg így néz ki tehát a bizonyítás:
 
 \begin{proof}
 	\hypo{rf}{R \eor F}
@@ -206,6 +210,8 @@ If we had $\enot R$ as a further premise, we could derive $F$ by the {\eor}E rul
 
 It is important to notice that we are not claiming to have proven $\enot R$. We do not need to write in any justification for the assumption line of a subproof. You can think of the subproof as posing the question: What could we show \emph{if} $\enot R$ were true? For one thing, we can derive $F$. So we do:
 
+Fontos megjegyezni, hogy nem állítjuk $\enot R$ bebizonyítását. Nem szükséges igazolnunk az albizonyítás feltételezésének a sorát. Gondolhatunk az albizonyításra, mint a következő kérdésre: Mit tudnánk megmutatni, \emph{ha} $\enot R$ igaz volna? Elsőkörön származtathatnánk $F$-t. Tegyük is meg:
+
 \begin{proof}
 	\hypo{rf}{R \eor F}
 	\open
@@ -215,6 +221,9 @@ It is important to notice that we are not claiming to have proven $\enot R$. We 
 \end{proof}
 
 This has shown that \emph{if} we had $\enot R$ as a premise, \emph{then} we could prove $F$. In effect, we have proven $\enot R \eif F$. So the conditional introduction rule ({\eif}I) will allow us to close the subproof and derive $\enot R \eif F$ in the main proof. Our final proof looks like this:
+
+Ez megmutatta, hogy \emph{ha} $\enot R$ egy premissza volna, \emph{akkor} bizonyítani tudnánk $F$-et. Cserébe bebizonyítottuk ezt: $\enot R \eif F$. Tehát az implikáció bevezetés szabálya ({\eif}I) megengedi számunkra az albizonyítás lezárását, és $\enot R \eif F$ származtatását a fő bizonyításban. A végső bizonyítás tehát:
+
 
 \begin{proof}
 	\hypo{rf}{R \eor F}
@@ -228,9 +237,15 @@ This has shown that \emph{if} we had $\enot R$ as a premise, \emph{then} we coul
 
 Notice that the justification for applying the {\eif}I rule is the entire subproof. Usually that will be more than just two lines.
 
+Vegyük észre, hogy a {\eif}I szabály használatát a teljes albizonyítás tette lehetővé. Általában ez több, mint két sor lesz.
+
 It may seem as if the ability to assume anything at all in a subproof would lead to chaos: Does it allow you to prove any conclusion from any premises? The answer is no, it does not. Consider this proof:
 
+Úgy tűnhet, hogy a bármi feltételezésének a lehetősége az albizonyításban káoszhoz vezethet: Bármilyen következtetést bizonyíthatunk bármilyen premisszából? A válasz nem. Nézzük ezt a bizonyítást:
+
 %KN fordítása vége
+
+%KF fordítása kezdet
 
 \begin{proof}
 	\hypo{a}{\script{A}}
@@ -270,6 +285,10 @@ Put in a general form, the {\eif}I rule looks like this:
 When we introduce a subproof, we typically write what we want to derive in the column. This is just so that we do not forget why we started the subproof if it goes on for five or ten lines. There is no `want' rule. It is a note to ourselves and not formally part of the proof.
 
 Although it is always permissible to open a subproof with any assumption you please, there is some strategy involved in picking a useful assumption. Starting a subproof with an arbitrary, wacky assumption would just waste lines of the proof. In order to derive a conditional by the {\eif}I, for instance, you must assume the antecedent of the conditional in a subproof.
+
+%KF fordítása vége
+
+%DD fordítása kezdet
 
 The {\eif}I rule also requires that the consequent of the conditional be the last line of the subproof. It is always permissible to close a subproof and discharge its assumptions, but it will not be helpful to do so until you get what you want.
 
@@ -312,9 +331,9 @@ We made $P$ available by assuming it in a subproof, allowing us to use {\eif}E o
 	\have{pr}{P \eif R}\ci{p-r}
 \end{proof}
 
+%DD fordítása vége
 
-
-
+%KLP fordítása kezdet
 
 \subsection{Biconditional}
 The rules for the biconditional will be like double-barreled versions of the rules for the conditional.
@@ -364,9 +383,13 @@ Here is a simple mathematical argument in English:
 \end{earg}
 This argument form is traditionally called a \emph{reductio}. Its full Latin name is \emph{reductio ad absurdum}, which means `reduction to absurdity.' In a reductio, we assume something for the sake of argument--- for example, that there is a greatest natural number. Then we show that the assumption leads to two contradictory sentences--- for example, that $A$ is the greatest natural number and that it is not. In this way, we show that the original assumption must have been false.
 
+%KLP fordítása vége
+
 %MK fordítása kezdet
 
 The basic rules for negation will allow for arguments like this. If we assume something and show that it leads to contradictory sentences, then we have proven the negation of the assumption. This is the negation introduction ({\enot}I) rule:
+
+A negáció(tagadás) alapvető szabályai megengedik az ilyen érvelést. Ha állítunk valamit és megmutatjuk, hogy ellentmondásos mondatokhoz vezet, akkor bizonyítottuk a feltevés negációját(tagadását). Ez a negáció bevezetésének ({\enot}I) szabálya:
 
 \begin{proof}
 \open
@@ -377,9 +400,22 @@ The basic rules for negation will allow for arguments like this. If we assume so
 \have{a}[\ ]{\enot\script{A}}\ni{na-nb}
 \end{proof}
 
+\begin{proof}
+\open
+	\hypo[m]{na}{\script{A}}\by{reductio ad absurdum céljából}{}
+	\have[n]{b}{\script{B}}
+	\have{nb}{\enot\script{B}}
+\close
+\have{a}[\ ]{\enot\script{A}}\ni{na-nb}
+\end{proof}
+
 For the rule to apply, the last two lines of the subproof must be an explicit contradiction: some sentence followed on the next line by its negation. We write `for reductio' as a note to ourselves, a reminder of why we started the subproof. It is not formally part of the proof, and you can leave it out if you find it distracting.
 
+Ahhoz, hogy alkalmazhassuk a szabályt, a részbizonyítás utolsó két sorának egyértelmű ellentmondásnak kell lennie: egy mondatot a következő sorban a tagadása követ. Jegyzetként odaírjuk magunknak, hogy „reductio ad absurdum céljából”, vagy „ellentmondás céljából”, azért, hogy emlékeztessen, hogy miért kezdtük el a részbizonyítást. Normál esetben ez nem része a bizonyításnak, ki is hagyhatod, ha zavarónak találod.
+
 To see how the rule works, suppose we want to prove the law of non-contradiction: $\enot(G \eand \enot G)$. We can prove this without any premises by immediately starting a subproof. We want to apply {\enot}I to the subproof, so we assume $(G \eand \enot G)$. We then get an explicit contradiction by {\eand}E. The proof looks like this:
+
+Hogy lássuk, hogy működik a szabály, tegyük fel, hogy bizonyítani akarjuk a nem-ellentmondás szabályát: $\enot(G \eand \enot G)$. Ezt be tudjuk bizonyítani premisszák nélkül, egyből részbizonyítással. Alkalmazni akarjuk {\enot}I-t a részbizonyításra, így feltesszük, hogy $(G \eand \enot G)$. Egyértelmű ellentmondásra jutunk {\eand}E által. A bizonyítás így néz ki:
 
 \begin{proof}
 	\open
@@ -390,7 +426,18 @@ To see how the rule works, suppose we want to prove the law of non-contradiction
 	\have{ngng}{\enot(G \eand \enot G)}\ni{gng-ng}
 \end{proof}
 
+\begin{proof}
+	\open
+		\hypo{gng}{G\eand \enot G}\by{ellentmondás céljából}{}
+		\have{g}{G}\ae{gng}
+		\have{ng}{\enot G}\ae{gng}
+	\close
+	\have{ngng}{\enot(G \eand \enot G)}\ni{gng-ng}
+\end{proof}
+
 The {\enot}E rule will work in much the same way. If we assume \enot\script{A} and show that it leads to a contradiction, we have effectively proven \script{A}. So the rule looks like this:
+
+A {\enot}E szabály körülbelül ugyanígy fog működni. Ha feltesszük, hogy \enot\script{A} és megmutatjuk, hogy ellentmondáshoz vezet, hatékonyan bizonyítottuk \script{A}-t. Így a szabály a következőképp néz ki:
 
 \begin{proof}
 \open
@@ -401,9 +448,20 @@ The {\enot}E rule will work in much the same way. If we assume \enot\script{A} a
 \have{a}[\ ]{\script{A}}\ne{na-nb}
 \end{proof}
 
+\begin{proof}
+\open
+	\hypo[m]{na}{\enot\script{A}}\by{ellentmondás céljából}{}
+	\have[n]{b}{\script{B}}
+	\have{nb}{\enot\script{B}}
+\close
+\have{a}[\ ]{\script{A}}\ne{na-nb}
+\end{proof}
 
-\section{Derived rules}
+\section*{Derived rules}
+\section{Származtatott szabályok}
 The rules of the natural deduction system are meant to be systematic. There is an introduction and an elimination rule for each logical operator, but why these basic rules rather than some others? Many natural deduction systems have a disjunction elimination rule that works like this:
+
+A természetes levezetési(deduktív) rendszer szabályainak szisztematikusnak kell lenniük. Minden logikai operátorhoz van egy bevezető és egy kiküszöbölő(elimináló) szabály, de miért ilyen alapvető szabályok vannak inkább mint valamilyen másfélék? Sok természetes levezetési rendszerben van egy szétválasztó(diszjunktív) kiküszöbölési szabály, ami így működik:
 
 \begin{proof}
 	\have[m]{ab}{\script{A}\eor\script{B}}
@@ -413,6 +471,8 @@ The rules of the natural deduction system are meant to be systematic. There is a
 \end{proof}
 
 Let's call this rule Dilemma (DIL) It might seem as if there will be some proofs that we cannot do with our proof system, because we do not have this as a basic rule. Yet this is not the case. Any proof that you can do using the Dilemma rule can be done with basic rules of our natural deduction system. Consider this proof:
+
+Nevezzük ezt a szabályt Dilemmának (DIL). Úgy tűnhet, mintha lenne néhány bizonyítás, amit nem tudunk megcsinálni a bizonyítási rendszerünkkel, mivel ez nincs az alapvető szabályaink között. Mégsem ez a helyzet. Bármely bizonyítás, amit meg tudsz csinálni a Dilemma szabály használatával, megcsinálható a természetes levezetési rendszerünk alapvető szabályaival. Vegyük a következő bizonyítást:
 
 \begin{proof}
 	\hypo{ab}{\script{A}\eor\script{B}}
@@ -437,7 +497,32 @@ Let's call this rule Dilemma (DIL) It might seem as if there will be some proofs
 	\have{c}{\script{C}} \ne{nc-nb}
 \end{proof}
 
+\begin{proof}
+	\hypo{ab}{\script{A}\eor\script{B}}
+	\hypo{ac}{\script{A}\eif\script{C}}
+	\hypo{bc}{\script{B}\eif\script{C}}\by{ \script{C}-t akarunk}{}
+	\open
+		\hypo{nc}{\enot \script{C}}\by{ellentmondás céljából}{}
+		\open
+			\hypo{a1}{\script{A}}\by{ellentmondás céljából}{}
+			\have{c1}{\script{C}}\ce{ac, a1}
+			\have{nc1}{\enot\script{C}}\by{R}{nc}
+		\close
+		\have{na}{\enot\script{A}}\ni{a1-nc1}
+		\open
+			\hypo{b2}{\script{B}}\by{ellentmondás céljából}{}
+			\have{c2}{\script{C}}\ce{bc, b2}
+			\have{nc2}{\enot\script{C}}\by{R}{nc}
+		\close
+		\have{b}{\script{B}}\oe{ab, na}
+		\have{nb}{\enot\script{B}}\ni{b2-nc2}
+	\close
+	\have{c}{\script{C}} \ne{nc-nb}
+\end{proof}
+
 %MK fordítása vége
+
+%HT fordítása kezdet
 
 \script{A}, \script{B}, and \script{C} are meta-variables. They are not symbols of SL, but stand-ins for arbitrary sentences of SL. So this is not, strictly speaking, a proof in SL. It is more like a recipe. It provides a pattern that can prove anything that the Dilemma rule can prove, using only the basic rules of SL. This means that the Dilemma rule is not really necessary. Adding it to the list of basic rules would not allow us to derive anything that we could not derive without it.
 
@@ -469,6 +554,10 @@ We also add hypothetical syllogism (HS) as a derived rule. We have already given
 Consider how you would prove this argument: $F\eif(G\eand H)$, \therefore\ $F\eif G$
 
 Perhaps it is tempting to write down the premise and apply the {\eand}E rule to the conjunction $(G \eand H)$. This is impermissible, however, because the basic rules of proof can only be applied to whole sentences. We need to get $(G \eand H)$ on a line by itself. We can prove the argument in this way:
+
+%HT fordítása vége
+
+%BM fordítása kezdet
 
 \begin{proof}
 	\hypo{fgh}{F\eif(G\eand H)}
@@ -512,6 +601,10 @@ $\enot\enot\script{A} \Longleftrightarrow \script{A}$ & DN
 \end{center}
 
 Two more replacement rules are called De Morgan's Laws, named for the 19th-century British logician August De Morgan. (Although De Morgan did discover these laws, he was not the first to do so.) The rules capture useful relations between negation, conjunction, and disjunction. Here are the rules, which we abbreviate DeM:
+
+%BM fordítása vége
+
+%LLM fordítása kezdet
 
 \begin{center}
 \begin{tabular}{rl}
@@ -586,6 +679,10 @@ Since all of the derived rules of SL are derived from the basic rules, they will
 
 In order to concisely state the rules for the quantifiers, we need a way to mark the relation between quantified sentences and their instances. For example, the sentence $Pa$ is a particular instance of the general claim $\forall x Px$.
 
+%LLM fordítása vége
+
+%BA fordítása kezdet
+
 For a wff \script{A}, a constant \script{c}, and a variable \script{x}, define a \define{substitution instance} of $\forall \script{x}\script{A}$ or $\exists \script{x}\script{A}$ is the wff that we get by replacing every occurrence of \script{x} in \script{A} with \script{c}. We call \script{c} the \define{instantiating constant}.
 
 To underscore the fact that the variable \script{x} is replaced by the instantiating constant \script{c}, we will write the original quantified expressions as $\forall \script{x}\script{A}\script{x}$ and $\exists \script{x}\script{A}\script{x}$. And we will write the substitution instance \script{A}\script{c}.
@@ -624,6 +721,10 @@ When using the $\forall$E rule, you write the substituted sentence with the cons
 
 It is legitimate to infer $\exists x Px$ if you know that \emph{something} is a $P$. It might be any particular thing at all. For example, if you have $Pa$ available in the proof, then $\exists x Px$ follows. 
 
+%BA fordítása vége
+
+%WN fordítása kezdet
+
 This is the existential introduction rule ($\exists$I):
 
 \begin{proof}
@@ -656,6 +757,10 @@ It makes no difference to the meaning of the sentence whether we use the variabl
 \end{proof}
 
 We have derived $Ma$. Nothing stops us from using the same justification to derive $Mb$, $\ldots$, $Mj_2$, $\ldots$, $Ms_7$, $\ldots$, and so on until we run out of space or patience. We have effectively shown the way to prove $M\script{c}$ for any constant \script{c}. From this, $\forall y My$ follows.
+
+%WN fordítása vége
+
+%BB fordítása kezdet
 
 \begin{proof}
 	\hypo{x}{\forall x Mx}
@@ -698,6 +803,11 @@ Note also that the constant may not occur in any \emph{undischarged} assumption,
 A sentence with an existential quantifier tells us that there is \emph{some} member of the UD that satisfies a formula. For example, $\exists x Sx$ tells us (roughly) that there is at least one $S$. It does not tell us \emph{which} member of the UD satisfies $S$, however. We cannot immediately conclude $Sa$, $Sf_{23}$, or any other substitution instance of the sentence. What can we do?
 
 Suppose that we knew both $\exists x Sx$ and $\forall x(Sx \eif Tx)$. We could reason in this way:
+
+%BB fordítása vége
+
+%GM fordítása kezdet
+
 \begin{quote}
 Since $\exists x Sx$, there is something that is an $S$. We do not know which constants refer to this thing, if any do, so call this thing `Ishmael'. From $\forall x(Sx \eif Tx)$, it follows that if Ishmael is an $S$, then it is a $T$. Therefore, Ishmael is a $T$.  Because Ishmael is a $T$, we know that $\exists x Tx$.
 \end{quote}
@@ -724,6 +834,8 @@ Since the proxy constant is just a place holder that we use inside the subproof,
 The easiest way to satisfy these requirements is to pick an entirely new constant when you start the subproof, and then not to use that constant anywhere else in the proof. Once you close the subproof, do not mention it again.
 
 With this rule, we can give a formal proof that $\exists x Sx$ and $\forall x(Sx \eif Tx)$ together entail $\exists x Tx$.
+
+%GM fordítása vége
 
 \begin{proof}
 	\hypo{es}{\exists x Sx}
@@ -930,6 +1042,7 @@ Próbáljon ki különböző dolgokat. Ha egy megközelítés nem sikerül, akko
 
 %ZsGy fordítása vége
 
+%BBB fordítása kezdet
 
 \section{Proof-theoretic concepts}
 
@@ -951,9 +1064,9 @@ The set of sentences $\{\script{A}_1,\script{A}_2,\ldots\}$ is \define{provably 
 
 It is easy to show that a set is provably inconsistent: You just need to assume the sentences in the set and prove a contradiction. Showing that a set is \emph{not} provably inconsistent will be much harder. It would require more than just providing a proof or two; it would require showing that proofs of a certain kind are \emph{impossible}.
 
+%BBB fordítása vége
 
-
-
+%GT fordítása kezdet
 
 
 
@@ -976,6 +1089,8 @@ In general, $\script{A}\vdash\script{B}$ if and only if $\script{A}\models\scrip
 You can pick and choose when to think in terms of proofs and when to think in terms of models, doing whichever is easier for a given task. Table \ref{table.ProofOrModel} summarizes when it is best to give proofs and when it is best to give models.
 
 In this way, proofs and models give us a versatile toolkit for working with arguments. If we can translate an argument into QL, then we can measure its logical weight in a purely formal way. If it is deductively valid, we can give a formal proof; if it is invalid, we can provide a formal counterexample.
+
+%GT fordítása vége
 
 %HHB fordítása kezdet
 
