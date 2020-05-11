@@ -69,18 +69,30 @@ When we add a line to a proof, we write the rule that justifies that line. We al
 
 Obviously, the reiteration rule will not allow us to show anything \emph{new}. For that, we will need more rules. The remainder of this section will give introduction and elimination rules for all of the sentential connectives. This will give us a complete proof system for SL. Later in the chapter, we introduce rules for quantifiers and identity.
 
+Egyértelműen az ismétlési szabály nem engedi meg nekünk hogy bármi \emph{újat} mutassunk. Ahhoz több szabályra van szükségünk.
+Ezen fejezet maradéka bevezető és elimináló szabályokat fog adni a kijelentéslogikai műveletekhez. Ez egy komplett bizonyíték rendszert ad nekünk KL-hez. Később a fejezetben bevezetünk szabályokat kvantorokhoz és az azonossághoz.
+
 All of the rules introduced in this chapter are summarized starting on p.~\pageref{ProofRules}.
 
+Mindegyik szabály, amelyet ebben a fejezetben vezetünk, be összegezve van a ~\pageref{ProofRules} oldalon.
 
-\subsection{Conjunction}
+\subsection*{Conjunction}
+\subsection{Konjukció}
 
 Think for a moment: What would you need to show in order to prove $E \eand F$?
+
+Gondolkodj picit: Mit kellene megmutatnod ahhoz, hogy bizonyítsd $E \eand F$-et?
 
 Of course, you could show $E \eand F$ by proving $E$ and separately proving $F$. 
 This holds even if the two conjuncts are not atomic sentences. If you can prove $[(A \eor J) \eif V]$ and  $[(V \eif L) \eiff (F \eor N)]$, then you have effectively proven
 $$[(A \eor J) \eif V] \eand [(V \eif L) \eiff (F \eor N)].$$
 So this will be our conjunction introduction rule, which we abbreviate {\eand}I:
 
+Persze, megmutathatnád $E \eand F$-et azáltal, hogy bizonyítod $E$-t és külön $F$-et.
+Ez fennáll akkor is, ha a két konjukció nem atomi mondat. Ha be tudod bizonyítani, hogy  $[(A \eor J) \eif V]$ és  $[(V \eif L) \eiff (F \eor N)]$, akkor bebizonyítottad, hogy
+$$[(A \eor J) \eif V] \eand [(V \eif L) \eiff (F \eor N)].$$
+Tehát a konjukció bevezető szabályunk így fog kinézni rövidítve {\eand}I:
+ 
 \begin{proof}
 	\have[m]{a}{\script{A}}
 	\have[n]{b}{\script{B}}
@@ -89,7 +101,12 @@ So this will be our conjunction introduction rule, which we abbreviate {\eand}I:
 
 A line of proof must be justified by some rule, and here we have `{\eand}I m,n.' This means: Conjunction introduction applied to line $m$ and line $n$. These are variables, not real line numbers; $m$ is some line and $n$ is some other line. In an actual proof, the lines are numbered $1, 2, 3, \ldots$ and rules must be applied to specific line numbers. When we define the rule, however, we use variables to underscore the point that the rule may be applied to any two lines that are already in the proof. If you have $K$ on line 8 and $L$ on line 15, you can prove $(K\eand L)$ at some later point in the proof with the justification `{\eand}I 8, 15.'
 
+Egy bizonyítás sorát mindig indokolni kell valamilyen szabállyal, és itt ez esetben „{\eand}I m,n.”
+Ez a következőt jelenti: Konjukció bemutatás van alkalmazva $m$ és $n$ sorra. Ezek változók, nem valós sorszámok; m valamilyen sor és n valamilyen másik sor. Egy valós bizonyításban a sorok meg vannak számozva $1, 2, 3, \ldots$ formában és a szabályokat valamelyik specifikus sorszámhoz kell alkalmazni. Viszont, amikor definiáljuk a szabályt változókat használunk, hogy felhívjuk a figyelmet arra, hogy a szabályt bármelyik kettő, a bizonyításban már benne lévő sorra lehet alkalmazni. Ha $K$-d van a nyolcas soron és $L$ a tizenötösön, akkor be tudod bizonyítani $(K\eand L)$-t valamikor később a bizonyításban „{\eand}I 8, 15” indoklással.
+
 Now, consider the elimination rule for conjunction. What are you entitled to conclude from a sentence like $E \eand F$? Surely, you are entitled to conclude $E$; if $E \eand F$ were true, then $E$ would be true. Similarly, you are entitled to conclude $F$. This will be our conjunction elimination rule, which we abbreviate {\eand}E:
+
+Most vegyük figyelembe az elimináló szabályt a konjukcióhoz. Mire vagy jogosult következtetni egy olyan mondatból mint $E \eand F$?  Biztosan jogosultak vagyunk arra a következtetésre hogy $E$; ha $E \eand F$ igaz, akkor $E$ is igaz. Hasonlóan, jogosultak vagyunk arra a következtetésre hogy $F$. Ez lesz a konjukció elimináló szabályunk, amit rövidítünk úgy hogy {\eand}E:
 
 \begin{proof}
 	\have[m]{ab}{\script{A}\eand\script{B}}
