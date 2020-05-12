@@ -574,6 +574,8 @@ It is tempting to say that sentence \ref{monkey1} entails sentence \ref{monkey2}
 
 How can this be? The answer comes from considering whether these sentences would be true or false \emph{if there were no monkeys}.
 
+%OM fordítása kezdet
+
 We have defined $\forall$ and $\exists$ in such a way that $\forall\script{A}$ is equivalent to $\enot \exists\enot \script{A}$. As such, the universal quantifier doesn't involve the existence of anything--- only non-existence. If sentence \ref{monkey1} is true, then there are \emph{no} monkeys who don't know sign language. If there were no monkeys, then $\forall x(Mx \eif Sx)$ would be true and $\exists x(Mx \eand Sx)$ would be false.
 
 We allow empty predicates because we want to be able to say things like, `I do not know if there are any monkeys, but any monkeys that there are know sign language.' That is, we want to be able to have predicates that do not (or might not) refer to anything.
@@ -605,6 +607,8 @@ Let $Rx$ mean `$x$ is a rose,' let $Tx$ mean `$x$ has a thorn,' and consider thi
 \end{earg}
 
 It is tempting to say that sentence \ref{pickUDrose} should be translated as $\forall x(Rx \eif Tx)$. If the UD contains all roses, that would be correct. Yet if the UD is merely \emph{things on my kitchen table}, then $\forall x(Rx \eif Tx)$ would only mean that every rose on my kitchen table has a thorn. If there are no roses on my kitchen table, the sentence would be trivially true.
+
+%OM fordítása vége
 
 The universal quantifier only ranges over members of the UD, so we need to include all roses in the UD in order to translate sentence \ref{pickUDrose}. We have two options. First, we can restrict the UD to include all roses but \emph{only} roses. Then sentence \ref{pickUDrose} becomes $\forall x Tx$. This means that everything in the UD has a thorn; since the UD just is the set of roses, this means that every rose has a thorn. This option can save us trouble if every sentence that we want to translate using the symbolization key is about roses.
 
