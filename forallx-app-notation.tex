@@ -32,26 +32,41 @@ Conjunction is often symbolized with the \emph{ampersand}, `{\&}.' The ampersand
 
 %TB fordítása kezdet
 
-\paragraph{Material Conditional} There are two common symbols for the material conditional: the \emph{arrow}, `$\rightarrow$', and the \emph{hook}, `$\supset$.'
+\paragraph{Material Conditional} There are two common symbols for the material conditional: the \emph{arrow}, `$\rightarrow$', and the \emph{horog}, `$\supset$.'
+
+\paragraph{Implikáció} Kettő általános jelölés van az implikációra: a \emph{nyíl}, `$\rightarrow$', és a \emph{patkó}, `$\supset$.'
 
 \paragraph{Material Biconditional} The \emph{double-headed arrow}, `$\leftrightarrow$', is used in systems that use the arrow to represent the material conditional. Systems that use the hook for the conditional typically use the \emph{triple bar}, `$\equiv$', for the biconditional.
 
+\paragraph{Ekvivalencia} A \emph{két hegyű nyíl}, `$\leftrightarrow$', olyan rendszerekben használt, ahol az implikációt nyíllal jelölik. Ahol az implikációt patkóval jelölik, az ekvivalencia jele általában \emph{tripla vonal}, `$\equiv$'.
+
 \paragraph{Quantifiers} The universal quantifier is typically symbolized as an upside-down A, `$\forall$', and the existential quantifier as a backwards E, `$\exists$.' In some texts, there is no separate symbol for the universal quantifier. Instead, the variable is just written in parentheses in front of the formula that it binds. For example, `all $x$ are $P$' is written $(x)Px$.
+
+\paragraph{Kvantorok} Az univerzális kvantor jele általában a fejre fordított A betű, `$\forall$', az egzisztenciális kvantor pedig a visszafele néző E, `$\exists$'. Néhány szövegben nincs jele az univerzális kvantornak. Ehelyett a változót zárójelben, a kötő formula elé írják. Például `minden $x$ -re $P$' jelölése $(x)Px$.
+
 
 In some systems, the quantifiers are symbolized with larger versions of the symbols used for conjunction and disjunction. Although quantified expressions cannot be translated into expressions without quantifiers, there is a conceptual connection between the universal quantifier and conjunction and between the existential quantifier and disjunction. Consider the sentence $\exists x Px$, for example. It means that \emph{either} the first member of the UD is a $P$, \emph{or} the second one is, \emph{or} the third one is, {\ldots}. Such a system uses the symbol `$\bigvee$' instead of `$\exists$.'
 
+Néhány rendszerben a kvantorokat a konjunkció és a diszjunkció jeleinek nagyobb változatával jelölik. Habár a kvantorokat tartalmazó kijelentéseket nem lehet leírni nélkülük, fogalmi kapcsolat van az univerzális kvantor és a konjunkció, illetve az egzisztenciális kvantor és a diszjunkció között. Vegyük példának a $\exists x Px$ kijelentést. Ez azt jelenti hogy az univerzumnak \emph{vagy} az első elemére igaz $P$, \emph{vagy} a másodikra, \emph{vagy} a harmadikra {\ldots}. Egy ilyen rendszer `$\bigvee$' jelet használ `$\exists$' helyett
 
 
 
 \section*{Polish notation}
+\section{Lengyel jelölés}
 
 This section briefly discusses sentential logic in Polish notation, a system of notation introduced in the late 1920s by the Polish logician Jan {\L}ukasiewicz.
+
+Ez az alfejezet röviden tárgyalja a kijelentéslogikát lengyel jelöléssel. A lengyel jelölés egy jelölés rendszer, amit egy lengyel logika kutató, Jan {\L}ukasiewicz vezetett be a késő 1920-as években.
+
 
 Lower case letters are used as sentence letters. The capital letter $N$ is used for negation. $A$ is used for disjunction, $K$ for conjunction, $C$ for the conditional, $E$ for the biconditional. (`A' is for alternation, another name for logical disjunction. `E' is for equivalence.)
 \marginpar{
 \begin{tabular}{cc}
 notation & Polish\\
 of SL & notation\\
+&\\
+kijelentés & lengyel\\
+logika & jelölés\\
 \enot & $N$\\
 \eand & $K$\\
 \eor & $A$\\
@@ -60,9 +75,18 @@ of SL & notation\\
 \end{tabular}
 }
 
+A kijelentések betűit kisbetűk jelölik. A nagy $N$ betűt használja a negáció jelölésére. $A$ jelöli a diszjunkciót, $K$ a konjunkciót, $C$ az implikációt és $E$ az ekvivalenciát. (`A' az  alternációból jön, ami egy másik szó a diszjunkcióra. `E' pedig az ekvivalenciából.)
+
+
 In Polish notation, a binary connective is written \emph{before} the two sentences that it connects. For example, the sentence $A\eand B$ of SL would be written $Kab$ in Polish notation.
 
+Lengyel jelölésnél a bináris összekötőket (kétváltozós logikai műveleteket) az általa összekötött kijelentések \emph{elé} írjuk. Például az $A\eand B$ kijelentés lengyel jelöléssel $Kab$.
+
+
 The sentences $\enot A\eif B$ and $\enot (A\eif B)$ are very different; the main logical operator of the first is the conditional, but the main connective of the second is negation. In SL, we show this by putting parentheses around the conditional in the second sentence. In Polish notation, parentheses are never required. The left-most connective is always the main connective. The first sentence would simply be written $CNab$ and the second $NCab$.
+
+A $\enot A\eif B$ és $\enot (A\eif B)$ kijelentések nagyon különböznek. Az első fő logikai operátora az implikáció, a másodiké viszont a negáció. Kijelentés logikában ezt zárójelezéssel tisztázzuk, második esetben. Lengyel jelölésnél sosincs szükség zárójelekre. Mindig balról az első művelet a fő összekötő. Az első kijelentés egyszerűen $CNab$ a második pedig $NCab$.
+
 
 %TB fordítása vége
 
