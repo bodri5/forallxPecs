@@ -269,25 +269,42 @@ It might seem as if this definition is circular, because it uses the word `and' 
 \end{enumerate}
 
 Since the definition of $v$ has the same structure as the definition of a wff, we know that $v$ assigns a value to \emph{every} wff of SL. Since the sentences of SL and the wffs of SL are the same, this means that $v$ returns the truth value of every sentence of SL.
-Mivel a $v$ meghatározása megegyezik a wff meghatározásával, ezért tudjuk, hogy a $v$ értéket rendel az SL \emph{minden} wff-jéhez. Mivel az SL mondatai és az SL wffjei ugyanazok, ez azt jelenti, hogy a $v$ az SL mondatok 'igaz' értékét adja vissza.
+
+Mivel a $v$ meghatározása megegyezik a jfk meghatározásával, ezért tudjuk, hogy a $v$ értéket rendel a KL \emph{minden} jfk-éhez. Mivel a KL mondatai és a KL jfk-ei ugyanazok, ez azt jelenti, hogy a $v$ a KL mondatok igazságértékét adja vissza.
+
 Truth in SL is always truth \emph{relative to} some truth value assignment, because the definition of truth for SL does not say whether a given sentence is true or false. Rather, it says how the truth of that sentence relates to a truth value assignment.
-Az 'igaz' az SLben mindig 'igaz' \emph{viszonyítva} valamilyen igazságérték-hozzárendeléshez, mivel az 'igaz' SL-ben lévő definíciója nem mondja, hogy egy adott mondat igaz-e vagy hamis. Helyette inkább azt mondja, hogy a mondat igazsága hogyan kapcsolódik, egy igazságérték-hozzárendeléshez.
-\subsection{Other concepts in SL}
-\subsection{Egyéb fogalmak az SL-ben}
+
+Az „igaz” a KL-ben mindig „igaz” \emph{viszonyítva} valamilyen igazságérték-hozzárendeléshez, mivel az „igaz” KL-ben lévő definíciója nem mondja, hogy egy adott mondat igaz-e vagy hamis. Helyette inkább azt mondja, hogy a mondat igazsága hogyan kapcsolódik, egy igazságérték-hozzárendeléshez.
+
+\subsection*{Other concepts in SL}
+\subsection{Egyéb fogalmak a KL-ben}
 Working with SL so far, we have done without a precise definition of `tautology', `contradiction', and so on. Truth tables provided a way to \emph{check if} a sentence was a tautology in SL, but they did not \emph{define} what it means to be a tautology in SL. We will give definitions of these concepts for SL in terms of entailment.
-Ahogy idáig az SL-el dolgoztunk, azt a „tautológia”, az „ellentmondás” és a többbi, pontos meghatározása nélkül tettük. Az igazságtábla útmutatást nyújtott ahhoz hogy \emph{ellenőrizze} azt hogy a mondat tautológia volt-e az SL-ben, de nem \emph{definiálta} hogy mit jelent tautológiának lenni SL-ben. E fogalmak meghatározásait fogjuk az SL szempontjából megadni.
+
+Ahogy idáig a KL-el dolgoztunk, azt a „tautológia”, az „ellentmondás” és a többbi pontos meghatározása nélkül tettük. Az igazságtábla útmutatást nyújtott ahhoz hogy \emph{ellenőrizzük} azt, hogy a mondat tautológia volt-e a KL-ben, de nem \emph{definiálta} hogy mit jelent tautológiának lenni KL-ben. E fogalmak meghatározásait fogjuk a KL szempontjából megadni.
+
 The relation of semantic entailment, `\script{A} entails \script{B}', means that there is no truth value assignment for which \script{A} is true and \script{B} is false. Put differently, it means that \script{B} is true for any and all truth value assignments for which \script{A} is true.
-A szemantikai öröklés relációja, hogy `\script{A} örökli \script{B}'-t, azt jelenti, hogy nincs igazérték-hozzárendelés amiben \script{A} 'igaz' és \script{B} 'hamis'. Másképp fogalmazva ez azt jelenti, hogy \script{B} igaz bármely és az összes igazságérték-hozzárendelésre amelyben \script{A} igaz.
+
+A szemantikai öröklés relációja, miszerint „\script{A}-t örökli \script{B}”, azt jelenti, hogy nincs igazérték-hozzárendelés amiben \script{A} 'igaz' és \script{B} 'hamis'. Másképp fogalmazva ez azt jelenti, hogy \script{B} igaz bármely és az összes igazságérték-hozzárendelésre amelyben \script{A} igaz.
+
 We abbreviate this with a symbol called the \emph{double turnstile}:
-Ezt egy jelöléssel rövidítjük amit úgy nevezünk, hogy \emph{kettős forgóváz}:
+
+Ezt egy jelöléssel rövidítjük amit úgy nevezünk, hogy \emph{dupla sorompó
+}:
 $\script{A}\models\script{B}$ means `\script{A} semantically entails \script{B}.'
-$\script{A}\models\script{B}$ azt jelenti, hogy `\script{A} szemantikailag örököse \script{B}-nek.'
+
+$\script{A}\models\script{B}$ azt jelenti, hogy „\script{B} szemantikailag örököse \script{A}-nak.”
+
 We can talk about entailment between more than two sentences: $$\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}\models\script{B}$$ means that there is no truth value assignment for which all of the sentences in the set $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ are true and \script{B} is false.
-Öröklésről több mint két mondat között is beszélhetünk: $$\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}\models\script{B}$$ ami azt jelenti, hogy nincs igazságérték-hozzárendelés amelyekre fent áll hogy, az összes mondat $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ szettben 'igaz' és \script{B} 'hamis'.
+
+Öröklésről több mint két mondat között is beszélhetünk: $$\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}\models\script{B}$$ ami azt jelenti, hogy nincs igazságérték-hozzárendelés amelyekre fennáll hogy, az összes mondat a $\{\script{A}_1,\script{A}_2,\script{A}_3,\cdots\}$ halmazban „igaz” és \script{B} 'hamis'.
+
 We can also use the symbol with just one sentence: $\models\script{C}$ means that \script{C} is true for all truth value assignments. This is equivalent to saying that the sentence is entailed by anything.
-Csak simán egy mondattal is használhatjuk a jelölést: $\models\script{C}$ ami azt jelenti, hogy \script{C} minden igazérték-hozzárendelésre 'igaz'. Ez megegyezik azzal az állítással, hogy a mondat bármi örököse.
+
+Csak simán egy mondattal is használhatjuk a jelölést: $\models\script{C}$ ami azt jelenti, hogy \script{C} minden igazérték-hozzárendelésre „igaz”. Ez megegyezik azzal az állítással, hogy a mondat bármi örököse.
+
 The double turnstile symbol allows us to give concise definitions for various concepts of SL:
-A kettős forgóváz jelölés lehetővé teszi, hogy tömör meghatározásokat adjunk az SL különféle fogalmaira:
+
+A dupla sorompó jelölés lehetővé teszi, hogy tömör meghatározásokat adjunk az SL különféle fogalmaira:
 %KML fordítása vége
 
 %DG fordítása kezdet
