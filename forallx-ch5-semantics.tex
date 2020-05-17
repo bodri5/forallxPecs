@@ -400,31 +400,29 @@ You do not need to know anything about comic books to be able to determine that,
 
 What about the sentence $\forall x  Mx$? The sentence is false, because it is not true that all members of the UD are $M$. It requires the barest minimum of knowledge about comic books to know that there are other characters besides just these three. Although we specified the extension of $M$ in a formally precise way, we still specified the UD with an English language description. Formally speaking, a UD is just a set of members.
 
-Mi a helyzet a $\forall x  Mx$ állítással? Az állítás hamis, mert nem igaz, hogy az UD minden tagja $M$. A lehető legkevesebb képregényes ismeret is elég ahhoz, hogy tudjuk, hogy ezen a három karakteren kívül több is létezik. Annak ellenére, hogy pontosan leszögeztük $M$ kiterjesztésének módját, az UD-T magyar nyelvű leírással határoztuk meg. Hivatalosan, az UD csak a tagok készlete.
+Mi a helyzet a $\forall x  Mx$ állítással? Az állítás hamis, mert nem igaz, hogy az UD minden tagja $M$. A lehető legkevesebb képregényes ismeret is elég ahhoz, hogy tudjuk, hogy ezen a három karakteren kívül több is létezik. Annak ellenére, hogy formálisan pontosan megadtuk $M$ kiterjedését, az UD-T magyar nyelvű leírással határoztuk meg. Hivatalosan, az UD csak a tagok halmaza.
 
 The formal significance of a predicate is determined by its extension, but what should we say about constants like $b$ and $w$? The meaning of a constant determines which member of the UD is picked out by the constant. The individual that the constant picks out is called the \define{referent} of the constant. Both $b$ and $w$ have the same referent, since they both refer to the same comic book character. You can think of a constant letter as a name and the referent as the thing named. In English, we can use the different names `Batman' and `Bruce Wayne' to refer to the same comic book character. In this interpretation, we can use the different constants `$b$' and `$w$' to refer to the same member of the UD.
 
-A formális jelentését az állítmánynak a kiterjesztés határozza meg, de mit mondhatunk el a konstansokról, mint például a $b$-ről és $w$-ről? A konstans jelentése determinálja, hogy a konstans melyik UD tagot emeli ki. Ezt az egyedet, amit a konstans kiválaszt a konstans \define{REFERENCIA} -jának nevezzük. Mind $b$-nek és $w$-nek azonos a referenciája, mivel mindkettő ugyan arra a képregényhősre utal. Gondolhatunk egy konstans betűre, mint név, és a referenciára, mint név. Magyarul, használhatunk különböző neveket, mint például "Batman" és "Bruce Wayne”, hogy ugyan arra a képregény hősre utaljunk. Ebben az interpretációban, használhatunk különböző konstansokat, mint például `$b$' és `$w$' hogy utaljunk az UD ugyanazon tagjára.
+A formális jelentését egy predikátumnak a kiterjedés határozza meg, de mit mondhatunk el a konstansokról, mint például a $b$-ről és $w$-ről? A konstans jelentése determinálja, hogy a konstans melyik UD tagot emeli ki. Ezt az egyedet, amit a konstans kiválaszt a konstans \define{referensének} nevezzük. Mind $b$-nek és $w$-nek azonos a referense, mivel mindkettő ugyanarra a képregényhősre utal. Gondolhatunk egy konstans betűre, mint név, és a referensre, mint a név tulajdonosára. Magyarul, használhatunk különböző neveket, mint például "Batman" és "Bruce Wayne”, hogy ugyanarra a képregényhősre utaljunk. Ebben az interpretációban, használhatunk különböző konstansokat, mint például `$b$' és `$w$' hogy utaljunk az UD ugyanazon tagjára.
 
-\subsection{Sets}
-
+\subsection*{Sets}
 \subsection{Halmazok}
 
 We use curly brackets `\{' and `\}' to denote sets. The members of the set can be listed in any order, separated by commas. The fact that sets can be in any order is important, because it means that \{foo, bar\} and \{bar, foo\} are the same set.
 
-Kapcsos zárójeleket használunk `\{' és `\}' , hogy jelöljük a halmazokat. A halmazok tagjait bármilyen sorrendben listázhatjuk, vesszővel elválasztva. Az a tény, hogy a halmazokat bármilyen sorrendben felsorolhatjuk fontos, mivel ez azt jelenti, hogy \{foo, bar\} és \{bar, foo\} ugyan az a halmaz.
+Kapcsos zárójeleket használunk `\{' és `\}' , hogy jelöljük a halmazokat. A halmazok tagjait bármilyen sorrendben listázhatjuk, vesszővel elválasztva. Az a tény, hogy a halmazokat bármilyen sorrendben felsorolhatjuk fontos, mivel ez azt jelenti, hogy \{foo, bar\} és \{bar, foo\} ugyanaz a halmaz.
 
 It is possible to have a set with no members in it. This is called the \define{empty set}. The empty set is sometimes written as \{\}, but usually it is written as the single symbol $\emptyset$.
 
-Az is lehetséges, hogy egy halmaznak nincsenek tagjai. Ezek az \define{Üres Halmazok}. Az üres halmazokat általában \{\} -vel jelöljük, de néha egy szimbólumként $\emptyset$ -ként is látthatjuk.
+Az is lehetséges, hogy egy halmaznak nincsenek tagjai. Ezek az \define{üres halmazok}. Az üres halmazokat általában \{\} -vel jelöljük, de néha egy szimbólumként $\emptyset$ -ként is látthatjuk.
 
-\subsection{Models}
-
+\subsection*{Models}
 \subsection{Modellek}
 
 As we have seen, an interpretation in QL is only formally significant insofar as it determines a UD, an extension for each predicate, and a referent for each constant. We call this formal structure a \define{model} for QL.
 
-Ahogy már látthatuk, egy interpretáció QL-ben csak akkor formálisan szignifikáns, amennyiben meghatározza az UD-t, egy kiterjesztés minden állítmányhoz, és referencia minden konstanshoz.  Ezt a formális struktúrát nevezzük a QL \define{modell} -jének.
+Ahogy már látthatuk, egy interpretáció PL-ben formálisan csak annyit jelent, hogy meghatározza az UD-t, egy kiterjedést minden predikátumhoz, és egy referenst minden konstanshoz.  Ezt a formális struktúrát nevezzük a PL egy \define{modelljének}.
 
 To see how this works, consider this symbolization key:
 \begin{ekey}
@@ -433,16 +431,16 @@ To see how this works, consider this symbolization key:
 \item[f:] Mister Fine
 \end{ekey}
 
-Hogy lássuk hogyan is működik, nézzük meg ezt a fajta jelölést:
+Hogy lássuk hogyan is működik, nézzük meg ezt a szimbolizációs kulcsot:
 \begin{ekey}
 \item[UD:]Emberek, akik részt vettek a Three Stooges-ban
-\item[Hx:]$x$ akinek van haja.
+\item[Hx:]$x$-nek van haja.
 \item[f:] Mister Fine
 \end{ekey}
 
 If you do not know anything about the Three Stooges, you will not be able to say which sentences of QL are true on this interpretation. Perhaps you just remember Larry, Curly, and Moe. Is the sentence $Hf$ true or false? It depends on which of the stooges is Mister Fine.
 
-Ha nem tudunk semmit a Three Stooges-ről (Három Besúgó), akkor nem fogjuk tudni megállapítani, hogy melyik mondat igaz a QL-ből, ebben az értelmezésben. Lehet, hogy csak Larryre, Curlyre és Moera emlékszik az ember. Vajon a $Hf$ igaz vagy hamis? Attól függ, hogy melyik besúgó volt Mister Fine.
+Ha nem tudunk semmit a Three Stooges-ről (Három Besúgó), akkor nem fogjuk tudni megállapítani, hogy melyik mondat igaz a PL-ből, ebben az értelmezésben. Lehet, hogy csak Larryre, Curlyre és Moera emlékszik az ember. Vajon a $Hf$ igaz vagy hamis? Attól függ, hogy melyik besúgó volt Mister Fine.
 
 %HM fordítása vége
 
