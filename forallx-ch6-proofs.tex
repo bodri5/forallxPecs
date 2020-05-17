@@ -853,12 +853,18 @@ It is legitimate to infer $\exists x Px$ if you know that \emph{something} is a 
 
 This is the existential introduction rule ($\exists$I):
 
+Ez az egzisztenciális bevezetési szabály ($\exists$I):
+
 \begin{proof}
 	\have[m]{a}{\script{A}\script{c}}
 	\have[\ ]{c}{\exists \script{x}\script{A}\script{x}} \Ei{a}
 \end{proof}
 
-It is important to notice that the variable \script{x} does not need to replace all occurrences of the constant \script{c}. You can decide which occurrences to replace and which to leave in place. For example:
+It is important to notice that the variable \script{x} does not need to replace all occurrences of the constant \script{c}. You can decide which occurrences to replace and which to leave in place.
+For example:
+
+Fontos észrevenni, hogy az \script{x} változóra nem szükségszerű kicserélni a \script{c} konstans összes előfordulását. Eldöntheted, hogy mely előfordulásokat cseréled ki és melyeket hagyod a helyén.
+Például: 
 \nopagebreak
 \begin{proof}
 	\hypo{a}{Ma \eif Rad}
@@ -869,13 +875,20 @@ It is important to notice that the variable \script{x} does not need to replace 
 	\have{f}{\exists z\exists y\exists x(Mx \eif Ryz)} \Ei{e}
 \end{proof}
 
-
 \subsection{Universal introduction}
+\subsection*{Univerzális bevezetés}
 A universal claim like $\forall x Px$ would be proven if {every} substitution instance of it had been proven. That is, if every sentence $Pa$, $Pb$, $\ldots$ were available in a proof, then you would certainly be entitled to claim $\forall x Px$. Alas, there is no hope of proving \emph{every} substitution instance. That would require proving $Pa$, $Pb$, $\ldots$, $Pj_2$, $\ldots$, $Ps_7$, $\ldots$, and so on to infinity. There are infinitely many constants in QL, and so this process would never come to an end.
+
+Egy olyan általános állítás, mint $\forall x Px$ bebizonyosodna, ha {minden} helyettesítési értéke bebizonyosodna. Vagyis, ha minden mondat $Pa$, $Pb$, $\ldots$ rendelkezésre állna bizonyítékként, akkor mindenképp jogosult lenne állítani, hogy $\forall x Px$. Sajnos nincs remény bebizonyítani \emph{minden} helyettesítési értékre. Ehhez szükséges lenne bebizonyítani $Pa$, $Pb$, $\ldots$, $Pj_2$, $\ldots$, $Ps_7$, $\ldots$, és így tovább végtelenig. Végtelen sok konstans van a PL-ben, és ez a folyamat soha nem érne véget.
 
 Consider instead a simple argument: $\forall x Mx$, \therefore\ $\forall y My$
 
+Ehelyett szemléljünk meg egy egyszerű érvet: $\forall x Mx$, \therefore\ $\forall y My$
+
 It makes no difference to the meaning of the sentence whether we use the variable $x$ or the variable $y$, so this argument is obviously valid. Suppose we begin in this way:
+
+Nincs különbség a tétel értelmezésében, akár az $x$ akár az $y$ változót használjuk, tehát ez az érv egyértelműen érvényes.
+Tegyük fel, hogy így kezdjük:
 
 \begin{proof}
 	\hypo{x}{\forall x Mx} \by{want $\forall y My$}{}
@@ -883,6 +896,8 @@ It makes no difference to the meaning of the sentence whether we use the variabl
 \end{proof}
 
 We have derived $Ma$. Nothing stops us from using the same justification to derive $Mb$, $\ldots$, $Mj_2$, $\ldots$, $Ms_7$, $\ldots$, and so on until we run out of space or patience. We have effectively shown the way to prove $M\script{c}$ for any constant \script{c}. From this, $\forall y My$ follows.
+
+Származtattunk $Ma$-t. Semmi sem állíthat meg minket, hogy használjuk ugyan ezt az indoklást, hogy ebből származtassunk  $Mb$, $\ldots$, $Mj_2$, $\ldots$, $Ms_7$, $\ldots$, és így tovább, amíg ki nem fogyunk a helyből vagy a türelemből. Valójában megmutattuk a bizonyítási módját $M\script{c}$-nek minden \script{c} konstansra. Ebből következik, hogy $\forall y My$.
 
 %WN fordítása vége
 
