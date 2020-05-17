@@ -1042,11 +1042,29 @@ Ezzel a szabállyal adni tudunk egy formális bizonyítást arra, hogy $\exists 
 	\have{et2}{\exists x Tx}\Ee{es,s-et1}
 \end{proof}
 
+\begin{proof}
+	\hypo{es}{\exists x Sx}
+	\hypo{ast}{\forall x(Sx \eif Tx)}\by{$\exists x Tx$-et szeretnénk}{}
+	\open
+		\hypo{s}{Si}
+		\have{st}{Si \eif Ti}\Ae{ast}
+		\have{t}{Ti} \ce{s,st}
+		\have{et1}{\exists x Tx}\Ei{t}
+	\close
+	\have{et2}{\exists x Tx}\Ee{es,s-et1}
+\end{proof}
+
 Notice that this has effectively the same structure as the English-language argument with which we began, except that the subproof uses the proxy constant `$i$' rather than the bogus name `Ishmael'.
 
+Vegyük észre, hogy a fenti példának ténylegesen ugyanaz a felépítése, mint a „magyar nyelvő” példának, amivel kezdtünk, attól eltekintve, hogy a részbizonyítás a `$i$' stróman állandót használja a kétes „Ishmael” név helyett.
+
 \subsection{Quantifier negation}
+\subsection{Kvantor negáció}
+
 
 When translating from English to QL, we noted that $\enot\exists x\enot\script{A}$ is logically equivalent to $\forall x\script{A}$. In QL, they are provably equivalent. We can prove one half of the equivalence with a rather gruesome proof:
+
+A magyarról PL-re történő fordítás során megfigyeltük, hogy $\enot\exists x\enot\script{A}$ logikailag ekvivalens ezzel: $\forall x\script{A}$. PL-ben azonban csak valószínűsíthető ez az egyenlőség. Az egyenlőség egyik felét egy meglehetősen bonyolult levezetéssel tudjuk bebizonyítani:
 
 \begin{proof}
 	\hypo{Aa}{\forall x Ax} \by{want $\enot\exists x\enot Ax$}{}
@@ -1067,9 +1085,33 @@ When translating from English to QL, we noted that $\enot\exists x\enot\script{A
 	\have{nEna}{\enot\exists x\enot Ax}\ni{Ena-nAa3}
 \end{proof}
 
+\begin{proof}
+	\hypo{Aa}{\forall x Ax} \by{$\enot\exists x\enot Ax$-et szeretnénk}{}
+	\open
+		\hypo{Ena}{\exists x\enot Ax}\by{ellentmondás céljából}{}
+		\open
+			\hypo{nc}{\enot Ac}\by{$\exists$E-ért}{}
+			\open
+				\hypo{Aa2}{\forall x Ax}\by{ellentmondás céljából}{}
+				\have{c2}{Ac}\Ae{Aa}
+				\have{nc2}{\enot Ac}\by{R}{nc}
+			\close
+			\have{nAa}{\enot\forall x Ax}\ni{Aa2-nc2}
+		\close
+		\have{Aa3}{\forall x Ax}\by{R}{Aa}
+		\have{nAa3}{\enot\forall x Ax}\Ee{Ena,nc-nAa}
+	\close
+	\have{nEna}{\enot\exists x\enot Ax}\ni{Ena-nAa3}
+\end{proof}
+
 In order to show that the two sentences are genuinely equivalent, we need a second proof that assumes $\enot\exists x\enot\script{A}$ and derives $\forall x\script{A}$. We leave that proof as an exercise for the reader.
 
+Ahhoz, hogy rávilágítsunk arra, hogy a két mondat ténylegesen egyenlő egymással, egy második bizonyításra is szükségünk lesz, amely egyrészt feltételezi, hogy $\enot\exists x\enot\script{A}$, és ebből levezeti a $\forall x\script{A}$ összefüggést. Ezt a bizonyítást gyakorlásként az Olvasóra bízzuk.
+
 It will often be useful to translate between quantifiers by adding or subtracting negations in this way, so we add two derived rules for this purpose. These rules are called quantifier negation (QN):
+
+A kvantorok közötti fordítás során gyakran hasznosnak bizonyul, ha ily módon negációkat adunk vagy veszünk el, éppen ezért két további levezetett szabállyal kell kibővíteni a folyamatot. Ezeket a szabályokat kvantor negációnak (QN) nevezzük: 
+
 \begin{center}
 \begin{tabular}{rl}
 $\enot\forall\script{x}\script{A} \Longleftrightarrow \exists\script{x}\enot\script{A}$\\
@@ -1078,6 +1120,8 @@ $\enot\exists\script{x}\script{A} \Longleftrightarrow \forall\script{x}\enot\scr
 \end{tabular}
 \end{center}
 Since QN is a replacement rule, it can be used on whole sentences or on subformulae.
+
+Mivel a QN egy helyettesítési szabály, ezért akár egész mondatokon, vagy részképleteken is alkalmazható.
 
 %GyR fordítása vége
 
