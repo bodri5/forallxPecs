@@ -966,13 +966,26 @@ Tételezzük fel, hogy mind az $\exists x Sx$, mind az $\forall x(Sx \eif Tx)$ i
 \begin{quote}
 Since $\exists x Sx$, there is something that is an $S$. We do not know which constants refer to this thing, if any do, so call this thing `Ishmael'. From $\forall x(Sx \eif Tx)$, it follows that if Ishmael is an $S$, then it is a $T$. Therefore, Ishmael is a $T$.  Because Ishmael is a $T$, we know that $\exists x Tx$.
 \end{quote}
+
+\begin{quote}
+Miután $\exists x Sx$, van valami dolog, ami $S$. Nem tudjuk, hogy melyik konstansok vonatkoznak erre a dologra, de ha egyáltalán van ilyen, akkor hívjuk ezt „Ishmaelnek”. $\forall x(Sx \eif Tx)$-ből az következik, hogy ha Ishmael egy $S$, akkor egy $T$. Azaz Ishmael egy $T$.  Mivel Ishmael egy $T$, tudjuk, hogy $\exists x Tx$.
+\end{quote}
+
 In this paragraph, we introduced a name for the thing that is an $S$. We gave it an arbitrary name (`Ishmael') so that we could reason about it and derive some consequences from there being an $S$. Since `Ishmael' is just a bogus name introduced for the purpose of the proof and not a genuine constant, we could not mention it in the conclusion. Yet we could derive a sentence that does not mention Ishmael; namely, $\exists x Tx$. This sentence does follow from the two premises.
+
+Ebben a bekezdésben, bevezettünk egy nevet a dolognak, ami egy $S$. Adtunk neki egy tetszőleges nevet, ami „Ishmael” volt, hogy tudjunk gondolkodni róla és tudjunk következtetéseket levonni abból, hogy milyen $S$-nek lenni. Mivel „Ishmael” csak egy kitalált név amit a bizonyítás céljából vezettünk be és nem egy valódi konstans, így nem említhettük volna meg a konkluzióban. Mégis származtatni tudtunk egy olyan mondatot, amely nem említi Ishmaelt név szerint:, $\exists x Tx$. Ez a mondat következik a két premisszából.
 
 We want the existential elimination rule to work in a similar way. Yet since English language words like `Ishmael' are not symbols of QL, we cannot use them in formal proofs. Instead, we will use constants of QL which do not otherwise appear in the proof.
 
+Azt akarjuk, hogy az egzisztenciális elimináció szabály hasonlóan működjön. Mégis a magyar nyelvben az olyan szavak, mint az „Ishmael” nem szimbólumai a PL-nek, így nem használhatjuk formális bizonyításokban. Ehelyett a PL konstansait fogjuk használni, amelyek amúgy nem jelennek meg a bizonyitásban.
+
 A constant that is used to stand in for whatever it is that satisfies an existential claim is called a \define{proxy}. Reasoning with the proxy must all occur inside a subproof, and the proxy cannot be a constant that is doing work elsewhere in the proof.
 
+A konstanst ami bármi helyében állhatott, ami kielégít egy egzisztenciális igényt, azt \define{strómannak}-nak hívjuk. A strómannal való érvelésnek egy albizonyításban kell megjelennie, és a stróman nem lehet olyan konstans, ami máshol is szerepel a bizonyításban.
+
 This is the schematic form of the existential elimination rule ($\exists$E): 
+
+Ez a sematikus formája az egzisztenciális eliminációs szabálynak ($\exists$E):
 
 \begin{proof}
 	\have[m]{a}{\exists \script{x}\script{A}\script{x}}
@@ -984,11 +997,20 @@ This is the schematic form of the existential elimination rule ($\exists$E):
 \end{proof}
 $^\ast$ The constant \script{c} must not appear in $\exists\script{x}\script{A}\script{x}$, in \script{B}, or in any undischarged assumption.
 
+$^\ast$ A \script{c} konstans nem jelenhet meg $\exists\script{x}\script{A}\script{x}$-ben,\script{B}-ben, vagy bármelyik más kielégítetlen felvetésben.
+
+
 Since the proxy constant is just a place holder that we use inside the subproof, it cannot be something that we know anything particular about. So it cannot appear in the original sentence $\exists\script{x}\script{A}\script{x}$ or in an undischarged assumption. Moreover, we do not learn anything about the proxy constant by using the $\exists$E rule. So it cannot appear in \script{B}, the sentence you prove using $\exists$E.
+
+Mivel a stróman konstans csak egy helyettesítő, amit a részbizonyitásban használunk, ezért nem lehet olyan dolog, amiről bármi részletet tudnunk. Szóval nem jelenhet meg az eredeti kijelentésben. Ráadásul, nem tudunk meg semmit a stróman konstansról azzal, hogy használjuk a $\exists$E szabályt. Szóval nem jelenhet meg a \script{B} mondatban, amit a  $\exists$E használatával bizonyítasz.
 
 The easiest way to satisfy these requirements is to pick an entirely new constant when you start the subproof, and then not to use that constant anywhere else in the proof. Once you close the subproof, do not mention it again.
 
+A legegyszerűbb módja ezen követelmények kielégítésének az, hogy választasz egy teljesen új konstanst, amikor elkezded az albizonyítást és ezután ezt a konstanst nem használod máshol a bizonyításban. Amikor befejezted az albizonyitást, ne említsd meg mégegyszer.
+
 With this rule, we can give a formal proof that $\exists x Sx$ and $\forall x(Sx \eif Tx)$ together entail $\exists x Tx$.
+
+Ezzel a szabállyal adni tudunk egy formális bizonyítást arra, hogy $\exists x Sx$-ből és $\forall x(Sx \eif Tx)$-ből együttesen következik, hogy $\exists x Tx$.
 
 %GM fordítása vége
 
