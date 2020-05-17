@@ -274,9 +274,15 @@ It may seem as if the ability to assume anything at all in a subproof would lead
 
 It may seem as if this is a proof that you can derive any conclusions \script{B} from any premise \script{A}. When the vertical line for the subproof ends, the subproof is \emph{closed}. In order to complete a proof, you must close all of the subproofs. And you cannot close the subproof and use the R rule again on line 4 to derive \script{B} in the main proof. Once you close a subproof, you cannot refer back to individual lines inside it.
 
+Úgy tűnhet, hogy ez egy olyan bizonyítás, amellyel bármely \script{B} következtetést bármely \script{A} premisszából származtathatunk. Mikor a vízszintes vonal a végéhez ér, az albizonyítás \emph{lezárul}. Annak érdekében, hogy a bizonyítást teljesíthessük minden albizonyítást le kell zárnunk. Nem zárhatjuk le az albizonyítást és használhatjuk az R szabályt újra a 4. sorban, hogy \script{B}-t származtathassuk a fő bizonyításban. Amennyiben már lezártunk egy albizonyítást, többé nem hivatkozhatunk vissza annak egyes soraira.
+
 Closing a subproof is called \emph{discharging} the assumptions of that subproof. So we can put the point this way: You cannot complete a proof until you have discharged all of the assumptions besides the original premises of the argument.
 
+Egy albizonyítás lezárását az albizonyítás feltételezéseinek \emph{teljesítésének} hívjuk. A lényeget összefoglalva: Nem teljesíthetünk egy bizonyítást, amíg nem teljesítettük az összes feltételezést a kijelentésünk eredeti premisszája mellet.
+
 Of course, it is legitimate to do this:
+
+Természetesen az  elfogadott, ha ezt csináljuk:
 
 \begin{proof}
 	\hypo{a}{\script{A}}
@@ -289,7 +295,11 @@ Of course, it is legitimate to do this:
 
 This should not seem so strange, though. Since \script{B}\eif\script{B} is a tautology, no particular premises should be required to validly derive it. (Indeed, as we will see, a tautology follows from any premises.)
 
+Ennek nem kell ilyen különösnek lennie. Mivel \script{B}\eif\script{B} egy tautológia, ezért nincs szükség adott premisszára, hogy érvényesen származtathassuk. (És valóban, ahogy azt látni fogjuk, egy tautológia bármely premisszából következik.)
+
 Put in a general form, the {\eif}I rule looks like this:
+
+Általános formával írva a {\eif}I szabály így fog kinézni:
 
 \begin{proof}
 	\open
@@ -299,9 +309,21 @@ Put in a general form, the {\eif}I rule looks like this:
 	\have[\ ]{ab}{\script{A}\eif\script{B}}\ci{a-b}
 \end{proof}
 
+\begin{proof}
+	\open
+		\hypo[m]{a}{\script{A}} \by{\script{B}-t akarjuk}{}
+		\have[n]{b}{\script{B}}
+	\close
+	\have[\ ]{ab}{\script{A}\eif\script{B}}\ci{a-b}
+\end{proof}
+
 When we introduce a subproof, we typically write what we want to derive in the column. This is just so that we do not forget why we started the subproof if it goes on for five or ten lines. There is no `want' rule. It is a note to ourselves and not formally part of the proof.
 
+Amikor bevezetünk egy albizonyítást, akkor általában azt írjuk az oszlopba, amit származtatni akarunk. Mindezt azért, hogy ne felejtsük el, hogy miért is indítottuk az albizonyítást, akár 5 vagy 10 sorral korábban. Nincs arra vonatkozó szabály, hogy mit "akarunk". Ez csak egy megjegyzés magunknak és nem formális része a bizonyításnak.
+
 Although it is always permissible to open a subproof with any assumption you please, there is some strategy involved in picking a useful assumption. Starting a subproof with an arbitrary, wacky assumption would just waste lines of the proof. In order to derive a conditional by the {\eif}I, for instance, you must assume the antecedent of the conditional in a subproof.
+
+Habár bármikor megengedett egy albizonyítás nyitása bármilyen kedvünkre való feltételezéssel, van némi stratégia a számunkra hasznos feltételezés kiválasztásában. Egy albizonyítás elkezdése tetszőleges, kiszámíthatatlan feltételezésekkel csak a bizonyítás sorait pazarolja. Annak érdekében, hogy származtassunk egy {\eif}I implikációt például, feltételeznünk kell az implikáció előzményét egy albizonyításban.
 
 %KF fordítása vége
 
