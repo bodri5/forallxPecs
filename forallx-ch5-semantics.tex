@@ -798,12 +798,15 @@ Ez az érvelés természetesen hiteles, a következtetése pedig igaz. Azonban e
 
 There are further difficulties with this approach.
 
+További nehézségek is vannak ezzel a megközelítéssel. 
+
 Consider the sentence $\forall x(Rxx\eif Rxx)$, another obvious tautology. It might be tempting to reason in this way: `$Rxx\eif Rxx$ is true in every model, so $\forall x(Rxx\eif Rxx)$ must be true.' The problem is that $Rxx\eif Rxx$ is \emph{not} true in every model. It is not a sentence, and so it is \emph{neither} true \emph{nor} false. We do not yet have the vocabulary to say what we want to say about $Rxx\eif Rxx$. In the next section, we introduce the concept of \emph{satisfaction}; after doing so, we will be better able to provide an argument that $\forall x(Rxx\eif Rxx)$ is a tautology.
+
+Fontoljuk meg a következő állítást $\forall x(Rxx\eif Rxx)$, egy nyilvánvaló tautológia. Csábító lehet így érvelni: „$Rxx\eif Rxx$ igaz minden modellben, így $\forall x(Rxx\eif Rxx)$ állításnaknak igaznak kell lennie.” A probléma az, hogy  $Rxx\eif Rxx$ \emph{nem} igaz minden modellben. Ez nem egy állítás, így ez \emph{sem nem} igaz \emph{sem nem} hamis. Még nincs meg a szókincsünk, hogy elmondhassuk amit akarunk $Rxx\eif Rxx$-ről. A következő részben bemutatjuk a \emph{kielégítés} fogalmát; ezután jobban alá tudjuk majd támasztani, hogy $\forall x(Rxx\eif Rxx)$ egy tautológia.
 
 It is necessary to reason about an infinity of models to show that a sentence is a tautology. Similarly, it is necessary to reason about an infinity of models to show that a sentence is a contradition, that two sentences are equivalent, that a set of sentences is inconsistent, or that an argument is valid. There are other things we can show by carefully constructing a model or two. Table \ref{table.ModelOrArgument} summarizes which things are which.
 
-
-
+Végtelen sok modellt kel vizsgálni ahhoz, hogy bizonyítani tudjuk, hogy az állítás egy tautológia. Hasonlóképpen, végtelen sok modellt kel vizsgálni ahhoz,, hogy be tudjuk mutatni azt, hogy az állítás egy ellentmondás, hogy két állítás ekvivalens, hogy állítások egy halmaza inkonzisztens, vagy, hogy egy érvelés helyes. Más dolgokat viszont képesek vagyunk megmutatni modellek gondos felépítésével. Az \ref{table.ModelOrArgument} tábla összefoglalja, mely dolog melyik. 
 
 
 \begin{table}[h!]
@@ -835,7 +838,34 @@ Is the argument \mbox{`\script{P}, \therefore\ \script{C}'} valid? & {show that 
 \end{center}
 \end{table}
 
+\begin{table}[h!]
+\caption{Viszonylag egyszerű megválaszolni a kérdést, ha modellek létrehozása elég hozzá. Sokkal nehezebb, ha minden lehetséges modellre érvelést kell hozni. Ez a tábla bemutatja azokat a lehetőségeket mikor egy modell létrehozása elég.}
+\label{table.ModelOrArgument}
+\begin{center}
+\begin{tabular*}{\textwidth}[t]{p{10em}p{10em}p{10em}}
+& {\centerline{IGEN}} & {\centerline{NEM}}\\
+\cline{3-3}
 
+\script{A} egy tautológia? & {megmutatja, hogy \script{A}-nak igaznak kell lennie akármely modellben} & \tablefbox{\emph{létrehoz egy modellt} ahol \script{A} hamis}\\
+\cline{3-3}
+
+\script{A} egy ellentmondás? &  {megmutatja \script{A}-nak hamisnak kell lennie akármely modellben} & \tablefbox{\emph{létrehoz egy modellt} ahol \script{A} igaz}\\
+\cline{2-3}
+
+\script{A} kontingens? & \tablefbox{\emph{két modell létrehozása}, egy, amelyben \script{A} igaz és egy másik amelyben \script{A} hamis}\vline & {vagy azt mutatja, hogy \script{A} egy tautológia vagy, hogy \script{A} egy ellentmondás}\\
+\cline{2-3}
+
+\script{A} és \script{B} ekvivalens? & {megmutatja, hogy \script{A}-nak és \script{B}-nek ugyanolyan igazságértékűnek kell lennie minden modellben } & \tablefbox{\emph{egy modell létrehozása} amelyben \script{A} és \script{B} különböző igazságértékkel rendelkezik}\\
+\cline{2-3}
+
+ \model{A} halmaza konzisztens?? & \tablefbox{\emph{létrehoz egy modellt} amelyben minden állítás \model{A} igaz} & {megmutatja hogy az állítások mindegyike nem lehet igaz minden modellben}\\
+\cline{2-3}
+
+A \mbox{`\script{P}, \therefore\ \script{C}'} érvelés igaz? & {megmutatja, hogy akármely modellben ahol \script{P} igaz, egy olyan modellnek kell lennie ahol \script{C} is igaz} & \tablefbox{\emph{létrehoz egy modellt} amelyben \script{P} igaz és \script{C} hamis}\\
+\cline{3-3}
+\end{tabular*}
+\end{center}
+\end{table}
 
 %RA fordítása vége
 
