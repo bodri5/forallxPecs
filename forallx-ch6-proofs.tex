@@ -911,14 +911,17 @@ Származtattunk $Ma$-t. Semmi sem állíthat meg minket, hogy használjuk ugyan 
 
 It is important here that $a$ was just some arbitrary constant. We had not made any special assumptions about it. If $Ma$ were a premise of the argument, then this would not show anything about \emph{all} $y$. For example:
 
+Itt fontos megjegyezni, hogy $a$ egy tetszőleges konstans. Nem szabtunk meg előfeltételt vele kapcsolatban. Ha $Ma$ előfeltétele lenne az argumentumnak, akkor ez semmit sem mondana \emph{minden} $y$-ról. Például:
+
 \begin{proof}
 	\hypo{x}{\forall x Rxa}
 	\have{a}{Raa} \Ae{x}
 	\have{y}{\forall y Ryy} \by{not allowed!}{}
 \end{proof}
 
-
 This is the schematic form of the universal introduction rule ($\forall$I):
+
+Ez az univerzális kvantor bevezetési szabályának vázlatos formája ($\forall$I):
 
 \begin{proof}
 	\have[m]{a}{\script{A}\script{c}^\ast}
@@ -926,9 +929,15 @@ This is the schematic form of the universal introduction rule ($\forall$I):
 \end{proof}
 $^\ast$ The constant \script{c} must not occur in any undischarged assumption.
 
+$^\ast$ A \script{c} konstans nem fordulhat elő egyik nem teljesített feltevésben sem.
+
 Note that we can do this for any constant that does not occur in an undischarged assumption and for any variable.
 
+Vegyük észre, hogy ezt bármely konstansal vagy változóval meg tudjuk tenni, amely nem fordul elő egyik nem teljesített feltevésben sem.
+
 Note also that the constant may not occur in any \emph{undischarged} assumption, but it may occur as the assumption of a subproof that we have already closed. For example, we can prove $\forall z(Dz \eif Dz)$ without any premises.
+
+Azt is vegyük észre, hogy a konstans bár nem fordulhat elő egyik \emph{nem teljesített} felvetésben sem, de előfordulhat egy felvetés albizonyítékaként, amit már bezártunk. Pédául tudjuk bizonyítani, hogy  $\forall z(Dz \eif Dz)$ bármilyen előfeltétel nélkül.
 
 \begin{proof}
 	\open
@@ -940,10 +949,15 @@ Note also that the constant may not occur in any \emph{undischarged} assumption,
 \end{proof}
 
 
-\subsection{Existential elimination}
+\subsection*{Existential elimination}
+\subsection{Egzisztenciális elimináció}
 A sentence with an existential quantifier tells us that there is \emph{some} member of the UD that satisfies a formula. For example, $\exists x Sx$ tells us (roughly) that there is at least one $S$. It does not tell us \emph{which} member of the UD satisfies $S$, however. We cannot immediately conclude $Sa$, $Sf_{23}$, or any other substitution instance of the sentence. What can we do?
 
+Egy egzisztenciális kvantoros mondatból az derül ki, hogy \emph{létezik} egy olyan UD-tag, amely kielégíti a képletet. Például $\exists x Sx$-ból az derül ki (nagyjából), hogy  vagy legalább egy $S$. Azonban nem derül ki, hogy az UD \emph{mely} tagja teljesíti $S$-t. Nem tudunk azonnal következtetést levonni $Sa$, $Sf_{23}$, vagy bármely egyéb helyettesítő példájából. Mit tehetünk?
+
 Suppose that we knew both $\exists x Sx$ and $\forall x(Sx \eif Tx)$. We could reason in this way:
+
+Tételezzük fel, hogy mind az $\exists x Sx$, mind az $\forall x(Sx \eif Tx)$ ismertek. Az alábbi módon érvelhetünk:
 
 %BB fordítása vége
 
