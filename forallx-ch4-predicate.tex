@@ -1160,10 +1160,17 @@ Sentence \ref{atmost1} can be paraphrased as, `It is not the case that there are
 
 Sentence \ref{atmost1} can also be approached in another way. It means that any apples that there are on the table must be the selfsame apple, so it can be translated as $\forall x\forall y\bigl[(Ax \eand Ay) \eif x=y\bigr]$. The two translations are logically equivalent, so both are correct.
 
+A \ref{atmost1}. mondat másfelől is megközelíthető. Azt jelenti, hogy bármely alma, ami az asztalon van, annak ugyanannak az almának kell lennie, tehát eképpen fordítható: $\forall x\forall y\bigl[(Ax \eand Ay) \eif x=y\bigr]$. A két fordítás logikailag megegyező, tehát mindkettő helyes.
+
 In a similar way, sentence \ref{atmost2} can be translated in two equivalent ways. It can be paraphrased as, `It is not the case that there are \emph{three} or more distinct apples', so it can be translated as the negation of sentence \ref{atleast3}. Using universal quantifiers, it can also be translated as
 $$\forall x\forall y\forall z\bigl[(Ax \eand Ay \eand Az) \eif (x=y \eor x=z \eor y=z)\bigr].$$
 
+Hasonlóan a \ref{atmost2}-as mondat is lefordítható két egyenértékű módon. A következőképpen lehet megfogalmazni: „Nem arról van szó, hogy \emph{három} vagy több különböző alma van”, tehát a \ref{atleast3}-es mondat tagadásaként lehet fordítani. Univerzális kvantorokat használva, így is fordítható:
+$$\forall x\forall y\forall z\bigl[(Ax \eand Ay \eand Az) \eif (x=y \eor x=z \eor y=z)\bigr].$$
+
 See p.~\pageref{summary.atmost} for the general case.
+
+Lásd a \pageref{summary.atmost}. oldalon az általános esetet.
 
 The examples above are sentences about apples, but the logical structure of the sentences translates mathematical inequalities like $a\geq 3$, $a \leq 2$, and so on. We also want to be able to translate statements of equality which say exactly how many things there are. For example:
 \begin{earg}
@@ -1171,9 +1178,19 @@ The examples above are sentences about apples, but the logical structure of the 
 \item[\ex{exactly2}] There are exactly two apples on the table.
 \end{earg}
 
+A fenti példák almákról szólnak, de a mondatok logikai sturktúrái matematikai egyenlőtlenségekké fordíthatóak, mint $a\geqslant 3$, $a \leqslant 2$, és így tovább. Képesek szeretnénk lenni lefordítani az egyenlőségi állításokat is, melyek megmondják, hogy pontosan miből mennyi van. Például:
+\begin{earg}
+\item[\ex{exactly1}] Pontosan egy alma van az asztalon.
+\item[\ex{exactly2}] Pontosan két alma van az asztalon.
+\end{earg}
+
 Sentence \ref{exactly1} can be paraphrased as, `There is \emph{at least} one apple on the table, and there is \emph{at most} one apple on the table.' This is just the conjunction of sentence \ref{atleast1} and sentence \ref{atmost1}: $\exists x Ax \eand \forall x\forall y\bigl[(Ax \eand Ay) \eif x=y\bigr]$. This is a somewhat complicated way of going about it. It is perhaps more straightforward to paraphrase sentence \ref{exactly1} as, `There is a thing which is the only apple on the table.' Thought of in this way, the sentence can be translated $\exists x\bigl[Ax \eand \enot\exists y(Ay \eand x\neq y)\bigr]$.
 
+A \ref{exactly1}. mondat megfogalmazható úgy, hogy: „\emph{Legalább} egy alma van az asztalon és \emph{legfeljebb} egy alma van az asztalon.” Ez a \ref{atleast1}-es és \ref{atmost1}-es mondat konjunkciója: $\exists x Ax \eand \forall x\forall y\bigl[(Ax \eand Ay) \eif x=y\bigr]$. Ez egy kicsit komplikáltabb megoldás. Talán egyértelműbb a következő megfogalmazása a \ref{exactly1}. mondatnak: „Van valami az asztalon, ami az egyetlen alma az asztalon.” Ezen gondolatmenet alapján, a mondat így fordítható: $\exists x\bigl[Ax \eand \enot\exists y(Ay \eand x\neq y)\bigr]$.
+
 Similarly, sentence \ref{exactly2} may be paraphrased as, `There are two different apples on the table, and these are the only apples on the table.' This can be translated as $\exists x\exists y\bigl[Ax \eand Ay \eand x\neq y \eand \enot\exists z(Az \eand x\neq z \eand y\neq z)\bigr]$.
+
+Hasonlóan a \ref{exactly2}. mondat megfogalmazható így: „Két különböző alma van az asztalon és csak almák vannak az asztalon.” Ez így fordítható: $\exists x\exists y\bigl[Ax \eand Ay \eand x\neq y \eand \enot\exists z(Az \eand x\neq z \eand y\neq z)\bigr]$.
 
 Finally, consider this sentence:
 \begin{earg}
@@ -1181,7 +1198,15 @@ Finally, consider this sentence:
 \end{earg}
 It might be tempting to add a predicate so that $Tx$ would mean `$x$ is a thing on the table.' However, this is unnecessary. Since the UD is the set of things on the table, all members of the UD are on the table. If we want to talk about a \emph{thing on the table}, we need only use a quantifier. Sentence \ref{atmost2inUD} can be symbolized like sentence \ref{atmost2} (which said that there were at most two apples), but leaving out the predicate entirely. That is, sentence \ref{atmost2inUD} can be translated as $\forall x \forall y \forall z(x=y \eor x=z \eor y=z)$.
 
+Végül tekintsük ezt a mondatot:
+\begin{earg}
+\item[\ex{atmost2inUD}] Legfeljebb két dolog van az asztalon.
+\end{earg}
+Csábító lehet, hogy predikátumot adjunk hozzá, miszerint $Tx$ azt jelentené, hogy „$x$ egy dolog az asztalon.” Azonban szükségtelen. Mivel az UD az asztalon lévő dolgok halmaza, ezért az összes tagja az UD-nak az asztalon van. Ha egy \emph{dologról az asztalon} szeretnénk beszélni, akkor csak egy kvantifikátort kell használnunk. A \ref{atmost2inUD}. mondat szimbolizálható, mint a \ref{atmost2}. (ami azt állította, hogy legfeljebb két alma van), de elhagyva teljesen a predikátumot. Azaz a \ref{atmost2inUD}. mondat így fordítható: $\forall x \forall y \forall z(x=y \eor x=z \eor y=z)$.
+
 Techniques for symbolizing expressions of quantity (`at most', `at least', and `exactly') are summarized on p.~\pageref{summary.atleast}.
+
+Mennyiségek kifejezésének szimbolizálására való technikák („legfeljebb”, „legalább”, és „pontosan”) összefoglalása a ~\pageref{summary.atleast}. oldalon található.
 
 %BD fodítása vége
 
