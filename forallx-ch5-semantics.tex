@@ -983,15 +983,27 @@ Giving arguments about all possible models typically requires clever combination
 %PE fordítása kezdet
 
 Consider one more example. The argument $\forall x(Hx \eand Jx)$ \therefore  $\forall x Hx$ is obviously valid. We can only show that the argument is valid by considering what must be true in every model in which the premise is true.
+
+Vegyünk figyelembe még egy példát. A következő érvelés: $\forall x(Hx \eand Jx)$ \therefore $\forall x Hx$ nyilvánvalóan érvényes. Ezt azonban csak akkor tudjuk bizonyítani, ha minden olyan esetet számításba veszünk, amiben a feltevés igaz.
+
 \begin{quote}
 Consider an arbitrary model \model{M} in which the premise $\forall x(Hx \eand Jx)$ is true. The conjunction $Hx \eand Jx$ is satisfied regardless of what is assigned to $x$, so $Hx$ must be also (by part 3 of the definition of {satisfaction}). As such, $(\forall x) Hx$ is satisfied by any variable assignment (by part 7 of the definition of {satisfaction}) and true in \model{M} (by the definition of {truth}).
-Since we did not assume anything about \model{M} besides $\forall x(Hx \eand Jx)$ being true, $(\forall x) Hx$ must be true in any model in which $\forall x(Hx \eand Jx)$ is true. So $\forall x(Hx \eand Jx) \models \forall x Hx$.
+Since we did not assume anything about \model{M} besides $Hx \eand Jx$ being true, $(\forall x) Hx$ must be true in any model in which $\forall x(Hx \eand Jx)$ is true. So $\forall x(Hx \eand Jx) \models \forall x Hx$.
+
+Vegyünk figyelembe egy tetszőleges \model{M} modelt, amelyben a feltevés, $\forall x(Hx \eand Jx)$ igaz. $Hx \eand Jx$ konjunkció feltétlenül ki van elégítve függetlenül $x$-től, tehát ezért $Hx$ is. (Az előzőekben leírt definíció harmadik része miatt.) Vagyis $(\forall x)Hx$ ki van elégítve bármely változó hozzárendeléséval (hetedik rész alapján), és igaz \model{M}-ben (az igazság definíciója szerint). Mivel nem feltételezünk semmit \model{M}-ről azon kívül, hogy$Hx \eand Jx$ igaz, tehát $(\forall x) Hx$-nek igaznak kell lennie egy olyan modelben, ahol $\forall x(Hx \eand Jx)$ igaz. Ezen indokok miatt $\forall x(Hx \eand Jx) \models \forall x Hx$.
 \end{quote}
+
 Even for a simple argument like this one, the reasoning is somewhat complicated. For longer arguments, the reasoning can be insufferable. The problem arises because talking about an infinity of models requires reasoning things out in English. What are we to do?
+
+Egy ehhez hasonló bizonyításnak is lehet az érvelése kissé bonyolult. Hosszabb érvelés esetén az indoklás elviselhetetlenül komplikált is lehet. Ez a probléma azért merül fel, mert a modellek végtelenségét csak magyar nyelven tudjuk kifejteni. Mit tegyünk hát?
 
 We might try to formalize our reasoning about models, codifying the divide-and-conquer strategies that we used above. This approach, originally called \emph{semantic tableaux}, was developed in the 1950s by Evert Beth and Jaakko Hintikka. Their tableaux are now more commonly called \emph{truth trees}.
 
+Modellekkel kapcsolatos érvelésünket megpróbálhatunk formalizálni, és lekódolni az oszd meg és uralkodj stratégiát, úgy, ahogy azt korábban használtuk. Ezt a megközelítést az 1950-es években fejlesztette ki Evert Beth és Jaako Hintikka, és eredetileg úgy nevezték, hogy \emph{szemantikai táblázat}. Az általuk kitalált táblákat ma már \emph{igazság fáknak} nevezik.
+
 A more traditional approach is to consider deductive arguments as proofs. A \emph{proof system} consists of rules that formally distinguish between legitimate and illegitimate arguments--- without considering models or the meanings of the symbols. In the next chapter, we develop proof systems for SL and QL. 
+
+Megszokott módon a deduktív érveket bizonyítéknak fogjuk tekinteni. Olyan szabályokból áll a \emph{bizonyítási rendszer}, melyek formális szinten megkülönböztetik az érveket, és szétválasztják: legális, és illegális érv. Ezt mind úgy, hogy nem veszik számításba modelleket, és a szimbólumok jelentését. A következő fejezetben SL és QL típusokra fogunk bizonyítási rendszereket fogunk kidolgozni.
 
 %\section*{Summary of definitions}
 %\begin{itemize}
@@ -1014,23 +1026,34 @@ A more traditional approach is to consider deductive arguments as proofs. A \emp
 \problempart
 \label{pr.TorF1}
 Determine whether each sentence is true or false in the model given.
+
+Határozza meg a következő mondatokról, hogy igaz-e vagy hamis a magadott modellben.
 \begin{partialmodel}
-UD & \{Corwin, Benedict\}\\
-\extension{A} & \{Corwin, Benedict\}\\
-\extension{B} & \{Benedict\}\\
-\extension{N} & $\emptyset$\\
-\referent{c} & Corwin
+	UD & \{Corwin, Benedict\}\\
+	\extension{A} & \{Corwin, Benedict\}\\
+	\extension{B} & \{Benedict\}\\
+	\extension{N} & $\emptyset$\\
+	\referent{c} & Corwin
 \end{partialmodel}
+
+\begin{partialmodel}
+	UD & \{Corwin, Benedict\}\\
+	\extension{A} & \{Corwin, Benedict\}\\
+	\extension{B} & \{Benedict\}\\
+	\extension{N} & $\emptyset$\\
+	\referent{c} & Corwin
+\end{partialmodel}
+
 \begin{earg}
-\item $Bc$
-\item $Ac \eiff \enot Nc$
-\item $Nc \eif (Ac \eor Bc)$
-\item $\forall x Ax$
-\item $\forall x \enot Bx$
-\item $\exists x(Ax \eand Bx)$
-\item $\exists x(Ax \eif Nx)$
-\item $\forall x(Nx \eor \enot Nx)$
-\item $\exists x Bx \eif \forall x Ax$
+	\item $Bc$
+	\item $Ac \eiff \enot Nc$
+	\item $Nc \eif (Ac \eor Bc)$
+	\item $\forall x Ax$
+	\item $\forall x \enot Bx$
+	\item $\exists x(Ax \eand Bx)$
+	\item $\exists x(Ax \eif Nx)$
+	\item $\forall x(Nx \eor \enot Nx)$
+	\item $\exists x Bx \eif \forall x Ax$
 \end{earg}
 
 %PE fordítása vége
