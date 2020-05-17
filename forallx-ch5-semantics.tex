@@ -755,14 +755,29 @@ In order to show that it is invalid, we need to show that there is some model in
 	\referent{c}	& Bj\"ork
 \end{partialmodel}
 
+Annak érdekében, hogy bizonyítsuk, az érvelés helytelen, találnunk kell olyan modellt, amelynél a felvetések igazak, a következtetés pedig hamis. Építhetünk egy ilyen modellt szándékosan. Itt van egy módja ennek:
+\begin{partialmodel}
+	UD			& \{Bj\"ork\}\\
+	\extension{T}	& \{Bj\"ork\}\\
+	\extension{K_1}	& \{Bj\"ork\}\\
+	\extension{K_2}	& $\emptyset$\\
+	\extension{R}	& \{Bj\"ork\}\\
+	\referent{c}	& Bj\"ork
+\end{partialmodel}
+
 Similarly, we can show that a set of sentences is consistent by constructing a model in which all of the sentences are true.
 
+Hasonlóan, azt is megmutathatjuk, hogy adott állítások halmaza konzisztens, azáltal, hogy olyan modellt készítünk amelyben minden állítás igaz.
 
-
-\subsection{Reasoning about all models}
+\subsection*{Reasoning about all models}
+\subsection{Gondolkodás a modellekről}
 We can show that a sentence is \emph{not} a tautology just by providing one carefully specified model: a model in which the sentence is false. To show that something is a tautology, on the other hand, it would not be enough to construct ten, one hundred, or even a thousand models in which the sentence is true. It is only a tautology if it is true in \emph{every} model, and there are infinitely many models. This cannot be avoided just by constructing partial models, because there are infinitely many partial models.
 
+Megmutathatjuk, hogy egy állítás \emph{nem} tautológia, mindössze egyetlen körültekintően meghatározott modellel: egy olyan modellel, amelyben az állítás hamis. Ugyanakkor, hogy bizonyítsuk, hogy valami tautológia, nem lenne elegendő készítenünk tíz, száz vagy akár ezer olyan modellt, amelyben az állítás igaz. Csak akkor tautológia, hogyha igaz \emph{minden} modellre, és végtelenszámú modell van. Ezt nem lehet elkerülni részleges modellek készítésével, mert végtelenül sok részleges modell van.
+
 Consider, for example, the sentence $Raa\eiff Raa$. There are two logically distinct partial models of this sentence that have a 1-member UD. There are 32 distinct partial models that have a 2-member UD. There are 1526 distinct partial models that have a 3-member UD. There are 262,144 distinct partial models that have a 4-member UD. And so on to infinity. In order to show that this sentence is a tautology, we need to show something about all of these models. There is no hope of doing so by dealing with them one at a time.
+
+Vegyük például, az $Raa\eiff Raa$ állítást. Két olyan logikailag eltérő részleges modell létezik erre az állításra amelynek 1 tagú UD-je van. 32 olyan különböző részleges modell amelynek 2 tagú UD-je van. 1526 olyan különböző részleges modell amelynek 3 tagú UD-je van. 262 144 olyan különböző részleges modell amelynek 4 tagú UD-je van. És így tovább, a végtelenségig. Annak érdekében, hogy megmutassuk, hogy ez az állítás tautológia, az összes ilyen modellen bizonyítanunk kell. Reménytelen, hogy mindezt megtegyük, minden modellre, egyesével.
 
 Nevertheless, $Raa\eiff Raa$ is obviously a tautology. We can prove it with a simple argument:
 \begin{quote}
@@ -771,6 +786,12 @@ There are two kinds of models: those in which ${\langle}\referent{a},\referent{a
 \end{quote}
 This argument is valid, of course, and its conclusion is true. However, it is not an argument in QL. Rather, it is an argument in English \emph{about} QL; it is an argument in the metalanguage. There is no formal procedure for evaluating or constructing natural language arguments like this one. The imprecision of natural language is the very reason we began thinking about formal languages.
 
+Ettől függetlenül, a $Raa\eiff Raa$ nyilvánvalóan tautológia. Ezt egy egyszerű állítással igazolhatjuk:
+\begin{quote}
+\label{allmodels1}
+Két fajta modell létezik: azok amelyekben ${\langle}\referent{a},\referent{a}{\rangle}$ benne van $R$ kiterjedésében és azok amelyekben nem. Az első típusú modellben $Raa$ igaz; az ekvivalencia táblázat alapján pedig $Raa\eiff Raa$ szintén igaz. A második fajta modellben $Raa$ hamis, ebből következően $Raa\eiff Raa$ igaz. Mivel az állítás mindkét modell szerint igaz, és mivel minden modell besorolható a fentebb említett két kategóriába, $Raa\eiff Raa$ minden modell esetén igaz. Ebből adódóan pedig tautológia.
+\end{quote}
+Ez az érvelés természetesen hiteles, a következtetése pedig igaz. Azonban ez nem egy érv PL-ben. Sokkal inkább, ez egy magyar nyelvű érvelés a PL-\emph{ről}, egy metanyelvbeli állítás. Nincs hivatalos eljárásmód az olyan természetes nyelveken írt érvek kiértékelésére vagy felépítésére, mint ez. A természetes nyelvek pontatlansága az oka annak, hogy elkezdtünk gondolkodni egy formális nyelv használatáról.
 %GR fordítása vége
 
 %RA fordítása kezdet
