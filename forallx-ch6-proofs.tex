@@ -132,18 +132,28 @@ Most vegyük figyelembe az elimináló szabályt a konjukcióhoz. Mire vagy jogo
 
 When you have a conjunction on some line of a proof, you can use {\eand}E to derive either of the conjuncts. The {\eand}E rule requires only one sentence, so we write one line number as the justification for applying it.
 
+Ha konjunkció van egy bizonyítási sorban, használhatod {\eand}E-t, hogy levezesd bármelyik konjunktot. Az {\eand}E szabály csak egy mondatot igényel, ezért leírjuk az egyes sorszámot, hogy igazoljuk a használatát.
+
 Even with just these two rules, we can provide some proofs. Consider this argument.
+
+Csupán ezzel a két szabállyal már tudunk csinálni néhány bizonyítást.
+Fontold meg ezt az érvelést.
+
 \begin{earg}
 \item[] $[(A\eor B)\eif(C\eor D)] \eand [(E \eor F) \eif (G\eor H)]$
 \item[\therefore] $[(E \eor F) \eif (G\eor H)] \eand [(A\eor B)\eif(C\eor D)]$
 \end{earg}
 The main logical operator in both the premise and conclusion is conjunction. Since conjunction is symmetric, the argument is obviously valid. In order to provide a proof, we begin by writing down the premise. After the premises, we draw a horizontal line--- everything below this line must be justified by a rule of proof. So the beginning of the proof looks like this:
 
+A fő logikai operátor a feltevésben és a következtetésben a konjunkció. Mivel a konjunkció szimmetrikus, az érvelés természetesen érvényes lesz. A bizonyítás biztosításának érdekében, elkezdjük leírni az előfeltételeket. Az előfeltételek után vízszintes vonalat rajzolunk -- minden, ami a vonal alatt van, a bizonyítási szabályok alapján igazolva kell legyen. Tehát a bizonyítás kezdete így néz ki:
+
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
 \end{proof}
 
 From the premise, we can get each of the conjuncts by {\eand}E. The proof now looks like this:
+
+A kezdőfeltételtől kezdve, mindegyik konjunkciót megkaphatjuk {\eand}E-vel. A bizonyítás most így néz ki: 
 
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
@@ -152,6 +162,8 @@ From the premise, we can get each of the conjuncts by {\eand}E. The proof now lo
 \end{proof}
 
 The rule {\eand}I requires that we have each of the conjuncts available somewhere in the proof. They can be separated from one another, and they can appear in any order. So by applying the {\eand}I rule to lines 3 and 2, we arrive at the desired conclusion. The finished proof looks like this:
+
+Az {\eand}I szabályhoz szükséges, hogy az összes konjunkció elérhető legyen valahol a bizonyításban. Külön lehetnek egymástól és bármilyen sorrendben megjelenhetnek. Tehát, {\eand}I szabályt alkalmazva a 3-as és 2-es sorban, elérkezünk a kívánt következtetéshez. A befejezett bizonyítás így néz ki:
 
 \begin{proof}
 	\hypo{ab}{{[}(A\eor B)\eif(C\eor D){]} \eand {[}(E \eor F) \eif (G\eor H){]}}
@@ -162,6 +174,8 @@ The rule {\eand}I requires that we have each of the conjuncts available somewher
 \end{proof}
 
 This proof is trivial, but it shows how we can use rules of proof together to demonstrate the validity of an argument form. Also: Using a truth table to show that this argument is valid would have required a staggering 256 lines, since there are eight sentence letters in the argument.
+
+Ez a bizonyítás triviális, de megmutatja, hogy hogyan tudjuk a bizonyítás szabályait együtt használni ahhoz, hogy igazoljunk egy érvelési formát. Továbbá látszik, hogy igazságtáblát használva  ennek az érvelésnek a levezetéséhez megdöbbentően sok, 256 sort kellett volna használni, hiszen nyolc mondatbetű szerepelt az érvelésben.
 
 %When we defined a wff, we did not allow for conjunctions with more than two conjuncts. If we had done so, then we could define a more general version of the rules of proof for conjunction.
 
