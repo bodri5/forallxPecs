@@ -566,11 +566,19 @@ Nevezzük ezt a szabályt Dilemmának (DIL). Úgy tűnhet, mintha lenne néhány
 
 \script{A}, \script{B}, and \script{C} are meta-variables. They are not symbols of SL, but stand-ins for arbitrary sentences of SL. So this is not, strictly speaking, a proof in SL. It is more like a recipe. It provides a pattern that can prove anything that the Dilemma rule can prove, using only the basic rules of SL. This means that the Dilemma rule is not really necessary. Adding it to the list of basic rules would not allow us to derive anything that we could not derive without it.
 
+\script{A}, \script{B}, és \script{C} metaváltozók. Ezek nem KL szimbólumai, hanem KL tetszőleges mondatainak helyettesítései. Vagyis ez tulajdonképpen nem egy bizonyítás KL-ben. Inkább olyan, mint egy recept. Ad egy mintát, ami tud bizonyítani mindent amit a Dilemma szabály is tud, KL alapszabályait felhasználva. Ez azt jelenti, hogyy a Dilemma szabály igazán nem is szükséges. Hozzáadva az alap szabályok listájához nem engedné meg nekünk azt, hogy származtassunk akármit amit nem tudnánk származtathatni nélküle.
+
 Nevertheless, the Dilemma rule would be convenient. It would allow us to do in one line what requires eleven lines and several nested subproofs with the basic rules. So we will add it to the proof system as a derived rule.
+
+Azonban a Dilemma szabály kényelmes lenne. Megengedné nekünk hogy egy sorból megvalósítsuk azt amit tizenegy sor és számos beágyazott albizonyítás igényel az alap szabályokkal. Vagyis hozzáadjuk a bizonyítási rendszerhez mint származtatott szabály.
 
 A \define{derived rule} is a rule of proof that does not make any new proofs possible. Anything that can be proven with a derived rule can be proven without it. You can think of a short proof using a derived rule as shorthand for a longer proof that uses only the basic rules. Anytime you use the Dilemma rule, you could always take ten extra lines and prove the same thing without it.
 
+Egy \define{származtatott szabály} egy bizonyítási szabály ami nem tesz lehetővé új bizonyításokat. Akármi ami bizonyítható származtatott szabállyal, az bizonyítható anélkül is. Gondolhatunk egy rövid bizonyításra, ami származtatott szabályt használ, mint rövidítése egy hosszab bizonyításnak, ami csak az alapvető szabályokat használja. Akármikor, amikor a Dilemma szabályt használod, mindig vehetsz 10 extra sort és bizonyíthatod anélkül is.
+
 For the sake of convenience, we will add several other derived rules. One is \emph{modus tollens} (MT).
+
+A kényelmesség kedvéért, hozzáadunk több származtatott szabályt. Egyik a \emph{modus tollens} (MT).
 
 \begin{proof}
 	\have[m]{ab}{\script{A}\eif\script{B}}
@@ -580,7 +588,11 @@ For the sake of convenience, we will add several other derived rules. One is \em
 
 We leave the proof of this rule as an exercise. Note that if we had already proven the MT rule, then the proof of the DIL rule could have been done in only five lines.
 
+Ennek a szabálynak a bizonyítását gyakorlásnak hagyjuk. Jegyezzük meg, ha már bebizonyítottuk az MT szabályt, akkor a DIL szabály bizonyítása megoldható csupán öt sorból.
+
 We also add hypothetical syllogism (HS) as a derived rule. We have already given a proof of it on p.~\pageref{HSproof}.
+
+Hozzáadjuk a láncszabályt is (hipotetikus szillogizmus, HS), mint származtatott szabály. Már van hozzá egy megadott bizonyításunk a \pageref{HSproof}. oldalon.
 
 \begin{proof}
 	\have[m]{ab}{\script{A}\eif\script{B}}
@@ -589,11 +601,17 @@ We also add hypothetical syllogism (HS) as a derived rule. We have already given
 \end{proof}
 
 
-\section{Rules of replacement}
+\section*{Rules of replacement}
+\section{Helyettesítési szabályok}
 %\nix{could be beefier}
 Consider how you would prove this argument: $F\eif(G\eand H)$, \therefore\ $F\eif G$
 
+%\nix{lehetne nagyobb}
+Gondoljunk bele, hogyan tudnánk bebizonyítani ezt az állítást: $F\eif(G\eand H)$, \therefore\ $F\eif G$
+
 Perhaps it is tempting to write down the premise and apply the {\eand}E rule to the conjunction $(G \eand H)$. This is impermissible, however, because the basic rules of proof can only be applied to whole sentences. We need to get $(G \eand H)$ on a line by itself. We can prove the argument in this way:
+
+Talán csábító lehet leírni a feltételt és vonatkoztatni a {\eand}E szabályt a $(G \eand H)$ kapcsolathoz. Ez azonban megengedhetetlen, mert a bizonyítás alap szabályait csak egész momdatokra lehet alkalmazni. Meg kell kapnunk $(G \eand H)$-t egy saját sorba. Így tudjuk ezt az érvet bizonyítani:
 
 %HT fordítása vége
 
