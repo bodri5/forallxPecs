@@ -610,22 +610,47 @@ It is tempting to say that sentence \ref{pickUDrose} should be translated as $\f
 
 %OM fordítása vége
 
-%JT fordítása kezdet
+%JT fordítás kezdete
+%\begin{earg}
+%\item[\ex{pickUDrose}] Every rose has a thorn.
+%\item[\ex{pickUDrose}] Minden rózsának van tüskéje.
+%\end{earg}
+
+
+%It is tempting to say that sentence \ref{pickUDrose} should be translated as $\forall x(Rx \eif Tx)$. If the UD contains all roses, that would be correct. Yet if the UD is merely \emph{things on my kitchen table}, then $\forall x(Rx \eif Tx)$ would only mean that every rose on my kitchen table has a thorn. If there are no roses on my kitchen table, the sentence would be trivially true.
+
+%Helytálló lehet azt mondani, hogy a \ref{pickUDrose} mondat a következőképpen értelmezhető: $\forall x(Rx \eif Tx)$. Ha az UD tartalmazza az összes rózsát. akkor ez helyes lenne. Viszont ha az UD csupán a konyhaasztalomon lévő dolgokra vonatkozik, akkor $\forall x(Rx \eif Tx)$ csupán azt jelentené, hogy a konyhaasztalomon lévő minden rózsának van tüskéje. Ha nincsenek rózsák a konyhaasztalomon, a mondat triviálisan igaz lenne.
 
 The universal quantifier only ranges over members of the UD, so we need to include all roses in the UD in order to translate sentence \ref{pickUDrose}. We have two options. First, we can restrict the UD to include all roses but \emph{only} roses. Then sentence \ref{pickUDrose} becomes $\forall x Tx$. This means that everything in the UD has a thorn; since the UD just is the set of roses, this means that every rose has a thorn. This option can save us trouble if every sentence that we want to translate using the symbolization key is about roses.
 
+Az univerzális kvantorok csupán az UD tagjaira terjednek ki, szóval bele kell számítanunk az összes rózsát a UD-ba ahhoz, hogy le tudjuk fordítani a \ref{pickUDrose}. mondatot. Két lehetőségünk van. Az első, lekorlátozhatjuk az UD-t, hogy az összes rózsát tartalmazza, de \emph{csak} rózsákat. Ebben az esetben a \ref{pickUDrose}. mondat $\forall x Tx$ lesz. Ez azt jelenti, hogy mindennek ami az UD-ban van, van tüskéje; mivel az UD csak rózsát tartalmaz, ezért ez azt jelenti, hogy minden rózsának van tüskéje. Ez a lehetőség megkímél minket a problémáktól, ha minden mondat, amit értelmezni szeretnénk a szimbolizációs kulcs segítségével, a rózsákról szól.
+
 Second, we can let the UD contain things besides roses: rhododendrons, rats, rifles, and whatall else. Then sentence \ref{pickUDrose} must be $\forall x(Rx \eif Tx)$.
+
+A második lehetőségünk, hogy megengedjük, hogy az UD tartalmazzon más dolgokat is a rózsákon kívül: Havasszépét, patkányokat, puskákat, bármi mást. Így a \ref{pickUDrose}. mondat $\forall x(Rx \eif Tx)$ kell, hogy legyen.
 
 If we wanted the universal quantifier to mean \emph{every} thing, without restriction, then we might try to specify a UD that contains everything. This would lead to problems. Does `everything' include things that have only been imagined, like fictional characters? On the one hand, we want to be able to symbolize arguments about Hamlet or Sherlock Holmes. So we need to have the option of including fictional characters in the UD. On the other hand, we never need to talk about every thing that does not exist. That might not even make sense. There are philosophical issues here that we will not try to address. We can avoid these difficulties by always specifying the UD. For example, if we mean to talk about plants, people, and cities, then the UD might be `living things and places.'
 
+Ha azt akarjuk, hogy az univerzális kvantorok \emph{minden} dolgot jelentsenek, korlátozások nélkül, akkor megpróbálhatunk meghatározni egy UD-t, ami mindent tartalmaz. Ez problémákhoz vezetne. A „mindenbe” beletartoznának olyan dolgok is, amiket csak elképzeltünk, mint például kitalált karakterek? Másrészről, azt akarjuk, hogy a Hamletről és Sherlock Holmesról szóló érveket szimbolizálhassuk. Tehát lehetőséget kell teremtenünk arra, hogy a kitalált karaktereket az UD részévé tegyük. Másrészről, nem szükséges minden olyan dologról beszélnünk, ami nem létezik. Talán nincs is értelme. Ezek filozófiai kérdések, amikkel nem fogunk foglalkozni. Elkerülhetjük ezeket a problémákat azzal, hogy meghatározzuk az UD-t. Például ha a növényekról, emberekről, városokról szeretnénk beszélni, akkor az UD lehetne „élő dolgok és helyek.”
+
 Suppose that we want to translate sentence \ref{pickUDrose} and, with the same symbolization key, translate these sentences:
+
+Tegyük fel, hogy értelmezni akarjuk a \ref{pickUDrose} mondatot és ugyanazzal a szimbolizációs kulccsal az alábbi mondatokat is értelmezni szeretnénk:
 
 \begin{earg}
 \item[\ex{pickUDhair}] Esmerelda has a rose in her hair.
 \item[\ex{pickUDcross}] Everyone is cross with Esmerelda.
 \end{earg}
 
+\begin{earg}
+\item[\ex{pickUDhair}] Esmereldának van egy rózsa a hajában.
+\item[\ex{pickUDcross}] Mindenki haragszik Esmeraldára.
+\end{earg}
+
 We need a UD that includes roses (so that we can symbolize sentence \ref{pickUDrose}) and a UD that includes people (so we can translate sentence \ref{pickUDhair}--\ref{pickUDcross}.) Here is a suitable key:
+
+Szükségünk van egy UD-ra, ami tartalmazza a rózsákat (azért, hogy szimbolizálni tudjuk a \ref{pickUDrose} mondatot) és egy UD-ra, ami tartalmazza az embereket(azért, hogy értelmezni tudjuk a 21-22. mondatot.) Itt egy alkalmazható kulcs:
+
 \begin{ekey}
 \item[UD:] people and plants
 \item[Px:] $x$ is a person.
@@ -636,9 +661,21 @@ We need a UD that includes roses (so that we can symbolize sentence \ref{pickUDr
 \item[e:] Esmerelda
 \end{ekey}
 
+\begin{ekey}
+\item[UD:] emberek és növények 
+\item[Px:] $x$ egy személy.
+\item[Rx:] $x$ egy rózsa.
+\item[Tx:] $x$-nek tüskéje van.
+\item[Cxy:] $x$ haragszik $y$-ra. 
+\item[Hxy:] $x$-nek $y$ van a hajában.
+\item[e:] Esmerelda 
+\end{ekey}
+
 Since we do not have a predicate that means `$\ldots$ has a rose in her hair', translating sentence \ref{pickUDhair} will require paraphrasing. The sentence says that there is a rose in Esmerelda's hair; that is, there is something which is both a rose and is in Esmerelda's hair. So we get: $\exists x(Rx \eand Hex)$.
 
-%JT fordítása vége
+Mivel nincs egy predikátumunk, ami azt jelenti, hogy „$\ldots$-nak van egy rózsa a hajában”, ezért a \ref{pickUDhair}. mondat értelmezése újrafogalmazást igényel. A mondat arról szól, hogy egy rózsa van Esmerelda hajában; azaz van valami, ami egyszerre rózsa és Esmeralda hajában is van. Szóval ezt kapjuk: $\exists x(Rx \eand Hex)$.
+
+%JT fordítás vége
 
 %MB fordítása kezdet
 
