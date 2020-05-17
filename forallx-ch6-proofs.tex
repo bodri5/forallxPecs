@@ -1600,11 +1600,15 @@ Provide a proof of the argument about Billy on p.~\pageref{surgeon2}.
 \label{pr.BarbaraEtc.proof1}
 Look back at Part \ref{pr.BarbaraEtc} on p.~\pageref{pr.BarbaraEtc}. Provide proofs to show that each of the argument forms is valid in QL.
 
+Lásd \ref{pr.BarbaraEtc} rész a \pageref{pr.BarbaraEtc}. oldalon. Bizonyítsa be, hogy az argumentumok mindegyik változata érvényes a PL-ben.
 
 
 \problempart
 \label{pr.BarbaraEtc.proof2}
 Aristotle and his successors identified other syllogistic forms. Symbolize each of the following argument forms in QL and add the additional assumptions `There is an $A$' and `There is a $B$.' Then prove that the supplemented arguments forms are valid in QL.
+
+M rész Arisztotelész és utódjai egyéb szillogisztikus formulákat is azonosítottak. Jelöljük a kötvetkező argumentumok mindegyikét a PL-ben és egészítsük ki azzal a feltevéssel, hogy „van egy $A$” és „van egy $B$”. Ez után bizonyítsuk be, hogy a kiegészített érvelések helyesek a PL-ben.
+
 
 \begin{description}
 \item[Darapti:] All $A$s are $B$s. All $A$s are $C$s.
@@ -1623,10 +1627,29 @@ Aristotle and his successors identified other syllogistic forms. Symbolize each 
 	\therefore\  Some $C$ is not $A$.
 \end{description}
 
+\begin{description}
+\item[Darapti:] Minden $A$ az $B$. Minden $A$ az $C$.
+	\therefore\  Néhány $B$ az $C$.
+\item[Felapton:] Egyik $B$ sem $C$. Minden $A$ az $B$.
+	\therefore\  Néhány $A$ az nem $C$.
+\item[Barbari:] Minden $B$ az $C$. Minden $A$ az $B$.
+	\therefore\  Néhány $A$ az $C$.
+\item[Camestros:] Minden $C$ az $B$. Egyik $A$ sem $B$.
+	\therefore\  Néhány $A$ az nem $C$.
+\item[Celaront:] Egyik $B$ sem $C$. Minden $A$ az $B$.
+	\therefore\  Néhány $A$ az nem $C$.
+\item[Cesaro:] Egyik $C$ sem $B$. Minden $A$ az $B$.
+	\therefore\  Néhány $A$ az nem $C$.
+\item[Fapesmo:] Minden $B$ az $C$. Egyik $A$ sem $B$.
+	\therefore\  Néhány $C$ az nem $A$.
+\end{description}
 
 
 \problempart
 Provide a proof of each claim.
+
+N rész Bizonyítsa mindegyik állítást.
+
 \begin{earg}
 \item $\forall x \forall y Gxy\vdash\exists x Gxx$
 \item $\forall x \forall y (Gxy \eif Gyx) \vdash \forall x\forall y (Gxy \eiff Gyx)$
@@ -1641,6 +1664,9 @@ Provide a proof of each claim.
 
 \problempart
 Show that each pair of sentences is provably equivalent.
+
+O rész Mutassa meg, hogy mindegyik mondatpár bizonyíthatóan ekvivalens.
+
 \begin{earg}
 \item $\forall x (Ax\eif \enot Bx)$, $\enot\exists x(Ax \eand Bx)$
 \item $\forall x (\enot Ax\eif Bd)$, $\forall x Ax \eor Bd$
@@ -1651,6 +1677,9 @@ Show that each pair of sentences is provably equivalent.
 
 \problempart
 Show that each of the following is provably inconsistent.
+
+P rész Mutassa meg, hogy a következők mindegyike bizonyíthatóan inkonzisztens.
+
 \begin{earg}
 \item \{$Sa\eif Tm$, $Tm \eif Sa$, $Tm \eand \enot Sa$\}
 \item \{$\enot\exists x Rxa$, $\forall x \forall y Ryx$\}
@@ -1664,13 +1693,26 @@ Show that each of the following is provably inconsistent.
 \problempart
 \label{pr.likes}
 Write a symbolization key for the following argument, translate it, and prove it:
+
+* Q rész Írjon fel egy szimbolizációs kulcsot a következő érvelésre, majd fordítsa le és bizonyítsa:
+
 \begin{quote}
 There is someone who likes everyone who likes everyone that he likes. Therefore, there is someone who likes himself.
 \end{quote}
 
+\begin{quote}
+Van valaki, aki szeret mindenkit, aki szeret mindenkit, akit ő szeret. Tehát, van valaki aki önmagát szereti.
+\end{quote}
+
+
+
+
 \problempart
 \label{pr.identity}
 Provide a proof of each claim.
+
+R rész Bizonyítsa mindegyik állítást.
+
 \begin{earg}
 \item $\{Pa \eor Qb, Qb \eif b=c, \enot Pa\}\vdash Qc$
 \item $\{m=n \eor n=o, An\}\vdash Am \eor Ao$
@@ -1689,10 +1731,15 @@ Provide a proof of each claim.
 \problempart
 Look back at Part \ref{pr.QLarguments} on p.~\pageref{pr.QLarguments}. For each argument: If it is valid in QL, give a proof. If it is invalid, construct a model to show that it is invalid.
 
+S rész Lásd \ref{pr.QLarguments} rész a \pageref{pr.QLarguments}. oldalon. Minden érvelésre: Ha érvényes PL-ben, bizonyítsa. Ha nem igaz, akkor szerkesszen olyan modellt, ami megmutatja, hogy helytelen.
+
 \solutions
 \problempart
 \label{pr.QLequivornot}
 For each of the following pairs of sentences: If they are logically equivalent in QL, give proofs to show this. If they are not, construct a model to show this.
+
+* T rész  Minden mondatpárra: Ha logikailag ekvivalensek PL-ben, akkor bizonyítsa is be. Ha nem ekvivalensek, akkor szerkesszen modellt, ami ezt megmutatja.
+
 \begin{earg}
 \item $\forall x Px \eif Qc$, $\forall x (Px \eif Qc)$
 \item $\forall x Px \eand Qc$, $\forall x (Px \eand Qc)$
@@ -1706,6 +1753,9 @@ For each of the following pairs of sentences: If they are logically equivalent i
 \problempart
 \label{pr.QLvalidornot}
 For each of the following arguments: If it is valid in QL, give a proof. If it is invalid, construct a model to show that it is invalid.
+
+* U rész Minden alábbi kifejezésre: Ha PL-ben helyes, bizonyítsa. Ha helytelen, szerkesszen modellt, mely megmutatja, hogy helytelen.
+
 \begin{earg}
 \item $\forall x\exists y Rxy$, \therefore\ $\exists y\forall x Rxy$
 \item $\exists y\forall x Rxy$, \therefore\ $\forall x\exists y Rxy$
@@ -1721,14 +1771,18 @@ For each of the following arguments: If it is valid in QL, give a proof. If it i
 
 
 
-
-
-
 \problempart
 \begin{earg}
 \item If you know that $\script{A}\vdash\script{B}$, what can you say about $(\script{A}\eand\script{C})\vdash\script{B}$? Explain your answer.
 \item If you know that $\script{A}\vdash\script{B}$, what can you say about $(\script{A}\eor\script{C})\vdash\script{B}$? Explain your answer.
 \end{earg}
+
+\problempart
+\begin{earg}
+\item Ha tudjuk, hogy  $\script{A}\vdash\script{B}$, akkor mit mondhatunk arról, hogy $(\script{A}\eand\script{C})\vdash\script{B}$? Válaszát magyarázza!
+\item Ha tudjuk, hogy  $\script{A}\vdash\script{B}$, akkor mit mondhatunk arról, hogy $(\script{A}\eor\script{C})\vdash\script{B}$? Válaszát magyarázza!
+\end{earg}
+
 
 
 %BB fordítása vége
