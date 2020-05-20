@@ -677,20 +677,30 @@ Mivel nincs egy predikátumunk, ami azt jelenti, hogy „$\ldots$-nak van egy r�
 
 %JT fordítás vége
 
-%MB fordítása kezdet
+%MBM fordítása kezdet
 
 It is tempting to translate sentence \ref{pickUDcross} as $\forall x Cxe$. Unfortunately, this would mean that every member of the UD is cross with Esmerelda--- both people and plants. It would mean, for instance, that the rose in Esmerelda's hair is cross with her. Of course, sentence \ref{pickUDcross} does not mean that.
 
+Csábító a \ref{pickUDcross}. mondatot így lefordítani: $\forall x Cxe$. Sajnálatos módon ez azt jelenti, hogy UD minden tagja haragszik Esmereldára -- emberek és növények egyaránt. Ez azt jelentené péládul, hogy a rózsa Esmerelda hajában haragszik rá. Természetesen, \ref{pickUDcross}. mondat nem ezt jelenti.
+
 `Everyone' means every person, not every member of the UD. So we can paraphrase sentence \ref{pickUDcross} as, `Every person is cross with Esmerelda.' We know how to translate sentences like this: $\forall x(Px \eif Cxe)$
+
+„Mindenki” minden embert jelenti, nem az UD minden tagját. Tehát a \ref{pickUDcross}. mondatot úgy fogalmazhatjuk meg,hogy  „Minden ember haragszik Esmereldára.” Tudjuk, hogy ezt így kell lefordítani: $\forall x(Px \eif Cxe)$
 
 In general, the universal quantifier can be used to mean `everyone' if the UD contains only people. If there are people and other things in the UD, then `everyone' must be treated as `every person.'
 
+Általában, az univerzális kvantor azt jelenti „mindenki” ha az UD csak embereket tartalmaz. Ha embereket és más dolgokat is tartalmaz az UD, a „mindenkit” úgy kell kezelni, mint „minden embert.”
 
 
 
 
-\subsection{Translating pronouns}
+
+\subsection*{Translating pronouns}
+\subsection{Névmások fordítása}
 When translating to QL, it is important to understand the structure of the sentences you want to translate. What matters is the final translation in QL, and sometimes you will be able to move from an English language sentence directly to a sentence of QL. Other times, it helps to paraphrase the sentence one or more times. Each successive paraphrase should move from the original sentence closer to something that you can translate directly into QL.
+
+
+A PL-re való fordításnál, fontos megérteni a lefordítandó mondatok szerkezetét. A végső PL fordítás számít, és néha a magyar nyelvű mondatról közvetlenül áttérhetünk a PL mondatra. Máskor segíthet egy mondat egyszeri vagy többszöri körülírása. Minden sikeres körülírással közelebb kell jutni az eredeti mondattól egy olyan megfogalmazáshoz, amit lefordíthatunk PL-re.
 
 For the next several examples, we will use this symbolization key:
 
@@ -701,6 +711,15 @@ For the next several examples, we will use this symbolization key:
 \item[l:] Lemmy
 \end{ekey}
 
+A következő pár pédában ezt a szimbolizációs kulcsot fogjuk használni:
+
+\begin{ekey}
+\item[UD:] ember
+\item[Gx:] $x$ tud gitározni.
+\item[Rx:] $x$ egy rocksztár.
+\item[l:] Lemmy
+\end{ekey}
+
 Now consider these sentences:
 
 \begin{earg}
@@ -708,11 +727,26 @@ Now consider these sentences:
 \item[\ex{pronoun2}] If a person can play guitar, then he is a rock star.
 \end{earg}
 
+Most nézzük ezeket a mondatokat:
+
+\begin{earg}
+\item[\ex{pronoun1}] Ha Lemmy tud gitározni, akkor ő egy rocksztár.
+\item[\ex{pronoun2}] Ha egy ember tud gitározni, akkor ő egy rocksztár.
+\end{earg}
+
 Sentence \ref{pronoun1} and sentence \ref{pronoun2} have the same consequent (`$\ldots$ he is a rock star'), but they cannot be translated in the same way. It helps to paraphrase the original sentences, replacing pronouns with explicit references.
+
+A \ref{pronoun1}. és a \ref{pronoun2}. mondatnak ugyan az a következtetése („$\ldots$ ő egy rocksztár”), de nem fordíthatjuk ugyanúgy. Segít az eredeti mondat átfogalmazásában, ha a névmásokat kifejezett hivatkozásokra cseréljük.
 
 Sentence \ref{pronoun1} can be paraphrased as, `If Lemmy can play guitar, then \emph{Lemmy} is a rockstar.' This can obviously be translated as $Gl \eif Rl$.
 
-%MB fordítása vége
+A \ref{pronoun1}. mondat átfogalmazható így, „Ha Lemmy tud gitározni, akkor \emph{Lemmy} egy rocksztár.” Ezt le tudjuk írni így $Gl \eif Rl$.
+
+%Sentence \ref{pronoun2} must be paraphrased differently: `If a person can play guitar, then \emph{that person} is a rock star.' This sentence is not about any particular person, so we need a variable. Translating halfway, we can paraphrase the sentence as, `For any person $x$, if $x$ can play guitar, then $x$ is a rockstar.' Now this can be translated as $\forall x (Gx \eif Rx)$. This is the same as, `Everyone who can play guitar is a rock star.'
+
+%A \ref{pronoun2}. mondatot máshogy kell megfogalmazni: `Ha egy ember tud gitározni, akkor \emph{ez az ember} egy rocksztár.' Ez a mondat nem konkrét személyről szól, tehát változóra van szükségünk. A fordítás felénél, körülírhatjuk a mondatot úgy, hogy `Bárki $x$, ha $x$ tud gitározni, akkor $x$ egy rocksztár.' Most le tudjuk fordítani úgy, hogy $\forall x (Gx \eif Rx)$. Ez ugyanaz mint, `Mindenki aki tud gitározni, egy rocksztár.'
+
+%MBM fordítása vége
 
 %PR fordítása kezdet
 
