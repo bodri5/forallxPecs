@@ -183,8 +183,11 @@ Ez a bizonyítás triviális, de megmutatja, hogy hogyan tudjuk a bizonyítás s
 
 %VB fordítása kezdet
 
-\subsection{Disjunction}
+\subsection*{Disjunction}
+\subsection{Diszjunkció}
 If $M$ were true, then $M \eor N$ would also be true. So the disjunction introduction rule ({\eor}I) allows us to derive a disjunction if we have one of the two disjuncts:
+
+Ha $M$ igaz lenne, akkor az $M \eor N$ is igaz lenne. Szóval a diszjunkciót bemutató szabály ({\eor}I) megengedi, hogy származtassunk egy diszjunkciót ha rendelkezésünkre áll egy a két lenti esetből:
 
 \begin{proof}
 	\have[m]{a}{\script{A}}
@@ -194,6 +197,8 @@ If $M$ were true, then $M \eor N$ would also be true. So the disjunction introdu
 
 Notice that \script{B} can be \emph{any} sentence whatsoever. So the following is a legitimate proof:
 
+Vegyük észre, hogy \script{B} \emph{bármilyen} kijelentés lehet. Szóval a következő egy igazolt bizonyítás:
+
 \begin{proof}
 	\hypo{m}{M}
 	\have{mmm}{M \eor ([(A\eiff B) \eif (C \eand D)] \eiff [E \eand F])}\oi{m}
@@ -201,9 +206,15 @@ Notice that \script{B} can be \emph{any} sentence whatsoever. So the following i
 
 It may seem odd that just by knowing $M$ we can derive a conclusion that includes sentences like $A$, $B$, and the rest--- sentences that have nothing to do with $M$. Yet the conclusion follows immediately by {\eor}I. This is as it should be: The truth conditions for the disjunction mean that, if \script{A} is true, then $\script{A}\eor \script{B}$ is true regardless of what \script{B} is. So the conclusion could not be false if the premise were true; the argument is valid.
 
+Furcsának tűnhet, hogy csak azért mert ismerjük $M$-et olyan konklúzióra következtethetünk, melyek tartalmaznak dolgokat mint $A$, $B$, stb. -- kijelentéseket, amelyeknek semmi közük $M$-hez. Mégis, a konklúziót közvetlenül egy {\eor}I követi. Ez, ahogyan lennie kell: Az igazság feltételei a diszjunkcióhoz azt jelentik, hogy ha \script{A} igaz, akkor $\script{A}\eor \script{B}$ is igaz, függetlenül attól, hogy \script{B} milyen. Szóval a konklúzió nem lehet hamis ha a premissza igaz volt; az bizonyítás helyes.
+
 Now consider the disjunction elimination rule. What can you conclude from $M \eor N$? You cannot conclude $M$. It might be $M$'s truth that makes $M \eor N$ true, as in the example above, but it might not. From $M \eor N$ alone, you cannot conclude anything about either $M$ or $N$ specifically. If you also knew that $N$ was false, however, then you would be able to conclude $M$.
 
+Most gondoljuk át a diszjunkciós kiküszöbölés szabályt. Mit tudunk következtetni $M \eor N$-ből? Nem következtethetünk $M$-et. Lehetséges, hogy $M$ igazságértéke az ami igazzá teszi $M \eor N$-t, csak mint a fenti példában, de lehetséges, hogy nem. Egyedül $M \eor N$-ből, nem következtethetünk semmi specifikusra  $M$-ről vagy $N$-ről. Ha azonban tudtuk volna, hogy $N$ hamis, akkor mégis következtethettünk volna $M$-re.
+
 This is just disjunctive syllogism, it will be the disjunction elimination rule ({\eor}E).
+
+Ez nem más, mint a diszjunktív szillogizmus, ez lesz a diszjunkciós kiküszöbölési szabály. ({\eor}E).
 \begin{multicols}{2}
 \begin{proof}
 	\have[m]{ab}{\script{A}\eor\script{B}}
@@ -219,14 +230,19 @@ This is just disjunctive syllogism, it will be the disjunction elimination rule 
 
 \end{multicols}
 
-\subsection{Conditional}
+\subsection*{Conditional}
+\subsection{Implikáció}
 
 Consider this argument:
+
+Gondoljuk át a következő érvelést:
 \begin{earg}
 \item[] $R \eor F$
 \item[\therefore] $\enot R \eif F$
 \end{earg}
 The argument is certainly a valid one. What should the conditional introduction rule be, such that we can draw this conclusion?
+
+Az érvelés bizonyosan igaz. Milyennek kellene lennie az implikáció bevezető szabályának, hogy erre a következtetésre juthassunk?
 
 %VB fordítása vége
 
