@@ -987,6 +987,7 @@ This definition follows the same structure as the definition of a wff for QL, so
 
 
 \subsection{Truth}
+\subsection{Igazság}
 
 Consider a simple sentence like $\forall xPx$. By part 7 in the definition of satisfaction, this sentence is satisfied if $a[\Omega|x]$ satisfies $Px$ in \model{M} for every $\Omega$ in the UD. By part 1 of the definition, this will be the case if every $\Omega$ is in the extension of $P$. Whether $\forall xPx$ is satisfied does not depend on the particular variable assignment $a$. If this sentence is satisfied, then it is true. This is a formalization of what we have said all along: $\forall xPx$ is true if everything in the UD is in the extension of $P$.
 
@@ -994,16 +995,24 @@ The same thing holds for any sentence of QL. Because all of the variables are bo
 
 %PG fordítása vége
 
-%ML fordítása kezdet
-
 Truth in QL is \emph{truth in a model}. Sentences of QL are not flat-footedly true or false as mere symbols, but only relative to a model. A model provides the meaning of the symbols, insofar as it makes any difference to truth and falsity.
 
+Az igazság a PL-ben az \emph{igazság egy modellben}. A PL mondatai önmagukban mint szimbólumok nem igazak vagy hamisak, csakis egy bizonyos modellhez viszonyítva. A modell adja meg a szimbólumok jelentését, legalábbis az igazság és a hamisság közötti különbség tekintetében. 
 
 
 \subsection{Reasoning about all models (reprise)}
+\subsection{Minden modellről való érvelés (újra)}
 At the end of section \ref{sec.UsingModels}, we were stymied when we tried to show that $\forall x(Rxx\eif Rxx)$ is a tautology. Having defined satisfaction, we can now reason in this way:
+
+\Aref{sec.UsingModels}. fejezet végén megtorpantunk, amikor azt próbáltuk bizonyítani, hogy $\forall x(Rxx\eif Rxx)$ tautológia. A kielégítés definíciója után így érvelhetünk:
+
 \begin{quote}
 Consider some arbitrary model \model{M}. Now consider an arbitrary member of the UD; for the sake of convenience, call it $\Omega$. It must be the case either that $\langle\Omega,\Omega\rangle$ is in the extension of $R$ or that it is not. If $\langle\Omega,\Omega\rangle$ is in the extension of $R$, then $Rxx$ is satisfied by a variable assignment that assigns $\Omega$ to $x$ (by part 1 of the definition of  {satisfaction}); since the consequent of $Rxx\eif Rxx$ is satisfied, the conditional is satisfied (by part 5). If $\langle\Omega,\Omega\rangle$ is not in the extension of $R$, then $Rxx$ is not satisfied by a variable assignment that assigns $\Omega$ to $x$ (by part 1); since antecedent of $Rxx\eif Rxx$ is not satisfied, the conditional is satisfied (by part 5). In either case, $Rxx\eif Rxx$ is satisfied. This is true for any member of the UD, so $\forall x(Rxx \eif Rxx)$ is satisfied by any truth value assignment (by part 7). So $\forall x(Rxx \eif Rxx)$ is true in \model{M} (by the definition of {truth}). This argument holds regardless of the exact UD and regardless of the exact extension of $R$, so $\forall x(Rxx \eif Rxx)$ is true in any model. Therefore, it is a tautology.
+\end{quote}
+
+\begin{quote}
+Vegyünk egy tetszőleges \model{M} modellt. Most vegyük az univerzum tetszőleges elemét; az egyszerűség kedvéért nevezzük $\Omega$-nak. Muszáj, hogy $\langle\Omega,\Omega\rangle$ vagy $R$ kiterjedésének része legyen, vagy annak ne legyen része. Ha $\langle\Omega,\Omega\rangle$  $R$ kiterjedésének része, akkor $Rxx$ ki van elégítve egy változóhozzárendeléssel, ami $x$-hez $\Omega$-t rendeli (a kielégítés definíciójának 1. része miatt). Mivel $Rxx\eif Rxx$ következménye ki van elégítve, az implikáció is ki van elégítve (az 5. rész miatt).
+Ha $\langle\Omega,\Omega\rangle$  $R$ kiterjedésének nem része, akkor $Rxx$ nincs kielégítve azon változóhozzárendeléssel, ami $x$-hez $\Omega$-t rendeli (az 1. rész miatt). Mivel $Rxx\eif Rxx$ előfeltétele nincs kielégítve, az implikáció ki van elégítve (az 5. rész miatt). Mindkét esetben $Rxx\eif Rxx$ ki van elégítve. Ez igaz az univerzum minden elemére, ezért $\forall x(Rxx \eif Rxx)$ ki van elégítve minden igazságérték-hozzárendelésre (a 7. rész miatt). Vagyis $\forall x(Rxx \eif Rxx)$ igaz az \model{M} modellben (az igazság definíciója alapján). Ez az érvelés helyes attól függetlenül, hogy pontosan milyen is az univerzum, és mi $R$ kiterjedése, ezért $\forall x(Rxx \eif Rxx)$ igaz bármilyen modellben. Tehát ez egy tautológia.
 \end{quote}
 
 Giving arguments about all possible models typically requires clever combination of two strategies:
@@ -1012,7 +1021,6 @@ Giving arguments about all possible models typically requires clever combination
 
 2. Consider an arbitrary object as a way of showing something more general. In the argument above, it was crucial that $\Omega$ was just some arbitrary member of the UD. We did not assume anything special about it. As such, whatever we could show to hold of $\Omega$ must hold of every member of the UD--- if we could show it for $\Omega$, we could show it for anything. In the same way, we did not assume anything special about \model{M}, and so whatever we could show about \model{M} must hold for all models.
 
-%ML fordítása vége
 
 %PE fordítása kezdet
 
