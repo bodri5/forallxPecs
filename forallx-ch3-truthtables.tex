@@ -123,6 +123,12 @@ $P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
 \end{tabular}
 \end{center}
 The entire sentence is a conditional \script{A}\eif\script{B} with $(P \eand Q)$ as \script{A} and with $P$ as \script{B}. On the second row, for example, $(P\eand Q)$ is false and $P$ is true. Since a conditional is true when the antecedent is false, we write a 1 in the second row underneath the conditional symbol. We continue for the other three rows and get this:
+
+Az egész állítás feltételes \script{A}\eif\script{B}-vel  $(P \eand Q)$ mint \script{A}, és $P$-vel mint \script{B}.
+A második sorban, például $(P\eand Q)$ hamis és  $P$ igaz.
+Mivel egy feltétel igaz, ha az előzmény hamis, akkor egy 1-est írunk a második sorba a feltételes szimbólum alá.
+Folytatva a maradék három sorral, a következőket kapjuk:
+
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
@@ -136,7 +142,11 @@ $P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
 \end{center}
 The column of 1s underneath the conditional tells us that the sentence \mbox{$(P \eand Q)\eif P$} is true regardless of the truth-values of $P$ and $Q$. They can be true or false in any combination, and the compound sentence still comes out true. It is crucial that we have considered all of the possible combinations. If we only had a two-line truth table, we could not be sure that the sentence was not false for some other combination of truth-values.
 
+A feltétel alatti 1-es oszlop megmondja nekünk, hogy a \mbox{$(P \eand Q)\eif P$} állítás igaz, függetlenül a $P$ és $Q$ igazságértékétől. Bármilyen kombinációban lehetnek igazak és hamisak, az összetett mondat továbbra is igaz. Alapvető fontosságú, hogy megvizsgáljuk az összes lehetséges kombinációt. Ha csak egy kétsoros igazságtáblánk lenne, nem lehetnénk biztosak benne hogy a mondatok nem hamisak-e az igazság-értékek valamilyen más kombinációjára.
+
 In this example, we have not repeated all of the entries in every successive table. When actually writing truth tables on paper, however, it is impractical to erase whole columns or rewrite the whole table for every step. Although it is more crowded, the truth table can be written in this way:
+
+Ebben a példában nem ismételtük az összes bejegyzést minden egymást követő táblázatban.  Mikor ténylegesen igazság táblázatokat írunk papirra, nem praktikus teljes oszlopokat törölni vagy minden lépésre átírni a teljes táblát. Habár sokkal zsúfoltabb, az igazságtábla az alábbi módon is felírható:
 \begin{center}
 \begin{tabular}{c|c|@{\TTon}*{5}{c}@{\TToff}}
 $P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
@@ -148,6 +158,8 @@ $P$&$Q$&$(P$&\eand&$Q)$&\eif&$P$\\
 \end{tabular}
 \end{center}
 Most of the columns underneath the sentence are only there for bookkeeping purposes. When you become more adept with truth tables, you will probably no longer need to copy over the columns for each of the sentence letters. In any case, the truth-value of the sentence on each row is just the column underneath the main logical operator of the sentence; in this case, the column underneath the conditional.
+
+A mondat alatti oszlopok többsége csak könyvelési célokat szolgál. Mikor már ügyesebben bánunk az igazságtáblákkal, valószínűleg már nem lesz szükségünk arra, hogy az oszlopok fölé másoljuk az egyes állítások betűit.Minden esetben, az állítás igazság értékét, minden sorban éppen az állítás fő logikai operátora alatti oszlop adja; ebben az esetben feltétel alatti oszlop.
 
 %AL fordítása vége
 
