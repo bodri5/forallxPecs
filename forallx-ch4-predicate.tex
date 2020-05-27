@@ -582,13 +582,21 @@ How can this be? The answer comes from considering whether these sentences would
 
 We have defined $\forall$ and $\exists$ in such a way that $\forall\script{A}$ is equivalent to $\enot \exists\enot \script{A}$. As such, the universal quantifier doesn't involve the existence of anything--- only non-existence. If sentence \ref{monkey1} is true, then there are \emph{no} monkeys who don't know sign language. If there were no monkeys, then $\forall x(Mx \eif Sx)$ would be true and $\exists x(Mx \eand Sx)$ would be false.
 
+$\forall$-t és $\exists$-t úgy definiáltuk, hogy $\forall\script{A}$ egyenlő a $\enot \exists\enot \script{A}$ kifejezéssel. Ebből következik, hogy az univerzális kvantor nem valaminek a létezését jelenti, hanem csupán a nem-létezését. Ha a \ref{monkey1}. mondat igaz, akkor \emph{nincsenek} majmok, akik nem ismerik a jelnyelvet. Ha nincsenek majmok, akkor $\forall x(Mx \eif Sx)$ igaz és $\exists x(Mx \eand Sx)$ hamis.
+
 We allow empty predicates because we want to be able to say things like, `I do not know if there are any monkeys, but any monkeys that there are know sign language.' That is, we want to be able to have predicates that do not (or might not) refer to anything.
+
+Használhatunk üres predikátumokat, hiszen mondunk a következőhöz hasonlókat: „Nem tudom, hogy vannak-e itt majmok, azt pedig főleg nem tudom, hogy ismerik-e a jelnyelvet.”. Ebből kifolyólag szeretnénk olyan predikátumokat használni, amik nem (vagy talán nem) vonatkoznak semmire.
 
 %Third, consider: $(\forall x)(Px \eif Px)$. This should be a tautology. But if sentence \ref{monkey1} implied sentence \ref{monkey2}, then this would imply $(\exists x)(Px \eand Px)$. It would become a logical truth that for any predicate there is something that satisfies that predicate.
 
 What happens if we add an empty predicate $R$ to the interpretation above? For example, we might define $Rx$ to mean `$x$ is a refrigerator.' Now the sentence $\forall x(Rx \eif Mx)$ will be true. This is counterintuitive, since we do not want to say that there are a whole bunch of refrigerator monkeys. It is important to remember, though, that $\forall x(Rx \eif Mx)$ means that any member of the UD which is a refrigerator is a monkey. Since the UD is animals, there are no refrigerators in the UD and so the sentence is trivially true.
 
+Mi történik, ha a fenti kijelentéshez adunk egy $R$ üres predikátumot? Például definiálhatjuk $Rx$-et úgy, hogy az azt jelentse, hogy „$x$ egy hűtő.” Ekkor a $\forall x(Rx \eif Mx)$ logikai kijelentés értéke igaz lesz. Ez ellentétes azzal, amit a józan ész diktál, hiszen nem akarjuk azt mondani, hogy van egy csomó hűtő, aki majom. Ne felejtsük el, hogy a  $\forall x(Rx \eif Mx)$ állítás azt jelenti, hogy az UD bármely azon tagja, aki egy hűtő, az egyben egy majom is. Mivel az UD az állatokat jelenti, kizárt, hogy egy hűtő is a tagjai közt legyen. Ebből már egyértelműen látszik, hogy az állítás igaz.
+
 If you were actually translating the sentence `All refrigerators are monkeys', then you would want to include appliances in the UD. Then the predicate $R$ would not be empty and the sentence $\forall x(Rx \eif Mx)$ would be false.
+
+Ha úgy fordítanánk a mondatot, hogy „minden hűtő majom”, akkor a konyhai készülékeket is bele kellene venni az UD halmazba. Ekkor az $R$ predikátum nem lenne üres és a $\forall x(Rx \eif Mx)$ állítás értéke hamis lenne.
 
 \begin{table}[h!]
 \factoidbox{
@@ -602,15 +610,37 @@ If you were actually translating the sentence `All refrigerators are monkeys', t
 }
 \end{table}
 
-\subsection{Picking a Universe of Discourse}
+\begin{table}[h!]
+\factoidbox{
+\begin{itemize}
+\item UD-nek \emph{legalább} egy tagja van.
+\item A predikátum vonatkozhat közülük néhányra, az összesre vagy egyre sem.
+\item Egy konstans \emph{pontosan} egy elemet határoz meg UD-ből. 
+
+Egy elem az UD-ből néhány, az összes vagy nulla konstans által kerülhet kiválasztásra.
+\end{itemize}
+}
+\end{table}
+
+\subsection*{Picking a Universe of Discourse}
+\subsection{Egy Univerzum kiválasztása}
 The appropriate symbolization of an English language sentence in QL will depend on the symbolization key. In some ways, this is obvious: It matters whether $Dx$ means `$x$ is dainty' or `$x$ is dangerous.' The meaning of sentences in QL also depends on the UD.
+
+Egy adott mondat megfelelő leírása a PL-ben a szimbolizációs kulcs megválasztásától függ. Bizonyos értelemben ez nyilvánvaló, hiszen számít, hogy $Dx$ azt jelenti, hogy „$x$ kecses” vagy azt, hogy „$x$ veszélyes.” A mondatok jelentése a PL-ben az UD-től is függ.
 
 Let $Rx$ mean `$x$ is a rose,' let $Tx$ mean `$x$ has a thorn,' and consider this sentence:
 \begin{earg}
 \item[\ex{pickUDrose}] Every rose has a thorn.
 \end{earg}
 
+$Rx$ jelentse, hogy „$x$ egy rózsa” és $Tx$ jelentse, hogy „$x$-nek tüskéje van.” Ekkor vegyük a következő mondatot:
+\begin{earg}
+\item[\ex{pickUDrose}] Minden rózsának van tüskéje.
+\end{earg}
+
 It is tempting to say that sentence \ref{pickUDrose} should be translated as $\forall x(Rx \eif Tx)$. If the UD contains all roses, that would be correct. Yet if the UD is merely \emph{things on my kitchen table}, then $\forall x(Rx \eif Tx)$ would only mean that every rose on my kitchen table has a thorn. If there are no roses on my kitchen table, the sentence would be trivially true.
+
+Könnyen rávághatjuk, hogy a \ref{pickUDrose} mondatot $\forall x(Rx \eif Tx)$ logikával jelölhetjük. Ha az UD az összes rózsát tartalmazza, akkor ez igaz is. Viszont, ha az UD az \emph{asztalomon lévő tárgyakat} takarja, akkor a $\forall x(Rx \eif Tx)$ mondat csupán azt jelentené, hogy az asztalomon lévő összes rózsának van tüskéje. Ha nincsenek az asztalomon rózsák, könnyen látható, hogy a kijelentés igaz.
 
 %OM fordítása vége
 
