@@ -942,13 +942,24 @@ Must we always distinguish between different ways of being skilled, good, bad, o
 
 %NASz fordítása kezdet
 
-\subsection{Multiple quantifiers}
+\subsection*{Multiple quantifiers}
+\subsection{Több kvantor}
 Consider this following symbolization key and the sentences that follow it:
 \begin{ekey}
 \item{UD:} People and dogs
 \item{Dx:} $x$ is a dog.
 \item{Fxy:} $x$ is a friend of $y$.
 \item{Oxy:} $x$ owns $y$.
+\item{f:} Fifi
+\item{g:} Gerald
+\end{ekey}
+
+Tekinstük az alábbi kulcsokat és a hozzájuk tartozó mondatokat:
+\begin{ekey}
+\item{UD:} Emberek és kutyák
+\item{Dx:} $x$ egy kutya.
+\item{Fxy:} $x$ barátja $y$-nak.
+\item{Oxy:} $x$ birtokolja $y$-t.
 \item{f:} Fifi
 \item{g:} Gerald
 \end{ekey}
@@ -961,16 +972,35 @@ Consider this following symbolization key and the sentences that follow it:
 \item[\ex{dog5}] Every dog owner is the friend of a dog owner.
 \end{earg}
 
+\begin{earg}
+\item[\ex{dog1}] Fifi egy kutya.
+\item[\ex{dog2}] Geraldnak van kutyája.
+\item[\ex{dog3}] Valakinek van kutyája.
+\item[\ex{dog4}] Gerald összes barátjának van kutyája.
+\item[\ex{dog5}] Minden kutyatulajdonos barátja egy kutyatulajdonosnak.
+\end{earg}
+
 Sentence \ref{dog1} is easy: $Df$.
 
-Sentence \ref{dog2} can be paraphrased as, `There is a dog that Gerald owns.' This can be translated as $\exists x(Dx \eand Ogx)$.
+A \ref{dog1}. mondat egyszerű: $Df$.
+
+Sentence \ref{dog2}. can be paraphrased as, `There is a dog that Gerald owns.' This can be translated as $\exists x(Dx \eand Ogx)$.
+
+A \ref{dog2}. mondat mefogalmazható úgy is, hogy „Van egy kutya, akinek a gazdája Gerald.” Ez már átalakítható a következőre: $\exists x(Dx \eand Ogx)$.
 
 Sentence \ref{dog3} can be paraphrased as, `There is some $y$ such that $y$ is a dog owner.' The subsentence `$y$ is a dog owner' is just like sentence \ref{dog2}, except that it is about $y$ rather than being about Gerald. So we can translate sentence \ref{dog3} as $\exists y \exists x(Dx \eand Oyx)$. 
 %(Although we could swap the $x$s and $y$s, it is important that we use two different variables here.)
 
+A \ref{dog3}. mondat megfogalmazható úgy is, hogy, „Van néhány olyan $y$, ahol $y$ kutyatulajdonos.” Az „$y$ kutyatulajdonos” részmondat hasonlít a \ref{dog2}. mondatra, annyi különbséggel, hogy itt az $y$-on van a hangsúly és nem Geraldon. Tehát a \ref{dog3}. mondat a következőképp alakítható át: $\exists y \exists x(Dx \eand Oyx)$. 
+%(Bár felcserélhető lenne az $x$ és $y$, de fontos, hogy itt két külön változót használjunk)
+
 Sentence \ref{dog4} can be paraphrased as, `Every friend of Gerald is a dog owner.' Translating part of this sentence, we get $\forall x(Fxg \eif\mbox{`$x$ is a dog owner'})$. Again, it is important to recognize that `$x$ is a dog owner' is structurally just like sentence \ref{dog2}. Since we already have an x-quantifier, we will need a different variable for the existential quantifier. Any other variable will do. Using $z$, sentence \ref{dog4} can be translated as $\forall x\bigl[Fxg \eif\exists z(Dz \eand Oxz)\bigr]$.
 
+A \ref{dog4}. mondat érthető úgy, hogy „Gerald összes barátja kutyatulajdonos.” Ha a mondatot átalakítjuk, akkor a következőt kapjuk: $\forall x(Fxg \eif\mbox{„$x$ egy kutyatulajdonos”})$. Ismét megfigyelhető, hogy az „$x$ kutyatulajdonos” struktúra szempontjából ugyanaz, mint a \ref{dog2}. mondat. Mivel már van x kvantorunk, ezért szükségünk van egy másik egzisztenciális kvantor változóra. Bármelyik másik változó megfelelő. Amennyiben $z$-t használunk, a \ref{dog4}. mondat a következőképp alakítható át: $\forall x\bigl[Fxg \eif\exists z(Dz \eand Oxz)\bigr]$.
+
 Sentence \ref{dog5} can be paraphrased as `For any $x$ that is a dog owner, there is a dog owner who is $x$'s friend.' Partially translated, this becomes $$\forall x\bigl[\mbox{$x$ is a dog owner}\eif\exists y(\mbox{$y$ is a dog owner}\eand Fxy)\bigr].$$ Completing the translation, sentence \ref{dog5} becomes $$\forall x\bigl[\exists z(Dz \eand Oxz)\eif\exists y\bigl(\exists z(Dz \eand Oyz)\eand Fxy\bigr)\bigr].$$
+
+A \ref{dog5}. mondat megfogalmazható úgy, hogy „Bármelyik $x$ kutyatulajdonos esetében van egy másik kutyatulajdonos, aki $x$ barátja.” Részben átalakítva a következőképp néz ki: $$\forall x\bigl[\mbox{$x$ kutyatulajdonos}\eif\exists y(\mbox{$y$ kutyatulajdonos}\eand Fxy)\bigr].$$ Az átalakítás befejezésével a \ref{dog5}. mondat a következőképp alakul át: $$\forall x\bigl[\exists z(Dz \eand Oxz)\eif\exists y\bigl(\exists z(Dz \eand Oyz)\eand Fxy\bigr)\bigr].$$
 
 Consider this symbolization key and these sentences:
 \begin{ekey}
@@ -979,9 +1009,23 @@ Consider this symbolization key and these sentences:
 \item[i:] Imre.
 \item[k:] Karl.
 \end{ekey}
+
+Tekintsük az alábbi kulcsokat és a hozzájuk tartozó mondatokat:
+\begin{ekey}
+\item[UD:] emberek
+\item[Lxy:] $x$ kedveli $y$-t.
+\item[i:] Imre.
+\item[k:] Karl.
+\end{ekey}
+
 \begin{earg}
 \item[\ex{likes1}]Imre likes everyone that Karl likes.
 \item[\ex{likes2}]There is someone who likes everyone who likes everyone that he likes.
+\end{earg}
+
+\begin{earg}
+\item[\ex{likes1}]Imre mindenkit kedvel, akit Karl is kedvel.
+\item[\ex{likes2}]Van egy ember, aki kedvel minden olyan embert, aki kedvel mindenkit, akit ő kedvel.
 \end{earg}
 
 %NASz fordítása vége
