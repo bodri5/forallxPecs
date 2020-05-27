@@ -1276,27 +1276,51 @@ Továbbá olyan kijelentésekben, amik használják a „különben” szót, az
 
 We add the constant $h$, which means Hikaru.
 
+Hozzáadunk egy $h$ állandót, ami Hikarut jelent.
+
 Sentence \ref{else3} can be paraphrased as, `No one who is not Pavel owes money to Hikaru.' This can be translated as $\enot\exists x(x\neq p \eand Oxh)$.
+
+A \ref{else3}. mondatot úgy is megfogalmazhatjuk, hogy 'Senki aki nem Pavel tartozik Hikarunak.' Ezt lefordíthatjuk úgy hogy $\enot\exists x(x\neq p \eand Oxh)$.
 
 Sentence \ref{else4} can be paraphrased as, `Pavel owes Hikaru \emph{and} no one besides Pavel owes Hikaru money.' We have already translated one of the conjuncts, and the other is straightforward. Sentence \ref{else4} becomes $Oph \eand \enot\exists x(x\neq p \eand Oxh)$.
 
+A \ref{else4}. mondatot úgy is megfogalmazhatjuk, hogy 'Pavel tartozik Hikarunak \emph{és} Pavelen kívül senki más nem tartozik Hikarunak.' Már előzőleg lefordítottuk az egyik kapcsolatot, a másik már magától értetődő. A \ref{else4}. mondat így fog kinézni $Oph \eand \enot\exists x(x\neq p \eand Oxh)$.
 
-\subsection{Expressions of quantity}
+
+\subsection*{Expressions of quantity}
+\subsection{A mennyiség kifejezései}
 We can also use identity to say how many things there are of a particular kind. For example, consider these sentences:
 \begin{earg}
 \item[\ex{atleast1}] There is at least one apple on the table.
 \item[\ex{atleast2}] There are at least two apples on the table.
 \item[\ex{atleast3}] There are at least three apples on the table.
 \end{earg}
+
+Az egyenlőséget is használhatjunk arra, hogy megmondjuk, hány darab van egy dologból. Például, vizsgáld meg ezeket a mondatokat:
+\begin{earg}
+\item[\ex{atleast1}] Legalább egy alma van az asztalon.
+\item[\ex{atleast2}] Legalább kettő alma van az asztalon.
+\item[\ex{atleast3}] Legalább három alma van az asztalon.
+\end{earg}
 Let the UD be \emph{things on the table}, and let $Ax$ mean `$x$ is an apple.'
+
+Nevezzük UD-nak az \emph{asztalon lévő dolgokat,} és $Ax$ jelentse azt hogy „$x$ egy alma.”
 
 Sentence \ref{atleast1} does not require identity. It can be translated adequately as $\exists x Ax$: There is some apple on the table--- perhaps many, but at least one.
 
+A \ref{atleast1}. mondatnak nincs szüksége egyenlőségre. Megfelelően le lehet fordítani így $\exists x Ax$: Ott van pár alma az asztalon -- lehet hogy több, de legalább egy.
+
 It might be tempting to also translate sentence \ref{atleast2} without identity. Yet consider the sentence $\exists x \exists y(Ax \eand Ay)$. It means that there is some apple $x$ in the UD and some apple $y$ in the UD. Since nothing precludes $x$ and $y$ from picking out the same member of the UD, this would be true even if there were only one apple. In order to make sure that there are two \emph{different} apples, we need an identity predicate. Sentence \ref{atleast2} needs to say that the two apples that exist are not identical, so it can be translated as $\exists x \exists y(Ax \eand Ay \eand x\neq y)$.
+
+Csábítónak tűnik a \ref{atleast2}. mondat lefordítása is egyenlőség nélkül. Mégis gondoljuk át a következő mondatot: $\exists x \exists y(Ax \eand Ay)$. Azt jelenti, hogy van pár alma $x$ az UD-ban és pár alma $y$ szintén az UD-ban. Mivel semmi nem gátolja meg $x$-et és $y$-t abban, hogy az UD ugyan azt az elemét válasszák ki, ez akkor is igaz lenne, ha csak egy alma lenne. Ahhoz, hogy biztosak legyünk abban, hogy van kettő \emph{különböző} alma, kell egy eggyenlőség predikátum. A \ref{atleast2}. mondatnak azt kell mondania, hogy van két nem megegyező alma, ezt lefordíthatjuk erre: $\exists x \exists y(Ax \eand Ay \eand x\neq y)$.
 
 Sentence \ref{atleast3} requires talking about three different apples. It can be translated as $\exists x \exists y\exists z(Ax \eand Ay \eand Az \eand x\neq y \eand y\neq z \eand x \neq z)$.
 
+A \ref{atleast3}. mondatnak arról kell szólnia, hogy van három különböző alma. Lefordítható így: $\exists x \exists y\exists z(Ax \eand Ay \eand Az \eand x\neq y \eand y\neq z \eand x \neq z)$.
+
 Continuing in this way, we could translate `There are at least $n$ apples on the table.' There is a summary of how to symbolize sentences like these on p.~\pageref{summary.atleast}.
+
+Ezen az úton haladva lefordíthatnánk a „Legalább $n$ alma van az asztalon” mondatot. Van egy összefoglaló arról, hogy hogyan tudjuk szimbolizálni az ehhez hasonló mondatokat a ~\pageref{summary.atleast}. oldalon.
 
 
 Now consider these sentences:
@@ -1305,7 +1329,16 @@ Now consider these sentences:
 \item[\ex{atmost2}] There are at most two apples on the table.
 \end{earg}
 
+
+Most vizsgáljuk meg ezeket a mondatokat:
+\begin{earg}
+\item[\ex{atmost1}] Maximum egy alma van az asztalon.
+\item[\ex{atmost2}] Maximum kettő alma van az asztalon.
+\end{earg}
+
 Sentence \ref{atmost1} can be paraphrased as, `It is not the case that there are at least \emph{two} apples on the table.' This is just the negation of sentence \ref{atleast2}: $$\enot \exists x \exists y(Ax \eand Ay \eand x\neq y)$$
+
+A \ref{atmost1}. mondatot megfogalmazhatjuk úgy, hogy „Nem igaz, hogy legalább \emph{kettő} alma van az asztalon.” Ez csak egy tagadása a \ref{atleast2}. mondatnak: $$\enot \exists x \exists y(Ax \eand Ay \eand x\neq y)$$
 
 %MA fordítása vége 
 
