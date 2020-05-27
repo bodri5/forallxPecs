@@ -511,18 +511,34 @@ A \ref{quan1} mondat azt jelenti, hogy (bármilyen érmére) \emph{ha} az az én
 
 Since sentence \ref{quan1} is about coins that are both in my pocket \emph{and} that are quarters, it might be tempting to translate it using a conjunction. However, the sentence $\forall x(Px \eand Qx)$ would mean that everything in the UD is both in my pocket and a quarter: All the coins that exist are quarters in my pocket. This would be a crazy thing to say, and it means something very different than sentence \ref{quan1}.
 
+Mivel a \ref{quan1}. mondat arról szól, hogy mindkét érme a zsebemben van \emph{és} azok negyed dollárosok, csábító lehet ezeket konjunkció használatával leírni. Viszont az $\forall x(Px \eand Qx)$ mondat azt jelentené, hogy minden az UD-ben található dolog mindkét zsebemben van és ezek negyed dollárosok: Minden létező érme negyed dolláros és a zsebeimben van. Ezt őrültség lenne így kimondani, és teljesen mást is jelent, mint a \ref{quan1}. mondat.  
+
 Sentence \ref{quan2} is most naturally translated with an existential quantifier. It says that there is some coin which is both on the table and which is a dime. So we can translate it as $\exists x(Tx \eand Dx)$.
+
+A \ref{quan2}. mondat legtermészetesebben egy egzisztenciális kvantorral fordítható le. Azt mondja ki, hogy van valamennyi érme, amely az asztalon van és tízcentes. Tehát ezt $\exists x(Tx \eand Dx)$-ként fordíthatjuk.
 
 Notice that we needed to use a conditional with the universal quantifier, but we used a conjunction with the existential quantifier. What would it mean to write $\exists x(Tx \eif Dx)$? Probably not what you think. It means that there is some member of the UD which would satisfy the subformula; roughly speaking, there is some $a$ such that $(Ta \eif Da)$ is true. In SL, $\script{A} \eif \script{B}$ is logically equivalent to $\enot\script{A} \eor \script{B}$, and this will also hold in QL. So $\exists x(Tx \eif Dx)$ is true if there is some $a$ such that $(\enot Ta \eor Da)$; i.e., it is true if some coin is \emph{either} not on the table \emph{or} is a dime. Of course there is a coin that is not on the table--- there are coins in lots of other places. So $\exists x(Tx \eif Dx)$ is trivially true. A conditional will usually be the natural connective to use with a universal quantifier, but a conditional within the scope of an existential quantifier can do very strange things. As a general rule, do not put conditionals in the scope of existential quantifiers unless you are sure that you need one.
 
+Észre lehet venni, hogy szükségünk volt egy implikáció használatára az univerzális kvantorhoz, de konjukciót használtunk az egzisztenciális kvantorhoz. Mit jelentene, ha a $\exists x(Tx \eif Dx)$-t írnánk le? Valószínűleg nem azt, amire gondolnánk. Azt jelenti, hogy az UD-nak van egy tagja, amely kielégíti a szubfüggvényt; Nyersen fogalmazva, létezik $a$ úgy, hogy $(Ta \eif Da)$ igaz. Az kijelentés logikában $\script{A} \eif \script{B}$ logikailag ekvivalens $\enot\script{A} \eor \script{B}$-el, és ez a kvantifikált logikában is így van. Szóval $\exists x(Tx \eif Dx)$ igaz, ha létezik $a$ úgy, hogy $(\enot Ta \eor Da)$; vagyis: igaz, ha valamennyi érme \emph{vagy} nincs az asztalon \emph{vagy} tízcentes. Persze van olyan érme, amely nincs az asztalon -- sok más helyen is vannak érmék. Tehát $\exists x(Tx \eif Dx)$ triviálisan igaz. Az implikáció lesz általában a természetes kapcsolat az univerzális kvantor haszhálatához, de egy implikáció az egzisztenciális kvantoron belül elég furcsa dolgokat tud csinálni. Általános szabályként, ne rakjunk implikáció az egzisztenciális kvantoron belülre, kivéve, ha biztosak vagyunk benne, hogy szükségünk van a használatára.
+
 Sentence \ref{quan3} can be paraphrased as, `It is not the case that every coin on the table is a dime.' So we can translate it as $\enot \forall x(Tx \eif Dx)$. You might look at sentence \ref{quan3} and paraphrase it instead as, `Some coin on the table is not a dime.' You would then translate it as $\exists x(Tx \eand \enot Dx)$. Although it is probably not obvious, these two translations are logically equivalent. (This is due to the logical equivalence between $\enot\forall x\script{A}$ and $\exists x\enot\script{A}$, along with the equivalence between $\enot(\script{A}\eif\script{B})$ and $\script{A}\eand\enot\script{B}$.)
 
+A \ref{quan3}. mondat értelmezhető úgy, hogy „Nem áll fenn, hogy minden érme az asztalon tízcentes.” Szóval fordíthatjuk ezt $\enot \forall x(Tx \eif Dx)$-ként. Lehet, hogy ránézünk a \ref{quan3}-os mondatra és úgy értelmezzük, hogy „Néhány érme az asztalon nem tízcentes.” Ezt utána $\exists x(Tx \eand \enot Dx)$-ként fordítanánk le. Bár Valószínűleg ez nem teljesen egyértelmű, de ez a két fordítás logikailag ekvivalens. (Ez a $\enot\forall x\script{A}$ és $\exists x\enot\script{A}$ közötti logikai ekvivalencia miatt fordulhat elő, valamint még a $\enot(\script{A}\eif\script{B})$ és $\script{A}\eand\enot\script{B}$ között lévő ekvivalencia miatt.)
+
 Sentence \ref{quan4} can be paraphrased as, `It is not the case that there is some dime in my pocket.' This can be translated as $\enot\exists x(Px \eand Dx)$. It might also be paraphrased as, `Everything in my pocket is a non-dime,' and then could be translated as $\forall x(Px \eif \enot Dx)$. Again the two translations are logically equivalent. Both are correct translations of sentence \ref{quan4}.
+
+A \ref{quan4}. mondat értelmezhető úgy, hogy „Nem áll fenn, hogy van valamennyi tízcentes a zsebemben.” Ezt lefordíthatjuk úgy, hogy $\enot\exists x(Px \eand Dx)$. Még úgy is lehet értelmezni, hogy „A zsebemben minden nem tízcentes,” és aztán úgy fordítható, hogy $\forall x(Px \eif \enot Dx)$. A két fordítás ismét logikailag ekvivalens. Mindkettő helyes fordítása a \ref{quan4}-es mondatnak.
 
 We can now translate the argument from p.~\pageref{willard1}, the one that motivated the need for quantifiers:
 \begin{quote}
 Willard is a logician. All logicians wear funny hats.\\
 \therefore\ Willard wears a funny hat.
+\end{quote}
+
+Most már le tudjuk fordítani a kifejezést a ~\pageref{willard1}. oldalról, amely szükségessé tette a kvantorok használatát:
+\begin{quote}
+Willard egy logikával foglalkozó tudós. Minden logikával foglalkozó tudós vicces kalapot hord.\\
+\therefore\ Willard egy vicces kalapot hord.
 \end{quote}
 
 %NG fordítása vége
