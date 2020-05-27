@@ -841,23 +841,41 @@ A kvantorokra vonatkozó szabályok rövid ismertetése érdekében, szükségü
 
 For a wff \script{A}, a constant \script{c}, and a variable \script{x}, define a \define{substitution instance} of $\forall \script{x}\script{A}$ or $\exists \script{x}\script{A}$ is the wff that we get by replacing every occurrence of \script{x} in \script{A} with \script{c}. We call \script{c} the \define{instantiating constant}.
 
+Az \script{A} jfk, \script{c} konstans és \script{x} változó esetén $\forall \script{x}\script{A}$ vagy $\exists \script{x}\script{A}$  \define{helyettesítő példányát} úgy definiáljuk, mint a jfk, amelyet akkor kapunk, ha \script{x} minden \script{A} béli előfordulását \script{c}-vel helyettesítjük. \script{c}-t \define{példányosító állandónak} nevezzük.
+
 To underscore the fact that the variable \script{x} is replaced by the instantiating constant \script{c}, we will write the original quantified expressions as $\forall \script{x}\script{A}\script{x}$ and $\exists \script{x}\script{A}\script{x}$. And we will write the substitution instance \script{A}\script{c}.
+
+Annak kihangsúlyozására, hogy az \script{x} változó helyébe a példányosító \script{c} állandó lép, az eredeti, kvantifikált kifejezéseket $\forall \script{x} \script{A} \script{x}$-ként és $\exists \script{x} \script{A} \script {x}$-ként írjuk, és a helyettesítő példányt \script{A}\script{c}-vel írjuk.
 
 Note that \script{A}, \script{x}, and \script{c} are all meta-variables. That is, they are stand-ins for any wff, variable, and constant whatsoever. And when we write \script{A}\script{c}, the constant \script{c} may occur multiple times in the wff \script{A}.
 
+Vegye figyelembe hogy \script{A}, \script{x} és \script{c} mind meta-változók. Vagyis beleillenek bármilyen jfk-ba, változóba és konstansba. Továbbá amikor \script{A}\script{c}-t írunk, a \script{c} állandó többször is előfordulhat az \script{A} jfk-ban.
+
 
 For example:
+
+Példa:
 
 \begin{itemize}
 \item $Aa \eif Ba$, $Af \eif Bf$, and $Ak \eif Bk$ are all substitution instances of $\forall x(Ax \eif Bx)$; the instantiating constants are $a$, $f$, and $k$, respectively.
 \item $Raj$, $Rdj$, and $Rjj$ are substitution instances of $\exists zRzj$; the instantiating constants are $a$, $d$, and $j$, respectively.
 \end{itemize}
 
-\subsection{Universal elimination}
+\begin{itemize}
+\item $Aa \eif Ba$, $Af \eif Bf$ és $Ak \eif Bk$, helyettesítő példányai $\forall x(Ax \eif Bx)$-nek; a példányosító állandók, $a$, $f$ és $k$.
+\item $Raj$, $Rdj$ és $Rjj$, helyettesítő példányai $\exists zRzj$-nek; a példányosító állandók, $a$, $d$ és $j$.
+\end{itemize}
+
+\subsection*{Universal elimination}
+\subsection{Univerzális elimináció}
 
 If you have $\forall x Ax$, it is legitimate to infer that anything is an $A$. You can infer $Aa$, $Ab$, $Az$, $Ad_3$. You can infer any substitution instance, $A\script{c}$ for any constant \script{c}.
 
+Ha teljesül hogy $\forall x Ax$, akkor jogosan feltételezhető, hogy bármi lehet $A$. Bevezetheti $Aa$-t, $Ab$-t, $Az$-t, $Ad_3$-at, tetszőleges helyettesítő példányt, $A\script{c}$ bármilyen \script{c} állandóra.
+
 This is the general form of the universal elimination rule ($\forall$E):
+
+Az univerzális kvantor eliminációs szabályának általános formája ($\forall$E):
 
 \begin{proof}
 	\have[m]{a}{\forall \script{x}\script{A}\script{x}}
@@ -866,6 +884,8 @@ This is the general form of the universal elimination rule ($\forall$E):
 
 When using the $\forall$E rule, you write the substituted sentence with the constant \script{c} replacing all occurrences of the variable \script{x} in \script{A}. For example:
 
+A $\forall$E szabály használatakor a helyettesített mondatot a \script{c} állandóval kell írni, amely az  \script{x} változó összes előfordulását felváltja \script{A}-ban. Például:
+
 \begin{proof}
 	\hypo{a}{\forall x(Mx \eif Rxd)}
 	\have{c}{Ma \eif Rad} \Ae{a}
@@ -873,9 +893,14 @@ When using the $\forall$E rule, you write the substituted sentence with the cons
 \end{proof}
 
 
-\subsection{Existential introduction}
+\subsection*{Existential introduction}
+
+\subsection{Egzisztenciális bevezetés}
 
 It is legitimate to infer $\exists x Px$ if you know that \emph{something} is a $P$. It might be any particular thing at all. For example, if you have $Pa$ available in the proof, then $\exists x Px$ follows. 
+
+Jogosan következtethetünk arra, hogy $\exists x Px$, ha tudjuk hogy \emph{valami} $P$. Ez lehet bármilyen konkrét dolog. Például, ha rendelkezésre áll $Pa$ a bizonyításban, akkor $ \exists x Px$ következik.
+cica
 
 %BA fordítása vége
 
