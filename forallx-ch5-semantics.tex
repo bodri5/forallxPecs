@@ -878,7 +878,7 @@ A \mbox{`\script{P}, \therefore\ \script{C}'} érvelés igaz? & {megmutatja, hog
 
 For SL, we split the definition of truth into two parts: a truth value assignment ($a$) for sentence letters and a truth function ($v$) for all sentences. The truth function covered the way that complex sentences could be built out of sentence letters and connectives.
 
-Az SL esetében az igazság meghatározását két részre osztottuk: az igazságérték-hozzárendelést ($a$) a mondat betűire és az igazságfüggvényt ($v$) az összes mondatra. Az igazságfüggvény lefedte azt a módot, amellyel az összetett mondatokat betűkből és kötőszavakból lehet felépíteni.
+Az SL esetében az igazság meghatározását két részre osztottuk: az igazságérték-hozzárendelést ($a$) a mondat betűire és az igazságfüggvényt ($v$) az összes mondatra. Az igazságfüggvény lefedte azt a módot, amellyel az összetett mondatokat betűkből és logikai műveletekből lehet felépíteni.
 
 In the same way that truth for SL is always \emph{truth given a truth value assignment}, truth for QL is \emph{truth in a model}. The simplest atomic sentence of QL consists of a one-place predicate followed by a constant, like $Pj$. It is true in a model \model{M} if and only if the referent of $j$ is in the extension of $P$ in \model{M}.
 
@@ -890,11 +890,11 @@ Folytathatnánk így az igazság meghatározását minden olyan atom-mondat eset
 
 We could then define truth for sentences built up with sentential connectives in the same way we did for SL. For example, the sentence $(Pj \eif Mda)$ is true in \model{M} if either $Pj$ is false in \model{M} or $Mda$ is true in \model{M}.
 
-Ezután meghatározhatjuk az igazságot, melyek a mondathoz tartozó összeköttetésekkel épültek fel, ugyanúgy, mint az SL esetében. Például, a mondat $(Pj \eif Mda)$ igaz \model{M}-ben, ha $Pj$ hamis \model{M}-ben vagy $Mda$ igaz \model{M}-ben.
+Ezután meghatározhatjuk az igazságot, melyek a mondathoz tartozó logikai műveletekkel épültek fel, ugyanúgy, mint az SL esetében. Például, a mondat $(Pj \eif Mda)$ igaz \model{M}-ben, ha $Pj$ hamis \model{M}-ben vagy $Mda$ igaz \model{M}-ben.
 
 Unfortunately, this approach will fail when we consider sentences containing quantifiers. Consider $\forall x Px$. When is it true in a model \model{M}? The answer cannot depend on whether $Px$ is true or false in \model{M}, because the $x$ in $Px$ is a free variable. $Px$ is not a sentence. It is neither true nor false.
 
-Sajnálatos módon, ez a megközelítés kudarcot vall, ha figyelembe vesszük a számszerűsítőket tartalmazó mondatokat. Figyelembe veszi a $\forall x Px$. Mikor igaz ez egy modellben \modell{M}. A válasz nem függ attól, hogy $Px$ igaz vagy hamis a \model{M}-ben, mert az $x$ az $Px$-ben egy szabad változó, $Px$ pedig nem egy mondat. Ez se nem igaz, se nem hamis.
+Sajnálatos módon, ez a megközelítés kudarcot vall, ha figyelembe vesszük a kvantorokat tartalmazó mondatokat. Figyelembe veszi a $\forall x Px$. Mikor igaz ez egy modellben \modell{M}. A válasz nem függ attól, hogy $Px$ igaz vagy hamis a \model{M}-ben, mert az $x$ az $Px$-ben egy szabad változó, $Px$ pedig nem egy mondat. Ez se nem igaz, se nem hamis.
 
 We were able to give a recursive definition of truth for SL because every well-formed formula of SL has a truth value. This is not true in QL, so we cannot define truth by starting with the truth of atomic sentences and building up. We also need to consider the atomic formulae which are not sentences. In order to do this we will define \emph{satisfaction}; every well-formed formula of QL will be satisfied or not satisfied, even if it does not have a truth value. We will then be able to define \emph{truth} for sentences of QL in terms of satisfaction.
 
@@ -908,7 +908,7 @@ Azért tudtuk megadni az igazság rekurzív meghatározását az SL számára, m
 
 The formula $Px$ says, roughly, that $x$ is one of the $P$s. This cannot be quite right, however, because $x$ is a variable and not a constant. It does not name any particular member of the UD. Instead, its meaning in a sentence is determined by the quantifier that binds it. The variable $x$ must stand-in for every member of the UD in the sentence $\forall xPx$, but it only needs to stand-in for one member in $\exists xPx$. Since we want the definition of satisfaction to cover $Px$ without any quantifier whatsoever, we will start by saying how to interpret a free variable like the $x$ in $Px$.
 
-A $Px$ képlet azt mutatja tömören, hogy $x$ az egyike az $P$-nek. Ez azonban nem teljesen igaz, mert a $x$ változó, és nem állandó. Az UD egyetlen tagját sem nevezi meg. Ehelyett a mondatban szereplő jelentését a számszerűsítő határozza meg, amely azt megköti. A $x$ változónak be kell állnia az UD minden tagjára a $\forall xPx$ mondatban, de elegendő egy tagjának megegyeznie $\exists xPx$-ben. Mivel azt akarjuk, hogy az elégedettség meghatározása a $Px$ -ra kiterjedjen, bármiféle számszerűsítés nélkül, akkor azzal kezdjük, hogy hogyan kell értelmezni egy olyan szabad változót, mint a $x$ $Px$-ben.
+A $Px$ képlet azt mutatja tömören, hogy $x$ az egyike az $P$-nek. Ez azonban nem teljesen igaz, mert a $x$ változó, és nem állandó. Az UD egyetlen tagját sem nevezi meg. Ehelyett a mondatban szereplő jelentését a kvantor határozza meg, amely azt megköti. A $x$ változónak be kell állnia az UD minden tagjára a $\forall xPx$ mondatban, de elegendő egy tagjának megegyeznie $\exists xPx$-ben. Mivel azt akarjuk, hogy az elégedettség meghatározása a $Px$ -ra kiterjedjen, bármiféle kvantor nélkül, akkor azzal kezdjük, hogy hogyan kell értelmezni egy olyan szabad változót, mint a $x$ $Px$-ben.
 
 %KM fordítása vége
 
