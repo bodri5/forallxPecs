@@ -1868,6 +1868,35 @@ Using the symbolization key given, translate each English-language sentence into
 \end{earg}
 
 \problempart
+\label{pr.QLballet}
+Szimbólumkulcsokat használva fordítsuk le a magyar nyelvű mondatokat PL-re.
+\begin{ekey}
+\item[UD:] emberek
+\item[Dx:] $x$ balettozik.
+\item[Fx:] $x$ nő.
+\item[Mx:] $x$ férfi.
+\item[Cxy:] $x$ $y$ gyermeke.
+\item[Sxy:] $x$ $y$ testvére.
+\item[e:] Elmer
+\item[j:] Jane
+\item[p:] Patrick
+\end{ekey}
+\begin{earg}
+\item Patrick minden gyermeke balettozik.
+\item Jane Patrick lánya.
+\item Patricknak van egy lánya.
+\item Jane egyedüli gyermek.
+\item Patrik minden lánya balettozik.
+\item Patricknak nincsenek fiai.
+\item Jane Elmer unokahúga.
+\item Patrik Elmer fiútestvére.
+\item Patrik fiútestvérének nincs gyermeke.
+\item Jane nagynéni.
+\item Mindenkinek, aki balettozik, van egy lánytestvére, aki balettozik.
+\item Minden férfi, aki balettozik, valakinek a gyermeke, aki balettozik.
+\end{earg}
+
+\problempart
 \label{pr.freeQL}
 Identify which variables are bound and which are free.
 \begin{earg}
@@ -1878,6 +1907,16 @@ Identify which variables are bound and which are free.
 \item $\forall x_1(Mx_2 \eiff Lx_2x_1) \eand \exists x_2 Lx_3x_2$
 \end{earg}
 
+\problempart
+\label{pr.freeQL}
+Válasszuk ki a kötött és szabad változókat.
+\begin{earg}
+\item $\exists x Lxy \eand \forall y Lyx$
+\item $\forall x Ax \eand Bx$
+\item $\forall x (Ax \eand Bx) \eand \forall y(Cx \eand Dy)$
+\item $\forall x\exists y[Rxy \eif (Jz \eand Kx)] \eor Ryx$
+\item $\forall x_1(Mx_2 \eiff Lx_2x_1) \eand \exists x_2 Lx_3x_2$
+\end{earg}
 
 \problempart
 Using the symbolization key given, translate each English-language sentence into QL with identity. The last sentence is ambiguous and can be translated two ways; you should provide both translations. (Hint: Identity is only required for the last four sentences.)
@@ -1902,6 +1941,31 @@ Using the symbolization key given, translate each English-language sentence into
 \item Ingmar trusts Hofthor, but no one else.
 \item The person who knows the combination to the safe is a vegetarian.
 \item The person who knows the combination to the safe is not a spy.
+\end{earg}
+
+\problempart
+Szimbólumkulcsokat használva fordítsuk le a magyar nyelvű mondatokat PL-re identitással. Az utolsó mondat nem egyértelmű, fordítsa le mindkét módon. (Tipp: Identitás csak az utolsó négy mondathoz szükséges.)
+\begin{ekey}
+\item[UD:] emberek
+\item[Kx:] $x$ imseri a kombinációt a széfhez.
+\item[Sx:] $x$ egy kém.
+\item[Vx:] $x$ egy vegetáriánus.
+\item[Txy:] $x$ $y$-ban bízik.
+\item[h:] Hofthor
+\item[i:] Ingmar
+\end{ekey}
+\begin{earg}
+\item Hofthor egy kém, de nem vegetáriánus kém.
+\item Senki sem ismeri a széfkombinációt, kivéve, ha Ingmar ismeri.
+\item Egyik kém sem tudja a széf kombinációt.
+\item Hofthor és Ingmar sem vegetáriánus.
+\item Hofthor bízik egy vegetáriánusban.
+\item Mindenki, aki bízik Ingmarban, bízik egy vegetáriánusban.
+\item Mindenki, aki bízik Ingmarban, bízik valakiben, aki bízik egy vegetáriánusban.
+\item Csak Ingmar tudja a széf kombinációt.
+\item Ingmar bízik Hofthorban, de senki másban nem.
+\item A személy, aki tudja a széf kombinációját, az egy vegetáriánus.
+\item A személy, aki tudja a kombinációt a széfhez, nem egy kém.
 \end{earg}
 
 %SD fordítása vége
