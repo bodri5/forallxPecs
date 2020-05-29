@@ -940,11 +940,27 @@ For each term $t_i$: If $t_i$ is a constant, then $\Omega_i = \referent{t_i}$. I
 	\end{array}\right.
 \end{displaymath}
 
+Ha \script{A} az $(\script{B}\eand\script{C})$ valamilyen \script{B,C} jfk-ra, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	1 & \mbox{ha $s(\script{B}, a) = 1$ és $s(\script{C}, a) = 1$,}\\
+	0 & \mbox{más esetben.}
+	\end{array}\right.
+\end{displaymath}
+
 \item If \script{A} is $(\script{B}\eor\script{C})$ for some wffs \script{B,C}, then
 \begin{displaymath}s(\script{A}, a) =
 	\left\{\begin{array}{ll}
 	0 & \mbox{if $s(\script{B}, a) = 0$  and $s(\script{C}, a) = 0$,}\\
 	1 & \mbox{otherwise.}
+	\end{array}\right.
+\end{displaymath}
+
+Ha \script{A} az $(\script{B}\eor\script{C})$ valamilyen \script{B,C} jfk-ra, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	0 & \mbox{ha $s(\script{B}, a) = 0$  és $s(\script{C}, a) = 0$,}\\
+	1 & \mbox{más esetben.}
 	\end{array}\right.
 \end{displaymath}
 
@@ -956,11 +972,27 @@ For each term $t_i$: If $t_i$ is a constant, then $\Omega_i = \referent{t_i}$. I
 	\end{array}\right.
 \end{displaymath}
 
+Ha \script{A} az $(\script{B}\eif\script{C})$ valamilyen \script{B,C} jfk-ra, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	0 & \mbox{ha $s(\script{B}, a) = 1$ és $s(\script{C}, a) = 0$,}\\
+	1 & \mbox{más esetben.}
+	\end{array}\right.
+\end{displaymath}
+
 \item If \script{A} is $(\script{B}\eiff\script{C})$ for some sentences \script{B,C}, then
 \begin{displaymath}s(\script{A}, a) =
 	\left\{\begin{array}{ll}
 	1 & \mbox{if $s(\script{B}, a) = s(\script{C}, a)$},\\
 	0 & \mbox{otherwise.}
+	\end{array}\right.
+\end{displaymath}
+
+Ha \script{A} az $(\script{B}\eiff\script{C})$ valamely \script{B,C} mondatokra , akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	1 & \mbox{ha $s(\script{B}, a) = s(\script{C}, a)$},\\
+	0 & \mbox{más esetben.}
 	\end{array}\right.
 \end{displaymath}
 
@@ -972,6 +1004,14 @@ For each term $t_i$: If $t_i$ is a constant, then $\Omega_i = \referent{t_i}$. I
 	\end{array}\right.
 \end{displaymath}
 
+Ha \script{A} az $\forall\script{x} \script{B}$ valamilyen \script{B} jfk-ra és valamilyen \script{x} változóra, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	1 & \mbox{ha $s(\script{B}, a[\Omega|\script{x}])=1$ minden tagjára $\Omega$ az UD-n belül},\\
+	0 & \mbox{más esetben.}
+	\end{array}\right.
+\end{displaymath}
+
 \item If \script{A} is $\exists\script{x} \script{B}$ for some wff \script{B} and some variable \script{x}, then
 \begin{displaymath}s(\script{A}, a) =
 	\left\{\begin{array}{ll}
@@ -979,19 +1019,32 @@ For each term $t_i$: If $t_i$ is a constant, then $\Omega_i = \referent{t_i}$. I
 	0 & \mbox{otherwise.}
 	\end{array}\right.
 \end{displaymath}
+
+Ha \script{A} az $\exists\script{x} \script{B}$ valamilyen \script{B} jfk-ra és valamilyen \script{x} változóra, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	1 & \mbox{ha $s(\script{B}, a[\Omega|\script{x}])=1$ legalább 1 tagjára $\Omega$ az UD-n belül},\\
+	0 & \mbox{más esetben.}
+	\end{array}\right.
+\end{displaymath}
 \end{enumerate}
  
 This definition follows the same structure as the definition of a wff for QL, so we know that every wff of QL will be covered by this definition. For a model \model{M} and a variable assignment $a$, any wff will either be satisfied or not. No wffs are left out or assigned conflicting values.
 
+Ez a definíció ugyanazt a struktúrát követi, mint  a jól formált kifejezések definíciója PL-re, tehát tudjuk, hogy minden jól formált kifejezés a PL-en belül ezzel a definícióval lesz ellátva. Egy modelnek \model{M}-nek és egy változó hozzárendelésnek $a$-nak, bármely jól formált kifejezés vagy ki lesz elégítve vagy nem. Egy jól formált kifejezés sincs kihagyva vagy ellentmondó értékkel ellátva.
 
 
-
-\subsection{Truth}
+\subsection*{Truth}
 \subsection{Igazság}
+
 
 Consider a simple sentence like $\forall xPx$. By part 7 in the definition of satisfaction, this sentence is satisfied if $a[\Omega|x]$ satisfies $Px$ in \model{M} for every $\Omega$ in the UD. By part 1 of the definition, this will be the case if every $\Omega$ is in the extension of $P$. Whether $\forall xPx$ is satisfied does not depend on the particular variable assignment $a$. If this sentence is satisfied, then it is true. This is a formalization of what we have said all along: $\forall xPx$ is true if everything in the UD is in the extension of $P$.
 
+Tekintsük meg ezt az egyszerű mondatot: $\forall xPx$. A 7-es részben lévő kielégülés definíciója szerint, ez a mondat akkor van kielégítve, ha $a[\Omega|x]$ kielégül $Px$ \model{M} minden $\Omega$-ra az UD-ben. Az 1-es rész definíciója szerint, ez annak az esete lesz, ha minden $\Omega$ benne van a $P$ kiterjedésében. Vajon $\forall xPx$ kielégültsége nem függ-e az egyéni $a$ változó hozzárendelésén. Ha ez a mondat kielégített, akkor igaz. Ez egy formalizáció arról amiről egészen eddig beszéltünk: $\forall xPx$ igaz, ha minden ami az UD-ben van az benne van a $P$ kiterjedésében is.
+
 The same thing holds for any sentence of QL. Because all of the variables are bound, a sentence is satisfied or not regardless of the details of the variable assignment. So we can define truth in this way: A sentence \script{A} is \define{true in} \model{M} if and only if some variable assignment satisfies \script{A} in $M$; \script{A} is \define{false in} \model{M} otherwise.
+
+Ugyanez a dolog áll fenn a PL bármely mondatához. Mivel minden változó behatárolt, a mondat kielégült vagy nem igazán része a változó hozzárendelésnek. Tehát definiálhatjuk így az igazságot: A mondat \script{A} az \define{igaz} \model{M}-ben csak akkor ha néhány változó hozzárendelés kielégült \script{A} $M$-ben ; \script{A} az \define{hamis} \model{M}-ben minden más esetben.
 
 %PG fordítása vége
 
