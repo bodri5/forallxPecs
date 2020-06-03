@@ -372,10 +372,21 @@ $\forall x\bigl[(Ox \eand Jx) \eif Wx\bigr] \eand \exists x\bigl[Mx \eand \foral
 $\exists x\bigl(Dx \eand Cx \eand \forall y[(Dy\eand Cy) \eif x=y] \eand Wx\bigr)\eif \exists x\forall y(Wx \eiff x=y)$
 \item %The man with the axe is not a jack.
 wide scope: $\enot \exists x\bigl[Mx \eand \forall y(My \eif x=y) \eand Jx\bigr]$\\
+
+tág értelemben: $\enot \exists x\bigl[Mx \eand \forall y(My \eif x=y) \eand Jx\bigr]$\\
+
 narrow scope: $\exists x\bigl[Mx \eand \forall y(My \eif x=y) \eand \enot Jx\bigr]$
+
+szűk értelemben: $\exists x\bigl[Mx \eand \forall y(My \eif x=y) \eand \enot Jx\bigr]$
+
 \item %The deuce of clubs is not the man with the axe.
 wide scope: $\enot \exists x\exists z\bigl(Dx \eand Cx \eand Mz \eand \forall y[(Dy\eand Cy) \eif x=y]  \eand \forall y[(My \eif z=y) \eand x=z]\bigr)$\\
+
+tág értelemben: $\enot \exists x\exists z\bigl(Dx \eand Cx \eand Mz \eand \forall y[(Dy\eand Cy) \eif x=y]  \eand \forall y[(My \eif z=y) \eand x=z]\bigr)$\\
+
 narrow scope: $\exists x\exists z\bigl(Dx \eand Cx \eand Mz \eand \forall y[(Dy\eand Cy) \eif x=y]  \eand \forall y[(My \eif z=y) \eand x\neq z]\bigr)$
+
+szűk értelemben: $\exists x\exists z\bigl(Dx \eand Cx \eand Mz \eand \forall y[(Dy\eand Cy) \eif x=y]  \eand \forall y[(My \eif z=y) \eand x\neq z]\bigr)$
 \end{earg}
 
 
@@ -403,6 +414,8 @@ narrow scope: $\exists x\exists z\bigl(Dx \eand Cx \eand Mz \eand \forall y[(Dy\
 \lastSeq
 are true in the model.
 
+igazak a modellben.
+
 \solutionsection{ch.semantics}{pr.TorF2}
 \noSeq%\item $\exists x(Rxm \eand Rmx)$
 \noSeq%\item $\forall x(Rxm \eor Rmx)$
@@ -415,6 +428,9 @@ are true in the model.
 \noSeq%\item $\forall x \forall y (Rxy \eor Ryx)$
 \noSeq%\item $\forallx \forall y \forall z\bigl[(Rxy \eand Ryz) \eif Rxz\bigr]$
 are true in the model.
+
+igazak a modellben.
+
 
 \solutionsection{ch.semantics}{pr.InterpretationToModel}
 \begin{partialmodel}
@@ -432,13 +448,20 @@ UD & \{10,11,12,13\}\\
 \begin{earg}
 \item %$Da \eand Db$
 	The sentence is true in this model:
+
+	A modellben ez az állítás igaz:
+
 	\begin{partialmodel}
 		UD & \{Stan\}\\
 		\extension{D} & \{Stan\}\\
 		\referent{a} & Stan\\
 		\referent{b} & Stan
 	\end{partialmodel}
+
 	And it is false in this model:
+
+	És ez hamis a modellben:
+
 	\begin{partialmodel}
 		UD & \{Stan\}\\
 		\extension{D} & $\emptyset$\\
@@ -446,13 +469,19 @@ UD & \{10,11,12,13\}\\
 		\referent{b} & Stan
 	\end{partialmodel}
 \item %$\exists x Txh$
+
 	The sentence is true in this model:
+
+	A modellben ez az állítás igaz:
+
 	\begin{partialmodel}
 		UD & \{Stan\}\\
 		\extension{T} & \{\ntuple{Stan, Stan}\}\\
 		\referent{h} & Stan
 	\end{partialmodel}
 	And it is false in this model:
+
+	És ez hamis a modellben:
 	\begin{partialmodel}
 		UD & \{Stan\}\\
 		\extension{T} & $\emptyset$\\
@@ -460,12 +489,18 @@ UD & \{10,11,12,13\}\\
 	\end{partialmodel}
 \item %$Pm \eand \enot\forall x Px$
 	The sentence is true in this model:
+
+	A modellben ez az állítás igaz:
+
 	\begin{partialmodel}
 		UD & \{Stan, Ollie\}\\
 		\extension{P} & \{Stan\}\\
 		\referent{m} & Stan
 	\end{partialmodel}
 	And it is false in this model:
+
+	És ez hamis a modellben:
+
 	\begin{partialmodel}
 		UD & \{Stan\}\\
 		\extension{P} & $\emptyset$\\
@@ -477,9 +512,13 @@ UD & \{10,11,12,13\}\\
 
 \solutionsection{ch.semantics}{pr.NotEquiv}
 There are many possible correct answers. Here are some:
+
+Itt több helyes válasz lehetséges. Itt van néhány közülük:
 \begin{earg}
 \item %$Ja$, $Ka$
 	Making the first sentence true and the second false:
+
+	Így lesz az első mondat igaz, és a második hamis:
 	\begin{partialmodel}
 		UD & \{alpha\}\\
 		\extension{J} & \{alpha\}\\
@@ -488,6 +527,8 @@ There are many possible correct answers. Here are some:
 	\end{partialmodel}
 \item %$\exists x Jx$, $Jm$
 	Making the first sentence true and the second false:
+
+	Így lesz az első mondat igaz, és a második hamis:
 	\begin{partialmodel}
 		UD & \{alpha, omega\}\\
 		\extension{J} & \{alpha\}\\
@@ -495,12 +536,16 @@ There are many possible correct answers. Here are some:
 	\end{partialmodel}
 \item %$\forall x Rxx$, $\exists x Rxx$
 	Making the first sentence false and the second true:
+
+	Így lesz az első mondat hamis, és a második igaz:
 	\begin{partialmodel}
 		UD & \{alpha, omega\}\\
 		\extension{R} & \{\ntuple{alpha,alpha}\}
 	\end{partialmodel}
 \item %$\exists x Px \eif Qc$, $\exists x (Px \eif Qc)$
 	Making the first sentence false and the second true:
+
+	Így lesz az első mondat hamis, és a második igaz:
 	\begin{partialmodel}
 		UD & \{alpha, omega\}\\
 		\extension{P} & \{alpha\}\\
@@ -509,6 +554,8 @@ There are many possible correct answers. Here are some:
 	\end{partialmodel}
 \item %$\forall x(Px \eif \enot Qx)$, $\exists x(Px \eand \enot Qx)$
 	Making the first sentence true and the second false:
+
+	Így lesz az első mondat igaz, és a második hamis:
 	\begin{partialmodel}
 		UD & \{iota\}\\
 		\extension{P} & $\emptyset$\\
@@ -516,6 +563,8 @@ There are many possible correct answers. Here are some:
 	\end{partialmodel}
 \item %$\exists x(Px \eand Qx)$, $\exists x(Px \eif Qx)$
 	Making the first sentence false and the second true:
+
+	Így lesz az első mondat hamis, és a második igaz:
 	\begin{partialmodel}
 		UD & \{iota\}\\
 		\extension{P} & $\emptyset$\\
@@ -523,6 +572,8 @@ There are many possible correct answers. Here are some:
 	\end{partialmodel}
 \item %$\forall x(Px\eif Qx)$, $\forall x(Px \eand Qx)$
 	Making the first sentence true and the second false:
+
+	Így lesz az első mondat igaz, és a második hamis:
 	\begin{partialmodel}
 		UD & \{iota\}\\
 		\extension{P} & $\emptyset$\\
@@ -530,12 +581,16 @@ There are many possible correct answers. Here are some:
 	\end{partialmodel}
 \item %$\forall x\exists y Rxy$, $\exists x\forall y Rxy$
 	Making the first sentence true and the second false:
+
+	Így lesz az első mondat igaz, és a második hamis:
 	\begin{partialmodel}
 		UD & \{alpha, omega\}\\
 		\extension{R} & \{\ntuple{alpha, omega}, \ntuple{omega, alpha}\}
 	\end{partialmodel}
 \item %$\forall x\exists y Rxy$, $\forall x\exists y Ryx$
 	Making the first sentence false and the second true:
+
+	Így lesz az első mondat hamis, és a második igaz:
 	\begin{partialmodel}
 		UD & \{alpha, omega\}\\
 		\extension{R} & \{\ntuple{alpha, alpha}, \ntuple{alpha, omega}\}
@@ -546,6 +601,8 @@ There are many possible correct answers. Here are some:
 \begin{earg}
 \item %Show that $\{{\enot}Raa, \forall x (x=a \eor Rxa)\}$ is consistent.
 There are many possible answers. Here is one:
+
+Több helyes válasz lehetséges. Az egyik:
 \begin{partialmodel}
 UD & \{Harry, Sally\}\\
 \extension{R} &\{\ntuple{Sally, Harry}\}\\
@@ -554,14 +611,23 @@ UD & \{Harry, Sally\}\\
 \item %Show that $\{\forall x\forall y\forall z(x=y \eor y=z \eor x=z), \exists x\exists y\ x\neq y\}$ is consistent.
 There are no predicates or constants, so we only need to give a UD.
 Any UD with 2 members will do.
+
+Nincsenek predikátumok vagy konstansok, tehát csak egy individuumtartományt kell megadnunk.
+Bármelyik két tagú individuumtartomány megteszi.
+
 \item %Show that $\{\forall x\forall y\ x=y, \exists x\ x \neq a\}$ is inconsistent.
 We need to show that it is impossible to construct a model in which these are both true. Suppose $\exists x\ x \neq a$ is true in a model. There is something in the universe of discourse that is \emph{not} the referent of $a$. So there are at least two things in the universe of discourse: \referent{a} and this other thing. Call this other thing $\beta$--- we know $a \neq \beta$. But if $a \neq \beta$, then $\forall x\forall y\ x=y$ is false. So the first sentence must be false if the second sentence is true. As such, there is no model in which they are both true. Therefore, they are inconsistent.
+
+Meg kell mutatnunk, hogy nincs olyan modell, amelyikben mindkettő igaz. Tegyük fel, hogy $\exists x\ x \neq a$ igaz a modellben. Van valami az individuumtartományban, ami \emph{nem} az $a$ referense. Tehát van két dolog az individuumtartományban: \referent{a} és ez a másik dolog. Hívjuk ezt a másik dolgot $\beta$-nak. Tudjuk, hogy $a \neq \beta$. De ha $a \neq \beta$, akkor $\forall x\forall y\ x=y$ hamis. Tehát az első mondatnak hamisnak kell lennie, ha ez első igaz. Tehát nincs olyan konzisztens modell, amelyikben mindkettő igaz.
+
 \end{earg}
 
 \solutionsection{ch.semantics}{pr.SemanticsEssay}
 \begin{earg}
 \stepcounter{eargnum}
 \item No, it would not make any difference. The satisfaction of a formula with one or more free variables depends on what the variable assignment does for those variables. Because a sentence has no free variables, however, its satisfaction does not depend on the variable assignment. So a sentence that is satisfied by \emph{some} variable assignment is satisfied by \emph{every} other variable assignment as well.
+
+Nem, ez nem változtatna semmit. A képlet egy vagy több szabad változóval való kielégítése függ attól, hogy mi a változóhozzárendelés azokra a változókra. Mivel, a mondatban nincsenek szabad változók, a kielégítése nem függ a változóhozzárendeléstől. Tehát az az állítás, amit \emph{valamelyik} változóhozzárendelés kielégít, ugyanúgy kielégíti a többi változóhozzárendelés is.
 \end{earg}
 
 %LDR fordítása vége
