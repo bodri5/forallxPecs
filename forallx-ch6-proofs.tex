@@ -1531,6 +1531,7 @@ A fontos pont, hogy szerencsére a bizonyítási rendzer a QL nyelvre egyben kon
 \problempart
 \label{pr.justifySLproof}
 Provide a justification (rule and line numbers) for each line of proof that requires one.
+* A rész Indokoljon (szabály és sorszám) minden egyes állítást, amit szükséges.
 \begin{multicols}{2}
 \begin{proof}
 \hypo{1}{W \eif \enot B}
@@ -1579,6 +1580,7 @@ Provide a justification (rule and line numbers) for each line of proof that requ
 \problempart
 \label{pr.solvedSLproofs}
 Give a proof for each argument in SL.
+* B rész Igazoljon minden egyes állítást KL-ben.
 \begin{earg}
 \item $K\eand L$, \therefore $K\eiff L$
 \item $A\eif (B\eif C)$, \therefore $(A\eand B)\eif C$
@@ -1590,6 +1592,7 @@ Give a proof for each argument in SL.
 
 \problempart
 Give a proof for each argument in SL.
+C rész Igazoljon minden egyes állítást KL-ben.
 \begin{earg}
 \item $Q\eif(Q\eand\enot Q)$, \therefore\ $\enot Q$
 \item $J\eif\enot J$, \therefore\ $\enot J$
@@ -1605,6 +1608,7 @@ Give a proof for each argument in SL.
 
 \problempart
 Show that each of the following sentences is a theorem in SL.
+D rész Mutassa meg, hogy a következő mondatok mindegyike egy tétel KL-ben.
 \begin{earg}
 \item $O \eif O$
 \item $N \eor \enot N$
@@ -1615,6 +1619,7 @@ Show that each of the following sentences is a theorem in SL.
 
 \problempart
 Show that each of the following pairs of sentences are provably equivalent in SL.
+E rész Mutassa meg, hogy a következő mondatpárok bizonyíthatóan ekvivalensek KL-ben.
 \begin{earg}
 \item $\enot\enot\enot\enot G$, $G$
 \item $T\eif S$, $\enot S \eif \enot T$
@@ -1625,6 +1630,7 @@ Show that each of the following pairs of sentences are provably equivalent in SL
 
 \problempart
 Provide proofs to show each of the following.
+F rész Bizonyítsa a következőket.
 \begin{earg}
 \item $M \eand (\enot N \eif \enot M) \vdash (N \eand M) \eor \enot M$
 \item \{$C\eif(E\eand G)$, $\enot C \eif G$\} $\vdash$ $G$
@@ -1636,12 +1642,23 @@ Provide proofs to show each of the following.
 
 \problempart
 For the following, provide proofs using only the basic rules. The proofs will be longer than proofs of the same claims would be using the derived rules.
+G rész A következőknél, az alapszabályok segítségével adjon bizonyítást. A bizonyítás így hosszabb lesz, mint ugyanaz a származtatott szabályok alkalmazásával.
+
 \begin{earg}
 \item Show that MT is a legitimate derived rule. Using only the basic rules, prove the following: \script{A}\eif\script{B}, \enot\script{B}, \therefore\ \enot\script{A}
+\item Mutassa meg, hogy MT egy legitim származtatott szabály. Csak az alapszabályok használatával, bizonyítsa a következőt: \script{A}\eif\script{B}, \enot\script{B}, \therefore\ \enot\script{A}
+
 \item Show that Comm is a legitimate rule for the biconditional. Using only the basic rules, prove that $\script{A}\eiff\script{B}$ and $\script{B}\eiff\script{A}$ are equivalent.
+\item Mutassa meg, hogy Comm egy legitim szabály az ekvivalenciára. Csak az alapszabályok használatával, bizozonyítsa, hogy $\script{A}\eiff\script{B}$ és $\script{B}\eiff\script{A}$ evivalensek.
+
 \item Using only the basic rules, prove the following instance of DeMorgan's Laws: $(\enot A \eand \enot B)$, \therefore\ $\enot(A \eor B)$
+\item Csak az alapszabályok használatával, bizonyítsa a következő példán keresztül a DeMorgan törvényeket: $(\enot A \eand \enot B)$, \therefore\ $\enot(A \eor B)$
+
 \item Without using the QN rule, prove $\enot\exists x\enot\script{A} \vdash \forall x\script{A}$
+\item QN szabály használata nélkül, bizonyítsa $\enot\exists x\enot\script{A} \vdash \forall x\script{A}$
+
 \item Show that {\eiff}{ex} is a legitimate derived rule. Using only the basic rules, prove that $D\eiff E$ and $(D\eif E)\eand(E\eif D)$ are equivalent.
+\item Mutassa meg, hogy {\eiff}{ex} egy legitim származtatott szabály. Csak az alapszabályok használatával bizonyítsa, hogy $D\eiff E$ és $(D\eif E)\eand(E\eif D)$ ekvivalensek.
 \end{earg}
 
 
@@ -1649,8 +1666,12 @@ For the following, provide proofs using only the basic rules. The proofs will be
 \problempart
 \label{pr.subinstanceQL}
 \begin{earg}
+* H rész
 \item Identify which of the following are substitution instances of $\forall x Rcx$: $Rac$, $Rca$, $Raa$, $Rcb$, $Rbc$, $Rcc$, $Rcd$, $Rcx$
+\item Határozza meg, hogy a következők közül melyik helyettesítheti $\forall x Rcx$: $Rac$, $Rca$, $Raa$, $Rcb$, $Rbc$, $Rcc$, $Rcd$, $Rcx$
 \item Identify which of the following are substitution instances of $\exists x\forall y Lxy$:
+$\forall y Lby$, $\forall x Lbx$, $Lab$, $\exists x Lxa$
+\item Határozza meg, hogy a kövezkezők közül melyik helyettesítheti $\exists x\forall y Lxy$:
 $\forall y Lby$, $\forall x Lbx$, $Lab$, $\exists x Lxa$
 \end{earg}
 
@@ -1661,6 +1682,7 @@ $\forall y Lby$, $\forall x Lbx$, $Lab$, $\exists x Lxa$
 \problempart
 \label{pr.justifyQLproof}
 Provide a justification (rule and line numbers) for each line of proof that requires one.
+* I rész Indokoljon (szabály és sorszám) minden egyes állítást, amit szükséges.
 \begin{multicols}{2}
 %$\{\forall x(\exists y)(Rxy \eor Ryx),\forall x\enot Rmx\}\vdash\exists xRxm$
 \begin{proof}
@@ -1730,6 +1752,7 @@ Provide a justification (rule and line numbers) for each line of proof that requ
 \problempart
 \label{pr.someQLproofs}
 Provide a proof of each claim.
+* J rész Bizonyítson be minden egyes állítást.
 \begin{earg}
 \item $\vdash \forall x Fx \eor \enot \forall x Fx$
 \item $\{\forall x(Mx \eiff Nx), Ma\eand\exists x Rxa\}\vdash \exists x Nx$
@@ -1740,6 +1763,7 @@ Provide a proof of each claim.
 
 \problempart
 Provide a proof of the argument about Billy on p.~\pageref{surgeon2}.
+K rész Bizonyitsa Billy érvelését az o.~\pageref{surgeon2}.
 
 
 %TS fordítása vége
