@@ -2,7 +2,8 @@
 
 %CE fordítása kezdet
 
-\chapter{Proofs}
+\chapter*{Proofs}
+\chapter{Bizonyítások}
 \label{ch.proofs}
 
 Consider two arguments in SL:
@@ -55,18 +56,30 @@ Egy \emph{bebizonyítási rendszernek} az a célja, hogy megmutassa az egyes ér
 \end{earg}
 By modus ponens, (1) and (2) entail $J \eor L$. This is an \emph{intermediate conclusion}. It follows logically from the premises, but it is not the conclusion we want. Now $J \eor L$ and (2) entail $J$, by disjunctive syllogism. We do not need a new rule for this argument. The proof of the argument shows that it is really just a combination of rules we have already introduced.
 
+A modus ponens miatt, (1) és (2)-ből következik, hogy $J \eor L$. Ami egy \emph{közbülső következtetés}. A premisszákból logikusan következik, de ez még nem az a konklúzió, amit szeretnénk megkapni. $J \eor L$-ből és (2)-ből következik $J$ a diszjunktív szillogizmus miatt. Az érveléshez nincs szükségünk új szabályra. Az érvelés bizonyítása megmutatja, hogy tényleg azoknak a szabályoknak egy kombinációja, amik fentebb lettek bevezetve.
+
 Formally, a \define{proof} is a sequence of sentences. The first sentences of the sequence are assumptions; these are the premises of the argument. Every sentence later in the sequence follows from earlier sentences by one of the rules of proof. The final sentence of the sequence is the conclusion of the argument.
+
+Formálisan egy \define{bizonyítás} mondatok sora. A következtetés első mondatai a hipotézisek; amelyek az érvelés premisszái. A következtetés minden későbbi mondata egy vagy több korábbi mondatból következik a bizonyítás egyik szabálya által. A következtetés utolsó mondata az érvelés konklúziója.
 
 This chapter begins with a proof system for SL, which is then extended to cover QL and QL plus identity.
 
+Ez a fejezet a KL bizonyításrendszerével kezdődik, ami a későbbiekben ki lesz terjesztve a PL-re és a PL plusz identitására.
 
-\section{Basic rules for SL}
+\section*{Basic rules for SL}
+\section{Alapszabályok KL-re}
 
 In designing a proof system, we could just start with disjunctive syllogism and modus ponens. Whenever we discovered a valid argument which could not be proven with rules we already had, we could introduce new rules. Proceeding in this way, we would have an unsystematic grab bag of rules. We might accidently add some strange rules, and we would surely end up with more rules than we need.
 
+Egy bizonyításrendszer létrehozásakor nyugodtan kezdhetünk a diszjunktív szillogizmussal és a modus ponensszel. Amikor találunk egy olyan érvet, amit nem lehet megadni a rendelkezésünkre álló szabályok segítségével, új szabályokat vezethetünk be. Ilyen módon a szabályoknak egy nem szisztematikusan kapott halmaza állna rendelkezésünkre. Lehet, hogy véletlenül hozzáadtunk néhány furcsa szabályt, és a végére így biztosan a szükségesnél több szabályunk lenne.
+
 Instead, we will develop what is called a \define{natural deduction} system. In a natural deduction system, there will be two rules for each logical operator: an \define{introduction} rule that allows us to prove a sentence that has it as the main logical operator and an \define{elimination} rule that allows us to prove something given a sentence that has it as the main logical operator.
 
+Ehelyett, egy \define{természetes levezetési, avagy dedukciós} rendszert használunk. Egy természetes levezetési rendszerben 2 szabály van minden logikai operátorra: egy \define{bevezető} szabály, amely lehetővé teszi számunkra, hogy bebizonyítsunk egy mondatot, amelyben ez a fő logikai operátor és egy \define{elimináló} szabály, amely lehetővé teszi számunkra, hogy bebizonyítsunk valamit egy mondattal, aminek ez a fő logikai operátora.
+
 In addition to the rules for each logical operator, we will also have a reiteration rule. If you already have shown something in the course of a proof, the reiteration rule allows you to repeat it on a new line. For instance:
+
+A logikai operátorokhoz tartozó szabályokon túl lesz egy ismétlési szabályunk is. Ha már a bizonyítás során bebizonyítottunk valamit, akkor az ismétlési szabály lehetővé teszi számunkra, hogy megismételjük egy új sorban. Például:
 
 \begin{proof}
 	\have{a1}{\script{A}}
@@ -74,6 +87,8 @@ In addition to the rules for each logical operator, we will also have a reiterat
 \end{proof}
 
 When we add a line to a proof, we write the rule that justifies that line. We also write the numbers of the lines to which the rule was applied. The reiteration rule above is justified by one line, the line that you are reiterating. So the `R 1' on line 2 of the proof means that the line is justified by the reiteration rule (R) applied to line 1.
+
+Amikor hozzáadunk egy új sort a bizonyításhoz, leírjuk azt a szabályt, ami igazolja azt a sort. Azoknak a soroknak számát is leírjuk, melyekre a szabály alkalmazva lett. A fenti ismétlési szabályt csak egy sor, a megismételt sor igazolja. Tehát a bizonyítás 2. sorában az `R 1' azt jelenti, hogy a sort az 1. sorra alkalmazott ismételési szabály (R) igazolja.
 
 %AE fordítása vége
 
