@@ -1080,22 +1080,35 @@ Tekintsük az alábbi kulcsokat és a hozzájuk tartozó mondatokat:
 
 Sentence \ref{likes1} can be partially translated as $\forall x(\mbox{Karl likes $x$}\eif\mbox{Imre likes $x$})$. This becomes $\forall x(Lkx\eif Lix)$.
 
+A \ref{likes1} mondat részben a következőként fordítható le: $\forall x(\mbox{Karl szereti $x$}\eif\mbox{Imre szereti $x$})$.Ebből $\forall x(Lkx\eif Lix)$ képezhető.
+
 
 Sentence \ref{likes2} is almost a tongue-twister. There is little hope of writing down the whole translation immediately, but we can proceed by small steps. An initial, partial translation might look like this: $$\exists x\ \mbox{everyone who likes everyone that $x$ likes is liked by $x$}$$
 The part that remains in English is a universal sentence, so we translate further: $$\exists x\forall y(\mbox{$y$ likes everyone that $x$ likes}\eif\mbox{$x$ likes $y$}).$$
 The antecedent of the conditional is structurally just like sentence \ref{likes1}, with $y$ and $x$ in place of Imre and Karl. So sentence \ref{likes2} can be completely translated in this way $$\exists x\forall y\bigl[\forall z(Lxz \eif Lyz) \eif Lxy\bigr]$$
 
+A \ref{likes2} mondat szinte már egy nyelvtörő. Elég kevés remény fűzhető a fordítás azonnali leírásához, de apró lépésekkel eljuthatunk az eredményhez. Kezdésnek egy részletes fordítás így nézne ki: $$\exists x\ \mbox{mindenkit aki mindenkit szeret,akit szereti $x$ azt szereti $x$ is}$$
+A megmaradt rész magyarul egy univerzális mondat, így tovább fordíthatunk: $$\exists x\forall y(\mbox{$y$ szeret mindenkit, akit szeret $x$}\eif\mbox{$x$ szereti $y$-t}).$$
+A feltételes állítás első tagja szerkezetileg pont olyan, mint a \ref{likes1} mondat, Imrét és Karlt $y$-nal és $x$-el helyettesítve. Tehát a \ref{likes2} mondatot teljesen a következőképpen lehetne lefordítani: $$\exists x\forall y\bigl[\forall z(Lxz \eif Lyz) \eif Lxy\bigr]$$
+
+
 When symbolizing sentences with multiple quantifiers, it is best to proceed by small steps. Paraphrase the English sentence so that the logical structure is readily symbolized in QL. Then translate piecemeal, replacing the daunting task of translating a long sentence with the simpler task of translating shorter formulae.
 
+Ha több kvantort tartalmazó mondatokat kell átírnunk szimbólumokra, akkor legjobb, ha kis lépésekben haladunk. Először átfogalmazzuk a mondatot úgy, hogy a logikai struktúra szimbolizálható legyen PL-ben. Majd részletenként fordítunk, így lecserélve egy hosszú, bonyolult mondat fordítását egy sokkal egyszerűbb rész fordítására
 
 
-
-\section{Sentences of QL}
+\section*{Sentences of QL}
+\section{A predikátumlogika mondatai}
 
 In this section, we provide a formal definition for a \emph{well-formed formula} (wff) and \emph{sentence} of QL.
 
-\subsection{Expressions}
+Ebben a fejezetben formálisan definiáljuk a \emph{jól formált kifejezés} (jfk) és a \emph{mondat} fogalmát a predikátumlogikában.
+
+\subsection*{Expressions}
+\subsection{Kifejezések}
 There are six kinds of symbols in QL:
+
+Hat féle szimbólum van a PL-ben:
 
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -1118,9 +1131,32 @@ quantifiers& $\forall, \exists$\\
 \end{tabular}
 \end{center}
 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+állítások & $A,B,C,\ldots,Z$\\
+alsó indexszel, ha szükséges & $A_1, B_1,Z_1,A_2,A_{25},J_{375},\ldots$\\
+\hline
+konstansok & $a,b,c,\ldots,w$\\
+alsó indexszel, ha szükséges & $a_1, w_4, h_7, m_{32},\ldots$\\
+\hline
+változók & $x,y,z$\\
+alsó indexszel, ha szükséges & $x_1, y_1, z_1, x_2,\ldots$\\
+\hline
+összekötő műveletek & \enot,\eand,\eor,\eif,\eiff\\
+\hline
+zárójelek&( , )\\
+\hline
+mennyiségjelzők& $\forall, \exists$\\
+\hline
+\end{tabular}
+\end{center}
+
 
 %copied from the definition for SL
 We define an \define{expression of QL} as any string of symbols of QL. Take any of the symbols of QL and write them down, in any order, and you have an expression.
+
+Bármilyen PL szimbólumokból alkotott karakterláncot KIFEJEZÉS-nek hívunk PL-ben. Bármelyik PL szimbólumot leírva, bármilyen sorrendben egy kifejezést kapunk.
 
 %KM fordítása vége
 
