@@ -343,6 +343,9 @@ Annak érdekében, hogy megmutassuk, hogy egy mondat tautológia, meg kell mutat
 %BM fordítása kezdet
 
 Consider, for example, the sentence $(U \eand T) \eif (S \eand W)$. We want to show that it is \emph{not} a tautology by providing a partial truth table. We fill in 0 for the entire sentence. The main connective of the sentence is a conditional. In order for the conditional to be false, the antecedent must be true (1) and the consequent must be false (0). So we fill these in on the table:
+
+Vegyük például a mondatot ahhol $(U \eand T) \eif (S \eand W)$ érték van. Meg szeretnénk mutatni, hogy \emph{nem} egy tautológia részleges igazságtáblázattal. Az összes esetben 0-t használunk kitöltésre. Az egész egy feltételezésen alapszik. Annak érdekében, hogy a feltétel (false) legyen, az előzménynek igaz(1) és ez utáni értékeknek pedig hamis(0)-nak kell lennie .Ezt így ábrázoljuk egy táblázatban a táblázatban:
+
 \begin{center}
 \begin{tabular}{c|c|c|c|@{\TTon}*{7}{c}@{\TToff}}
 $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
@@ -351,6 +354,8 @@ $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
 \end{tabular}
 \end{center}
 In order for the $(U\eand T)$ to be true, both $U$ and $T$ must be true.
+
+Ahoz, hogy $(U\eand T)$ igaz lehessen, mind $U$-nak és $T$-nek igaznak kell lennie.
 \begin{center}
 \begin{tabular}{c|c|c|c|@{\TTon}*{7}{c}@{\TToff}}
 $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
@@ -359,6 +364,8 @@ $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
 \end{tabular}
 \end{center}
 Now we just need to make $(S\eand W)$ false. To do this, we need to make at least one of $S$ and $W$ false. We can make both $S$ and $W$ false if we want. All that matters is that the whole sentence turns out false on this line. Making an arbitrary decision, we finish the table in this way:
+
+Most már csak az  $(S\eand W)$ -t kell hamis értékre hozni. Ehez valamelyiknek $S$ és $W$ közül hamisnak kell lennie. Persze ha szeretnénk mind a kettő lehet hamis. Csak az számít, hogy az egész kifejezés hamis lesz ezen a soron. Tetszőleges döntés meghozatalával a táblázatot így fejezzük be:
 \begin{center}
 \begin{tabular}{c|c|c|c|@{\TTon}*{7}{c}@{\TToff}}
 $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
@@ -369,7 +376,11 @@ $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
 
 Showing that something is a contradiction requires a complete truth table. Showing that something is \emph{not} a contradiction requires only a one-line partial truth table, where the sentence is true on that one line.
 
+Ha azt akarjuk belátni, hogy valami ellentmondásos, teljes igazságtáblra van szükség. Annak bizonyítására, hogy valami \emph{nem} ellentmondásos, csak egysoros részleges igazságtáblát kell csinálnunk, ahol a mondat igaz az adott soron. 
+
 A sentence is contingent if it is neither a tautology nor a contradiction. So showing that a sentence is contingent requires a \emph{two-line} partial truth table: The sentence must be true on one line and false on the other. For example, we can show that the sentence above is contingent with this truth table:
+
+A sor kontingens, ha nem tautológia vagy ellentmondás. Tehát egy mondat kontingenciájának bizonyításához \emph{két sorú} igazságtábla kell: Az értékeknek igaz-nak kell lennie az egyik sorban, a másikon pedig hamisnak. Például be tudjuk mutatni, hogy a fenti mondat kontingens ezzel az igazságtáblával:
 \begin{center}
 \begin{tabular}{c|c|c|c|@{\TTon}*{7}{c}@{\TToff}}
 $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
@@ -380,7 +391,11 @@ $S$&$T$&$U$&$W$&$(U$&\eand&$T)$&\eif    &$(S$&\eand&$W)$\\
 \end{center}
 Note that there are many combinations of truth values that would have made the sentence true, so there are many ways we could have written the second line.
 
+Megjegyezhetjük, hogy sok lehetőség van a igaz értékekre, amitől az egész sor igaz lesz, szóval sok lehetőségünk van a 2 sort kitölteni rengeteg variációval.
+
 Showing that a sentence is \emph{not} contingent requires providing a complete truth table, because it requires showing that the sentence is a tautology or that it is a contradiction.  If you do not know whether a particular sentence is contingent, then you do not know whether you will need a complete or partial truth table. You can always start working on a complete truth table. If you complete rows that show the sentence is contingent, then you can stop. If not, then complete the truth table. Even though two carefully selected rows will show that a contingent sentence is contingent, there is nothing wrong with filling in more rows.
+
+Annak belátásához, hogy egy mondat \emph{nem} kontingens, teljes igazságtábla szükséges, mert meg kell mutatni vagy azt, hogy tautológia, vagy azt, hogy ellentmondás. Ha nem tudjuk, hogy egy mondat kontingens-e, akkor azt sem tudjuk, szükség lesz-e teljes vagy részleges igazságtáblára. Mindig kezdhetjük egy teljes igazságtábla készítésével. Ha találunk olyan sorokat, amik azt mutatják, hogy a mondat kontingens, akkor meg lehet állni. Ha nem, akkor elkészítjük a teljes igazságtáblát. Bár két ügyesen megválasztott sor bizonyíthatja, hogy a mondat kontingens, nem baj, ha több sort töltünk ki.
 
 %BM fordítása vége
 
