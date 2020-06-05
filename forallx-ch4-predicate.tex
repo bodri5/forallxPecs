@@ -418,38 +418,68 @@ A kvantorok az Individuumtartomány \emph{alatt mozognak}. A megadott Individuum
 
 In QL, the UD must be \emph{non-empty}; that is, it must include at least one thing. It is possible to construct formal languages that allow for empty UDs, but this introduces complications.
 
+PL-ben az UD  nem lehet \emph{üres}; legalább egy dolgot tartalmaznia kell. Lehetőség van olyan formális nyelvek felépítésére, amelyek lehetővé teszik az üres UD-k használatát, de ez komplikációkhoz vezethet.
+
 Even allowing for a UD with just one member can produce some strange results. Suppose we have this as a symbolization key:
+
+Már a csak egy taggal lévő UD engedélyezése is furcsa eredményeket hozhat. Tegyük fel, hogy ezt használjuk szimbolizációs kulcsként:
 \begin{ekey}
 \item[UD:] the Eiffel Tower
 \item[Px:] $x$ is in Paris.
 \end{ekey}
+
+\begin{ekey}
+\item[UD:] az Eiffel torony
+\item[Px:] $x$ Párizsban van.
+\end{ekey}
 The sentence $\forall x Px$ might be paraphrased in English as `Everything is in Paris.' Yet that would be misleading. It means that everything \emph{in the UD} is in Paris. This UD contains only the Eiffel Tower, so with this symbolization key $\forall x Px$ just means that the Eiffel Tower is in Paris.
 
+A $\forall x Px$ mondat magyarul lehetne az, hogy „Minden Párizsban van.” Ez azonban megtévesztő lehet. Ez azt jelenti, hogy minden az \emph{UD-n belül} Párizsban van. Ez az UD az Eiffel tornyot tartalmazza csak, szóval ezzel a szimbolizációs kulccsal $\forall x Px$ csak annyit jelent, hogy az Eiffel torony Párizsban van.
 
-
-\subsection{Non-referring terms}
+\subsection*{Non-referring terms}
+\subsection{Nem hivatkozó változók}
 In QL, each constant must pick out exactly one member of the UD. A constant cannot refer to more than one thing--- it is a \emph{singular} term. Each constant must still pick out \emph{something}. This is connected to a classic philosophical problem: the so-called problem of non-referring terms.
 
+PL-ben minden konstansnak választania kell pontosan egy tagot a UD-ből. A konstant nem hivatkozhat egynél több dologra -- ez egy \emph{szinguláris} kifejezés. Minden konstansnak kell választania \emph{valamit}. Ez kapcsolódik a klasszikus filozófiai problémához: az úgynevezett nem hivatkozó változók problémájához.
+
 Medieval philosophers typically used sentences about the \emph{chimera} to exemplify this problem. Chimera is a mythological creature; it does not really exist. Consider these two sentences:
+
+A középkori filozófusok tipikusan a \emph{chimeráról} alkottak példa mondatokat a probléma leírásához. A chimera egy mitológiai teremtmény; valójában nem létezik. Vegyük az alábbi két mondatot:
 \begin{earg}
 \item[\ex{chimera1}] Chimera is angry.
 \item[\ex{chimera2}] Chimera is not angry.
 \end{earg}
+\begin{earg}
+\item[\ex{chimera1}] A chimera mérges.
+\item[\ex{chimera2}] A chimera nem mérges.
+\end{earg}
 It is tempting just to define a constant to mean `chimera.' The symbolization key would look like this:
+
+Csábító, hogy definiáljunk egy konstans értéket ami alatt a „chimerát” értjük. A szimbolizációs kulcs így nézne ki:
+
 \begin{ekey}
 \item[UD:] creatures on Earth
 \item[Ax:] $x$ is angry.
 \item[c:] chimera
 \end{ekey}
+\begin{ekey}
+\item[UD:] a Földön élő teremtmények
+\item[Ax:] $x$ mérges.
+\item[c:] chimera
+\end{ekey}
 We could then translate sentence \ref{chimera1} as $Ac$ and sentence \ref{chimera2} as $\enot Ac$.
+
+Értelmezhetjük a \ref{chimera1} mondatot mint $Ac$ és a \ref{chimera2} mondatot mint $\enot Ac$.
 
 Problems will arise when we ask whether these sentences are true or false.
 
+Akkor merül fel a probléma, amikor meg akarjuk tudni, hogy ezek a mondatok igazak vagy hamisak.
+
 One option is to say that sentence \ref{chimera1} is not true, because there is no chimera. If sentence \ref{chimera1} is false because it talks about a non-existent thing, then sentence \ref{chimera2} is false for the same reason. Yet this would mean that $Ac$ and $\enot Ac$ would both be false. Given the truth conditions for negation, this cannot be the case.
 
-%MP fordítása vége
+Az egyik opció, hogy azt mondjuk a \ref{chimera1} mondat hamis, mert a chimera nem létezik. Ha a \ref{chimera1} mondat hamis, mert egy nem létező dologról van szó, akkor a \ref{chimera2} is hamis ugyanazon okok miatt. Ez azt jelentené, hogy $Ac$ -nek és $\enot Ac$ -nek is hamisnak kellene lennie.  A negációra való tekintettel ez nem történhet meg.
 
-%NV fordítása kezdet
+%MP fordítása vége
 
 Since we cannot say that they are both false, what should we do? Another option is to say that sentence \ref{chimera1} is \emph{meaningless} because it talks about a non-existent thing. So $Ac$ would be a meaningful expression in QL for some interpretations but not for others. Yet this would make our formal language hostage to particular interpretations. Since we are interested in logical form, we want to consider the logical force of a sentence like $Ac$ apart from any particular interpretation. If $Ac$ were sometimes meaningful and sometimes meaningless, we could not do that.
 
