@@ -1465,35 +1465,61 @@ In this way, proofs and models give us a versatile toolkit for working with argu
 \begin{tabular*}{\textwidth}{p{10em}|p{10em}|p{10em}|}
 \cline{2-3}
 
+
  & {\centerline{YES}} & {\centerline{NO}}\\
 \cline{2-3}
+ & {\centerline{IGEN}} & {\centerline{NEM}}\\
+\cline{2-3}
+
 
 Is \script{A} a tautology? & prove $\vdash\script{A}$ & give a model in which \script{A} is false\\
 \cline{2-3}
-
-Is \script{A} a contradiction? &  prove $\vdash\enot\script{A}$ & give a model in which \script{A} is true\\
+A \script{A} tautológia? & bizonyítás $\vdash\script{A}$ & adjon meg egy példát, amiben \script{A} hamis\\
 \cline{2-3}
+
+
+Is \script{A} a contradiction? & prove $\vdash\enot\script{A}$ & give a model in which \script{A} is true\\
+\cline{2-3}
+Az \script{A} ellentmondás? & bizonyítás $\vdash\enot\script{A}$ & adjon meg egy példát, amiben \script{A} igaz\\
+\cline{2-3}
+
 
 Is \script{A} contingent? & give a model in which \script{A} is true and another in which \script{A} is false & prove $\vdash\script{A}$ or $\vdash\enot\script{A}$\\
 \cline{2-3}
+Az \script{A} kontingens? & adjon meg egy példát, amiben \script{A} igaz és egy másikat, amiben \script{A} hamis & bizonyítás $\vdash\script{A}$ vagy $\vdash\enot\script{A}$\\
+\cline{2-3}
+
 
 Are \script{A} and \script{B} equivalent? & prove \mbox{$\script{A}\vdash\script{B}$} and \mbox{$\script{B}\vdash\script{A}$}  & give a model in which \script{A} and \script{B} have different truth values\\
 \cline{2-3}
+Az \script{A} és a \script{B} ekvivalensek? & bizonyítás \mbox{$\script{A}\vdash\script{B}$} és \mbox{$\script{B}\vdash\script{A}$}  & adj meg egy példát, amiben \script{A} és \script{B} különböző igazságértékkel rendelkeznek\\
+\cline{2-3}
+
 
 Is the set \model{A} consistent? & give a model in which all the sentences in \model{A} are true & taking the sentences in \model{A}, prove \script{B} and \enot\script{B}\\
 \cline{2-3}
+Az \model{A} készlet konzisztens? & adjon meg egy példát, ahol az összes tételben \model{A} igaz & a tételek bevitele \model{A}, bizonyítás \script{B} és \enot\script{B}\\
+\cline{2-3}
+
 
 Is the argument \mbox{`\script{P}, \therefore\ \script{C}'} valid? & prove $\script{P}\vdash\script{C}$ & give a model in which \script{P} is true and \script{C} is false\\
 \cline{2-3}
+A \mbox{`\script{P}, \therefore\ \script{C}'} érvelés valós? & bizonyítás $\script{P}\vdash\script{C}$ & adjon meg egy példát, amiben \script{P} igaz, és \script{C} hamis\\
+\cline{2-3}
+
+
 \end{tabular*}
 \end{center}
+
 \caption{Sometimes it is easier to show something by providing proofs than it is by providing models. Sometimes it is the other way round.  It depends on what you are trying to show.}
+\caption{Néha egyszerűbb úgy megmutatni valamit, hogy bizonyítékokat mutatunk be és nem modelleket. Néha az ellenkezője igaz. Attól függ, hogy mit szeretnénk bemutatni.}
+
 \label{table.ProofOrModel}
 \end{table}
 
 
-
 \section{Soundness and completeness}
+\section{Megbízhatóság és teljesség}
 
 This toolkit is incredibly convenient. It is also intuitive, because it seems natural that provability and semantic entailment should agree. Yet, do not be fooled by the similarity of the symbols `$\models$' and `$\vdash$.' The fact that these two are really interchangeable is not a simple thing to prove.
 
@@ -1502,6 +1528,15 @@ Why should we think that an argument that \emph{can be proven} is necessarily a 
 This is the problem of \define{soundness}. A proof system is \define{sound} if there are no proofs of invalid arguments. Demonstrating that the proof system is sound would require showing that \emph{any} possible proof is the proof of a valid argument. It would not be enough simply to succeed when trying to prove many valid arguments and to fail when trying to prove invalid ones.
 
 Fortunately, there is a way of approaching this in a step-wise fashion. If using the {\eand}E rule on the last line of a proof could never change a valid argument into an invalid one, then using the rule many times could not make an argument invalid. Similarly, if using the {\eand}E and {\eor}E rules individually on the last line of a proof could never change a valid argument into an invalid one, then using them in combination could not either.
+
+
+Ez az eszközkészlet hihetetlenül megfelelő. Továbbá intuitív, mert természetesnek tűnik, hogy a bizonyíthatóságnak és a szemantikai következtetéseknek meg kell egyezniük. Mégis, ne hagyjuk magunkat átverni a szimbólumok hasonlóságával `$\models$' and `$\vdash$. A tény, hogy ez a két szimbólum valóban felcserélhető, nem egyszerű bizonyítani.
+
+Miért kéne azt gondolnunk, hogy egy érv, amit \emph{bizonyítani lehet} feltétlenül \emph{helytálló} érv e? Tehát, miért gondoljuk, hogy $\script{A}\vdash\script{B}$ ugyan azt jelenti, mint $\script{A}\models\script{B}$?
+
+Ez a probléma a \define{megbízhatósággal}. Egy bizonyítási rendszer \define{megbízható}, ha nincsenek bizonyítékok érvénytelen érvekre. Annak bemutatása érdekében, hogy a bizonyítási rendszer megbízható szükséges megmutatni, hogy \emph{minden} lehetséges bizonyíték egy valós érv bizonyítéka. Nem lenne elég, ha csak az lenne sikeres, amikor próbáljuk bebizonyítani, hogy sok valós érvelés van és nem sikerülne bizonyítani a valótlanokat.
+
+Szerencsére, van egy módja annak, hogy lépésről-lépésre megközelítsük. Ha az {\eand}E szabályt használjuk az utolsó soron, akkor a bizonyíték soha nem tudja megváltoztatni a valós érvet valótlanra, utána, ha a szabályt többször alkalmazzuk egy érved nem tud érvénytelenné tenni. Hasonlóan, ha az {\eand}E és a {\eor}E szabályokat egyszerre használjuk az utolsó vonalán egy érvnek soha nem tudja megváltoztatni az érvényességét érvénytelenre, ahogyan, ha kombinálva használjuk őket, az sem tud változtatni.
 
 %HHB fordítása vége
 
