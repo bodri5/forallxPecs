@@ -588,9 +588,22 @@ Translating, we get:
 \item[\therefore] $Fw$
 \end{earg}
 
+\begin{ekey}
+\item[UD:] emberek
+\item[Lx:] $x$ logikus.
+\item[Fx:] $x$ vicces kalapot visel.
+\item[w:] Willard
+\end{ekey}
+Lefordítva kapjuk:
+\begin{earg}
+\item[] $Lw$
+\item[] $\forall x(Lx \eif Fx)$
+\item[\therefore] $Fw$
+\end{earg}
+
 This captures the structure that was left out of the SL translation of this argument, and this is a valid argument in QL.
 
-
+Ez rögzíti a struktúrát, amelyet kihagytak ennek az argumentumnak a SL fordításából, és ez egy érvényes argumentum a QL-ben.
 
 
 
@@ -601,6 +614,9 @@ This captures the structure that was left out of the SL translation of this argu
 
 \subsection{Empty predicates}
 A predicate need not apply to anything in the UD. A predicate that applies to nothing in the UD is called an \define{empty} predicate.
+
+\subsection{Üres predikátumok}
+A predikátumnak nem kell semmire sem vonatkoznia az UD-ben. Egy olyan predikátumot, amely az UD-n semmire sem vonatkozik, \define{üres} predikátumnak nevezik.
 
 Suppose we want to symbolize these two sentences:
 \begin{earg}
@@ -614,13 +630,33 @@ It is possible to write the symbolization key for these sentences in this way:
 \item[Sx:] $x$ knows sign language.
 \end{ekey}
 
+Tegyük fel, hogy szimbolizálni akarjuk ezt a két mondatot:
+\begin{earg}
+\item[\ex{monkey1}]Minden majom ismeri a jelnyelvet.
+\item[\ex{monkey2}]Néhány majom ismeri a jelnyelvet.
+\end{earg}
+Így lehet a következő mondatokhoz szimbolizáló kulcsot írni:
+\begin{ekey}
+\item[UD:] állatok
+\item[Mx:] $x$ egy majom.
+\item[Sx:] $x$ ismeri a jelnyelvet.
+\end{ekey}
+
 Sentence \ref{monkey1} can now be translated as $\forall x(Mx \eif Sx)$.
+A \ref{monkey1} mondat lefordítható $\forall x(Mx \eif Sx)$-ként.
 
 Sentence \ref{monkey2} becomes $\exists x(Mx \eand Sx)$.
+A \ref{monkey2} mondat $\exists x(Mx \eand Sx)$ lesz.
+
 
 It is tempting to say that sentence \ref{monkey1} entails sentence \ref{monkey2}; that is: if every monkey knows sign language, then it must be that some monkey knows sign language. This is a valid inference in Aristotelean logic: All $M$s are $S$, \therefore\ some $M$ is $S$. However, the entailment does not hold in QL. It is possible for the sentence $\forall x(Mx \eif Sx)$ to be true even though the sentence $\exists x(Mx \eand Sx)$ is false.
 
+Kísértő azt mondani, hogy a \ref{monkey1} mondat magában foglalja a \ref{monkey2} mondatot; vagyis: ha minden majom ismeri a jelnyelvet, akkor lehet, hogy néhány majom ismeri a jelnyelvet. Ez érvényes következtetés az Arisztotelészi logikában: Minden $M$s $S$, \therefore\ néhány $M$ pedig $S$. Azonban a következtetés nem érvényes a QL-ben. Lehetséges, hogy a $\forall x(Mx \eif Sx)$ mondat igaz, még akkor is, ha a $\exists x(Mx \eand Sx)$ mondat hamis.
+
+
 How can this be? The answer comes from considering whether these sentences would be true or false \emph{if there were no monkeys}.
+
+Hogy lehet ez? A válasz abból adódik, hogy figyelembe vesszük, vajon ezek a mondatok valóban hamisak lennének-e, \emph{ha nem lennének majmok}.
 
 %BV fordítása vége
 
