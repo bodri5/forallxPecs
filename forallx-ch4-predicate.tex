@@ -997,6 +997,8 @@ Ezáltal le tudjuk fordítani ezt a érvelést:
 %TB fordítása kezdet
 
 Next suppose that we want to translate this argument:
+
+Következőnek tegyük fel, hogy le akarjuk fordítani ezt az érvelést:
 \begin{quote}
 \label{surgeon3}
 Carol is a skilled surgeon and a tennis player. Therefore, Carol is a skilled tennis player.
@@ -1012,13 +1014,38 @@ This translation is a disaster! It takes what in English is a terrible argument 
 \item[] $(Rc \eand K_1c) \eand Tc$
 \item[\therefore] $Tc \eand K_2c$
 \end{earg}
+
+\begin{quote}
+\label{surgeon3}
+Carol szakképzett sebés és teniszezik. Ennélfogva Carol egy szakképzett teniszező.
+\end{quote}
+Ha az előző érvelésben használt szimbolizációs kulccsal kezdünk, hozzáadhatjuk a predikátumot (jelentse $Tx$ hogy $x$ teniszezik') és egy konstansot (legyen $c$ Carol). Ekkor az érvelés a következő:
+\begin{earg}
+\item[] $(Rc \eand Kc) \ eand Tc$
+\item\therefore] $ Tx \eand Kc$
+\end{earg}
+Ez a fordítás katasztrofális! Veszi a magyar nyelven szörnyű érvelést és lefordítja egy PL-ben érvényes érveléssé. A probléma az, hogy különbség van \emph{szakképzett sebésznek lenni} és \emph{szakképzett teniszezőnek lenni} között. Az érvelés helyes fordításához kétfajta predikátum szükséges, mindkét ismerethez egy. Ha $K_1x$ azt jelenti, hogy '$x$ egy képzett sebész' és $K_2x$ azt, hogy '$x$ képzett teniszező', akkor így szimbolizálhatjuk az érvelést:
+\begin{earg}
+\label{surgeon3correct}
+\item[] $(Rc \eand K_1c) \eand Tc$
+\item[\therefore] $Tc \eand K_2c$
+\end{earg}
+
 Like the English language argument it translates, this is invalid. %\nix{Notice that there is no logical connection between $K_1c$ and $Rc$. As symbols of QL, they might be any one-place predicates. In English there is a connection between being a \emph{surgeon} and being a \emph{skilled surgeon}: Every skilled surgeon is a surgeon. In order to capture this connection, we symbolize `Carol is a skilled surgeon' as $Rc \eand K_1c$. This means: `Carol is a surgeon and is skilled as a surgeon.'}
+
+Pont ahogy a magyar mondat amit lefordít, ez is helytelen %\nix{Vegyük észre, hogy nincs logikai kapcsolat $K_1c$ és $Rx$ között. Mint PL szimbólumok, lehetnek unáris predikátumok. Angol nyelvben van kapcsolat \emph{sebész} és \emph{szakképzett sebész} között: minden szakképzett sebész sebész. Annak érdekében hogy ezt a kapcsolatot megfogalmazzuk, szimbolizáljuk a 'Carol egy szakképzett sebész'-t mint $Rc \eand K_1c$. Ekkor a jelentése: 'Carol egy sebész és szakképzett, mint sebész.'}
 
 The moral of these examples is that you need to be careful of symbolizing predicates in an ambiguous way. Similar problems can arise with predicates like \emph{good}, \emph{bad}, \emph{big}, and \emph{small}. Just as skilled surgeons and skilled tennis players have different skills, big dogs, big mice, and big problems are big in different ways.
 
+Ezen példák tanulsága az, hogy nagyon elővigyázatosan fordítsunk kétértelmű predikátumokat. Hasonló problémákba ütközhetünk a \emph{jó}, \emph{rossz}, \emph{nagy}, és \emph{kicsi} predikátumokkal. Ugyanúgy, ahogy egy képzett sebésznek és egy képzett teniszezőnek más jártasságai vannak, egy nagy kutya, nagy egér és egy nagy probléma is másképpen nagy. 
+
 Is it enough to have a predicate that means `$x$ is a skilled surgeon', rather than two predicates `$x$ is skilled' and `$x$ is a surgeon'? Sometimes. As sentence \ref{surgeon1} shows, sometimes we do not need to distinguish between skilled surgeons and other surgeons.
 
+Vajon elég egy predikátum, ami azt jelenti, hogy '$x$ egy képzett sebész', ahelyett, hogy két predikátumot használnánk, mint '$x$ képzett' és $x$ sebész'? Néha. Ahogy a \ref{surgeon} mondat mutatja, néha nem kell különbséget tenni képzett sebészek és más sebészek között. 
+
 Must we always distinguish between different ways of being skilled, good, bad, or big? No. As the argument about Billy shows, sometimes we only need to talk about one kind of skill. If you are translating an argument that is just about dogs, it is fine to define a predicate that means `$x$ is big.' If the UD includes dogs and mice, however, it is probably best to make the predicate mean `$x$ is big for a dog.'
+
+Vajon mindig meg kell különböztessük a képzett, jó, rossz vagy nagy különböző jelentéseit? Nem. Ahogy az érvelés Billyről mutatja, néha elég egy fajta készségről beszélni. Ha egy érvelés csak kutyákról szól, rendben van definiálni egy predikátumot '$x$ nagy' jelentéssel. Azonban ha az UD kutyákat és egereket is tartalmaz, valószínűleg a legjobb egy olyan predikátumot definiálni, ami '$x$ nagy egy kutyához képest'-et jelent.
 
 %TB fordítása vége
 
