@@ -378,21 +378,42 @@ Vegyük példának az $Fb$ kijelentést. A kijelentés ezen interpretációval i
 
 We could try to characterize this as a truth value assignment, as we did for SL. The truth value assignment would assign 0 or 1 to each atomic wff: $Fb$, $Fw$, and so on. If we were to do that, however, we might just as well translate the sentences from QL to SL by replacing $Fb$ and $Fw$ with sentence letters. We could then rely on the definition of truth for SL, but at the cost of ignoring all the logical structure of predicates and terms. In writing a symbolization key for QL, we do not give separate definitions for $Fb$ and $Fw$. Instead, we give meanings to $F$, $b$, and $w$. This is essential because we want to be able to use quantifiers. There is no adequate way to translate $\forall x Fx$ into SL.
 
+Megpróbálhatjuk igazságérték-hozzárendelésként jellemezni ezt, mint a kijelentéslogikában. Az igazságérték-hozzárendelés, hozzárendelne 0-át vagy 1-est minden elemi jfk-hez: $Fb$, $Fw$, és így tovább. Ha viszont ezt megtennénk, akkor jobban járnánk predikátum logikából kijelentéslogikába fordítani az $Fb$ és $Fw$ értékek mondat betűkre való cserélésével. Ezután tudnánk az igazság definíciójára hagyatkozni a kijelentéslogikában, de a predikációk és kifejezések logikai szerkezetének figyelmen kívül hagyása mellett. A szimbolizációs kulcs írásában a predikátum logikában nem adunk különböző definíciót $F$, $b$, és $w$. Ez lényeges mivel szeretnénk használni kvantorokat. Nincs megfelelő módja a $\forall x Fx$ a kijelentéslogikába való fordítására.
+
 So we want a formal counterpart to an interpretation for predicates and constants, not just for sentences. We cannot use a truth value assignment for this, because a predicate is neither true nor false. In the interpretation given above, $F$ is true \emph{of} the Batman (i.e., $Fb$ is true), but it makes no sense at all to ask whether $F$ on its own is true. It would be like asking whether the English language fragment `$\ldots$fights crime' is true.
+
+Szeretnénk egy formális párokat a predikátumok és konstansok értelmezésére, nem csak a mondatokra. Nem használhatunk egy igazságérték-hozzárendelést ehhez, mert a predikátum sem igaz sem hamis. Az előbbi értelmezésben, $F$ iga Batmanre (például, $Fb$ igaz), de nincs értelme megkérdezni, hogy $F$ önmagában igaz-e. Ez olyan lenne, mintha megkérdeznénk, hogy a magyar nyelv részlet `$\ldots$bűn ellen küzd' igaz-e.
 
 What does an interpretation do for a predicate, if it does not make it true or false? An interpretation helps to pick out the objects to which the predicate applies. Interpreting $Fx$ to mean `$x$ fights crime' picks out Batman, Superman, Spiderman, and other heroes as the things that are $F$s. Formally, this is a set of members of the UD to which the predicate applies; this set is called the \define{extension} of the predicate.
 
+Mit tesz egy értelmezés az állítmányra, ha nem teszi igazzá vagy hamissá? Az értelmezés segít kiválasztani azokat az objektumokat, amelyekre a predikátum vonatkozik. $Fx$-et úgy értelmezni, hogy „$x$ küzd a bűn ellen”-t jelenti, kiválasztja Batman-t, Superman-t, Pókembert, és más hősöket, mint „dolgokat”, amik $F$-ek. Formálisan, ez egy tagok halmaza az alaphalmazban, amelyre a predikátum érvényes; ezt a halmazt a predikátum \define{kiterjedésének} hívjuk.
+
 Many predicates have indefinitely large extensions. It would be impractical to try and write down all of the comic book crime fighters individually, so instead we use an English language expression to interpret the predicate. This is somewhat imprecise, because the interpretation alone does not tell you which members of the UD are in the extension of the predicate. In order to figure out whether a particular member of the UD is in the extension of the predicate (to figure out whether Black Lightning fights crime, for instance), you need to know about comic books. In general, the extension of a predicate is the result of an interpretation \emph{along with} some facts.
+
+Rengeteg predikátumnak van végtelen nagy kiterjedése. Nem lenne praktikus megpróbálni leírni az összes képregény bűnüldözőt egyenként, ehelyett egy magyar nyelvű kifejezést használunk a predikátum értelmezésére. Ez nem a legpontosabb, mert az értelmezés önmagában nem fejezi ki melyik tagok az alaphalmazban (UD) a kiterjedése a predikátumnak. Ahhoz, hogy kitaláljuk éppen melyik tag az alaphalmazban (UD) van a predikátum kiterjedésében (Például, hogy kitaláljuk „Black Lightning” bűnüldöző-e), tudnunk kell a képregényekről. Általánosan, a predikátum kiterjedése egy interpretáció eredménye tényekkel \emph{együtt}.
 
 %\begin{center}
 %\small INTERPRETATION OF A PREDICATE \script{P} + STATE OF THE WORLD $\Longrightarrow$ EXTENSION OF \script{P}
 %\end{center}
 
+%\begin{közép}
+%\small PREDIKÁTUM ÉRTELMEZÉSE \script{P} + VILÁG HELYZETE $\Longrightarrow$ KITERJESZTÉSE A(Z) \script{P}
+%\end{közép}
+
 Sometimes it is possible to list all of the things that are in the extension of a predicate. Instead of writing a schematic English sentence, we can write down the extension as a set of things. Suppose we wanted to add a one-place predicate $M$ to the key above. We want $Mx$ to mean `$x$ lives in Wayne Manor', so we write the extension as a set of characters:
+
+Néha lehetséges, hogy felsoroljuk az összes dolgot ami a predikátum kiterjedésében van. Ahelyett, hogy vázlatos magyar mondatot írnánk, leírhatjuk a kiterjedést, mint dolgok halmazát. Tegyük fel, hogy egy hely predátumot akartunk hozzáadni az előbbi $M$ kulcshoz. Azt akarjuk, hogy $Mx$ azt jelentse, hogy „$x$ a Wayne Villában él”, ezért a kiterjedést egy karakterek halmazaként írjuk le:
+
 \begin{partialmodel}
 	\extension{M} & \{Bruce Wayne, Alfred the butler, Dick Grayson\}
 \end{partialmodel}
+\begin{partialmodel}
+	\extension{M} & \{Bruce Wayne, Alfred az inas, Dick Grayson\}
+\end{partialmodel}
+
 You do not need to know anything about comic books to be able to determine that, on this interpretation, $Mw$ is true: Bruce Wayne is just specified to be one of the things that is $M$. Similarly, $\exists x Mx$ is obviously true on this interpretation: There is at least one member of the UD that is an $M$--- in fact, there are three of them.
+
+Nem kell tudnod semmit a képregényekről, hogy meghatározd, hogy ezen értelmezésben $Mw$ igaz: Bruce Wayne úgy van specifikálva, hogy ő az egyik valami ami $M$ része. Hasonlóan, $\exists x Mx$ is egyértelműen igaz ezen értelmezésen: Van legalább egy tag az alaphalmazban (UD) ami $M$ -- ráadásul, három is van belőle.
 
 %VL fordítása vége
 
