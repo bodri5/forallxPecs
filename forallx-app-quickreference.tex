@@ -7,7 +7,7 @@
 \label{app.CharacteristicTTs}
 
 %KB fordítása kezdet
-
+Gyors Ajánló 
 \hfill
 \begin{tabular}{c|c}
 \script{A} & \enot\script{A}\\
@@ -55,6 +55,9 @@ F & F & F & F & T & T
 \label{app.symbolization}
 \begin{tabular*}{\textwidth}{rl}
 \multicolumn{2}{c}{\textsc{Sentential Connectives} (chapter \ref{ch.SL})}\\ \\
+Szimbolizáció 
+Tartozó kapcsolatok (2. fejezet)
+
 It is not the case that $P$. & $\enot P$\\
 Either $P$, or $Q$. & $(P \eor Q)$\\
 Neither $P$, nor $Q$. & $\enot(P \eor Q)$\ or \ $(\enot P \eand \enot Q)$\\
@@ -64,11 +67,31 @@ $P$ only if $Q$. & $(P \eif Q)$\\
 $P$ if and only if $Q$. & $(P \eiff Q)$\\
 Unless $P$, $Q$. $P$ unless $Q$. & $(P \eor Q)$\\
 \\
+
+Nem P. $\enot P$\\
+Vagy P, vagy Q  $(P \eor Q)$\\
+Nem P, vagy Q  $\enot(P \eor Q)$\ or \ $(\enot P \eand \enot Q)$\\
+P és Q  $(P \eand Q)$\\
+Ha P akkor Q $(P \eif Q)$\\
+P csak akkor ha Q  $(P \eif Q)$\\
+P ha és csak ha Q $(P \eiff Q)$\\
+P nélkül Q. Q nélkül P $(P \eor Q)$\\
+
+\\
 \multicolumn{2}{c}{\label{SymbolizingPredicates}\textsc{Predicates} (chapter \ref{ch.QL})}\\ \\
 All $F$s are $G$s. & $\forall x(Fx \eif Gx)$\\
 Some $F$s are $G$s. & $\exists x(Fx \eand Gx)$\\
 Not all $F$s are $G$s. & $\enot\forall x(Fx \eif Gx)$\ or\ $\exists x(Fx \eand \enot Gx)$\\
 No $F$s are $G$s. & $\forall x(Fx \eif\enot Gx)$\ or\ $\enot\exists x(Fx \eand Gx)$\\
+\\
+
+Állítások (4. fejezet)
+
+Minden F G is $\forall x(Fx \eif Gx)$\\
+Létezik olyan F ami G $\exists x(Fx \eand Gx)$\\
+Nem mindegyik F G $\enot\forall x(Fx \eif Gx)$\ or\ $\exists x(Fx \eand \enot Gx)$\\
+F nem egyenlő G-vel $\forall x(Fx \eif\enot Gx)$\ or\ $\enot\exists x(Fx \eand Gx)$\\
+
 \\
 \multicolumn{2}{c}{\textsc{Identity} (section \ref{sec.identity})}\\ \\
 Only $j$ is $G$. & $\forall x(Gx \eiff x=j)$\\
@@ -82,8 +105,14 @@ The $F$ is non-$G$. (narrow) & $\exists x(Fx \eand \forall y(Fy \eif x=y) \eand 
 \end{center}
 
 
+Azonosság (4.6. rész)
 
-
+Csak j egyenlő G-vel $\forall x(Gx \eiff x=j)$\\
+Csak j nem egyenlő G-vel $\forall x(x \neq j \eif Gx)$\\
+F egyenlő G-vel $\exists x(Fx \eand \forall y(Fy \eif x=y) \eand Gx)$\\
+Az F nem egyenlő G-vel két féle képpen értelmezhető:
+Nem F egyenlő G-vel (tág) $\enot\exists x(Fx \eand \forall y(Fy \eif x=y) \eand Gx)$\\
+F egyenlő nem G-vel (szűk)  $\exists x(Fx \eand \forall y(Fy \eif x=y) \eand \enot Gx)$
 
 
 % BEGIN: symbolizing cardinality
@@ -102,6 +131,17 @@ The $F$ is non-$G$. (narrow) & $\exists x(Fx \eand \forall y(Fy \eif x=y) \eand 
 \item[n] $\exists x_1\cdots\exists x_n(Fx_1 \eand\cdots\eand Fx_n \eand x_1 \neq x_2 \eand\cdots\eand x_{n-1}\neq x_n)$ 
 \end{ekey}
 
+
+Azonosságok a mennyiségek bemutatására
+Legalább  \blank\ $F$s.
+Egy $\exists xFx$
+Kettő $\exists x_1\exists x_2(Fx_1 \eand Fx_2 \eand x_1 \neq x_2)$
+Három $\exists x_1\exists x_2\exists x_3(Fx_1 \eand Fx_2 \eand Fx_3 \eand x_1 \neq x_2 \eand x_1 \neq x_3 \eand x_2 \neq x_3)$
+Négy $\exists x_1\exists x_2\exists x_3\exists x_4 (Fx_1 \eand Fx_2 \eand Fx_3 \eand Fx_4 \eand x_1 \neq x_2 \eand x_1 \neq x_3 \eand x_1 \neq x_4 \eand x_2 \neq x_3 \eand x_2 \neq x_4 \eand x_3 \neq x_4)$
+N $\exists x_1\cdots\exists x_n(Fx_1 \eand\cdots\eand Fx_n \eand x_1 \neq x_2 \eand\cdots\eand x_{n-1}\neq x_n)$ 
+
+
+
 \subsection*{There are at most \blank\ $F$s.}
 \label{summary.atmost}
 
@@ -113,6 +153,21 @@ One way to say `at most $n$ things are $F$' is to put a negation sign in front o
 \item[n]$\forall x_1\cdots\forall x_{n+1}
 \bigl[(Fx_1\eand \cdots \eand Fx_{n+1}) \eif (x_1=x_2 \eor \cdots \eor x_n=x_{n+1})\bigr]$ 
 \end{ekey}
+
+
+
+Legfeljebb \blank\ $F$s.
+
+Az egyik módszer az, hogy azt mondjuk „legfeljebb $n$ dolog az $F$”, egy tagadási jel elhelyezése az egyik elé a fenti szimbólumok közül, és azt mondjuk, hogy $\enot$ „legalább n + 1 dolog F.” Egyenértékűen:
+
+Egy $\forall x_1\forall x_2\bigl[(Fx_1 \eand Fx_2) \eif x_1=x_2\bigr]$
+Kettő $\forall x_1\forall x_2\forall x_3\bigl[(Fx_1 \eand Fx_2 \eand Fx_3) \eif (x_1=x_2 \eor x_1=x_3 \eor x_2=x_3)\bigr]$
+Három $\forall x_1\forall x_2\forall x_3\forall x_4\bigl[(Fx_1 \eand Fx_2 \eand Fx_3 \eand Fx_4) \eif (x_1=x_2 \eor x_1=x_3 \eor x_1=x_4 \eor x_2=x_3 \eor x_2=x_4 \eor x_3=x_4)\bigr]$
+N $\forall x_1\cdots\forall x_{n+1}
+\bigl[(Fx_1\eand \cdots \eand Fx_{n+1}) \eif (x_1=x_2 \eor \cdots \eor x_n=x_{n+1})\bigr]$ 
+
+
+
 
 \subsection*{There are exactly \blank\ $F$s.}
 \label{summary.exactly}
@@ -132,9 +187,28 @@ One way to say `exactly $n$ things are $F$' is to conjoin two of the symbolizati
 %\item[n] $\exists x_1\cdots\exists x_n\forall y\Bigl(Fx_1 \eand\cdots\eand Fx_n \eand \bigl[Fy \eif (y=x_1 \eor \cdots \eor y=x_n)\bigr] \eand x_1 \neq x_2 \eand\cdots\eand x_{n-1}\neq x_n\Bigr)$ 
 \end{ekey}
 
+
+
+Pontosan \blank\ $F$s.
+Az egyik módszer az, hogy azt mondjuk „pontosan n a dolgok F” a fenti szimbólumok közül kettőt összekapcsolunk és azt mondjuk „legalább n dolog F” és „legfeljebb n dolog F”. A következő ekvivalnes formulák rövidebbek :
+
+Nulla $\forall x\enot Fx$
+Egy $\exists x\bigl[Fx \eand \enot\exists y(Fy \eand x\neq y)\bigr]$
+Kettő $\exists x_1\exists x_2\bigl[Fx_1 \eand Fx_2 \eand x_1 \neq x_2 \eand \enot\exists y\bigl(Fy \eand y\neq x_1 \eand y \neq x_2\bigr) \bigr]$
+Három $\exists x_1\exists x_2\exists x_3\bigl[Fx_1 \eand Fx_2 \eand Fx_3 \eand x_1 \neq x_2 \eand x_1 \neq x_3 \eand x_2 \neq x_3 \eand\\
+\enot\exists y(Fy \eand y \neq x_1 \eand y \neq x_2 \eand y\neq x_3) \bigr]$
+N $\exists x_1\cdots\exists x_n\bigl[Fx_1 \eand\cdots\eand Fx_n  \eand x_1 \neq x_2 \eand\cdots\eand x_{n-1}\neq x_n \eand\\
+ \enot\exists y(Fy \eand y\neq x_1 \eand \cdots \eand y\neq x_n)\bigr]$ 
+ 
+
+
 \subsection*{Specifying the size of the UD}
 
 Removing $F$ from the symbolizations above produces sentences that talk about the size of the UD. For instance, `there are at least 2 things (in the UD)' may be symbolized as $\exists x\exists y(x \neq y)$.
+
+
+
+Az F eltávolítása a fenti szimbólumokból mondatokat eredményez amik az UD méretéről szólnak. Például: Legalább két dolog van (UD-ben) amit úgy szimbolizálnánk, hogy $\exists x\exists y(x \neq y)$.
 
 
 %KB fordítása vége
