@@ -916,17 +916,56 @@ A $Px$ képlet azt mutatja tömören, hogy $x$ az egyike az $P$-nek. Ez azonban 
 
 We do this by introducing a \emph{variable assignment}. Formally, this is a function that matches up each variable with a member of the UD. Call this function `a.' (The `a' is for `assignment', but this is not the same as the truth value assignment that we used in defining truth for SL.)
 
+
+Ezt egy változó hozzárendelés \emph bevezetésével hajtjuk végre. Formálisan ez egy olyan funkció, amely megfelel
+minden változó az UD tagjával. Hívja ezt a funkciót "a" -nak (az "a" hozzárendelés", de
+ez nem ugyanaz, mint az igazságérték-hozzárendelés, amelyet az SL igazságának meghatározásához használtunk.)
+
+
 The formula $Px$ is satisfied in a model \model{M} by a variable assignment $a$ if and only if $a(x)$, the object that $a$ assigns to $x$, is in the the extension of P in \model{M}.
+
+Az \model{M} modellben a $Px$ képletet egy változó hozzárendelés teljesíti, ha és csak akkor, ha $a(x)$ -- az objektum, amelyet $a$ egy $x$-hez rendel -- a P kiterjesztésében van \model{M} -ben.
+
+
 
 When is $\forall x Px$ satisfied? It is not enough if $Px$ is satisfied in \model{M} by $a$, because that just means that $a(x)$ is in \extension{P}. $\forall x Px$ requires that every other member of the UD be in \extension{P} as well.
 
+Mikor kielégített $\forall x Px$ ? Nem elég, ha $Px$ kielégített az \model{M}-ben $a$ által, mert ez csak azt jelenti
+hogy a $a(x)$ \extension{P}-ben van. $\forall x Px$  megköveteli, hogy az UD minden tagja \extension{P}-ben is legyen.
+
+
+
 So we need another bit of technical notation: For any member $\Omega$ of the UD and any variable \script{x}, let $a[\Omega|\script{x}]$ be the variable assignment that assigns $\Omega$ to \script{x} but agrees with $a$ in all other respects. We have used $\Omega$, the Greek letter Omega, to underscore the fact that it is some member of the UD and not some symbol of QL. Suppose, for example, that the UD is presidents of the United States. The function $a[\mbox{Grover Cleveland}|x]$ assigns Grover Cleveland to the variable $x$, regardless of what $a$ assigns to $x$; for any other variable, $a[\mbox{Grover Cleveland}|x]$ agrees with $a$.
+
+Szükség van tehát egy újabb műszaki jelölésre: Az UD bármely tagjának és bármely változónak
+\script{x}, hagyjuk, hogy a $a[\Omega|\script{x}]$ legyen a változó-hozzárendelés, amely $\Omega$-t \script{x}-hez rendelt, de minden más szempontból megegyezik az $a$-val.
+Akkor használunk $\Omega$ -t, a görög Omega betűt arra használtuk, hogy aláhúzzuk azt a tényt, hogy ő az
+UD, nem pedig a QL szimbóluma. Tegyük fel például, hogy az UD az Egyesült Államok elnökei
+Államok. Az a$a[\mbox{Grover Cleveland}|x]$ funkció a Grover Cleveland-t az $x$ változóhoz rendeli, függetlenül attól $a$
+amit $x$ hozzárendel; bármely más változó esetében az $a[\mbox{Grover Cleveland}|x]$ egyetért $a$.
+
 
 We can now say concisely that $\forall x Px$ is satisfied in a model \model{M} by a variable assignment $a$ if and only if, for every object $\Omega$ in the UD of \model{M}, $Px$ is satisfied in \model{M} by $a[\Omega|x]$.
 
+Most röviden elmondhatjuk, hogy az $\forall x Px$ az \model{M} modellben egy változó hozzárendeléssel van kielégítve, ha és csak akkor, ha az \model{M} UD minden $\Omega$ objektumára $Px$ teljesül \model{M}-ben egy $a[\Omega|x]$ értékkel.
+
 You may worry that this is circular, because it gives the satisfaction conditions for the sentence $\forall x Px$ using the phrase `for every object.' However, it is important to remember the difference between a logical symbol like `$\forall$' and an English language word like `every.' The word is part of the metalanguage that we use in defining satisfaction conditions for object language sentences that contain the symbol.
 
+Félhet, hogy ez kör alakú, mert megadja a mondat elégedettségének feltételeit
+$\forall x Px$ az „minden objektumra” kifejezést használva. Fontos azonban, hogy emlékezzen a különbségre
+egy olyan logikai szimbólum, mint például a „$\forall$” és az angol nyelvű szó, mint például „minden”. A szó része
+a metanyelv, amelyet az objektumnyelvű mondatok elégedettségének meghatározására használunk, hogy
+tartalmazzák a szimbólumot.
+
 We can now give a general definition of satisfaction, extending from the cases we have already discussed. We define a function $s$ (for `satisfaction') in a model \model{M} such that for any wff \script{A} and variable assignment $a$, $s(\script{A}, a)=1$ if \script{A} is satisfied in \model{M} by $a$; otherwise $s(\script{A}, a)=0$.
+
+Most már megadhatjuk az elégedettség általános meghatározását, kiterjesztve a már meglévő eseteket
+tárgyalt. Az M modellben definiáljuk az $s$ függvényt („elégedettség”) úgy, hogy minden \script{A} és Wff wf-hez
+$a$,  $s(\script{A} , a) = 1$ változó hozzárendelése, ha \script{A}-val \model{M} teljesül $a$; egyébként $s(\script{A}, a)=0$
+
+
+
+
 
 \begin{enumerate}
 \item If \script{A} is an atomic wff of the form $\script{P}\script{t}_1\ldots\script{t}_n$ and $\Omega_i$ is the object picked out by $t_i$, then
@@ -939,11 +978,31 @@ We can now give a general definition of satisfaction, extending from the cases w
 
 For each term $t_i$: If $t_i$ is a constant, then $\Omega_i = \referent{t_i}$. If $t_i$ is a variable, then $\Omega_i = a(t_i)$.
 
+\item Ha \script{A} jelentése egy atomi wff $\script{P}\script{t}_1\ldots\script{t}_n$ és $\Omega_i$ kiválasztott $t_i$ által, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	1 & \mbox{ha ${\langle}\Omega_1\ldots\Omega_n{\rangle}$ \extension{\script{P}} - ben \model{M}}-ben,\\
+	0 & \mbox{másképp.}
+	\end{array}\right.
+\end{displaymath}
+
+Minden kifejezésre $t_i$: Ha $t_i$ egy állandó, akkor $\Omega_i = \referent{t_i}$. Ha $t_i$ egy változó, akkor $\Omega_i = a(t_i)$.
+
+
 \item If \script{A} is ${\enot}\script{B}$ for some wff \script{B}, then
 \begin{displaymath}s(\script{A}, a) =
 	\left\{\begin{array}{ll}
 	1 & \mbox{if $s(\script{B}, a) = 0$},\\
 	0 & \mbox{otherwise.}
+	\end{array}\right.
+\end{displaymath}
+
+
+\item Ha \script{A}  ${\enot}\script{B}$ bizonyos wff esetén \script{B}, akkor
+\begin{displaymath}s(\script{A}, a) =
+	\left\{\begin{array}{ll}
+	1 & \mbox{ha $s(\script{B}, a) = 0$},\\
+	0 & \mbox{másképp.}
 	\end{array}\right.
 \end{displaymath}
 
