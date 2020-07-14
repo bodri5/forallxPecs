@@ -1437,14 +1437,27 @@ Könnyű megmutatni, hogy egy halmaz bizonyíthatóan inkonzisztens: Csak vegyü
 
 
 
-\section{Proofs and models}
+\section*{Proofs and models}
+\section{Bizonyítások és modellek}
+
 As you might already suspect, there is a connection between \emph{theorems} and \emph{tautologies}.
+
+Mint már gyaníthatja, kapcsolat áll fenn a \emph{tételek} és a \emph{tautológiák} között.
+
 
 There is a formal way of showing that a sentence is a theorem: Prove it. For each line, we can check to see if that line follows by the cited rule. It may be hard to produce a twenty line proof, but it is not so hard to check each line of the proof and confirm that it is legitimate--- and if each line of the proof individually is legitimate, then the whole proof is legitimate. Showing that a sentence is a tautology, though, requires reasoning in English about all possible models. There is no formal way of checking to see if the reasoning is sound. Given a choice between showing that a sentence is a theorem and showing that it is a tautology, it would be easier to show that it is a theorem.
 
+Van egy formális módszer annak bemutatására, hogy egy mondat tétel: Bizonyítsa be. Minden sor esetében ellenőrizhetjük, hogy a sor megfelel-e a hivatkozott szabálynak. Nehéz lehet húsz soros bizonyítást előállítani, de nem olyan nehéz ellenőrizni a bizonyítás minden sorát, és igazolni annak helyességét - és ha a bizonyítás mindegyik sora külön-külön helyes, akkor az egész bizonyítás helyes. Annak igazolása, hogy egy mondat tautológia, angol nyelvű érvelést igényel minden lehetséges modellről. Nincs hivatalos mód annak ellenőrzésére, hogy az érvelés megalapozott-e. Ha választhatnánk annak bizonyítása között, hogy egy mondat tétel, illetve annak bizonyítása között, hogy tautológia, könnyebb megmutatni, hogy ez egy tétel.
+
+
 Contrawise, there is no formal way of showing that a sentence is \emph{not} a theorem. We would need to reason in English about all possible proofs. Yet there is a formal method for showing that a sentence is not a tautology. We need only construct a model in which the sentence is false. Given a choice between showing that a sentence is not a theorem and showing that it is not a tautology, it would be easier to show that it is not a tautology.
 
+Ezzel szemben nincs hivatalos módszer annak bemutatására, hogy a mondat \emph{nem} tétel. Magyar nyelven kellene érvelnünk minden lehetséges bizonyítékról. Van azonban egy hivatalos módszer annak bemutatására, hogy a mondat nem tautológia. Csak azt a modellt kell felépíteni, amelyben a mondat hamis. Ha választhatnánk annak bizonyítása között, hogy egy mondat nem tétel, és annak bizonyítása, hogy nem tautológia, könnyebb lenne megmutatni, hogy nem tautológia.
+
+
 Fortunately, a sentence is a theorem if and only if it is a tautology. If we provide a proof of $\vdash\script{A}$ and thus show that it is a theorem, it follows that \script{A} is a tautology; i.e., $\models\script{A}$. Similarly, if we construct a model in which \script{A} is false and thus show that it is not a tautology, it follows that \script{A} is not a theorem.
+
+Szerencsére, egy mondat tétel akkor és csak akkor, ha tautológia. Ha bizonyítékot szolgáltatunk $\vdash\script{A}$, és így megmutatjuk, hogy ez egy tétel, akkor az következik, hogy \script{A} tautológia; vagyis $\models\script{A}$. Hasonlóképpen, ha olyan modellt állítunk elő, amelyben \script{A} hamis, és így megmutatjuk, hogy nem tautológia, akkor az következik, hogy \script{A} nem tétel.
 
 In general, $\script{A}\vdash\script{B}$ if and only if $\script{A}\models\script{B}$. As such:
 \begin{itemize}
@@ -1452,9 +1465,24 @@ In general, $\script{A}\vdash\script{B}$ if and only if $\script{A}\models\scrip
 \item Two sentences are \emph{logically equivalent} if and only if they are \emph{provably equivalent}.
 \item A set of sentences is \emph{consistent} if and only if it is \emph{not provably inconsistent}.
 \end{itemize}
+
+
+Általában $\script{A}\vdash\script{B}$ akkor és csak akkor, ha $\script{A}\models\script{B}$. Mint ahogy:
+\begin{itemize}
+\item Az érv akkor és csak akkor \emph{érvényes}, ha \emph{a következtetés a felvetésből származtatható}.
+\item Két mondat \emph{logikailag egyenértékű} akkor és csak akkor, ha \emph{bizonyíthatóan ekvivalensek}.
+\item Egy mondatkészlet akkor és csak akkor \emph{konzisztens}, ha \emph{nem bizonyíthatóan inkonzisztens}.
+\end{itemize}
+
+
 You can pick and choose when to think in terms of proofs and when to think in terms of models, doing whichever is easier for a given task. Table \ref{table.ProofOrModel} summarizes when it is best to give proofs and when it is best to give models.
 
+Kiválaszthatja, hogy mikor gondolkodjon a bizonyítások terén, és mikor gondolkodjon modellek terén, azt használja amelyikkel egyszerűbb egy adott feladatot megoldani. A \ref{table.ProofOrModel} táblázat összefoglalja, mikor a legjobb bizonyításokat alkalmazni, mikor a legjobb modelleket.
+
+
 In this way, proofs and models give us a versatile toolkit for working with arguments. If we can translate an argument into QL, then we can measure its logical weight in a purely formal way. If it is deductively valid, we can give a formal proof; if it is invalid, we can provide a formal counterexample.
+
+Ily módon a bizonyítások és modellek sokoldalú eszközkészletet biztosítanak az érvek kezeléséhez. Ha le tudunk fordítani egy érvet QL-be, akkor annak logikai súlyát tisztán formális módon is meg tudjuk mérni. Ha deduktív módon érvényes, hivatalos igazolást adhatunk; ha érvénytelen, akkor nyújthatunk formális ellenpéldát.
 
 %GT fordítása vége
 
